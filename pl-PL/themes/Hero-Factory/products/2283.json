@@ -1,0 +1,513 @@
+{
+  "hits": {
+    "total": {
+      "value": 1,
+      "relation": "eq"
+    },
+    "max_score": 7.590852,
+    "hits": [
+      {
+        "_type": "_doc",
+        "_index": "lego_historic_product_637992720183657998",
+        "_id": "2283",
+        "_source": {
+          "market": {
+            "us": {
+              "skus": [
+                {
+                  "item_id": 4611693
+                }
+              ]
+            },
+            "pl": {
+              "skus": [
+                {
+                  "item_id": 4611692
+                }
+              ]
+            }
+          },
+          "themes": [
+            {
+              "images": [
+                {
+                  "uid": "bltc4a5d0bd8e9aab3f",
+                  "modifiedDate": "2022-03-18T07:58:41.965Z",
+                  "contentType": "image/png",
+                  "title": "Hero_Factory_dbixthemecard.png",
+                  "size": 1497994,
+                  "imageType": "card_image",
+                  "filename": "Hero_Factory_dbixthemecard.png",
+                  "altText": "",
+                  "url": "https://www.lego.com/cdn/cs/catalog/assets/bltc4a5d0bd8e9aab3f/1/Hero_Factory_dbixthemecard.png"
+                },
+                {
+                  "uid": "blt61be09fb30bd9093",
+                  "modifiedDate": "2020-02-20T20:39:14.889Z",
+                  "contentType": "image/png",
+                  "title": "Hero_Factory_Black_Short_RGB.png",
+                  "size": 221146,
+                  "imageType": "logo_portrait",
+                  "filename": "Hero_Factory_Black_Short_RGB.png",
+                  "altText": "",
+                  "url": "https://www.lego.com/cdn/cs/catalog/assets/blt61be09fb30bd9093/1/Hero_Factory_Black_Short_RGB.png"
+                },
+                {
+                  "uid": "bltd1605551c47b86d1",
+                  "modifiedDate": "2020-02-20T20:39:48.559Z",
+                  "contentType": "image/png",
+                  "title": "Hero_Factory_Black_Original_Short_RGB.png",
+                  "size": 226057,
+                  "imageType": "primary_image",
+                  "filename": "Hero_Factory_Black_Original_Short_RGB.png",
+                  "altText": "",
+                  "url": "https://www.lego.com/cdn/cs/catalog/assets/bltd1605551c47b86d1/1/Hero_Factory_Black_Original_Short_RGB.png"
+                }
+              ],
+              "isSubtheme": false,
+              "locale": {
+                "en-sg": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "fi-fi": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "uk-ua": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "ar-ae": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "de-at": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "nl-nl": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "zh-hk": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "zh-tw": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "es-es": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "fr-ca": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "it-it": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "ro-ro": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "et-ee": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "fo-fo": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "Lf2Ef2Gf2Of2® Hf2E"
+                },
+                "zh-cn": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "sk-sk": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "ru-ru": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® Hero Factory"
+                },
+                "en-gb": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "fr-ch": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "fr-fr": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "en-za": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "nl-be": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "en-au": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "de-ch": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "de-de": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "fr-be": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "en-us": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "pt-br": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "pl-pl": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "el-gr": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® Hero Factory"
+                },
+                "en-nz": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "sv-se": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "tr-tr": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "en-my": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "ja-jp": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "pt-pt": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "lt-lt": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "nb-no": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "ko-kr": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "es-ar": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "lv-lv": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "sl-si": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "cs-cz": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "hu-hu": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "da-dk": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "en-ca": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                },
+                "es-mx": {
+                  "tags": [],
+                  "features": [],
+                  "characters": [],
+                  "display_title": "LEGO® HERO Factory"
+                }
+              },
+              "id": "2f95cc33-4145-289a-b7d4-4d88ceb3db69",
+              "title": "Hero Factory",
+              "primary_image": {
+                "uid": "bltd1605551c47b86d1",
+                "modifiedDate": "2020-02-20T20:39:48.559Z",
+                "contentType": "image/png",
+                "title": "Hero_Factory_Black_Original_Short_RGB.png",
+                "size": 226057,
+                "imageType": "primary_image",
+                "filename": "Hero_Factory_Black_Original_Short_RGB.png",
+                "altText": "",
+                "url": "https://www.lego.com/cdn/cs/catalog/assets/bltd1605551c47b86d1/1/Hero_Factory_Black_Original_Short_RGB.png"
+              },
+              "theme_id": {
+                "theme_id": 20047,
+                "portal_id": 10000,
+                "group_id": 30
+              },
+              "display_title": ""
+            }
+          ],
+          "assets": [
+            {
+              "itemId": "50002283",
+              "assetFiles": [
+                {
+                  "url": "https://www.lego.com/cdn/product-assets/product.img.pri/2283_prod.jpg",
+                  "fileName": "2283_prod.jpg",
+                  "modifiedDate": "0001-01-01T00:00:00",
+                  "size": 306246,
+                  "extension": ".jpg",
+                  "type": "product.img.pri",
+                  "metaTags": {
+                    "image": {
+                      "width": 400,
+                      "height": 768
+                    }
+                  }
+                }
+              ],
+              "baseName": "2283_prod",
+              "type": "product.img.pri",
+              "modifiedDate": "2020-08-20T18:34:58.7936264"
+            }
+          ],
+          "availability": {
+            "marketingExitDate": "2012-07-31T00:00:00",
+            "launchDate": "2011-07-01T00:00:00"
+          },
+          "product_versions": [
+            {
+              "characteristics": {
+                "hasSmallBall": true,
+                "hasPullbackFunctionality": false,
+                "isBatteryOperated": false
+              },
+              "building_instructions": [
+                {
+                  "sequence": {
+                    "total": 1,
+                    "element": 1
+                  },
+                  "id": "6000946",
+                  "type": "product.bi.core",
+                  "image": {
+                    "url": "https://www.lego.com/cdn/product-assets/product.bi.core.img/6000946.png",
+                    "size": 64822,
+                    "modifiedDate": "2014-11-06T08:11:18"
+                  },
+                  "file": {
+                    "url": "https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6000946.pdf",
+                    "size": 8263049,
+                    "modifiedDate": "2011-06-08T13:44:55.5131353"
+                  },
+                  "description": "BI 3005/72+4*-2283"
+                }
+              ],
+              "availability": {
+                "marketingExitDate": "2012-07-31T00:00:00",
+                "launchDate": "2011-07-01T00:00:00"
+              },
+              "piece_count": 331,
+              "item_id": 4611692,
+              "measurements": {
+                "itemId": 4611692,
+                "length": 262,
+                "sizeUnit": "MM",
+                "width": 382,
+                "height": 70.5
+              }
+            },
+            {
+              "characteristics": {
+                "hasSmallBall": true,
+                "hasPullbackFunctionality": false,
+                "isBatteryOperated": false
+              },
+              "building_instructions": [
+                {
+                  "sequence": {
+                    "total": 1,
+                    "element": 1
+                  },
+                  "id": "6000946",
+                  "type": "product.bi.core",
+                  "image": {
+                    "url": "https://www.lego.com/cdn/product-assets/product.bi.core.img/6000946.png",
+                    "size": 64822,
+                    "modifiedDate": "2014-11-06T08:11:18"
+                  },
+                  "file": {
+                    "url": "https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6000946.pdf",
+                    "size": 8263049,
+                    "modifiedDate": "2011-06-08T13:44:55.5131353"
+                  },
+                  "description": "BI 3005/72+4*-2283"
+                }
+              ],
+              "availability": {
+                "marketingExitDate": "2012-07-31T00:00:00",
+                "launchDate": "2011-08-01T00:00:00"
+              },
+              "piece_count": 331,
+              "item_id": 4611693,
+              "measurements": {
+                "itemId": 4611693,
+                "length": 262,
+                "sizeUnit": "MM",
+                "width": 382,
+                "height": 70.5
+              }
+            }
+          ],
+          "locale": {
+            "pl-pl": {
+              "tags": [],
+              "display_title": "WITCH DOCTOR",
+              "title": "WITCH DOCTOR",
+              "description": "„Nadszedł czas, bohaterowie! Witch Doctor planuje wykraść z dzikiej planety Quatros jej życiodajną moc — Quaza! Trzeba go powstrzymać, zanim będzie za późno i planeta rozpadnie się na kawałki. Wcześniej będziecie musieli jednak pokonać jego niecnych pomocników — krwiożercze bestie. Uważajcie na potężną laskę mocy Witch Doctora!“"
+            },
+            "en-us": {
+              "tags": [],
+              "display_title": "WITCH DOCTOR",
+              "title": "WITCH DOCTOR",
+              "description": "“This is it, heroes! Witch Doctor has a nasty plan for jungle planet Quatros – to steal the planet’s very life force – its Quaza! You must stop him before it’s too late or the planet will break into pieces. You will have to battle through his corrupted helpers, the beasts, to get to him! Keep away from his mighty power staff!”"
+            }
+          },
+          "product_number": "2283"
+        },
+        "_score": 7.590852
+      }
+    ]
+  },
+  "_shards": {
+    "skipped": 0,
+    "failed": 0,
+    "total": 6,
+    "successful": 6
+  },
+  "timed_out": false,
+  "took": 2
+}
