@@ -1,16 +1,19 @@
-# The Docker image that will be used to build your app
-image: node:lts
-# Functions that should be executed before the build script is run
-before_script:
-  - npm ci
+# This file is a template, and might need editing before it works on your project.
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Pages/HTML.gitlab-ci.yml
+
+# Full project: https://gitlab.com/pages/plain-html
+image: busybox
+
 pages:
+  stage: deploy
+  environment: production
   script:
-    - image
+    - echo "The site will be deployed to $CI_PAGES_URL"
   artifacts:
     paths:
-      # The folder that contains the files to be exposed at the Page URL
       - public
   rules:
-    # This ensures that only pushes to the default branch will trigger
-    # a pages deploy
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
