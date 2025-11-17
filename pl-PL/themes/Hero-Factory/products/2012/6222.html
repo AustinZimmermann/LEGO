@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO® Hero Factory - Produkty - 6222 - CORE HUNTER - LEGO.com (Polska)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        /* Custom styles for Hero Factory branding */
+        .hero-factory-bg {
+            background-color: #004C99; /* Deep Blue */
+        }
+        .hero-factory-orange {
+            color: #FF8000;
+        }
+        .core-hunter-title {
+            text-shadow: 2px 2px 0px #000;
+        }
+        .purchase-button {
+            background-color: #FF8000; /* Bright Orange */
+            transition: transform 0.1s;
+        }
+        .purchase-button:hover {
+            background-color: #E67300;
+            transform: scale(1.02);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="hero-factory-bg text-white shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-wider">
+                <span class="hero-factory-orange">LEGO®</span> <span class="hidden sm:inline">Hero Factory</span>
+                <span class="sm:hidden">HF</span>
+            </div>
+            <nav class="space-x-4 text-sm font-semibold hidden sm:flex">
+                <a href="#" class="hover:text-yellow-400 transition">Produkty</a>
+                <a href="#" class="hover:text-yellow-400 transition">Bohaterowie</a>
+                <a href="#" class="hover:text-yellow-400 transition">Wsparcie</a>
+                <a href="#" class="hover:text-yellow-400 transition">Konto</a>
+            </nav>
+            <div class="text-sm">
+                (Polska)
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb / Path -->
+    <div class="max-w-7xl mx-auto px-4 py-2 text-sm text-gray-500">
+        <a href="#" class="hover:text-blue-600">Start</a> > <a href="#" class="hover:text-blue-600">Hero Factory</a> > 6222
+    </div>
+
+    <!-- Main Product Section -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- Product Title -->
+        <h1 class="text-4xl sm:text-5xl font-black mb-6 text-center lg:text-left text-gray-800 core-hunter-title">
+            6222: CORE HUNTER
+        </h1>
+
+        <div class="lg:flex lg:space-x-12">
+            
+            <!-- Left Column: Image and Details -->
+            <div class="lg:w-2/5 mb-8 lg:mb-0">
+                
+                <!-- Product Image Placeholder -->
+                <div class="w-full bg-white border border-gray-200 rounded-xl overflow-hidden card-shadow">
+                    <img 
+                        src="https://placehold.co/800x800/222/FFF?text=CORE+HUNTER+6222" 
+                        alt="Model Core Hunter - Zestaw 6222" 
+                        class="w-full h-auto"
+                        onerror="this.src='https://placehold.co/800x800/004C99/FFF?text=BRAK+ZDJ%C4%98CIA'"
+                    >
+                </div>
+
+                <!-- Set Details Card -->
+                <div class="mt-6 p-6 bg-white rounded-xl card-shadow border-t-4 border-orange-500">
+                    <h2 class="text-xl font-bold mb-4 text-gray-700">Informacje o produkcie</h2>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-600">Numer zestawu:</span>
+                            <span class="font-mono text-lg text-gray-900">6222</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-600">Liczba elementów:</span>
+                            <span class="font-mono text-lg text-gray-900">51</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b pb-2">
+                            <span class="font-semibold text-gray-600">Sugerowany wiek:</span>
+                            <span class="font-mono text-lg text-gray-900">7-14</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-600">Rok wydania:</span>
+                            <span class="font-mono text-lg text-gray-900">2012</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Price, CTA, and Description -->
+            <div class="lg:w-3/5">
+                
+                <!-- Pricing and CTA Box -->
+                <div class="p-6 sm:p-8 bg-white rounded-xl card-shadow border-t-4 border-blue-600 mb-8">
+                    <p class="text-3xl font-bold mb-1 text-gray-500 line-through">
+                        59.99 PLN
+                    </p>
+                    <p class="text-5xl font-black text-orange-600 mb-6">
+                        49.99 PLN
+                    </p>
+                    
+                    <label for="quantity" class="block text-lg font-semibold mb-2 text-gray-700">Ilość:</label>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <input type="number" id="quantity" value="1" min="1" max="10" 
+                               class="w-20 p-2 border-2 border-gray-300 rounded-lg text-center text-xl font-bold focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                        
+                        <button class="flex-1 purchase-button text-white font-extrabold py-4 px-6 rounded-xl text-xl uppercase shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-orange-300">
+                            Dodaj do koszyka
+                            <!-- Cart icon from Lucide (simulated via SVG) -->
+                            <svg class="w-6 h-6 ml-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </button>
+                    </div>
+
+                    <p class="text-sm text-green-600 font-semibold flex items-center">
+                         <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                        Dostępny od ręki. Wysyłka w 24h.
+                    </p>
+                </div>
+
+                <!-- Product Description -->
+                <div class="p-6 sm:p-8 bg-white rounded-xl card-shadow">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800 border-b pb-2">Opis produktu</h2>
+                    
+                    <p class="mb-4 text-lg leading-relaxed">
+                        Uwaga, Bohaterowie! CORE HUNTER sieje spustoszenie w Makuhero City! Ten złoczyńca, wyposażony w niesamowitą broń tnącą z możliwością transformacji i miotacz plazmy, jest wyjątkowo niebezpieczny. Jego specjalna zdolność to kradzież rdzeni energetycznych innych Bohaterów, co może ich na zawsze unieszkodliwić!
+                    </p>
+                    
+                    <p class="mb-4 text-lg leading-relaxed font-semibold text-blue-700">
+                        Niebezpieczeństwo na horyzoncie! Musisz go powstrzymać, zanim unieszkodliwi całą Hero Factory!
+                    </p>
+
+                    <h3 class="text-xl font-bold mt-6 mb-3 text-gray-700">Kluczowe funkcje i elementy:</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        <li>CORE HUNTER ma ponad 20 cm wysokości.</li>
+                        <li>Posiada masywną, transformującą broń tnącą.</li>
+                        <li>Zestaw zawiera miotacz plazmy montowany na ręce.</li>
+                        <li>Elementy z ruchomymi stawami i zbroją Hero Factory.</li>
+                        <li>Elementy w kolorze pomarańczowym i szarym, z niebieskim rdzeniem energetycznym.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="hero-factory-bg mt-12 p-6 text-white text-center text-sm">
+        <div class="max-w-7xl mx-auto opacity-75">
+            <p>&copy; 2025 Grupa LEGO. Wszelkie prawa zastrzeżone. Użycie tej witryny oznacza akceptację warunków użytkowania.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:underline">O nas</a>
+                <span class="text-gray-400">|</span>
+                <a href="#" class="hover:underline">Polityka prywatności</a>
+                <span class="text-gray-400">|</span>
+                <a href="#" class="hover:underline">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple function to handle quantity input change (for demonstration)
+        document.addEventListener('DOMContentLoaded', () => {
+            const quantityInput = document.getElementById('quantity');
+            quantityInput.addEventListener('change', (event) => {
+                let value = parseInt(event.target.value);
+                if (isNaN(value) || value < 1) {
+                    event.target.value = 1;
+                }
+                if (value > 10) {
+                    event.target.value = 10;
+                    alert('Możesz kupić maksymalnie 10 sztuk online.'); // Using a simulated custom modal in a real app
+                }
+            });
+            
+            const purchaseButton = document.querySelector('.purchase-button');
+            purchaseButton.addEventListener('click', () => {
+                const quantity = document.getElementById('quantity').value;
+                console.log(`Dodano do koszyka: Core Hunter x ${quantity}`);
+                
+                // In a real app, this would show a custom notification/modal
+                const cartMessage = document.createElement('div');
+                cartMessage.className = 'fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-xl animate-bounce';
+                cartMessage.textContent = `Dodano ${quantity}x Core Hunter do koszyka!`;
+                document.body.appendChild(cartMessage);
+                
+                setTimeout(() => {
+                    cartMessage.remove();
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
