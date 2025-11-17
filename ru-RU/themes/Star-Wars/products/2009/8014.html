@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8014 Боевой комплект Clone Walker™ (Шагающие роботы-клоны) - LEGO.com (Russia)</title>
+    <!-- Подключение Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Установка шрифта Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: #1f2937; /* Dark Gray */
+        }
+        /* Стилизация кнопки (имитация фирменного стиля LEGO) */
+        .lego-button {
+            background-color: #fce300; /* LEGO Yellow */
+            color: #1f2937;
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+        .lego-button:hover {
+            background-color: #f5d100;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        .price-text {
+            color: #0055a6; /* LEGO Blue for emphasis */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lego-red': '#cc0000',
+                        'lego-blue': '#0055a6',
+                        'lego-yellow': '#fce300',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <!-- Header / Навигация -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-2xl font-black text-lego-red">LEGO.com (Россия)</h1>
+            <!-- Иконка корзины (Placeholder) -->
+            <div class="text-xl p-2 rounded-full hover:bg-gray-100 cursor-pointer">
+                &#128722; <!-- Shopping Cart Emoji -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент продукта -->
+    <main class="max-w-3xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Название продукта -->
+        <div class="mb-4">
+            <p class="text-sm text-gray-500 mb-1">Star Wars™ / Боевые наборы</p>
+            <h2 class="text-3xl font-extrabold leading-tight text-gray-800">
+                8014 Боевой комплект Clone Walker™
+            </h2>
+        </div>
+        
+        <!-- Секция Изображения и Покупки (Адаптивный Grid/Flex) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white p-4 sm:p-6 rounded-xl shadow-lg">
+            
+            <!-- Колонка Изображения -->
+            <div>
+                <img 
+                    src="https://placehold.co/600x400/0073B7/FFFFFF?text=LEGO+8014\nClone+Walker" 
+                    alt="Изображение 8014 Боевой комплект Clone Walker™" 
+                    class="w-full h-auto rounded-lg object-cover shadow-md"
+                    onerror="this.onerror=null; this.src='https://placehold.co/600x400/CCCCCC/333333?text=Изображение+недоступно'"
+                >
+                <div class="mt-4 flex space-x-2 justify-center">
+                    <div class="w-2 h-2 bg-lego-red rounded-full"></div>
+                    <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                </div>
+            </div>
+
+            <!-- Колонка Деталей и Покупки -->
+            <div class="flex flex-col space-y-4">
+                
+                <!-- Цена -->
+                <div>
+                    <p class="text-lg text-gray-500 font-semibold">Цена</p>
+                    <p class="text-4xl font-black price-text mt-1">
+                        1 299 ₽
+                    </p>
+                </div>
+
+                <!-- Статус наличия -->
+                <div class="flex items-center space-x-2">
+                    <span class="text-green-600 text-xl">&#10003;</span> <!-- Checkmark -->
+                    <span class="text-green-600 font-bold">В наличии</span>
+                </div>
+
+                <!-- Кнопка Добавить в корзину -->
+                <button class="lego-button w-full py-3 rounded-xl font-bold uppercase text-lg tracking-wider focus:outline-none focus:ring-4 focus:ring-lego-yellow focus:ring-opacity-50">
+                    Добавить в корзину
+                </button>
+
+                <!-- Другие опции -->
+                <button class="w-full py-3 text-lego-blue border border-lego-blue rounded-xl font-semibold hover:bg-lego-blue hover:text-white transition">
+                    Найти в магазине
+                </button>
+
+                <!-- Характеристики -->
+                <div class="mt-4 pt-4 border-t border-gray-200 space-y-2">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">Артикул:</span>
+                        <span class="font-medium text-gray-800">8014</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">Возраст:</span>
+                        <span class="font-medium text-gray-800">6 - 12</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-gray-600">Количество деталей:</span>
+                        <span class="font-medium text-gray-800">72</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Описание продукта -->
+        <div class="mt-8 p-6 bg-white rounded-xl shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4 border-b pb-2">Описание продукта</h3>
+            <p class="text-gray-700 leading-relaxed">
+                Боевой комплект Clone Walker™ из серии LEGO <i>Star Wars</i>™ — идеальное дополнение для пополнения вашей армии клонов! Этот небольшой, но мощный шагающий робот, управляемый клоном-пехотинцем, готов к битве против сепаратистов. Он оснащен подвижными ногами и бластерной пушкой.
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mt-4 space-y-1">
+                <li class="pl-2">Включает 4 минифигурки: 2 клона-пехотинца, Клон-водитель и Боевой дроид.</li>
+                <li class="pl-2">Шагающий робот-клон имеет размеры более 8 см в высоту.</li>
+                <li class="pl-2">Компактный набор идеально подходит для быстрого развертывания войск и создания масштабных сражений.</li>
+            </ul>
+        </div>
+
+        <!-- Секция "Вам также может понравиться" -->
+        <div class="mt-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Вам также может понравиться</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <!-- Карта продукта 1 -->
+                <div class="bg-white p-3 rounded-lg shadow hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/150x150/B5CC00/FFFFFF?text=LEGO+SW" alt="Сопутствующий товар 1" class="w-full h-auto rounded-md mb-2">
+                    <p class="text-sm font-semibold truncate">Истребитель X-Wing</p>
+                    <p class="text-md font-bold text-gray-800">3 500 ₽</p>
+                </div>
+                <!-- Карта продукта 2 -->
+                <div class="bg-white p-3 rounded-lg shadow hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/150x150/FF8800/FFFFFF?text=LEGO+SW" alt="Сопутствующий товар 2" class="w-full h-auto rounded-md mb-2">
+                    <p class="text-sm font-semibold truncate">База на Хоте</p>
+                    <p class="text-md font-bold text-gray-800">7 890 ₽</p>
+                </div>
+                 <!-- Карта продукта 3 -->
+                <div class="bg-white p-3 rounded-lg shadow hover:shadow-xl transition duration-300 hidden sm:block">
+                    <img src="https://placehold.co/150x150/00A2C9/FFFFFF?text=LEGO+SW" alt="Сопутствующий товар 3" class="w-full h-auto rounded-md mb-2">
+                    <p class="text-sm font-semibold truncate">Миллениум Фалкон</p>
+                    <p class="text-md font-bold text-gray-800">12 999 ₽</p>
+                </div>
+                 <!-- Карта продукта 4 -->
+                <div class="bg-white p-3 rounded-lg shadow hover:shadow-xl transition duration-300 hidden sm:block">
+                    <img src="https://placehold.co/150x150/CC0000/FFFFFF?text=LEGO+SW" alt="Сопутствующий товар 4" class="w-full h-auto rounded-md mb-2">
+                    <p class="text-sm font-semibold truncate">Шаттл Кайло Рена</p>
+                    <p class="text-md font-bold text-gray-800">9 500 ₽</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer / Футер -->
+    <footer class="bg-gray-800 text-white mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+            <p>&copy; 2025 The LEGO Group. Все права защищены.</p>
+            <p class="mt-1">Политика конфиденциальности | Условия использования</p>
+        </div>
+    </footer>
+
+</body>
+</html>
