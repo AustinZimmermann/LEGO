@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO® Hero Factory - Produkty - 6283 - VOLTIX - LEGO.com (Polska)</title>
+    <!-- Ładowanie Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Konfiguracja Tailwind dla użycia niestandardowej czcionki -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'lego-blue': '#0058A8',
+                        'lego-red': '#E4002B',
+                        'hf-yellow': '#FFD700',
+                        'hf-black': '#1E1E1E',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Styl dla czcionki Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+    </style>
+</head>
+<body class="bg-gray-100 font-sans text-hf-black antialiased">
+
+    <!-- Nagłówek i Nawigacja (Mock) -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="text-2xl font-extrabold text-lego-blue tracking-tighter">
+                LEGO<span class="text-lego-red">.com</span>
+            </div>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="#" class="text-gray-700 hover:text-lego-blue transition duration-150">Sklep</a>
+                <a href="#" class="text-gray-700 hover:text-lego-blue transition duration-150">Odkryj</a>
+                <a href="#" class="text-gray-700 hover:text-lego-blue transition duration-150">Wsparcie</a>
+            </nav>
+            <button class="md:hidden text-hf-black p-2 rounded-md hover:bg-gray-100">
+                <!-- Ikona Menu (Lucide: Menu) -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Sekcja Strony Produktu -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- Ścieżka nawigacyjna (Breadcrumb) -->
+        <nav class="mb-4 text-sm text-gray-500" aria-label="Breadcrumb">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="#" class="hover:text-lego-blue">LEGO.com</a>
+                    <span class="mx-2">/</span>
+                </li>
+                <li class="flex items-center">
+                    <a href="#" class="hover:text-lego-blue">Hero Factory</a>
+                    <span class="mx-2">/</span>
+                </li>
+                <li class="text-gray-900 font-medium" aria-current="page">
+                    VOLTIX (6283)
+                </li>
+            </ol>
+        </nav>
+
+        <!-- Główna siatka produktu (Dwie kolumny na desktopie, jedna na mobile) -->
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12 bg-white p-6 rounded-xl shadow-lg">
+
+            <!-- Lewa Kolumna: Zdjęcie Produktu -->
+            <div class="lg:sticky lg:top-8 self-start">
+                <div class="w-full bg-gray-200 rounded-lg overflow-hidden border-4 border-hf-yellow/50">
+                    <!-- Placeholder dla zdjęcia produktu -->
+                    <img 
+                        src="https://placehold.co/800x800/222222/FFD700?text=VOLTIX+6283" 
+                        alt="Zestaw LEGO Hero Factory 6283 VOLTIX" 
+                        class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                    />
+                </div>
+                
+                <!-- Galeria (Miniatury) -->
+                <div class="hidden sm:flex mt-4 space-x-3 justify-center">
+                    <div class="w-16 h-16 bg-gray-300 rounded-md border-2 border-lego-blue cursor-pointer"></div>
+                    <div class="w-16 h-16 bg-gray-300 rounded-md opacity-60 hover:opacity-100 transition duration-150 cursor-pointer"></div>
+                    <div class="w-16 h-16 bg-gray-300 rounded-md opacity-60 hover:opacity-100 transition duration-150 cursor-pointer"></div>
+                </div>
+            </div>
+
+            <!-- Prawa Kolumna: Detale Produktu -->
+            <div class="mt-8 lg:mt-0">
+                <span class="text-sm font-semibold text-lego-red uppercase tracking-widest">LEGO Hero Factory</span>
+                <h1 class="text-4xl sm:text-5xl font-extrabold mt-1 leading-tight">VOLTIX</h1>
+                <p class="text-xl font-bold text-gray-600 mt-2">Nr zestawu: 6283</p>
+
+                <!-- Status i Cena -->
+                <div class="mt-6 flex items-baseline space-x-4">
+                    <span class="text-5xl font-extrabold text-hf-black">
+                        119,99 zł
+                    </span>
+                    <span class="text-xl text-gray-500 line-through">
+                        149,99 zł
+                    </span>
+                </div>
+
+                <div class="mt-2 text-green-600 font-semibold flex items-center">
+                    <!-- Ikona (Lucide: Check Circle) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle mr-1"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+                    Dostępny - Wysyłka w 1-2 dni robocze
+                </div>
+
+                <!-- Opis Produktu -->
+                <div class="mt-6 border-t pt-6">
+                    <h2 class="text-2xl font-bold mb-3">Opis Produktu</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        Voltix to zły geniusz, który wykorzystuje potężne uderzenia prądu do paraliżowania Bohaterów. Uważaj na jego pazury i plazmową wyrzutnię! To jeden z najgroźniejszych przeciwników, jakich wysłał do walki Von Nebula. Zbuduj go i przygotuj się na elektryzującą walkę!
+                    </p>
+                    <ul class="list-none mt-4 space-y-2 text-gray-700">
+                        <li class="flex items-center">
+                            <!-- Ikona (Lucide: Zap) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap text-hf-yellow mr-2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            Zawiera element rdzenia Hero Factory.
+                        </li>
+                        <li class="flex items-center">
+                            <!-- Ikona (Lucide: Hard Hat) -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-hard-hat text-lego-blue mr-2"><path d="M2 18V5l10-4 10 4v13"/><path d="M12 14v4"/><path d="M4 18h16"/></svg>
+                            Wysokość modelu po zbudowaniu: ok. 20 cm.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Kluczowe Informacje -->
+                <div class="mt-8 grid grid-cols-2 gap-4 text-center">
+                    <div class="bg-lego-blue text-white p-4 rounded-xl shadow-md">
+                        <p class="text-3xl font-extrabold">48</p>
+                        <p class="text-sm font-semibold uppercase opacity-90">Elementy</p>
+                    </div>
+                    <div class="bg-hf-black text-white p-4 rounded-xl shadow-md">
+                        <p class="text-3xl font-extrabold">7-14</p>
+                        <p class="text-sm font-semibold uppercase opacity-90">Wiek</p>
+                    </div>
+                </div>
+
+                <!-- Przyciski Akcji (CTA) -->
+                <div class="mt-8 space-y-4 sm:space-y-0 sm:flex sm:space-x-4">
+                    <button class="w-full sm:w-2/3 bg-lego-red hover:bg-lego-blue text-white font-bold py-3 px-6 rounded-xl shadow-lg transition duration-300 transform hover:scale-[1.02] text-lg uppercase tracking-wider" onclick="showMessage('Dodano VOLTIX (6283) do koszyka!')">
+                        Dodaj do koszyka
+                    </button>
+                    <button class="w-full sm:w-1/3 bg-gray-200 hover:bg-gray-300 text-hf-black font-semibold py-3 px-6 rounded-xl shadow transition duration-300 transform hover:scale-[1.02] text-lg" onclick="showMessage('Szukanie w pobliskich sklepach...')">
+                        Znajdź w sklepie
+                    </button>
+                </div>
+
+                <!-- Gwarancja satysfakcji -->
+                <div class="mt-6 text-center text-sm text-gray-500 border-t pt-4">
+                    <p>Darmowa dostawa przy zamówieniach powyżej 200 zł.</p>
+                    <p class="font-semibold">Bezproblemowe zwroty w ciągu 90 dni.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Stopka (Mock) -->
+    <footer class="bg-hf-black text-white mt-12 py-6">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2025 Grupa LEGO. Wszelkie prawa zastrzeżone. | <a href="#" class="underline hover:text-hf-yellow">Polityka Prywatności</a></p>
+        </div>
+    </footer>
+
+    <!-- Własny Moduł Komunikatów (Zamiast alert()) -->
+    <div id="message-box" class="fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-xl transform transition-transform duration-300 translate-y-full opacity-0 z-50">
+        <p id="message-text"></p>
+    </div>
+
+    <script>
+        /**
+         * Funkcja do wyświetlania niestandardowego komunikatu zamiast alert().
+         * @param {string} message - Tekst komunikatu do wyświetlenia.
+         */
+        function showMessage(message) {
+            const msgBox = document.getElementById('message-box');
+            const msgText = document.getElementById('message-text');
+
+            msgText.textContent = message;
+            
+            // Pokaż okno
+            msgBox.classList.remove('translate-y-full', 'opacity-0');
+            msgBox.classList.add('translate-y-0', 'opacity-100');
+
+            // Ukryj okno po 3 sekundach
+            setTimeout(() => {
+                msgBox.classList.remove('translate-y-0', 'opacity-100');
+                msgBox.classList.add('translate-y-full', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
