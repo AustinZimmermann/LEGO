@@ -1,20 +1,181 @@
-<!doctype html>
-<html lang="ru-RU">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-<title>Gold Leader’s Y-wing Starfighter™ (Звездный истребитель Y-wing Золотого Лидера) - 9495 - LEGO® Star Wars™ - Продукты - LEGO.com RU</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://pages-themes.github.io/cayman/assets/css/style.css">
+    <!-- Мета-теги для адаптивного дизайна и кодировки -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO® Star Wars™ - 9495 Gold Leader’s Y-wing Starfighter™ (Звездный истребитель Y-wing Золотого Лидера)</title>
+    <!-- Подключение Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Конфигурация Tailwind и шрифта Inter -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'star-black': '#1a1a2e',
+                        'star-dark': '#24243e',
+                        'rebel-gold': '#facc15',
+                        'light-saber': '#a8e6cf',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Установка основного шрифта и фона */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a2e; /* star-black */
+            color: #e5e7eb; /* Серый текст по умолчанию */
+            min-height: 100vh;
+        }
+        /* Стилизация заголовков и акцентов */
+        h1, h2 {
+            color: #facc15; /* rebel-gold */
+            font-weight: 700;
+        }
+        /* Стиль для кнопки "Купить сейчас" */
+        .buy-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(250, 204, 21, 0.4);
+        }
+        .buy-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(250, 204, 21, 0.6);
+            background-color: #eab308; /* Более темный золотой */
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif;">
-<main id="content" class="main-content" role="main">
-<h1>LEGO® <i>Star Wars</i>™</h1>
-<h2 style="font-weight: bold;">
-<span id="number">9495</span>
-<span id="title">Gold Leader’s Y-wing Starfighter™ (Звездный истребитель Y-wing Золотого Лидера)</span>
-</h2>
-<p><img src="https://www.lego.com/cdn/product-assets/product.img.pri/9495_prod.jpg"></p>
-<p>Воссоздавая напряженный финал фильма «Звездные войны. Эпизод IV: Новая надежда», Золотой Лидер Датч Вандер пролетает над поверхностью Звезды Смерти на своем истребителе Y-wing с функцией загрузки и сброса бомб, двойными ракетами, открывающимся кокпитом и вращающейся пушечной турелью. Готовясь сбросить бомбы, он уже представляет, как получит медаль из рук прекрасной принцессы Леи! В комплект входят 3 минифигурки: Золотой лидер Датч Вандер, церемониальная Лея с медалью и R2-A3.</p>
-<p style="font-size: 12px; text-align: center;">©2012 The LEGO Group. All rights reserved.</p>
-</main>  
+<body class="antialiased">
+
+    <!-- Заголовок и навигация (мобильная и десктопная) -->
+    <header class="bg-star-dark shadow-lg border-b border-rebel-gold/30 p-4 sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Логотип / Название магазина -->
+            <h1 class="text-xl md:text-2xl font-extrabold tracking-wider text-rebel-gold">
+                LEGO<span class="text-white mx-0.5">®</span> STAR WARS<span class="hidden sm:inline">™</span>
+            </h1>
+            <!-- Навигационное меню (для примера) -->
+            <nav class="hidden md:flex space-x-6 text-sm">
+                <a href="#" class="hover:text-rebel-gold transition-colors">Продукты</a>
+                <a href="#" class="hover:text-rebel-gold transition-colors">Коллекции</a>
+                <a href="#" class="hover:text-rebel-gold transition-colors">О нас</a>
+                <a href="#" class="hover:text-rebel-gold transition-colors">Контакты</a>
+            </nav>
+            <!-- Кнопка меню для мобильных устройств (неактивная) -->
+            <button class="md:hidden p-2 rounded-lg hover:bg-star-black/50 transition-colors">
+                <!-- Иконка гамбургера (inline SVG) -->
+                <svg class="w-6 h-6 text-rebel-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Основной контент страницы продукта -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <div class="max-w-6xl mx-auto bg-star-dark rounded-xl shadow-2xl overflow-hidden border border-rebel-gold/20">
+            
+            <!-- Заголовок продукта -->
+            <div class="p-6 sm:p-8 bg-star-black border-b border-rebel-gold/30">
+                <p class="text-sm uppercase tracking-widest text-gray-400 mb-1">LEGO® Star Wars™</p>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+                    Звездный истребитель Y-wing <span class="text-white">Золотого Лидера™</span>
+                </h2>
+                <p class="text-lg text-rebel-gold mt-2">Набор 9495 | Эпизод IV</p>
+            </div>
+
+            <!-- Секция Изображения и Деталей (Адаптивный Grid/Flex) -->
+            <div class="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Колонка изображения -->
+                <div class="lg:col-span-2">
+                    <div class="bg-gray-800 p-4 rounded-lg shadow-inner flex items-center justify-center">
+                        <!-- Заглушка изображения продукта -->
+                        <img 
+                            src="https://placehold.co/1200x600/1f2937/d1d5db?text=9495+Y-Wing+Starfighter" 
+                            alt="LEGO Star Wars 9495 Звездный истребитель Y-wing Золотого Лидера" 
+                            class="rounded-lg w-full h-auto object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/1200x600/1f2937/d1d5db?text=Изображение+Y-wing+недоступно';"
+                        >
+                    </div>
+                    <p class="text-center text-gray-500 text-xs mt-2">
+                        [Изображение Истребителя Y-Wing]
+                    </p>
+                </div>
+                
+                <!-- Колонка деталей/характеристик -->
+                <div class="lg:col-span-1 space-y-6">
+                    <!-- Блок характеристик -->
+                    <div class="p-4 bg-star-black rounded-lg border border-gray-700 shadow-md">
+                        <h3 class="text-2xl font-bold mb-3 text-rebel-gold">Характеристики</h3>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-center">
+                                <!-- SVG Иконка набора -->
+                                <svg class="w-5 h-5 mr-3 text-light-saber" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                <span>Номер набора: <span class="font-semibold text-white">9495</span></span>
+                            </li>
+                            <li class="flex items-center">
+                                <!-- SVG Иконка деталей -->
+                                <svg class="w-5 h-5 mr-3 text-light-saber" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                                <span>Количество деталей: <span class="font-semibold text-white">458</span></span>
+                            </li>
+                            <li class="flex items-center">
+                                <!-- SVG Иконка возраста -->
+                                <svg class="w-5 h-5 mr-3 text-light-saber" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                <span>Рекомендуемый возраст: <span class="font-semibold text-white">8-14</span></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Блок минифигурок -->
+                    <div class="p-4 bg-star-black rounded-lg border border-gray-700 shadow-md">
+                        <h3 class="text-2xl font-bold mb-3 text-rebel-gold">Минифигурки</h3>
+                        <ul class="list-disc list-inside space-y-1 text-gray-300 pl-2">
+                            <li><span class="font-semibold text-white">Золотой Лидер</span> (Dutch Vander)</li>
+                            <li><span class="font-semibold text-white">R5-F7</span> (Астромеханический дроид)</li>
+                            <li><span class="font-semibold text-white">Датч Вандер</span> (Золотой Лидер)</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Кнопка покупки -->
+                    <button class="buy-button w-full py-4 text-lg font-bold bg-rebel-gold text-star-dark rounded-lg uppercase tracking-wider">
+                        Купить сейчас (2500 RUB)
+                    </button>
+                    <p class="text-center text-sm text-gray-400">
+                        Ограниченное издание!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Секция Описание и Особенности -->
+            <div class="p-6 sm:p-8 bg-star-black border-t border-rebel-gold/30">
+                <h3 class="text-2xl font-bold mb-4 text-rebel-gold">Обзор продукта и особенности</h3>
+                <p class="text-gray-300 leading-relaxed mb-6">
+                    Воспроизведите легендарные битвы из фильма «Звездные войны. Эпизод IV: Новая надежда» с этим культовым набором. Звездный истребитель Y-wing Золотого Лидера™ — это классический боевой корабль Альянса повстанцев, оснащенный всем необходимым для уничтожения Звезды Смерти.
+                </p>
+                <h4 class="text-xl font-semibold mb-3 text-light-saber">Основные особенности набора:</h4>
+                <ul class="list-disc list-inside space-y-2 text-gray-300 pl-4">
+                    <li>Открывающаяся кабина для размещения минифигурки Золотого Лидера.</li>
+                    <li>Вместительный отсек для астромеханического дроида R5-F7.</li>
+                    <li>Рабочие торпедные установки для атаки на имперские силы.</li>
+                    <li>Высокодетализированный дизайн с элементами «старости и износа».</li>
+                    <li>Шасси, которое можно убирать или выпускать.</li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Футер -->
+    <footer class="mt-10 p-4 text-center text-gray-500 text-sm border-t border-star-dark">
+        <div class="max-w-7xl mx-auto">
+            <p>LEGO® и логотип LEGO являются торговыми марками The LEGO Group. ©2025 The LEGO Group. STAR WARS™ и соответствующие свойства являются торговыми марками Lucasfilm Ltd. LLC.</p>
+            <p class="mt-1">GitHub Pages Edition (Россия) | Все права защищены.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
