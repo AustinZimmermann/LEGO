@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO® BIONICLE® | 70786 Gali – Władczyni Wody | LEGO.com PL</title>
+    <!-- Ładowanie Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Konfiguracja czcionki Inter dla lepszej estetyki */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f4; /* Jasne tło */
+            color: #1f2937; /* Ciemny tekst */
+        }
+        .lego-blue {
+            background-color: #005a9c; /* Typowy LEGO Blue */
+        }
+        .lego-yellow {
+            background-color: #ffc900; /* Akcent LEGO Yellow */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Nagłówek i Nawigacja (LEGO.com style simplified) -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-extrabold text-lego-blue tracking-tighter">LEGO.com</a>
+                
+                <!-- Nawigacja dla urządzeń mobilnych -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-lego-blue font-medium transition duration-150">Sklep</a>
+                    <a href="#" class="text-gray-600 hover:text-lego-blue font-medium transition duration-150">Produkty</a>
+                    <a href="#" class="text-gray-600 hover:text-lego-blue font-medium transition duration-150">Pomoc</a>
+                </nav>
+
+                <!-- Ikony użytkownika/koszyka -->
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-lego-blue p-2 rounded-full hover:bg-gray-100 transition duration-150">
+                        <!-- Ikona Szukaj (SVG) -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    </button>
+                    <button class="text-gray-600 hover:text-lego-blue p-2 rounded-full hover:bg-gray-100 transition duration-150">
+                        <!-- Ikona Koszyk (SVG) -->
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 010 4 2 2 0 010-4zm-8 2a2 2 010 4 2 2 0 010-4z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Główna Sekcja Produktu -->
+    <main class="flex-grow max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        
+        <!-- Ścieżka nawigacji (Breadcrumb) -->
+        <nav class="text-sm mb-4 text-gray-500 hidden sm:block">
+            <a href="#" class="hover:text-lego-blue">LEGO®</a> / 
+            <a href="#" class="hover:text-lego-blue">BIONICLE®</a> / 
+            <span class="font-semibold">70786 Gali – Władczyni Wody</span>
+        </nav>
+
+        <!-- Karta Produktu -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden lg:flex lg:space-x-8 p-6">
+            
+            <!-- Lewa kolumna: Obraz -->
+            <div class="lg:w-1/2 flex justify-center items-center p-4">
+                <!-- Obrazek - używamy placeholder'a z motywem BIONICLE -->
+                <img 
+                    src="https://placehold.co/600x600/005a9c/ffffff?text=Gali%20BIONICLE%2070786" 
+                    alt="" 
+                    class="w-full h-auto max-w-md object-contain rounded-lg shadow-xl border-4 border-lego-yellow transition duration-300 hover:scale-[1.02]"
+                >
+            </div>
+
+            <!-- Prawa kolumna: Informacje o Produkcie -->
+            <div class="lg:w-1/2 mt-6 lg:mt-0 flex flex-col justify-between">
+                <div>
+                    <span class="text-sm font-semibold text-lego-blue uppercase tracking-wider">LEGO® BIONICLE®</span>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-800 mt-2 leading-tight">Gali – Władczyni Wody</h1>
+                    <p class="text-xl text-gray-500 mt-2">Nr zestawu: 70786</p>
+                    
+                    <!-- Cena -->
+                    <div class="my-6">
+                        <span class="text-4xl font-bold text-red-600">89,99 zł</span>
+                        <span class="text-lg text-gray-500 ml-3"> (w magazynie)</span>
+                    </div>
+
+                    <!-- Kluczowe cechy -->
+                    <ul class="space-y-2 text-gray-700 list-disc list-inside">
+                        <li>Liczba elementów: 105</li>
+                        <li>Wiek: 7-14</li>
+                        <li>Wysokość modelu: ok. 21 cm</li>
+                        <li>Zawiera maskę mocy BIONICLE® i podwójne ostrze wodne!</li>
+                    </ul>
+                </div>
+
+                <!-- Przycisk CTA i Opcje -->
+                <div class="mt-8 space-y-4">
+                    
+                    <!-- Przycisk Dodaj do koszyka -->
+                    <button class="w-full flex items-center justify-center lego-blue text-white font-bold py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-[1.01] text-xl uppercase tracking-wider">
+                        <!-- Ikona koszyka -->
+                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 010 4 2 2 0 010-4zm-8 2a2 2 010 4 2 2 0 010-4z"></path></svg>
+                        Dodaj do koszyka
+                    </button>
+                    
+                    <!-- Przycisk Lista życzeń -->
+                    <button class="w-full bg-white border-2 border-lego-blue text-lego-blue font-bold py-3 px-6 rounded-lg hover:bg-gray-50 transition duration-300">
+                        Dodaj do listy życzeń
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sekcja Opisu i Recenzji -->
+        <div class="mt-12 bg-white rounded-xl shadow-lg p-6 sm:p-8">
+            
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 pb-2 border-gray-200">Opis Produktu</h2>
+
+            <!-- Opis Gali -->
+            <p class="text-gray-700 mb-6 leading-relaxed">
+                Staw czoła siłom zła jako Gali – Władczyni Wody! Ten imponujący model BIONICLE® ma głowę BIONICLE® z maską i przyciskiem zwalniającym maskę, 6 złotych osłon, dekorację na klatkę piersiową o tematyce wodnej i przegubowe połączenia.
+                Odeprzyj atak Pająka Zagłady, używając potężnego podwójnego ostrza wodnego w obu dłoniach! Zmień ostrze w turbinę wodną, aby móc przelecieć nad oceanem i zebrać potężną złotą maskę.
+            </p>
+
+            <!-- Cechy i Funkcje -->
+            <h3 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Cechy zestawu:</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-700">
+                <div class="flex items-start space-x-3">
+                    <span class="text-lego-blue font-extrabold text-xl">&#10003;</span>
+                    <p>Posiada głowę BIONICLE® z przyciskiem zwalniającym maskę i 6 złotymi osłonami.</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <span class="text-lego-blue font-extrabold text-xl">&#10003;</span>
+                    <p>W zestawie Pająk Zagłady w kolorze zieleni morskiej.</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <span class="text-lego-blue font-extrabold text-xl">&#10003;</span>
+                    <p>Ruchome stawy i przeguby pozwalają na ustawianie Gali w dynamicznych pozach bojowych.</p>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <span class="text-lego-blue font-extrabold text-xl">&#10003;</span>
+                    <p>Zbuduj model Gali – Władczyni Wody w zupełnie nowy sposób.</p>
+                </div>
+            </div>
+
+            <!-- Sekcja "Recenzje" (Placeholder) -->
+            <h3 class="text-2xl font-semibold text-gray-800 mt-10 mb-4 border-t pt-6">Recenzje Klientów (4.8/5)</h3>
+            <p class="text-gray-500 italic">Brak recenzji dla tego produktu. Bądź pierwszy i podziel się swoją opinią!</p>
+
+        </div>
+    </main>
+
+    <!-- Stopka -->
+    <footer class="lego-blue text-white mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">O nas</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Grupa LEGO</a></li>
+                        <li><a href="#" class="hover:underline">Aktualności LEGO</a></li>
+                        <li><a href="#" class="hover:underline">Praca</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Wsparcie</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Kontakt</a></li>
+                        <li><a href="#" class="hover:underline">Instrukcje budowania</a></li>
+                        <li><a href="#" class="hover:underline">Części zamienne</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3 text-lg">Atrakcje</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">LEGO Life</a></li>
+                        <li><a href="#" class="hover:underline">Gry LEGO</a></li>
+                        <li><a href="#" class="hover:underline">Wideo</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <h4 class="font-bold mb-3 text-lg">Social Media</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <!-- Placeholder na ikony social mediów -->
+                        <span class="p-2 bg-white text-lego-blue rounded-full">F</span>
+                        <span class="p-2 bg-white text-lego-blue rounded-full">Y</span>
+                        <span class="p-2 bg-white text-lego-blue rounded-full">I</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-blue-700 text-xs text-center">
+                &copy; 2025 Grupa LEGO. Wszelkie prawa zastrzeżone.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
