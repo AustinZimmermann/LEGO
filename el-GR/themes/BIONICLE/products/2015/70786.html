@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Γκάλι – Κυρίαρχος του Νερού 70786 | BIONICLE® | LEGO® Shop GR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #f8f8f8;
+        }
+        .lego-yellow { background-color: #ffcf00; }
+        .lego-red { background-color: #d01012; }
+        .lego-blue { background-color: #006db7; }
+        .btn-primary {
+            background-color: #fd8024;
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover { background-color: #e06000; }
+        
+        /* Custom Scrollbar for thumbnails */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-gray-900">
+
+    <!-- Announcement Bar -->
+    <div class="bg-blue-100 text-center py-2 text-xs font-bold text-blue-900 px-4">
+        ΔΩΡΕΑΝ ΑΠΟΣΤΟΛΗ για παραγγελίες άνω των 55 €!
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="lego-yellow h-2 w-full"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Left Section: Logo & Nav -->
+                <div class="flex items-center">
+                    <button class="p-2 rounded-md lg:hidden hover:bg-gray-100 mr-2">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                    
+                    <a href="#" class="flex-shrink-0">
+                        <div class="lego-red text-white w-12 h-12 flex items-center justify-center font-bold text-xl italic border-2 border-white shadow-sm">
+                            LEGO
+                        </div>
+                    </a>
+
+                    <nav class="hidden lg:flex ml-8 space-x-8">
+                        <a href="#" class="text-sm font-bold hover:underline decoration-2 decoration-yellow-400 underline-offset-4">ΘΕΜΑΤΑ</a>
+                        <a href="#" class="text-sm font-bold hover:underline decoration-2 decoration-yellow-400 underline-offset-4">ΑΓΟΡΕΣ</a>
+                        <a href="#" class="text-sm font-bold hover:underline decoration-2 decoration-yellow-400 underline-offset-4">ΑΝΑΚΑΛΥΨΕ</a>
+                        <a href="#" class="text-sm font-bold hover:underline decoration-2 decoration-yellow-400 underline-offset-4">ΒΟΗΘΕΙΑ</a>
+                    </nav>
+                </div>
+
+                <!-- Right Section: Search & Cart -->
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 rounded-full hover:bg-gray-100 hidden sm:block">
+                        <i data-lucide="search" class="h-6 w-6"></i>
+                    </button>
+                    <button class="p-2 rounded-full hover:bg-gray-100 relative">
+                        <i data-lucide="shopping-bag" class="h-6 w-6"></i>
+                        <span class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-white transform translate-x-1/4 -translate-y-1/4 bg-blue-600 rounded-full">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Breadcrumbs -->
+        <nav class="flex text-xs text-gray-500 mb-6 overflow-x-auto whitespace-nowrap scrollbar-hide" aria-label="Breadcrumb">
+            <ol class="flex items-center space-x-2">
+                <li><a href="#" class="hover:underline">Αρχική</a></li>
+                <li><span class="mx-1">/</span></li>
+                <li><a href="#" class="hover:underline">Θέματα</a></li>
+                <li><span class="mx-1">/</span></li>
+                <li><a href="#" class="hover:underline">BIONICLE®</a></li>
+                <li><span class="mx-1">/</span></li>
+                <li class="font-bold text-gray-900">Γκάλι – Κυρίαρχος του Νερού</li>
+            </ol>
+        </nav>
+
+        <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+            <!-- Image Gallery -->
+            <div class="flex flex-col space-y-4">
+                <div class="bg-white rounded-lg p-8 flex items-center justify-center shadow-sm border border-gray-100 aspect-square relative overflow-hidden group">
+                    <!-- SVG Visualization of Gali -->
+                    <svg class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="galiWater" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- Background Element -->
+                        <circle cx="200" cy="200" r="160" fill="#f0f9ff" />
+                        
+                        <!-- Gali Figure Representation -->
+                        <!-- Body Armor -->
+                        <path d="M160 140 L240 140 L230 240 L170 240 Z" fill="#006db7" stroke="#004080" stroke-width="2" />
+                        <rect x="185" y="160" width="30" height="40" fill="silver" />
+                        
+                        <!-- Mask (Kaukau style) -->
+                        <path d="M170 90 L230 90 L240 130 L200 150 L160 130 Z" fill="url(#galiWater)" stroke="#005c99" stroke-width="2" />
+                        <circle cx="185" cy="110" r="5" fill="#ffff00" filter="url(#glow)" /> <!-- Eye -->
+                        <circle cx="215" cy="110" r="5" fill="#ffff00" filter="url(#glow)" /> <!-- Eye -->
+                        
+                        <!-- Limbs -->
+                        <rect x="120" y="140" width="30" height="90" rx="5" fill="#333" /> <!-- Left Arm -->
+                        <rect x="250" y="140" width="30" height="90" rx="5" fill="#333" /> <!-- Right Arm -->
+                        <rect x="150" y="240" width="35" height="100" rx="5" fill="#006db7" /> <!-- Left Leg -->
+                        <rect x="215" y="240" width="35" height="100" rx="5" fill="#006db7" /> <!-- Right Leg -->
+
+                        <!-- Shark Fins on Feet -->
+                        <path d="M130 340 L150 300 L190 340 Z" fill="silver" stroke="#666" stroke-width="1" />
+                        <path d="M210 340 L250 300 L270 340 Z" fill="silver" stroke="#666" stroke-width="1" />
+
+                        <!-- Elemental Trident (Weapon) -->
+                        <g transform="translate(280, 120) rotate(-15)">
+                            <rect x="-5" y="0" width="10" height="180" fill="#333" />
+                            <path d="M-30 0 L0 60 L30 0 L0 -80 Z" fill="gold" stroke="#b8860b" stroke-width="2" /> <!-- Blade Head -->
+                            <path d="M-30 0 L-40 -40" stroke="silver" stroke-width="4" />
+                            <path d="M30 0 L40 -40" stroke="silver" stroke-width="4" />
+                        </g>
+                        
+                        <text x="200" y="380" font-family="Arial" font-size="14" text-anchor="middle" fill="#aaa">Εικόνα Προσομοίωσης Σετ 70786</text>
+                    </svg>
+                    
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-yellow-400 text-black text-xs font-bold px-2 py-1 uppercase tracking-wide">Αποσυρθηκε</span>
+                    </div>
+                </div>
+                
+                <!-- Thumbnail Strip -->
+                <div class="flex space-x-4 overflow-x-auto pb-2 scrollbar-hide">
+                    <button class="w-20 h-20 bg-white border-2 border-blue-500 rounded-md p-2 flex-shrink-0">
+                        
+                    </button>
+                    <button class="w-20 h-20 bg-white border border-gray-200 rounded-md p-2 flex-shrink-0 hover:border-gray-400">
+                        
+                    </button>
+                    <button class="w-20 h-20 bg-white border border-gray-200 rounded-md p-2 flex-shrink-0 hover:border-gray-400">
+                        
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="mt-8 lg:mt-0">
+                <div class="border-b border-gray-200 pb-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-sm font-semibold text-gray-500">BIONICLE®</span>
+                        <div class="flex items-center text-yellow-500">
+                            <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            <i data-lucide="star" class="h-4 w-4 fill-current"></i>
+                            <span class="text-gray-600 text-sm ml-1">(5.0)</span>
+                        </div>
+                    </div>
+                    <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Γκάλι – Κυρίαρχος του Νερού</h1>
+                    <div class="flex items-center space-x-4 text-sm text-gray-600 mb-4">
+                        <span class="flex items-center"><i data-lucide="hash" class="h-3 w-3 mr-1"></i> 70786</span>
+                        <span class="flex items-center"><i data-lucide="smile" class="h-3 w-3 mr-1"></i> 7-14 Ετών</span>
+                        <span class="flex items-center"><i data-lucide="package" class="h-3 w-3 mr-1"></i> 87 Κομμάτια</span>
+                    </div>
+                    <div class="text-2xl font-bold text-gray-900">19,99 €</div>
+                    <p class="text-sm text-gray-500 mt-1">Η τιμή περιλαμβάνει ΦΠΑ.</p>
+                </div>
+
+                <!-- Actions -->
+                <div class="py-6">
+                    <div class="bg-gray-100 p-4 rounded-md mb-6 flex items-start">
+                        <i data-lucide="info" class="h-5 w-5 text-gray-600 mt-0.5 mr-3 flex-shrink-0"></i>
+                        <p class="text-sm text-gray-700">Αυτό το προϊόν έχει αποσυρθεί και δεν είναι πλέον διαθέσιμο για αγορά στο LEGO.com.</p>
+                    </div>
+                    
+                    <div class="flex flex-col gap-3">
+                        <button disabled class="w-full btn-primary text-white font-bold py-4 px-6 rounded-full opacity-50 cursor-not-allowed flex items-center justify-center">
+                            <i data-lucide="shopping-bag" class="h-5 w-5 mr-2"></i>
+                            Εξαντλήθηκε
+                        </button>
+                        <button class="w-full bg-blue-50 text-blue-600 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition-colors flex items-center justify-center">
+                            <i data-lucide="heart" class="h-5 w-5 mr-2"></i>
+                            Προσθήκη στη Λίστα Επιθυμιών
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Quick Benefits -->
+                <div class="grid grid-cols-2 gap-4 text-center">
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <i data-lucide="book-open" class="h-6 w-6 mx-auto text-blue-600 mb-2"></i>
+                        <span class="text-xs font-bold block">Οδηγίες Κατασκευής</span>
+                    </div>
+                    <div class="p-4 bg-gray-50 rounded-lg">
+                        <i data-lucide="shield-check" class="h-6 w-6 mx-auto text-green-600 mb-2"></i>
+                        <span class="text-xs font-bold block">Εγγύηση Ποιότητας</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details Section -->
+        <div class="mt-16 bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="border-b border-gray-200 bg-gray-50 px-6 py-4">
+                <h2 class="text-xl font-bold text-gray-900">Περιγραφή Προϊόντος</h2>
+            </div>
+            
+            <div class="p-6 lg:p-10 text-gray-800 leading-relaxed">
+                <div class="max-w-3xl">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-900">Διεκδίκησε τη Χρυσή Μάσκα του Νερού!</h3>
+                    <p class="mb-6">
+                        Ετοιμάσου για μια επική υποβρύχια μονομαχία για να διεκδικήσεις την πολύτιμη Χρυσή Μάσκα του Νερού! 
+                        Προσάρτησε τα πτερύγια καρχαρία στα πόδια της Γκάλι – Κυρίαρχου του Νερού και βούτηξε βαθιά στα 
+                        αρχαία ερείπια στον κρατήρα του ωκεανού.
+                    </p>
+                    <p class="mb-6">
+                        Σύνδεσε τα πτερύγια στο καμάκι για να δημιουργήσεις μια ισχυρή <strong>Στοιχειακή Τρίαινα</strong> και 
+                        να επιτεθείς στην Αράχνη-Νεκροκεφαλή. Ενεργοποίησε τον βραχίονα μάχης για να αποκρούσεις τις προσπάθειές της 
+                        να πετάξει τη μάσκα της Γκάλι. Η πανίσχυρη Χρυσή Μάσκα πρέπει να προστατευτεί πάση θυσία από τις κακές δυνάμεις!
+                    </p>
+
+                    <h4 class="font-bold text-lg mb-3 mt-8">Χαρακτηριστικά:</h4>
+                    <ul class="list-disc list-inside space-y-2 mb-6 marker:text-blue-500">
+                        <li>Διαθέτει κεφάλι BIONICLE® με μάσκα και κουμπί απόρριψης μάσκας, 2 κελύφη BIONICLE, φυλετική διακόσμηση στο στήθος, 2 πτερύγια καρχαρία.</li>
+                        <li><strong>Μετατρεπόμενο όπλο:</strong> Συνδύασε το καμάκι με τα πτερύγια για να φτιάξεις την Στοιχειακή Τρίαινα.</li>
+                        <li>Λειτουργία βραχίονα μάχης με χειριστήριο (γρανάζι) στην πλάτη.</li>
+                        <li>Περιλαμβάνει επίσης τη <strong>Χρυσή Μάσκα του Νερού</strong> και μια ασημένια Αράχνη-Νεκροκεφαλή (Skull Spider).</li>
+                        <li>Βούτηξε στο βυθό του ωκεανού σε λειτουργία πτερυγίων καρχαρία.</li>
+                        <li>Γύρισε τον τροχό για να ενεργοποιήσεις το χτύπημα του βραχίονα μάχης.</li>
+                        <li>Μην αφήσεις την Αράχνη-Νεκροκεφαλή να πετάξει τη μάσκα της Γκάλι!</li>
+                        <li>Εξαιρετικά ευλύγιστη και ανθεκτική φιγούρα για έντονο παιχνίδι δράσης.</li>
+                        <li>Συνδύασέ το με το <strong>70780 LEGO® BIONICLE® Προστάτης του Νερού</strong> για να ενισχύσεις τη δύναμη για την απόλυτη στοιχειακή μάχη!</li>
+                        <li>Έχει ύψος πάνω από 21 εκατοστά.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recommended Section -->
+        <div class="mt-12 mb-12">
+            <h3 class="text-xl font-bold mb-6">Συνδύασέ το με</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Combine Item -->
+                <div class="group cursor-pointer relative">
+                    <div class="bg-white rounded-lg aspect-square mb-3 p-4 flex items-center justify-center border border-gray-100 group-hover:shadow-md transition-shadow">
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mb-2">
+                                <i data-lucide="plus" class="h-8 w-8"></i>
+                            </div>
+                            <span class="text-xs font-bold text-gray-400">POWER UP</span>
+                        </div>
+                    </div>
+                    <h4 class="font-bold text-sm group-hover:underline text-blue-700">Προστάτης του Νερού</h4>
+                    <p class="text-xs text-gray-500">70780</p>
+                    <p class="font-bold text-sm mt-1">14,99 €</p>
+                </div>
+                 <!-- Other Master -->
+                 <div class="group cursor-pointer">
+                    <div class="bg-white rounded-lg aspect-square mb-3 p-4 flex items-center justify-center border border-gray-100 group-hover:shadow-md transition-shadow">
+                        <div class="w-20 h-20 bg-red-200 rounded-full opacity-50"></div>
+                    </div>
+                    <h4 class="font-bold text-sm group-hover:underline">Τάχου – Κυρίαρχος της Φωτιάς</h4>
+                    <p class="text-xs text-gray-500">70787</p>
+                    <p class="font-bold text-sm mt-1">19,99 €</p>
+                </div>
+                 <!-- Other Master -->
+                 <div class="group cursor-pointer">
+                    <div class="bg-white rounded-lg aspect-square mb-3 p-4 flex items-center justify-center border border-gray-100 group-hover:shadow-md transition-shadow">
+                        <div class="w-20 h-20 bg-green-200 rounded-full opacity-50"></div>
+                    </div>
+                    <h4 class="font-bold text-sm group-hover:underline">Λέβα – Κυρίαρχος της Ζούγκλας</h4>
+                    <p class="text-xs text-gray-500">70784</p>
+                    <p class="font-bold text-sm mt-1">14,99 €</p>
+                </div>
+                 <!-- Other Master -->
+                 <div class="group cursor-pointer">
+                    <div class="bg-white rounded-lg aspect-square mb-3 p-4 flex items-center justify-center border border-gray-100 group-hover:shadow-md transition-shadow">
+                        <div class="w-20 h-20 bg-black rounded-full opacity-20"></div>
+                    </div>
+                    <h4 class="font-bold text-sm group-hover:underline">Ονούα – Κυρίαρχος της Γης</h4>
+                    <p class="text-xs text-gray-500">70789</p>
+                    <p class="font-bold text-sm mt-1">19,99 €</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            <div>
+                <h5 class="font-bold mb-4 text-yellow-400">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</h5>
+                <ul class="space-y-2 text-sm text-blue-100">
+                    <li><a href="#" class="hover:text-white">Σχετικά με τον Όμιλο LEGO</a></li>
+                    <li><a href="#" class="hover:text-white">Νέα LEGO®</a></li>
+                    <li><a href="#" class="hover:text-white">Βιωσιμότητα</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4 text-yellow-400">ΥΠΟΣΤΗΡΙΞΗ</h5>
+                <ul class="space-y-2 text-sm text-blue-100">
+                    <li><a href="#" class="hover:text-white">Επικοινωνία</a></li>
+                    <li><a href="#" class="hover:text-white">Βρείτε οδηγίες κατασκευής</a></li>
+                    <li><a href="#" class="hover:text-white">Ανταλλακτικά</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4 text-yellow-400">ΑΞΙΟΘΕΑΤΑ</h5>
+                <ul class="space-y-2 text-sm text-blue-100">
+                    <li><a href="#" class="hover:text-white">LEGO® House</a></li>
+                    <li><a href="#" class="hover:text-white">LEGOLAND® Parks</a></li>
+                </ul>
+            </div>
+             <div>
+                <h5 class="font-bold mb-4 text-yellow-400">ΠΕΡΙΣΣΟΤΕΡΑ ΑΠΟ ΕΜΑΣ</h5>
+                <ul class="space-y-2 text-sm text-blue-100">
+                    <li><a href="#" class="hover:text-white">LEGO® LIFE</a></li>
+                    <li><a href="#" class="hover:text-white">LEGO Education</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-blue-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-blue-300">
+            <div class="mb-4 md:mb-0">
+                <p>LEGO, το λογότυπο LEGO, η Minifigure, BIONICLE και το λογότυπο BIONICLE είναι εμπορικά σήματα του Ομίλου LEGO. ©2025 The LEGO Group.</p>
+            </div>
+            <div class="flex space-x-4">
+                <a href="#" class="hover:text-white">Πολιτική Απορρήτου</a>
+                <a href="#" class="hover:text-white">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
