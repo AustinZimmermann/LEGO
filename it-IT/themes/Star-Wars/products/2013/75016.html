@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>75016 Homing Spider Droid™ - LEGO® Star Wars™</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for Star Wars theme and general aesthetics */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8; /* Light grey background */
+            color: #333;
+        }
+        
+        .star-wars-blue {
+            background-color: #0073e6; /* Bright blue for accents */
+        }
+        
+        .lego-red-bg {
+            background-color: #e60012; /* Iconic LEGO Red */
+        }
+
+        .lego-text-red {
+            color: #e60012;
+        }
+
+        .product-card-shadow {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .gradient-star-wars {
+            background: linear-gradient(90deg, #1f2937, #374151); /* Dark grey to medium grey */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header & Navigation -->
+    <header class="gradient-star-wars text-white shadow-lg sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            
+            <!-- LEGO Logo -->
+            <div class="text-3xl font-extrabold tracking-tight">
+                <span class="lego-text-red">LEGO</span>
+                <span class="text-white">.com</span>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="#" class="hover:text-yellow-400 transition">Acquista</a>
+                <a href="#" class="hover:text-yellow-400 transition">Scopri</a>
+                <a href="#" class="hover:text-yellow-400 transition">Assistenza</a>
+                <a href="#" class="star-wars-blue px-3 py-1 rounded-full hover:bg-blue-600 transition"><i>STAR WARS</i>™</a>
+            </nav>
+            
+            <!-- Account/Cart Icons (Placeholder) -->
+            <div class="flex items-center space-x-4">
+                <button class="text-xl hover:text-yellow-400 transition" aria-label="Cerca">🔍</button>
+                <button class="text-xl hover:text-yellow-400 transition" aria-label="Account">👤</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content - Product Page -->
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        
+        <!-- Breadcrumb -->
+        <div class="text-sm text-gray-500 mb-6">
+            <a href="#" class="hover:underline">LEGO.com</a> > <a href="#" class="hover:underline"><i>Star Wars</i>™</a> > 75016 Homing Spider Droid™
+        </div>
+
+        <!-- Product Details Grid -->
+        <div class="bg-white p-6 md:p-10 rounded-xl product-card-shadow">
+            
+            <h1 class="text-3xl md:text-4xl font-bold mb-4 lego-text-red">
+                75016 Homing Spider Droid™
+            </h1>
+            <p class="text-xl text-gray-700 mb-6 font-semibold">
+                Tema: LEGO® <i>Star Wars</i>™ | Anno: 2013
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Product Image Area -->
+                <div class="lg:col-span-2 bg-gray-100 p-4 rounded-lg flex items-center justify-center border border-gray-300">
+                    <div class="text-center">
+                        <img 
+                            src="https://placehold.co/600x400/1f2937/fff?text=Immagine+Set+75016" 
+                            alt="Homing Spider Droid" 
+                            class="w-full max-w-sm mx-auto rounded-lg"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/1f2937/fff?text=Immagine+Non+Disponibile';"
+                        >
+                        <p class="mt-4 text-gray-500 text-sm">LEGO® Star Wars™: Homing Spider Droid</p>
+                    </div>
+                </div>
+
+                <!-- Product Information & Purchase -->
+                <div class="lg:col-span-1 flex flex-col space-y-6">
+                    
+                    <!-- Pricing & Status -->
+                    <div class="p-4 rounded-lg border-2 border-green-500 bg-green-50">
+                        <p class="text-2xl font-bold text-green-700 mb-2">
+                            Prezzo: 49,99 €
+                        </p>
+                        <p class="text-sm text-green-600 font-medium">
+                            ✅ In stock. Spedizione gratuita oltre i 55 €!
+                        </p>
+                    </div>
+
+                    <!-- Key Stats -->
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="p-3 bg-gray-50 border rounded-lg">
+                            <p class="text-3xl font-extrabold star-wars-blue">295</p>
+                            <p class="text-xs font-semibold uppercase text-gray-600 mt-1">Pezzi</p>
+                        </div>
+                        <div class="p-3 bg-gray-50 border rounded-lg">
+                            <p class="text-3xl font-extrabold star-wars-blue">4</p>
+                            <p class="text-xs font-semibold uppercase text-gray-600 mt-1">Minifigure</p>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="flex flex-col space-y-3 pt-2">
+                        <label for="quantity" class="text-sm font-medium text-gray-700">Quantità:</label>
+                        <select id="quantity" class="p-3 border border-gray-300 rounded-lg shadow-sm focus:ring-star-wars-blue focus:border-star-wars-blue">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button class="w-full py-4 text-lg font-bold text-white lego-red-bg rounded-lg shadow-xl hover:bg-red-700 transition transform hover:scale-105 active:scale-100">
+                            Aggiungi al Carrello
+                        </button>
+                        <button class="w-full py-3 text-sm font-semibold text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-100 transition">
+                            Aggiungi alla Lista dei Desideri
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Full Description & Features -->
+                <div class="lg:col-span-3 pt-8 border-t border-gray-200">
+                    <h2 class="text-2xl font-bold star-wars-blue mb-4">
+                        Descrizione del Prodotto
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Entra in battaglia con l’Homing Spider Droid™, una formidabile arma Separatista vista nella Battaglia di Geonosis. Questo Droid è dotato di quattro gambe articolate che gli permettono di attraversare qualsiasi terreno e un cannone laser orientabile per neutralizzare i nemici a distanza. Preparati a ricreare le epiche scene di <i>Star Wars: La Guerra dei Cloni</i>!
+                    </p>
+                    
+                    <h3 class="text-xl font-semibold mt-6 mb-3 lego-text-red">
+                        Caratteristiche Principali
+                    </h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4">
+                        <li>Include 4 minifigure: Stass Allie, un Clone Trooper e 2 Super Battle Droid.</li>
+                        <li>Dotato di gambe snodabili per una posa dinamica.</li>
+                        <li>Il cannone a fuoco rapido (flick missile) in cima può essere ruotato di 360 gradi.</li>
+                        <li>Perfetto per ricreare la Battaglia di Geonosis!</li>
+                        <li>Dimensioni del Droid: 20 cm di altezza, 15 cm di lunghezza e 15 cm di larghezza.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="gradient-star-wars mt-8 py-6 text-sm text-gray-300">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2025 The LEGO Group. Tutti i diritti riservati.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition">Informativa sulla privacy</a>
+                <a href="#" class="hover:text-white transition">Termini di utilizzo</a>
+                <a href="#" class="hover:text-white transition">Contatti</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for simple interaction -->
+    <script>
+        // Simple JS for future expansions, like a message box instead of alert()
+        console.log("Pagina LEGO caricata. Set: 75016 Homing Spider Droid™ (2013)");
+        
+        // Example of adding click listener to the main button (no alert/confirm)
+        document.querySelector('.lego-red-bg').addEventListener('click', function() {
+            // In a real application, this would handle the AJAX call to add the item to the cart
+            console.log("Set 75016 aggiunto al carrello (simulato).");
+
+            // Custom, non-blocking notification box (simulated for no-alert rule)
+            const notify = document.createElement('div');
+            notify.textContent = "✔ 75016 Aggiunto al carrello!";
+            notify.className = "fixed bottom-5 right-5 bg-green-600 text-white p-4 rounded-lg shadow-2xl transition-opacity duration-300 z-50";
+            document.body.appendChild(notify);
+            
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                notify.remove();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
