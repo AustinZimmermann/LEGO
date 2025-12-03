@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44014 JET ROCKA - LEGO® Hero Factory - Prodotti - LEGO.com (Italia)</title>
+    <style>
+        /* RESET & BASE */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* HEADER (Stile LEGO 2013) */
+        .lego-header {
+            background-color: #ffcf00; /* Il classico giallo LEGO */
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 2px solid #e6bb00;
+        }
+        .lego-logo-small {
+            background-color: #d01012;
+            color: white;
+            font-weight: 900;
+            font-size: 14px;
+            padding: 2px 4px;
+            letter-spacing: 1px;
+            border: 2px solid white;
+            margin-right: 20px;
+            font-style: italic;
+        }
+        .nav-links a {
+            font-size: 12px;
+            font-weight: bold;
+            color: #333;
+            margin-right: 15px;
+            text-transform: uppercase;
+        }
+        .nav-links a:hover { text-decoration: underline; }
+
+        /* MAIN WRAPPER */
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            min-height: 800px;
+        }
+
+        /* BREADCRUMBS */
+        .breadcrumbs {
+            padding: 15px 20px;
+            font-size: 11px;
+            color: #666;
+            border-bottom: 1px solid #eee;
+        }
+        .breadcrumbs span { margin: 0 5px; }
+
+        /* HERO FACTORY BRANDING BANNER */
+        .theme-banner {
+            background: linear-gradient(to right, #000, #1a3c00); /* Nero a Verde scuro */
+            color: #7aff28; /* Verde neon Brain Attack */
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 4px solid #7aff28;
+        }
+        .theme-logo {
+            font-family: 'Impact', sans-serif;
+            font-style: italic;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 5px #7aff28;
+        }
+        .theme-sub { font-size: 12px; color: #fff; letter-spacing: 1px; }
+
+        /* PRODUCT AREA */
+        .product-main {
+            display: flex;
+            padding: 30px;
+            gap: 30px;
+        }
+
+        /* LEFT: IMAGE */
+        .product-image-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background-color: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ddd;
+            position: relative;
+            overflow: hidden;
+        }
+        /* CSS Drawing of Jet Rocka Abstract */
+        .jet-rocka-icon {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+        .wing {
+            position: absolute;
+            background: gold;
+            width: 80px;
+            height: 140px;
+            border-radius: 5px;
+            border: 2px solid #b8860b;
+        }
+        .wing.left { left: 0; transform: rotate(-20deg); top: 20px; background: linear-gradient(135deg, gold, #daa520); }
+        .wing.right { right: 0; transform: rotate(20deg); top: 20px; background: linear-gradient(-135deg, gold, #daa520); }
+        .body-core {
+            position: absolute;
+            width: 60px;
+            height: 120px;
+            background: #333;
+            left: 70px;
+            top: 40px;
+            border-radius: 10px;
+            z-index: 2;
+            border: 2px solid #111;
+        }
+        .visor {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            background: #7aff28; /* Neon green visor */
+            top: 50px;
+            left: 80px;
+            z-index: 3;
+            box-shadow: 0 0 10px #7aff28;
+        }
+        .brain-attack-logo-corner {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            background: #7aff28;
+            border-radius: 50%;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 10px;
+            text-align: center;
+            color: black;
+            box-shadow: 0 0 10px #7aff28;
+        }
+
+        /* RIGHT: INFO */
+        .product-info-area {
+            flex: 1;
+        }
+        .product-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        .product-meta {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .price-tag {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d01012;
+            margin-bottom: 20px;
+        }
+        .status-stock {
+            color: #5bb75b;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.2s;
+            border: none;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .btn-cart {
+            background-color: #ff7800; /* Orange CTA */
+            color: white;
+            box-shadow: 0 2px 0 #cc6000;
+        }
+        .btn-cart:hover { background-color: #ff8c00; }
+        .btn-wishlist {
+            background-color: #007bc0; /* Blue secondary */
+            color: white;
+            box-shadow: 0 2px 0 #005a8c;
+        }
+        
+        /* DESCRIPTION BOX */
+        .description-box {
+            margin-top: 30px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #eee;
+            border-left: 4px solid #7aff28;
+        }
+        .description-box h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #333;
+            text-transform: uppercase;
+        }
+        .description-box p {
+            font-size: 13px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        .features-list {
+            margin-left: 20px;
+            list-style-type: square;
+        }
+        .features-list li {
+            font-size: 13px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        /* SPECS TABLE */
+        .specs-table {
+            width: 100%;
+            margin-top: 20px;
+            font-size: 12px;
+            border-collapse: collapse;
+        }
+        .specs-table td {
+            padding: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        .specs-label { font-weight: bold; color: #666; width: 120px; }
+
+        /* FOOTER SIMULATION */
+        .footer {
+            background-color: #333;
+            color: #999;
+            padding: 20px;
+            font-size: 11px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .product-main { flex-direction: column; }
+            .theme-banner { flex-direction: column; align-items: flex-start; }
+            .theme-sub { margin-top: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP HEADER -->
+    <header class="lego-header">
+        <div class="lego-logo-small">LEGO</div>
+        <nav class="nav-links">
+            <a href="#">Prodotti</a>
+            <a href="#">Giochi</a>
+            <a href="#">Crea e Condividi</a>
+            <a href="#">Negozio</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        
+        <!-- BREADCRUMBS -->
+        <div class="breadcrumbs">
+            <a href="#">Home</a> <span>&rsaquo;</span>
+            <a href="#">Prodotti</a> <span>&rsaquo;</span>
+            <a href="#">Hero Factory</a> <span>&rsaquo;</span>
+            <strong>44014 JET ROCKA</strong>
+        </div>
+
+        <!-- HERO FACTORY BANNER -->
+        <div class="theme-banner">
+            <div>
+                <div class="theme-logo">HERO FACTORY</div>
+                <div class="theme-sub">BRAIN ATTACK - PROTEGGI LA GALASSIA</div>
+            </div>
+            <div style="font-size: 14px; font-weight: bold;">ANNO: 2013</div>
+        </div>
+
+        <!-- PRODUCT CONTENT -->
+        <div class="product-main">
+            
+            <!-- LEFT COLUMN: IMAGES -->
+            <div class="product-image-area">
+                <div class="main-image-placeholder">
+                    <img src="https://www.lego.com/cdn/product-assets/product.img.pri/44014_prod.jpg">
+                    <div class="brain-attack-logo-corner">BRAIN<br>ATTACK</div>
+                    <div style="position: absolute; bottom: 10px; right: 10px; font-weight: bold; color: #999; font-size: 12px;">Immagine simulata</div>
+                </div>
+                <div style="margin-top: 10px; display: flex; gap: 10px;">
+                    <div style="width: 60px; height: 60px; background: #eee; border: 1px solid #ddd; cursor: pointer;"></div>
+                    <div style="width: 60px; height: 60px; background: #eee; border: 1px solid #ddd; cursor: pointer;"></div>
+                    <div style="width: 60px; height: 60px; background: #eee; border: 1px solid #ddd; cursor: pointer;"></div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: INFO -->
+            <div class="product-info-area">
+                <h1 class="product-title">JET ROCKA</h1>
+                
+                <div class="product-meta">
+                    Articolo: <strong>44014</strong> &nbsp;|&nbsp; 
+                    Età: <strong>8-16</strong> &nbsp;|&nbsp; 
+                    Pezzi: <strong>290</strong> &nbsp;|&nbsp;
+                    Punti VIP: <strong>34</strong>
+                </div>
+
+                <div class="price-tag">€ 34,99</div>
+                
+                <span class="status-stock">Disponibile ora</span>
+
+                <div class="actions">
+                    <button class="btn btn-cart">Aggiungi al Carrello</button>
+                    <button class="btn btn-wishlist">Aggiungi alla Lista</button>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div class="description-box">
+                    <h3>Descrizione del Prodotto</h3>
+                    <p>
+                        <strong>Presto, JET ROCKA!</strong> I cervelli malvagi hanno violato le difese di LEGO® Hero Factory! 
+                        Recati al dipartimento di retrofitting per essere equipaggiato con il jetpack rimovibile top-secret. 
+                    </p>
+                    <p>
+                        È dotato di un display heads-up apribile, con forza protettiva, due shooter al plasma, missili azionabili, 
+                        lame alate al plasma ed enormi motori agli ioni. Con questa tecnologia, sbarazzarti dei cervelli malvagi sarà uno scherzo!
+                    </p>
+
+                    <h4 style="font-size: 13px; font-weight: bold; margin-bottom: 5px;">Caratteristiche:</h4>
+                    <ul class="features-list">
+                        <li>Include il mini-robot Eroe ROCKA.</li>
+                        <li>Dotato di jetpack rimovibile con display heads-up apribile, doppi shooter al plasma e missili azionabili.</li>
+                        <li>Include lame alate al plasma estensibili e enormi motori agli ioni.</li>
+                        <li>Premi il grilletto per estendere le ali al plasma e armare le armi!</li>
+                        <li>Sgancia il jetpack per equipaggiare un altro Eroe LEGO® Hero Factory.</li>
+                        <li>Combina con <strong>44009 DRAGON BOLT</strong>.</li>
+                        <li>Alto 24 cm.</li>
+                    </ul>
+                </div>
+
+                <!-- TECHNICAL DETAILS -->
+                <table class="specs-table">
+                    <tr>
+                        <td class="specs-label">Codice Articolo</td>
+                        <td>44014</td>
+                    </tr>
+                    <tr>
+                        <td class="specs-label">Tema</td>
+                        <td>LEGO® Hero Factory</td>
+                    </tr>
+                    <tr>
+                        <td class="specs-label">Sottotema</td>
+                        <td>Brain Attack</td>
+                    </tr>
+                    <tr>
+                        <td class="specs-label">Anno di uscita</td>
+                        <td>2013</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2013 The LEGO Group. Tutti i diritti riservati. L’uso di questo sito comporta l’accettazione dei Termini d’uso.</p>
+        <p>LEGO, il logo LEGO, la Minifigure e Hero Factory sono marchi registrati del LEGO Group.</p>
+        <div style="margin-top: 10px;">
+            <a href="#" style="margin: 0 10px;">Chi Siamo</a> |
+            <a href="#" style="margin: 0 10px;">Assistenza</a> |
+            <a href="#" style="margin: 0 10px;">Legale</a>
+        </div>
+    </footer>
+
+</body>
+</html>
