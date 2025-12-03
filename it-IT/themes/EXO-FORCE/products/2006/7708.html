@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7708 Uplink - LEGO® EXO-FORCE™ - Prodotti - LEGO.com (Italia)</title>
+    <!-- Caricamento di Tailwind CSS per uno stile moderno e reattivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Stile personalizzato per l'estetica dark e sci-fi di EXO-FORCE */
+        body {
+            font-family: sans-serif;
+            background-color: #0d1a26; /* Blu ardesia scuro/nero */
+        }
+        .exo-accent-text {
+            color: #00ffc8; /* Ciano/verde brillante per effetto "glow" sci-fi */
+        }
+        .exo-header {
+            background-color: #1e3a8a; /* Sfondo scuro dell'header */
+            border-bottom: 4px solid #00ffc8; /* Linea di accento brillante */
+        }
+        .product-box {
+            background-color: #172a3a; /* Colore leggermente più chiaro per i box interni */
+            box-shadow: 0 10px 15px -3px rgba(0, 255, 200, 0.1), 0 4px 6px -2px rgba(0, 255, 200, 0.05); /* Ombra con accento neon */
+        }
+        .buy-button {
+            background-color: #ff9900; /* Arancio/giallo classico LEGO */
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        .buy-button:hover {
+            background-color: #e58d00;
+            transform: translateY(-2px);
+        }
+        .buy-button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Intestazione (Header) -->
+    <header class="exo-header p-4 shadow-xl">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo EXO-FORCE -->
+            <h1 class="text-3xl font-extrabold text-white">LEGO® <span class="exo-accent-text">EXO-FORCE™</span></h1>
+            <!-- Navigazione (nascosta su mobile) -->
+            <nav class="hidden md:flex space-x-6 text-white text-sm font-semibold">
+                <a href="#" class="hover:text-amber-400 transition">Prodotti</a>
+                <a href="#" class="hover:text-amber-400 transition">Storia</a>
+                <a href="#" class="hover:text-amber-400 transition">Comunità</a>
+                <a href="#" class="hover:text-amber-400 transition">Assistenza</a>
+            </nav>
+            <button class="md:hidden text-white text-2xl p-2 rounded-lg hover:bg-white/10 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Contenuto Principale -->
+    <main class="max-w-7xl mx-auto p-4 md:p-8 text-white">
+
+        <!-- Breadcrumb -->
+        <div class="text-sm mb-6 text-gray-400">
+            <a href="#" class="hover:text-white transition">Home</a> / <a href="#" class="hover:text-white transition">Prodotti</a> / <span class="exo-accent-text font-medium">7708 Uplink</span>
+        </div>
+
+        <!-- Sezione Titolo Prodotto -->
+        <div class="mb-8 border-b-2 border-gray-700/50 pb-4">
+            <span class="text-sm font-semibold text-gray-400">TEMA: LEGO® EXO-FORCE™ | Anno: 2006</span>
+            <h2 class="text-5xl sm:text-6xl font-black mt-1 uppercase leading-tight">7708 Uplink</h2>
+            <p class="text-xl text-amber-400 mt-2">Mech Leggero da Ricognizione - Pilotato da Ryo</p>
+        </div>
+
+        <!-- Griglia Prodotto: Immagine e Dettagli -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- Immagine Prodotto (2/3 di larghezza su schermi grandi) -->
+            <div class="lg:col-span-2">
+                <div class="product-box p-4 rounded-xl border-2 border-gray-700/50">
+                    <!-- Placeholder per l'immagine del prodotto Uplink -->
+                    <img src="https://www.lego.com/cdn/product-assets/product.img.pri/7708_prod.jpg" 
+                         alt="Immagine principale del set LEGO 7708 Uplink EXO-FORCE" 
+                         class="w-full h-auto rounded-lg object-cover"
+                    >
+                </div>
+                <!-- Gallery / Viste alternative placeholder (mobile scrollable) -->
+                <div class="flex space-x-4 mt-4 overflow-x-auto pb-2">
+                    <div class="w-20 h-20 bg-gray-700 rounded-lg flex-shrink-0 cursor-pointer hover:ring-2 ring-exo-accent-text transition flex items-center justify-center text-xs text-gray-300">Viste laterali</div>
+                    <div class="w-20 h-20 bg-gray-700 rounded-lg flex-shrink-0 cursor-pointer hover:ring-2 ring-exo-accent-text transition flex items-center justify-center text-xs text-gray-300">Azione</div>
+                    <div class="w-20 h-20 bg-gray-700 rounded-lg flex-shrink-0 cursor-pointer hover:ring-2 ring-exo-accent-text transition flex items-center justify-center text-xs text-gray-300">Minifigure Ryo</div>
+                </div>
+            </div>
+
+            <!-- Acquisto / Dettagli Chiave (1/3 di larghezza) -->
+            <div class="lg:col-span-1 space-y-6">
+                
+                <!-- Box Prezzo e Acquisto -->
+                <div class="product-box p-6 rounded-xl border border-gray-700/50">
+                    <p class="text-2xl text-gray-400 font-light">Prezzo Consigliato (2006):</p>
+                    <p class="text-6xl font-extrabold exo-accent-text mt-1">€14.99</p>
+                    <button class="buy-button w-full mt-6 p-4 text-xl font-black rounded-lg text-black uppercase shadow-lg">
+                        AGGIUNGI AL CARRELLO
+                    </button>
+                    <p class="text-sm text-center text-gray-500 mt-3">Disponibilità: Articolo da collezione (Mock)</p>
+                </div>
+
+                <!-- Dettagli del Prodotto -->
+                <div class="product-box p-6 rounded-xl border border-gray-700/50">
+                    <h3 class="text-2xl font-bold mb-4 border-b border-gray-700 pb-2">Informazioni sul Set</h3>
+                    <ul class="space-y-3">
+                        <li class="flex justify-between items-center">
+                            <span class="text-gray-400">N. Articolo:</span>
+                            <span class="font-bold">7708</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="text-gray-400">Pezzi:</span>
+                            <span class="font-bold">96</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="text-gray-400">Età Consigliata:</span>
+                            <span class="font-bold">7 - 14 anni</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="text-gray-400">Minifigure:</span>
+                            <span class="font-bold">Ryo (Umano)</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="text-gray-400">Anno di Lancio:</span>
+                            <span class="font-bold">2006</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sezione Descrizione Ufficiale -->
+        <div class="mt-12">
+            <h3 class="text-3xl font-black border-b-4 border-amber-400 pb-2 mb-6 uppercase">La Base Operativa Mobile</h3>
+            <div class="product-box p-6 rounded-xl border border-gray-700/50 text-lg leading-relaxed">
+                <p class="mb-4 text-xl exo-accent-text font-semibold">“L’occhio nel cielo per l’EXO-FORCE!”</p>
+                <p class="mb-4">L’Uplink (7708) è un veccanismo di classe leggera, essenziale per le Forze Umane durante le operazioni di ricognizione e sorveglianza ad alta velocità. Progettato per essere veloce e agile, può aggirare facilmente i potenti robot d’assalto della Fazione Robotica lungo i ripidi canyon della Montagna Sentai.</p>
+                <p class="mb-4">Questo piccolo Mech è pilotato dal coraggioso Ryo, armato con un cannone laser orientabile per difendersi durante le missioni solitarie. Grazie alle sue articolazioni, l’Uplink può essere posizionato in innumerevoli pose da battaglia, perfetto per ricreare le epiche scene del cartone animato.</p>
+                <p class="font-semibold text-amber-400">Colleziona gli altri Mech Umani per potenziare l’Uplink e scoprire nuove combinazioni di combattimento!</p>
+            </div>
+        </div>
+
+        <!-- Altri Prodotti / Footer Placeholder -->
+        <div class="mt-12 text-center border-t border-gray-700 pt-6 text-gray-500 text-sm">
+            <p>© 2006 The LEGO Group. Tutti i diritti riservati. LEGO, il logo LEGO, EXO-FORCE e la Minifigure sono marchi registrati di The LEGO Group.</p>
+        </div>
+
+    </main>
+
+</body>
+</html>
