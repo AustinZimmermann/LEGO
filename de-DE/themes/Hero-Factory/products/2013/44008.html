@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44008 SURGE - LEGO® Hero Factory - LEGO.com (Deutschland)</title>
+    <!-- Lade Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Konfigurieren der Inter-Schriftart */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f4f4;
+        }
+        /* LEGO Rot für Akzentfarben */
+        .lego-red {
+            background-color: #e4002b;
+        }
+        .lego-red-hover:hover {
+            background-color: #cc0026;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Kopfzeile (LEGO Navigation Simulation) -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <!-- LEGO Logo (Text Placeholder) -->
+            <a href="#" class="text-3xl font-black text-red-600 tracking-tighter">LEGO<span class="text-gray-900">.com</span></a>
+            
+            <!-- Navigation (nur für Simulation) -->
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold text-gray-700">
+                <a href="#" class="hover:text-red-600 transition duration-150">Shop</a>
+                <a href="#" class="hover:text-red-600 transition duration-150">Entdecken</a>
+                <a href="#" class="hover:text-red-600 transition duration-150">Hilfe</a>
+            </nav>
+
+            <!-- Benutzer-Icons -->
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 hover:text-red-600">
+                    <!-- Suchen Icon (Placeholder SVG) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hauptinhalt des Produkts -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        
+        <!-- Breadcrumb / Brotkrümelnavigation -->
+        <div class="text-sm text-gray-500 mb-6">
+            <a href="#" class="hover:text-red-600">LEGO.com</a> > 
+            <a href="#" class="hover:text-red-600">Themen</a> > 
+            <a href="#" class="hover:text-red-600">Hero Factory</a> > 
+            <span class="font-semibold">SURGE 44008</span>
+        </div>
+
+        <!-- Produkt-Layout (Responsive Grid) -->
+        <div class="bg-white rounded-xl shadow-lg p-6 md:p-10 lg:grid lg:grid-cols-2 lg:gap-12">
+            
+            <!-- Linke Spalte: Bild und Gallerie -->
+            <div class="lg:sticky lg:top-8">
+                <!-- Hauptbild (Placeholder für Hero Factory Surge) -->
+                <div class="bg-gray-100 rounded-lg p-4 flex items-center justify-center aspect-square mb-6">
+                    <img src="https://placehold.co/400x400/004c99/ffffff?text=LEGO+44008+SURGE" 
+                         alt="" 
+                         class="max-h-full max-w-full rounded-md shadow-inner"
+                         onerror="this.src='https://placehold.co/400x400/004c99/ffffff?text=LEGO+44008+SURGE'"
+                    >
+                </div>
+                
+                <!-- Gallerie (Simulation) -->
+                <div class="hidden sm:flex space-x-3 justify-center">
+                    <div class="w-16 h-16 bg-gray-200 rounded-md cursor-pointer border-2 border-red-600"></div>
+                    <div class="w-16 h-16 bg-gray-200 rounded-md cursor-pointer opacity-70"></div>
+                    <div class="w-16 h-16 bg-gray-200 rounded-md cursor-pointer opacity-70"></div>
+                </div>
+            </div>
+
+            <!-- Rechte Spalte: Details und Kauf -->
+            <div class="mt-8 lg:mt-0">
+                <p class="text-sm text-red-600 font-semibold mb-2">LEGO® Hero Factory | Brain Attack</p>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                    SURGE
+                </h1>
+                <p class="text-xl font-medium text-gray-700 mb-6">
+                    Set-Nummer: 44008 | Jahr: 2013 | Teile: 66
+                </p>
+
+                <!-- Preis und Verfügbarkeit -->
+                <div class="mb-8 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+                    <p class="text-2xl font-bold text-gray-900 mb-2">
+                        UVP: 12,99 €
+                    </p>
+                    <p class="text-sm text-yellow-800 font-medium">
+                        (Dieser Artikel ist nicht mehr verfügbar und wird nicht mehr produziert.)
+                    </p>
+                </div>
+
+                <!-- Action Button (Simuliert) -->
+                <button class="w-full lego-red lego-red-hover text-white font-bold py-4 px-6 rounded-lg shadow-xl uppercase tracking-wider transition duration-300 transform hover:scale-[1.01] text-lg">
+                    Zum Warenkorb hinzufügen (Archiv-Simulation)
+                </button>
+                
+                <!-- Produktmerkmale -->
+                <div class="mt-10">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4 border-b pb-2">Produktdetails</h2>
+                    <ul class="space-y-3 text-gray-600 text-base">
+                        <li class="flex items-start">
+                            <span class="mr-3 text-red-600">⚡</span>
+                            Mächtige rotierende Blitzklingen zur Abwehr der Alien-Gehirne.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-red-600">🔫</span>
+                            Ausgestattet mit zwei Plasma-Shootern und Jetpack-Flügeln für Luftangriffe.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-red-600">🛡️</span>
+                            Aufklappbares Panzer-Visier und Hero-Kern-Verriegelungsklammern zum Schutz.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-red-600">📐</span>
+                            Über 19 cm groß.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-red-600">🔗</span>
+                            Kombinierbar mit Set 44009 DRAGON BOLT für ein größeres Modell (Anleitung auf LEGO.com).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abschnitt: Produktbeschreibung -->
+        <section class="mt-16 p-8 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-3">Beschreibung</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                Achtung SURGE: Die bösen Alien-Gehirne nähern sich dem LEGO® Hero Factory Hauptquartier und müssen aufgehalten werden! Wir haben dich mit mächtigen rotierenden Blitzklingen, zwei Plasma-Shootern, Jetpack-Flügeln, einem aufklappbaren Panzer-Visier und Hero-Kern-Verriegelungsklammern ausgestattet. Dreh die Blitzklingen und verpasse den Außerirdischen einen Schock, den sie nie vergessen werden!
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+                Der Angriff der Alien-Gehirne hat die Helden von Hero Factory auf die Probe gestellt. Schließe die Verriegelungsklammern, um den Hero-Kern zu schützen, feuere die zwei Raketen ab und fliege mit den Jetpack-Flügeln über die feindlichen Linien, um die Gefahr an der Quelle zu zerschlagen. Dieses Set ist perfekt für actionreiche Rollenspiele und bietet die Möglichkeit, mit anderen Hero Factory Sets kombiniert zu werden, um ultimative Kampfmaschinen zu erschaffen.
+            </p>
+        </section>
+        
+        <!-- Abschnitt: Spezifikationen (Technische Daten) -->
+        <section class="mt-16 p-8 bg-white rounded-xl shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-3">Spezifikationen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 text-gray-700">
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-medium">Thema:</span>
+                    <span class="font-semibold">Hero Factory</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-medium">Teileanzahl:</span>
+                    <span class="font-semibold">66</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-medium">Set-Nummer:</span>
+                    <span class="font-semibold">44008</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-medium">Altersempfehlung:</span>
+                    <span class="font-semibold">7–14 Jahre</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-medium">Veröffentlichungsjahr:</span>
+                    <span class="font-semibold">2013</span>
+                </div>
+                <div class="flex justify-between border-b pb-2">
+                    <span class="font-medium">Unterthema:</span>
+                    <span class="font-semibold">Brain Attack</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Fußzeile -->
+    <footer class="bg-gray-800 mt-12 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-400">
+            <p class="text-lg font-bold text-white mb-4">LEGO.com (Deutschland)</p>
+            <p class="text-sm">LEGO, das LEGO Logo, die Minifigur, DUPLO, BIONICLE, LEGENDS OF CHIMA, NINJAGO und MINDSTORMS sind Marken der LEGO Gruppe. ©2013 The LEGO Group.</p>
+            <p class="text-sm mt-4">Simulierte Produktseite im Stil von LEGO.com, basierend auf den Original-Set-Daten.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
