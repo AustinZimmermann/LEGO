@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7709 Base EXO-FORCE Team - LEGO® EXO-FORCE™ - LEGO.com (Italia)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f5f7; /* Light grey background, common for e-commerce */
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <!-- Header / Navbar (Simple LEGO branding) -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-red-600">LEGO.com</h1>
+            <nav class="text-sm space-x-4 hidden sm:block">
+                <a href="#" class="hover:text-red-600 font-medium">Shop</a>
+                <a href="#" class="hover:text-red-600 font-medium">Scopri</a>
+                <a href="#" class="hover:text-red-600 font-medium">Aiuto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Product Content Container -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Breadcrumbs -->
+        <div class="text-sm text-gray-500 mb-6">
+            <a href="#" class="hover:underline">Home</a> / 
+            <a href="#" class="hover:underline">Temi</a> / 
+            <a href="#" class="hover:underline">EXO-FORCE</a> / 
+            <span class="font-semibold">7709 Base EXO-FORCE Team</span>
+        </div>
+
+        <!-- Product Grid Layout (Responsive: Stacked on mobile, side-by-side on tablet/desktop) -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden lg:grid lg:grid-cols-2 lg:gap-8 p-6">
+            
+            <!-- Image Section -->
+            <div class="lg:col-span-1 mb-6 lg:mb-0">
+                <div class="relative bg-gray-100 rounded-lg p-4 sm:p-8 flex justify-center items-center h-80 sm:h-96">
+                    <!-- Placeholder Image -->
+                    <img 
+                        src="https://www.lego.com/cdn/product-assets/product.img.pri/7709_prod.jpg" 
+                        alt="Immagine del set LEGO 7709 Base EXO-FORCE Team"
+                        class="max-h-full max-w-full object-contain rounded-md"
+                    >
+                    <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                        Edizione 2006
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details and Buy Section -->
+            <div class="lg:col-span-1 space-y-6">
+                
+                <!-- Title and Status -->
+                <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight text-gray-900">
+                    7709 Base EXO-FORCE Team
+                </h2>
+                <p class="text-lg text-red-600 font-bold">
+                    Prodotto Fuori Produzione (Anno di Lancio: 2006)
+                </p>
+
+                <!-- Key Specifications -->
+                <div class="space-y-2 text-gray-700">
+                    <p><strong>Tema:</strong> LEGO® EXO-FORCE™</p>
+                    <p><strong>Codice Prodotto:</strong> 7709</p>
+                    <p><strong>Età Consigliata:</strong> 8-14</p>
+                    <p><strong>Numero di Pezzi:</strong> 398</p>
+                    <p><strong>Minifigure:</strong> 4 (2 Piloti, 2 Robot)</p>
+                </div>
+                
+                <!-- Mock Price and Actions -->
+                <div class="border-t border-gray-200 pt-6 space-y-4">
+                    <p class="text-2xl font-bold text-gray-900">
+                        <span class="text-sm font-normal line-through text-gray-500 mr-2">€ 39.99</span>
+                        Non disponibile
+                    </p>
+                    
+                    <button 
+                        class="w-full bg-gray-400 text-white font-bold py-3 px-4 rounded-xl shadow-md cursor-not-allowed transition duration-150 ease-in-out"
+                        disabled
+                    >
+                        Non Disponibile per l’Acquisto
+                    </button>
+                    
+                    <button 
+                        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-xl shadow-md transition duration-150 ease-in-out"
+                        onclick="showUnavailableMessage()"
+                    >
+                        Trova un Rivenditore
+                    </button>
+                    
+                    <!-- Message Box for alerts (replaces alert()) -->
+                    <div id="messageBox" class="hidden p-3 bg-yellow-100 text-yellow-800 rounded-lg text-sm transition-opacity duration-300">
+                        <!-- Message will appear here -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Description and Reviews Section -->
+        <div class="mt-10 bg-white rounded-xl shadow-lg p-6 lg:p-8">
+            <h3 class="text-2xl font-bold mb-4 border-b pb-2">Dettagli del Prodotto</h3>
+            <p class="text-gray-700 leading-relaxed">
+                Preparati a difendere la base! Il set 7709 Base EXO-FORCE Team è un elemento cruciale per la tua collezione LEGO® EXO-FORCE™. 
+                Pubblicato nel 2006, questo set ti permette di costruire una sezione di base fortificata con torrette rotanti, 
+                postazioni di controllo e potenti armi difensive, essenziali per respingere gli attacchi dei robot. 
+                Include anche un piccolo e agile veicolo di ricognizione per missioni sul campo.
+            </p>
+            <ul class="list-disc list-inside mt-4 space-y-1 text-gray-700">
+                <li>Perfetto per ricreare le epiche battaglie tra i piloti umani e i robot senzienti.</li>
+                <li>Design futuristico e colori vibranti tipici della linea EXO-FORCE.</li>
+                <li>Un pezzo da collezione irrinunciabile per i fan del tema.</li>
+            </ul>
+            
+            <h3 class="text-2xl font-bold mt-8 mb-4 border-b pb-2">Recensioni (Mock)</h3>
+            <div class="space-y-6">
+                <div class="border p-4 rounded-lg bg-gray-50">
+                    <p class="font-semibold">Marco V. - ⭐⭐⭐⭐⭐</p>
+                    <p class="text-sm text-gray-600">"Set fantastico! La base è solida e offre ore di gioco. Le minifigure sono ben dettagliate. Un classico del 2006."</p>
+                </div>
+                <div class="border p-4 rounded-lg bg-gray-50">
+                    <p class="font-semibold">Elena G. - ⭐⭐⭐⭐</p>
+                    <p class="text-sm text-gray-600">"Ottima aggiunta alla mia collezione EXO-FORCE. Avrei preferito più armi mobili, ma la struttura è perfetta."</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-10 p-6">
+        <div class="max-w-7xl mx-auto text-center text-sm">
+            <p>&copy; 2025 LEGO Group. Tutti i diritti riservati. EXO-FORCE è un marchio del LEGO Group. Simulazione di pagina creata per l’esempio.</p>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Funzione per mostrare un messaggio personalizzato invece di usare alert().
+         */
+        function showUnavailableMessage() {
+            const messageBox = document.getElementById('messageBox');
+            messageBox.textContent = "Siamo spiacenti, il set 7709 non è più disponibile per l'acquisto diretto su LEGO.com. Controlla presso i rivenditori autorizzati.";
+            messageBox.classList.remove('hidden', 'opacity-0');
+            messageBox.classList.add('opacity-100');
+
+            // Nasconde il messaggio dopo 5 secondi
+            setTimeout(() => {
+                messageBox.classList.remove('opacity-100');
+                messageBox.classList.add('opacity-0');
+                // Aggiunge 'hidden' dopo la transizione per nasconderlo completamente
+                setTimeout(() => {
+                    messageBox.classList.add('hidden');
+                }, 300); 
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
