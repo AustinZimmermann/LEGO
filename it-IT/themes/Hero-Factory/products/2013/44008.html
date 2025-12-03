@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURGE - 44008 - LEGO® Hero Factory - Prodotti - LEGO.com (Italia)</title>
+    <!-- Caricamento di Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configurazione per utilizzare il font Inter e colori personalizzati -->
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Intestazione Finta di LEGO.com (Semplificata) -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo Semplificato -->
+            <a href="#" class="text-3xl font-black text-red-600 tracking-wider">
+                LEGO<span class="text-gray-800">.com</span>
+            </a>
+            <!-- Navigazione Semplificata -->
+            <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
+                <a href="#" class="hover:text-red-600 transition duration-150">Shop</a>
+                <a href="#" class="hover:text-red-600 transition duration-150">Esplora</a>
+                <a href="#" class="hover:text-red-600 transition duration-150">Assistenza</a>
+            </nav>
+            <!-- Icone (Placeholder) -->
+            <div class="flex space-x-4">
+                <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l3 9h11l3-9h-2L16 6zM5 21a2 2 0 100-4 2 2 0 000 4zm14 0a2 2 0 100-4 2 2 0 000 4z"></path></svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenitore Principale della Pagina -->
+    <main class="container mx-auto px-4 py-8 md:py-12">
+        
+        <!-- Breadcrumb Semplificato -->
+        <div class="text-sm text-gray-500 mb-6">
+            <a href="#" class="hover:underline">Home</a> &gt; 
+            <a href="#" class="hover:underline">Prodotti</a> &gt; 
+            <a href="#" class="hover:underline">Hero Factory</a> &gt; 
+            <span class="font-semibold">SURGE</span>
+        </div>
+
+        <!-- Card Prodotto Principale -->
+        <div class="bg-white rounded-xl shadow-2xl p-6 md:p-10">
+            
+            <!-- Layout Responsive: Immagine a Sinistra, Dettagli a Destra (Desktop) / Stacked (Mobile) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                
+                <!-- Colonna Immagine Prodotto -->
+                <div class="md:sticky md:top-24">
+                    <div class="bg-gray-100 p-4 rounded-lg flex justify-center items-center overflow-hidden h-96">
+                        <!-- Placeholder Image (SURGE - LEGO Hero Factory) -->
+                        <img 
+                            src="https://placehold.co/600x600/1e3a8a/ffffff?text=SURGE+44008" 
+                            alt="Immagine LEGO Hero Factory SURGE (44008)" 
+                            class="max-h-full max-w-full object-contain rounded-md transition transform hover:scale-105 duration-300"
+                        >
+                    </div>
+                    <!-- Immagini Aggiuntive (Mock) -->
+                    <div class="mt-4 flex space-x-3 overflow-x-auto p-1">
+                        <div class="w-16 h-16 bg-gray-200 rounded-lg border-2 border-red-600 flex-shrink-0"></div>
+                        <div class="w-16 h-16 bg-gray-200 rounded-lg flex-shrink-0"></div>
+                        <div class="w-16 h-16 bg-gray-200 rounded-lg flex-shrink-0"></div>
+                        <div class="w-16 h-16 bg-gray-200 rounded-lg flex-shrink-0"></div>
+                    </div>
+                </div>
+                
+                <!-- Colonna Dettagli Prodotto -->
+                <div class="space-y-6">
+                    
+                    <span class="text-sm font-semibold text-red-600 bg-red-100 px-3 py-1 rounded-full inline-block uppercase tracking-wider">
+                        Hero Factory (2013)
+                    </span>
+
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
+                        SURGE
+                    </h1>
+                    
+                    <p class="text-lg text-gray-600">
+                        N. Prodotto: <span class="font-mono font-bold text-gray-800">44008</span>
+                    </p>
+
+                    <!-- Prezzo -->
+                    <div class="border-t border-b border-gray-200 py-4">
+                        <p class="text-xl text-gray-500 line-through">€ 15.99</p>
+                        <p class="text-4xl font-black text-red-600 mt-1">
+                            € 12.99
+                        </p>
+                        <p class="text-sm text-green-600 font-medium mt-1">
+                            Disponibile
+                        </p>
+                    </div>
+
+                    <!-- Descrizione -->
+                    <div class="space-y-4">
+                        <h2 class="text-2xl font-bold text-gray-800">Dettagli Prodotto</h2>
+                        <p class="text-gray-700 leading-relaxed">
+                            Attenzione! Il cervello malvagio ha infettato il giovane eroe SURGE con uno dei suoi parassiti malvagi. Adesso l’eroe non controlla più se stesso e sta seminando il panico nel cuore della città! 
+                            <span class="font-semibold">Usa l’armatura e i missili per fermarlo prima che causi troppi danni!</span>
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+                            <li>Include il malvagio cervellone blu scuro e un lanciamissili funzionante.</li>
+                            <li>Dotato di elementi di armatura trasparenti.</li>
+                            <li>Altezza: Circa 19 cm.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="pt-6 space-y-3">
+                        <button class="w-full bg-red-600 text-white font-bold py-3 px-6 rounded-lg shadow-lg hover:bg-red-700 transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-red-300 active:bg-red-800">
+                            Aggiungi al Carrello
+                        </button>
+                        <button class="w-full bg-yellow-400 text-gray-800 font-bold py-3 px-6 rounded-lg shadow-md hover:bg-yellow-500 transition duration-300 transform hover:scale-[1.01] focus:outline-none focus:ring-4 focus:ring-yellow-300">
+                            Trova in un Negozio
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Sezione "Potrebbe Piacerti Anche" (Mock) -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Potrebbe Piacerti Anche</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Mock Product 1 -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/150x150/f0f4f8/333333?text=BREEZ" alt="BREEZ 44006" class="mx-auto rounded-md mb-3">
+                    <p class="font-semibold text-gray-800">BREEZ (44006)</p>
+                    <p class="text-red-600 font-bold">€ 12.99</p>
+                </div>
+                <!-- Mock Product 2 -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300">
+                    <img src="https://placehold.co/150x150/f0f4f8/333333?text=ROCKA" alt="ROCKA 44002" class="mx-auto rounded-md mb-3">
+                    <p class="font-semibold text-gray-800">ROCKA (44002)</p>
+                    <p class="text-red-600 font-bold">€ 9.99</p>
+                </div>
+                <!-- Mock Product 3 -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300 hidden sm:block">
+                    <img src="https://placehold.co/150x150/f0f4f8/333333?text=BULK" alt="BULK 44004" class="mx-auto rounded-md mb-3">
+                    <p class="font-semibold text-gray-800">BULK (44004)</p>
+                    <p class="text-red-600 font-bold">€ 12.99</p>
+                </div>
+                <!-- Mock Product 4 -->
+                <div class="bg-white p-4 rounded-lg shadow-md text-center hover:shadow-xl transition duration-300 hidden lg:block">
+                    <img src="https://placehold.co/150x150/f0f4f8/333333?text=OGRUM" alt="OGRUM 44007" class="mx-auto rounded-md mb-3">
+                    <p class="font-semibold text-gray-800">OGRUM (44007)</p>
+                    <p class="text-red-600 font-bold">€ 19.99</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Semplificato -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-4 py-8 text-center text-sm text-gray-400">
+            <p>&copy; 2025 Gruppo LEGO. Tutti i diritti riservati.</p>
+            <p>LEGO e il logo LEGO sono marchi registrati del Gruppo LEGO.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
