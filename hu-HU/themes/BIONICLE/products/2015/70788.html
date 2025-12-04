@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>70788 Kopaka – A Jég ura - LEGO® BIONICLE® | LEGO.com (Magyarország)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f6f6f6;
+        }
+
+        .bionicle-font {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .lego-yellow {
+            background-color: #FFD502;
+        }
+
+        .lego-red {
+            background-color: #D01012;
+        }
+
+        .lego-blue {
+            background-color: #006CB7;
+        }
+
+        .ice-gradient {
+            background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 50%, #b2ebf2 100%);
+        }
+
+        .product-image-container {
+            background-image: radial-gradient(circle, #fff 0%, #f0f0f0 100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .product-image-container:hover {
+            transform: scale(1.02);
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
+        }
+
+        /* Custom Button Styles */
+        .btn-primary {
+            background-color: #fd8024; /* LEGO Orange */
+            color: white;
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #e06000;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen text-gray-800">
+
+    <!-- Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="bg-yellow-400 h-2 w-full"></div> <!-- LEGO Yellow Strip -->
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-6">
+                <!-- LEGO Logo Placeholder -->
+                <div class="w-12 h-12 bg-red-600 flex items-center justify-center text-white font-bold text-xs italic border-2 border-black tracking-tighter cursor-pointer">
+                    LEGO
+                </div>
+                
+                <nav class="hidden md:flex space-x-6 font-bold text-sm text-gray-700">
+                    <a href="#" class="hover:text-black hover:underline">TERMÉKEK</a>
+                    <a href="#" class="hover:text-black hover:underline">JÁTÉKOK</a>
+                    <a href="#" class="hover:text-black hover:underline">TÁMOGATÁS</a>
+                    <a href="#" class="hover:text-black hover:underline text-blue-600">BIONICLE®</a>
+                </nav>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 hover:text-black"><i class="fas fa-search text-xl"></i></button>
+                <button class="text-gray-600 hover:text-black"><i class="fas fa-shopping-bag text-xl"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-100 border-b border-gray-200">
+        <div class="container mx-auto px-4 py-2 text-xs text-gray-500">
+            <a href="#" class="hover:underline">Kezdőlap</a> / 
+            <a href="#" class="hover:underline">Termékek</a> / 
+            <a href="#" class="hover:underline">BIONICLE®</a> / 
+            <span class="font-bold text-gray-700">70788 Kopaka – A Jég ura</span>
+        </div>
+    </div>
+
+    <!-- Main Product Section -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Left: Images -->
+            <div class="space-y-4">
+                <div class="product-image-container w-full aspect-square rounded-lg border border-gray-200 flex items-center justify-center relative overflow-hidden p-8">
+                    <!-- Placeholder Image for Kopaka -->
+                    <img src="https://www.lego.com/cdn/product-assets/product.img.pri/70788_Prod.jpg">
+                    
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded">2015</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2">
+                    <!-- Thumbnail 1: Mask -->
+                    <div class="bg-white border rounded cursor-pointer hover:border-blue-500 p-2">
+                        <svg viewBox="0 0 100 100" class="w-full h-full">
+                            <path d="M30 30 L70 30 L65 70 L35 70 Z" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+                            <text x="50" y="90" font-size="12" text-anchor="middle">Arany Maszk</text>
+                        </svg>
+                    </div>
+                    <!-- Thumbnail 2: Skull Spider -->
+                    <div class="bg-white border rounded cursor-pointer hover:border-blue-500 p-2">
+                        <svg viewBox="0 0 100 100" class="w-full h-full">
+                            <circle cx="50" cy="50" r="20" fill="#C0C0C0" />
+                            <path d="M30 50 L10 30 M30 50 L10 70 M70 50 L90 30 M70 50 L90 70" stroke="#333" stroke-width="2"/>
+                            <text x="50" y="90" font-size="12" text-anchor="middle">Koponyapók</text>
+                        </svg>
+                    </div>
+                    <!-- Thumbnail 3: Action -->
+                    <div class="bg-white border rounded cursor-pointer hover:border-blue-500 p-2">
+                         <svg viewBox="0 0 100 100" class="w-full h-full">
+                            <path d="M20 80 L80 20" stroke="#87CEEB" stroke-width="3" stroke-dasharray="5,5"/>
+                            <text x="50" y="90" font-size="12" text-anchor="middle">Sílécek</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Details -->
+            <div>
+                <div class="flex items-center justify-between mb-2">
+                    <h2 class="text-3xl md:text-4xl font-black italic text-gray-900 bionicle-font">KOPAKA – A JÉG URA</h2>
+                </div>
+                
+                <div class="flex items-center space-x-4 mb-6 text-sm text-gray-600">
+                    <span class="bg-gray-200 px-2 py-1 rounded">70788</span>
+                    <span>97 Elem</span>
+                    <span>8-14 Év</span>
+                    <span class="flex items-center text-yellow-500">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-500 ml-1">(4.8)</span>
+                    </span>
+                </div>
+
+                <div class="mb-8">
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        Készülj fel egy dermesztő összecsapásra a hegycsúcsokon! Kopaka, a Jég ura készen áll, hogy megküzdjön a Koponyapókkal. Szereld fel a jégpajzsot, vagy alakítsd át sílécekké a gyors meneküléshez!
+                    </p>
+                </div>
+
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8">
+                    <h3 class="font-bold text-blue-900 mb-2"><i class="fas fa-snowflake mr-2"></i>Funkciók</h3>
+                    <ul class="list-disc list-inside text-sm text-blue-800 space-y-1">
+                        <li>Különleges BIONICLE® fej leválasztható maszkkal</li>
+                        <li>Arany Jégmaszk mellékelve</li>
+                        <li>Átalakítható Jégpajzs / Lavina Sílécek</li>
+                        <li>Elemi Jéglándzsa fegyver</li>
+                        <li>Harci kar funkció kerékkel működtetve</li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-col space-y-3">
+                    <button class="w-full btn-primary py-4 rounded font-bold text-lg shadow-md hover:shadow-lg uppercase tracking-wide">
+                        Kifutott termék (Archivált)
+                    </button>
+                    <div class="flex space-x-3">
+                         <button class="flex-1 bg-white border-2 border-gray-300 text-gray-700 py-3 rounded font-bold hover:border-black transition">
+                            <i class="fas fa-heart mr-2 text-red-500"></i> Kívánságlista
+                        </button>
+                        <button class="flex-1 bg-white border-2 border-gray-300 text-gray-700 py-3 rounded font-bold hover:border-black transition">
+                            <i class="fas fa-book mr-2 text-blue-500"></i> Építési útmutató
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <div class="flex items-center space-x-2 text-sm text-gray-500">
+                        <i class="fas fa-check-circle text-green-500"></i>
+                        <span>Ez a termék már nem kapható a LEGO.com oldalon.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Description & Story -->
+        <section class="mt-16 bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="bg-gray-50 px-6 py-4 border-b border-gray-200">
+                <h3 class="text-xl font-bold text-gray-800">Termékleírás</h3>
+            </div>
+            <div class="p-6 md:p-8">
+                <div class="prose max-w-none text-gray-700">
+                    <h4 class="text-2xl font-bold mb-4 bionicle-font text-blue-600">FIGYELD A LAVINÁT KOPAKÁVAL!</h4>
+                    <p class="mb-4">
+                        Öltöztesd harci díszbe Kopakát, a Jég urát a hegyi összecsapáshoz! Figyelj, mert a gonosz Koponyapók előmászik a hóból és megpróbálja lerántani Kopaka maszkját.
+                    </p>
+                    <p class="mb-6">
+                        Állítsd be a nagy erejű, páncélozott figura karjait és lábait félelmetes harci pózokba! Verd vissza a gonosz lényt a Jégpajzzsal, majd támadj a pusztító Elemi Jéglándzsával. Érd el előbb az értékes Arany Jégmaszkot, majd alakítsd át a pajzsot lavina sílécekké a gyors távozáshoz!
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                        <div class="feature-card bg-gray-50 p-6 rounded-lg border border-gray-100">
+                            <div class="text-blue-500 text-4xl mb-4"><i class="fas fa-shield-alt"></i></div>
+                            <h5 class="font-bold text-lg mb-2">2-az-1-ben Fegyver</h5>
+                            <p class="text-sm">A hatalmas jégpajzs egy mozdulattal átalakítható sílécekké, hogy Kopaka gyorsan mozoghasson a fagyos terepen.</p>
+                        </div>
+                        <div class="feature-card bg-gray-50 p-6 rounded-lg border border-gray-100">
+                            <div class="text-yellow-500 text-4xl mb-4"><i class="fas fa-mask"></i></div>
+                            <h5 class="font-bold text-lg mb-2">Maszk-leválasztó gomb</h5>
+                            <p class="text-sm">A fej hátulján található gombbal „lepattintható” a maszk, szimulálva a harci sérülést vagy a Koponyapók támadását.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specs -->
+        <section class="mt-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-4 px-2">Tulajdonságok</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow-sm border text-center">
+                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Életkor</span>
+                    <span class="block text-xl font-bold">8-14</span>
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm border text-center">
+                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Elemek</span>
+                    <span class="block text-xl font-bold">97</span>
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm border text-center">
+                    <span class="block text-gray-500 text-xs uppercase tracking-wide">VIP Pontok</span>
+                    <span class="block text-xl font-bold">130</span>
+                </div>
+                <div class="bg-white p-4 rounded shadow-sm border text-center">
+                    <span class="block text-gray-500 text-xs uppercase tracking-wide">Cikkszám</span>
+                    <span class="block text-xl font-bold">70788</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-300 uppercase text-sm">Rólunk</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">A LEGO Csoportról</a></li>
+                        <li><a href="#" class="hover:text-white">LEGO Hírek</a></li>
+                        <li><a href="#" class="hover:text-white">Fenntarthatóság</a></li>
+                        <li><a href="#" class="hover:text-white">Adatvédelmi nyilatkozat</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-300 uppercase text-sm">Támogatás</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">Kapcsolat</a></li>
+                        <li><a href="#" class="hover:text-white">Építési útmutatók keresése</a></li>
+                        <li><a href="#" class="hover:text-white">Hiányzó elemek</a></li>
+                        <li><a href="#" class="hover:text-white">Szállítás és visszaküldés</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-300 uppercase text-sm">Látványosságok</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white">LEGO® House</a></li>
+                        <li><a href="#" class="hover:text-white">LEGOLAND® Parkok</a></li>
+                        <li><a href="#" class="hover:text-white">LEGOLAND Discovery Centers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-300 uppercase text-sm">Kövess minket</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-blue-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-2xl hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-red-600"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>&copy; 2015 The LEGO Group. Minden jog fenntartva.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Cookie beállítások</a>
+                    <a href="#" class="hover:text-white">Jogi nyilatkozat</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
