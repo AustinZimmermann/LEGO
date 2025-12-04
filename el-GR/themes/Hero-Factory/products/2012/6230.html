@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6230 STORMER XL - LEGO® Hero Factory - LEGO.com GR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f6f6f6;
+        }
+        .lego-font {
+            font-family: sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+        .hero-factory-bg {
+            background: linear-gradient(135deg, #003366 0%, #000000 100%);
+        }
+        .btn-yellow {
+            background-color: #ffcf00;
+            color: black;
+            transition: all 0.2s;
+        }
+        .btn-yellow:hover {
+            background-color: #e5b800;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-yellow-400 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <!-- LEGO Logo Placeholder -->
+                <div class="bg-red-600 text-white w-10 h-10 flex items-center justify-center font-bold italic text-xs border-2 border-white">
+                    LEGO
+                </div>
+                <nav class="hidden md:flex space-x-6 text-sm font-bold text-gray-800">
+                    <a href="#" class="hover:text-white transition">ΠΡΟΪΟΝΤΑ</a>
+                    <a href="#" class="hover:text-white transition">ΠΑΙΧΝΙΔΙΑ</a>
+                    <a href="#" class="hover:text-white transition">HERO FACTORY</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="p-2 hover:bg-yellow-500 rounded-full transition">
+                    <i data-lucide="search" class="w-5 h-5 text-gray-800"></i>
+                </button>
+                <button class="p-2 hover:bg-yellow-500 rounded-full transition relative">
+                    <i data-lucide="shopping-bag" class="w-5 h-5 text-gray-800"></i>
+                    <span id="cart-count" class="absolute top-0 right-0 bg-red-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full hidden">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="bg-gray-200 border-b border-gray-300">
+        <div class="container mx-auto px-4 py-2 text-xs text-gray-600">
+            <span class="hover:underline cursor-pointer">Αρχική</span> > 
+            <span class="hover:underline cursor-pointer">Προϊόντα</span> > 
+            <span class="hover:underline cursor-pointer">Hero Factory</span> > 
+            <span class="font-bold text-gray-800">6230 STORMER XL</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                
+                <!-- Left Column: Image Gallery -->
+                <div class="p-6 bg-gray-50 md:border-r border-gray-200">
+                    <!-- Theme Branding -->
+                    <div class="mb-4">
+                        <div class="inline-block bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-wider skew-x-[-10deg]">
+                            <span class="skew-x-[10deg] block">Hero Factory</span>
+                        </div>
+                    </div>
+
+                    <!-- Main Image -->
+                    <div class="aspect-square w-full flex items-center justify-center bg-white border border-gray-100 rounded-lg mb-4 relative overflow-hidden group">
+                        <img id="main-image" src="https://www.lego.com/cdn/product-assets/product.img.pri/6230_prod.jpg" alt="LEGO 6230 STORMER XL" class="object-contain transition transform group-hover:scale-105 duration-300">
+                        <div class="absolute top-2 right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">
+                            Breakout
+                        </div>
+                    </div>
+
+                    <!-- Thumbnails -->
+                    <div class="flex space-x-2 overflow-x-auto pb-2">
+                        <button onclick="changeImage('https://images.brickset.com/sets/images/6230-1.jpg')" class="w-16 h-16 border-2 border-yellow-400 rounded flex-shrink-0 bg-white p-1">
+                            <img src="https://images.brickset.com/sets/images/6230-1.jpg" class="w-full h-full object-contain" alt="Front">
+                        </button>
+                        <button onclick="changeImage('https://images.brickset.com/sets/AdditionalImages/6230-1/6230_alt1.jpg')" class="w-16 h-16 border border-gray-300 hover:border-blue-500 rounded flex-shrink-0 bg-white p-1 transition">
+                            <img src="https://images.brickset.com/sets/AdditionalImages/6230-1/6230_alt1.jpg" onerror="this.src='https://placehold.co/100x100?text=Back'" class="w-full h-full object-contain" alt="Back">
+                        </button>
+                        <button onclick="changeImage('https://images.brickset.com/sets/AdditionalImages/6230-1/6230_alt2.jpg')" class="w-16 h-16 border border-gray-300 hover:border-blue-500 rounded flex-shrink-0 bg-white p-1 transition">
+                            <img src="https://images.brickset.com/sets/AdditionalImages/6230-1/6230_alt2.jpg" onerror="this.src='https://placehold.co/100x100?text=Action'" class="w-full h-full object-contain" alt="Action">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right Column: Product Details -->
+                <div class="p-6 md:p-8 flex flex-col h-full">
+                    <div class="flex justify-between items-start">
+                        <h1 class="text-3xl md:text-4xl font-black text-gray-900 mb-2 lego-font">STORMER XL</h1>
+                        <span class="text-gray-500 text-sm font-bold">6230</span>
+                    </div>
+
+                    <!-- Ratings Placeholder -->
+                    <div class="flex items-center mb-4 space-x-2">
+                        <div class="flex text-yellow-400">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            <i data-lucide="star-half" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <span class="text-sm text-blue-600 hover:underline cursor-pointer">(12 Κριτικές)</span>
+                    </div>
+
+                    <!-- Price Block -->
+                    <div class="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-100">
+                        <div class="text-sm text-gray-500 line-through">24.99 €</div>
+                        <div class="text-3xl font-bold text-gray-900">19.99 € <span class="text-sm font-normal text-green-600 ml-2">-20%</span></div>
+                        <div class="text-xs text-green-600 font-bold mt-1 flex items-center">
+                            <i data-lucide="check" class="w-3 h-3 mr-1"></i> Διαθέσιμο τώρα
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart -->
+                    <div class="flex space-x-4 mb-8">
+                        <div class="w-20">
+                            <label class="sr-only">Ποσότητα</label>
+                            <select class="w-full border border-gray-300 rounded p-3 bg-white font-bold text-center focus:outline-none focus:ring-2 focus:ring-yellow-400">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <button onclick="addToBag()" class="flex-1 btn-yellow font-bold text-lg rounded px-6 py-3 shadow-md flex items-center justify-center transform active:scale-95">
+                            Προσθήκη στο Καλάθι
+                        </button>
+                    </div>
+
+                    <!-- Product Specs -->
+                    <div class="grid grid-cols-3 gap-4 border-t border-b border-gray-200 py-6 mb-6">
+                        <div class="text-center">
+                            <div class="text-gray-500 text-xs uppercase tracking-wide mb-1">Ηλικία</div>
+                            <div class="font-black text-xl text-gray-800">8-16</div>
+                        </div>
+                        <div class="text-center border-l border-r border-gray-200">
+                            <div class="text-gray-500 text-xs uppercase tracking-wide mb-1">Κομμάτια</div>
+                            <div class="font-black text-xl text-gray-800">89</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-gray-500 text-xs uppercase tracking-wide mb-1">Πόντοι</div>
+                            <div class="font-black text-xl text-gray-800">500</div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="prose prose-sm text-gray-600">
+                        <h3 class="font-bold text-gray-900 text-lg mb-2">Πολεμήστε τους γαλαξιακούς κακοποιούς με τον STORMER XL!</h3>
+                        <p class="mb-4">
+                            STORMER, έχουμε μεγάλο πρόβλημα! Οι κακοποιοί απέδρασαν από το <strong>Hero Factory</strong> και διασκορπίζονται σε όλο τον γαλαξία! Είσαι εξοπλισμένος με μερικά από τα πιο προηγμένα εργαλεία μας για να αντιμετωπίσεις την απειλή.
+                        </p>
+                        <p class="mb-4">
+                            Χρησιμοποίησε το <strong>σπαθί ισχύος</strong>, τον <strong>εκτοξευτή πλάσματος</strong>, τα <strong>drones ανίχνευσης</strong> και τις <strong>χειροπέδες ηρώων</strong>. Πρόλαβε τους κακοποιούς και βάλε τους πίσω στη φυλακή!
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Διαθέτει σπαθί ισχύος, εκτοξευτή πλάσματος, drones ανίχνευσης και χειροπέδες.</li>
+                            <li>Πλήρως αρθρωτά μέλη για ρεαλιστικές μάχες.</li>
+                            <li>Συνδυάστε το με το σετ 6231 SPEEDA DEMON για ακόμα μεγαλύτερο μοντέλο!</li>
+                            <li>Ύψος πάνω από 26 εκατοστά.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Content Sections -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Features Block -->
+            <div class="bg-blue-900 text-white rounded-lg p-6 flex items-center shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 opacity-10 transform translate-x-10 -translate-y-10">
+                    <i data-lucide="shield" class="w-64 h-64"></i>
+                </div>
+                <div class="z-10">
+                    <h3 class="text-2xl font-bold mb-2 italic">HERO CORE</h3>
+                    <p class="text-blue-200 text-sm mb-4">
+                        Κάθε ήρωας διαθέτει έναν μοναδικό κωδικό στον πυρήνα του (Hero Core). Χρησιμοποίησε τον κωδικό στο online παιχνίδι Breakout για να ξεκλειδώσεις ειδικό περιεχόμενο!
+                    </p>
+                    <button class="bg-white text-blue-900 px-4 py-2 rounded font-bold text-sm hover:bg-gray-100 transition">
+                        Μάθε Περισσότερα
+                    </button>
+                </div>
+            </div>
+
+            <!-- Instructions Link -->
+            <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200 flex items-center justify-between">
+                <div>
+                    <h3 class="font-bold text-gray-900 mb-1">Οδηγίες Κατασκευής</h3>
+                    <p class="text-sm text-gray-500">Κατέβασε το PDF για το σετ 6230.</p>
+                </div>
+                <button class="flex items-center text-blue-600 font-bold hover:underline">
+                    <i data-lucide="download" class="w-5 h-5 mr-2"></i> PDF (5 MB)
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 mt-auto border-t-4 border-yellow-400">
+        <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase">Υποστηριξη</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Επικοινωνία</a></li>
+                    <li><a href="#" class="hover:text-white">Οδηγίες Κατασκευής</a></li>
+                    <li><a href="#" class="hover:text-white">Αντικατάσταση Τουβλάκια</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-4 uppercase">Σχετικα με εμας</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">LEGO® Group</a></li>
+                    <li><a href="#" class="hover:text-white">Νέα LEGO®</a></li>
+                    <li><a href="#" class="hover:text-white">Δήλωση Διαφάνειας</a></li>
+                </ul>
+            </div>
+            <div class="col-span-2 md:col-span-2">
+                <div class="flex items-center mb-4">
+                     <div class="bg-red-600 text-white w-8 h-8 flex items-center justify-center font-bold italic text-[10px] border border-white mr-3">
+                        LEGO
+                    </div>
+                    <span class="text-xs">© 2012 The LEGO Group. All rights reserved.</span>
+                </div>
+                <p class="text-xs text-gray-500">
+                    Το LEGO, το λογότυπο LEGO, η Minifigure, DUPLO, LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS και MIXELS είναι εμπορικά σήματα και πνευματική ιδιοκτησία του Ομίλου LEGO.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-4 right-4 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-2xl transform translate-y-24 transition-transform duration-300 z-50 flex items-center">
+        <div class="bg-green-500 rounded-full p-1 mr-3">
+            <i data-lucide="check" class="w-4 h-4 text-white"></i>
+        </div>
+        <div>
+            <h4 class="font-bold text-sm">Προστέθηκε στο καλάθι!</h4>
+            <p class="text-xs text-gray-400">Ο Stormer XL είναι έτοιμος για αποστολή.</p>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Image Gallery Logic
+        function changeImage(src) {
+            const mainImage = document.getElementById('main-image');
+            // Add fade effect
+            mainImage.style.opacity = '0.5';
+            setTimeout(() => {
+                mainImage.src = src;
+                mainImage.style.opacity = '1';
+            }, 150);
+        }
+
+        // Add to Bag Logic
+        let cartItems = 0;
+        function addToBag() {
+            cartItems++;
+            
+            // Update Bag Count
+            const cartCount = document.getElementById('cart-count');
+            cartCount.innerText = cartItems;
+            cartCount.classList.remove('hidden');
+
+            // Show Toast
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-24');
+            
+            // Hide Toast after 3 seconds
+            setTimeout(() => {
+                toast.classList.add('translate-y-24');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
