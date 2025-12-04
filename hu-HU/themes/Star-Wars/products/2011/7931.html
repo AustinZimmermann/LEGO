@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7931 T-6 Jedi Shuttle™ - LEGO® Star Wars™ - Termékek - LEGO.com (Magyarország)</title>
+    <!-- Tailwind CSS betöltése reszponzív stílushoz -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Egyedi stílusok a Star Wars hangulatért és olvashatóságért */
+        body {
+            font-family: sans-serif;
+            background-color: #1a1a2e; /* Sötét, éjszakai háttér */
+            color: #e0e0e0; /* Világos szöveg */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .product-card {
+            background-color: #2c2c45; /* Sötétebb kártya háttér */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid #4a4a6e;
+        }
+        .cta-button {
+            background-color: #f7d23d; /* Élénk sárga CTA gomb */
+            color: #1a1a2e;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .cta-button:hover {
+            background-color: #ffd700;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header / Navigáció -->
+    <header class="bg-black bg-opacity-50 p-4 border-b border-yellow-500/30">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-yellow-500 uppercase tracking-widest">
+                LEGO® <i>Star Wars</i>™
+            </h1>
+            <nav class="space-x-4 hidden sm:block">
+                <a href="#" class="text-sm hover:text-yellow-400">Termékek</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Témák</a>
+                <a href="#" class="text-sm hover:text-yellow-400">Támogatás</a>
+            </nav>
+            <button class="sm:hidden text-yellow-500 text-xl">
+                <!-- Burger menü ikon placeholder -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Fő termékoldal tartalom -->
+    <main class="container mx-auto p-4 sm:p-8">
+        <div class="product-card p-6 md:p-10 rounded-xl">
+            
+            <!-- Vissza gomb -->
+            <a href="#" class="text-yellow-500 hover:text-yellow-400 text-sm font-semibold mb-6 inline-block">
+                &larr; Vissza a LEGO <i>Star Wars</i>™ oldalra
+            </a>
+            
+            <!-- Termék Részletek - Reszponzív elrendezés: kép fent, részletek lent mobilon, egymás mellett asztalon -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                
+                <!-- Kép és Galéria (Bal oldal) -->
+                <div class="space-y-4">
+                    <div class="w-full aspect-video rounded-xl overflow-hidden border-4 border-yellow-500/50">
+                        <!-- Termék kép placeholder -->
+                        <img 
+                            src="https://www.lego.com/cdn/product-assets/product.img.pri/7931_prod.jpg" 
+                            alt="7931 T-6 Jedi Shuttle" 
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                    
+                    <!-- Kisebb képek/Galéria placeholder (mobilon elrejtve) -->
+                    <div class="hidden sm:flex space-x-2 justify-center">
+                        <div class="w-16 h-16 bg-gray-600 rounded-md cursor-pointer hover:border-2 border-yellow-500"></div>
+                        <div class="w-16 h-16 bg-gray-700 rounded-md cursor-pointer hover:border-2 border-yellow-500"></div>
+                        <div class="w-16 h-16 bg-gray-600 rounded-md cursor-pointer hover:border-2 border-yellow-500"></div>
+                    </div>
+                </div>
+                
+                <!-- Termék információk (Jobb oldal) -->
+                <div class="space-y-6">
+                    <div class="border-b border-yellow-500/50 pb-4">
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-2 leading-tight">
+                            7931 T-6 Jedi Shuttle™
+                        </h2>
+                        <p class="text-lg text-yellow-500 font-medium">
+                            LEGO® <i>Star Wars</i>™
+                        </p>
+                    </div>
+
+                    <!-- Kulcs adatok -->
+                    <div class="flex flex-wrap gap-4 text-sm font-medium">
+                        <span class="bg-gray-700 p-2 rounded-lg">Cikkszám: 7931</span>
+                        <span class="bg-gray-700 p-2 rounded-lg">Év: 2011</span>
+                        <span class="bg-gray-700 p-2 rounded-lg">Darabszám: 389</span>
+                        <span class="bg-green-500 p-2 rounded-lg text-black">Elérhető</span>
+                    </div>
+                    
+                    <!-- Ár és CTA -->
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-yellow-900/20 p-4 rounded-xl border border-yellow-500/50">
+                        <p class="text-3xl font-bold text-yellow-300 mb-4 sm:mb-0">
+                            19 990 Ft
+                        </p>
+                        <button class="cta-button w-full sm:w-auto px-8 py-3 rounded-xl text-lg font-bold uppercase shadow-lg hover:shadow-xl">
+                            Kosárba
+                        </button>
+                    </div>
+
+                    <!-- Termék Leírás -->
+                    <div class="space-y-4 pt-4">
+                        <h3 class="text-xl font-semibold border-b border-yellow-500/30 pb-2 text-yellow-500">
+                            Leírás
+                        </h3>
+                        <p class="text-gray-300">
+                            A T-6 Jedi Shuttle egy gyors és jól manőverezhető hajó, amit a Jedi Rend használt a Köztársaság idején. Irányítsd a forgó szárnyakat a repülési és leszállási módok között! A modell részletesen kidolgozott pilótafülkével, nyitható raktérrel és rugós kilövőkkel rendelkezik. Segíts Shaak Ti-nak és Saesee Tiin-nek, hogy megmeneküljenek a szeparatisták elől!
+                        </p>
+                    </div>
+
+                    <!-- Minifigurák -->
+                    <div class="pt-4">
+                        <h3 class="text-xl font-semibold border-b border-yellow-500/30 pb-2 text-yellow-500">
+                            Minifigurák
+                        </h3>
+                        <ul class="list-disc list-inside text-gray-300 ml-4 mt-2 grid grid-cols-2 gap-2">
+                            <li>Shaak Ti Jedi Mester</li>
+                            <li>Saesee Tiin Jedi Mester</li>
+                            <li>Astromech Droid</li>
+                            <li>Klon pilóta</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 bg-black bg-opacity-70 p-6 text-center text-xs text-gray-400">
+        <p class="mb-2">LEGO, a LEGO logó és a Minifigura a LEGO Csoport védjegyei. ©2025 A LEGO Csoport.</p>
+        <p>A Star Wars és a kapcsolódó tulajdonok a Lucasfilm Ltd. és/vagy annak leányvállalatainak védjegyei.</p>
+        <div class="mt-4 space-x-4">
+            <a href="#" class="hover:text-yellow-500">Adatvédelem</a>
+            <a href="#" class="hover:text-yellow-500">Általános Szerződési Feltételek</a>
+            <a href="#" class="hover:text-yellow-500">Kapcsolat</a>
+        </div>
+    </footer>
+
+</body>
+</html>
