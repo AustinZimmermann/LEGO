@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2111 Kai | LEGO® Ninjago | LEGO.com HU</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .spinner-anim {
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .bg-lego-yellow {
+            background-color: #FFD502;
+        }
+        
+        .bg-lego-red {
+            background-color: #D01012;
+        }
+
+        .text-lego-red {
+            color: #D01012;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 flex flex-col min-h-screen">
+
+    <!-- Promo Bar -->
+    <div class="bg-gray-100 text-xs text-center py-2 px-4 hidden md:block">
+        INGYENES szállítás 17 000 Ft feletti rendelés esetén! | Hivatalos LEGO® Áruház
+    </div>
+
+    <!-- Header -->
+    <header class="bg-lego-yellow shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-6">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0">
+                    <div class="w-10 h-10 bg-lego-red text-white flex items-center justify-center font-bold text-xl border-2 border-white shadow-sm">
+                        LEGO
+                    </div>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-6 font-bold text-sm uppercase tracking-wide">
+                    <a href="#" class="hover:underline">Termékek</a>
+                    <a href="#" class="hover:underline">Felfedezés</a>
+                    <a href="#" class="hover:underline">Súgó</a>
+                </nav>
+            </div>
+
+            <!-- Icons -->
+            <div class="flex items-center space-x-4 md:space-x-6">
+                <button class="text-gray-800 hover:text-lego-red"><i class="fas fa-search text-xl"></i></button>
+                <button class="text-gray-800 hover:text-lego-red"><i class="fas fa-heart text-xl"></i></button>
+                <button class="text-gray-800 hover:text-lego-red flex items-center">
+                    <i class="fas fa-shopping-bag text-xl"></i>
+                    <span class="ml-2 hidden md:inline font-bold">0 Ft</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-gray-50 py-3 border-b">
+        <div class="container mx-auto px-4 text-xs text-gray-500">
+            <a href="#" class="hover:underline">Kezdőlap</a>
+            <span class="mx-2">/</span>
+            <a href="#" class="hover:underline">Témák</a>
+            <span class="mx-2">/</span>
+            <a href="#" class="hover:underline">Ninjago</a>
+            <span class="mx-2">/</span>
+            <span class="text-gray-800 font-bold">2111 Kai</span>
+        </div>
+    </nav>
+
+    <!-- Main Product Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+            
+            <!-- Left Column: Gallery -->
+            <div class="space-y-4">
+                <!-- Main Image Placeholder (SVG) -->
+                <div class="bg-gray-100 rounded-lg p-8 aspect-square flex items-center justify-center relative overflow-hidden group border border-gray-200">
+                    <div class="absolute top-4 left-4 bg-gray-800 text-white text-xs font-bold px-2 py-1 rounded uppercase">Kifutott termék</div>
+                    
+                    <!-- SVG Representation of Kai Spinner -->
+                    <svg viewBox="0 0 200 200" class="w-3/4 h-3/4 drop-shadow-2xl group-hover:scale-110 transition-transform duration-500">
+                        <!-- Spinner Base -->
+                        <circle cx="100" cy="140" r="40" fill="#D01012" stroke="#8B0000" stroke-width="2"/>
+                        <circle cx="100" cy="140" r="20" fill="#FFD502" />
+                        <path d="M100 140 L120 120 L140 140 L120 160 Z" fill="#D01012" class="spinner-anim origin-center" style="transform-origin: 100px 140px;"/>
+                        
+                        <!-- Minifigure Abstract -->
+                        <rect x="85" y="90" width="30" height="35" fill="#D01012" stroke="#8B0000" /> <!-- Torso -->
+                        <rect x="85" y="125" width="13" height="15" fill="#333" /> <!-- Left Leg -->
+                        <rect x="102" y="125" width="13" height="15" fill="#333" /> <!-- Right Leg -->
+                        <circle cx="100" cy="80" r="12" fill="#FFD502" /> <!-- Head -->
+                        <path d="M85 70 Q100 60 115 70 V85 H85 Z" fill="#D01012" /> <!-- Ninja Hood -->
+                        <rect x="90" y="76" width="20" height="6" fill="#FFD502" /> <!-- Eyes gap -->
+                        <circle cx="95" cy="79" r="1.5" fill="black" />
+                        <circle cx="105" cy="79" r="1.5" fill="black" />
+                        
+                        <!-- Sword -->
+                        <path d="M120 100 L160 60" stroke="#FFD700" stroke-width="4" stroke-linecap="round"/>
+                        <path d="M150 50 L160 60 L170 70" fill="none" stroke="#FFA500" stroke-width="2"/>
+                    </svg>
+                    
+                    <button class="absolute bottom-4 right-4 bg-white p-2 rounded-full shadow-lg hover:bg-gray-50 text-gray-600">
+                        <i class="fas fa-expand-alt"></i>
+                    </button>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="aspect-square bg-gray-100 rounded cursor-pointer border-2 border-lego-red flex items-center justify-center p-2">
+                         <i class="fas fa-box text-2xl text-gray-400"></i>
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded cursor-pointer border-2 border-transparent hover:border-gray-300 flex items-center justify-center p-2">
+                        <i class="fas fa-user-ninja text-2xl text-gray-400"></i>
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded cursor-pointer border-2 border-transparent hover:border-gray-300 flex items-center justify-center p-2">
+                        <i class="fas fa-gamepad text-2xl text-gray-400"></i>
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded cursor-pointer border-2 border-transparent hover:border-gray-300 flex items-center justify-center p-2">
+                        <i class="fas fa-images text-2xl text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Details -->
+            <div>
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-sm font-bold text-gray-500 uppercase tracking-wider">Ninjago</span>
+                    <div class="flex text-yellow-400 text-sm">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-500 ml-1">(24 értékelés)</span>
+                    </div>
+                </div>
+                
+                <h1 class="text-4xl font-bold mb-2 lego-font tracking-wide">Kai</h1>
+                
+                <div class="flex flex-wrap gap-4 text-sm font-bold text-gray-700 mb-6">
+                    <span class="bg-gray-100 px-2 py-1 rounded">2111</span>
+                    <span class="bg-gray-100 px-2 py-1 rounded">6-14 Év</span>
+                    <span class="bg-gray-100 px-2 py-1 rounded">19 Elem</span>
+                    <span class="bg-gray-100 px-2 py-1 rounded">2011</span>
+                </div>
+
+                <div class="mb-8">
+                    <p class="text-3xl font-bold text-gray-400 italic mb-2">Már nem kapható</p>
+                    <p class="text-sm text-gray-600">Ez a termék 2012. december 31-én megszűnt.</p>
+                </div>
+
+                <!-- Action Buttons (Disabled) -->
+                <div class="space-y-4 mb-8">
+                    <button disabled class="w-full bg-gray-300 text-white font-bold py-4 rounded-full cursor-not-allowed uppercase tracking-wide">
+                        Kosárba
+                    </button>
+                    <div class="flex space-x-4">
+                        <button class="flex-1 border-2 border-gray-300 text-gray-500 font-bold py-3 rounded-full hover:border-gray-400 hover:text-gray-600 text-sm">
+                            <i class="far fa-heart mr-2"></i> Kívánságlista
+                        </button>
+                        <button class="flex-1 border-2 border-gray-300 text-gray-500 font-bold py-3 rounded-full hover:border-gray-400 hover:text-gray-600 text-sm">
+                            <i class="fas fa-check-circle mr-2"></i> Készletellenőrzés
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="prose max-w-none text-gray-700 mb-8">
+                    <h3 class="text-xl font-bold mb-2 text-gray-900">Pörögj a győzelembe!</h3>
+                    <p class="mb-4">
+                        A Spinjitzu mesterei visszatértek! Kai, a tűz nindzsája készen áll, hogy felvegye a harcot a csontvázsereggel a Tűzsárkány Kardja segítségével. Helyezd a minifigurát a pörgettyűre, és mutasd meg, ki az igazi Spinjitzu mester!
+                    </p>
+                    <ul class="list-disc pl-5 space-y-1 text-sm">
+                        <li>Tartalmaz 1 Kai minifigurát.</li>
+                        <li>A készlet része a piros tűz pörgettyű, 3 fegyver, 1 karakterkártya, 4 harckártya és LEGO® elemek.</li>
+                        <li>Fegyverek: Tűz Sárkánykardja, arany katana és lándzsa.</li>
+                        <li>Versenyezz a barátaiddal!</li>
+                    </ul>
+                </div>
+                
+                <!-- Extra Info Accordion Style -->
+                <div class="border-t border-gray-200">
+                    <details class="group py-4 cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold list-none">
+                            <span>Specifikációk</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-2 text-sm">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>Cikkszám: <strong>2111</strong></div>
+                                <div>Téma: <strong>Ninjago</strong></div>
+                                <div>Elemek száma: <strong>19</strong></div>
+                                <div>Minifigurák: <strong>1 (Kai)</strong></div>
+                                <div>Kiadás éve: <strong>2011</strong></div>
+                                <div>Súly: <strong>0.09 kg</strong></div>
+                            </div>
+                        </div>
+                    </details>
+                    
+                    <details class="group py-4 cursor-pointer border-t border-gray-200">
+                        <summary class="flex justify-between items-center font-bold list-none">
+                            <span>Építési útmutatók</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fas fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <div class="text-gray-600 mt-2 text-sm">
+                             <a href="#" class="flex items-center text-blue-600 hover:underline">
+                                <i class="fas fa-file-pdf mr-2"></i>
+                                2111_Kai_BI.pdf (1.2 MB)
+                             </a>
+                        </div>
+                    </details>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Recommendations / Related -->
+        <section class="mt-16 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Ajánlott neked</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- Related Item 1 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-100 rounded-lg p-4 mb-2 aspect-[4/3] flex items-center justify-center relative">
+                        <div class="absolute top-2 left-2 bg-yellow-400 text-xs font-bold px-1 rounded">ÚJ</div>
+                        <i class="fas fa-dragon text-4xl text-blue-600 group-hover:scale-110 transition"></i>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1 group-hover:underline">Jay - Villám Sárkány</h3>
+                    <div class="text-sm font-bold">14 990 Ft</div>
+                </div>
+                <!-- Related Item 2 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-100 rounded-lg p-4 mb-2 aspect-[4/3] flex items-center justify-center">
+                        <i class="fas fa-dungeon text-4xl text-gray-800 group-hover:scale-110 transition"></i>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1 group-hover:underline">Koponya Motor</h3>
+                    <div class="text-sm font-bold">9 990 Ft</div>
+                </div>
+                <!-- Related Item 3 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-100 rounded-lg p-4 mb-2 aspect-[4/3] flex items-center justify-center">
+                        <i class="fas fa-ghost text-4xl text-purple-600 group-hover:scale-110 transition"></i>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1 group-hover:underline">Spinjitzu Dojo</h3>
+                    <div class="text-sm font-bold">21 990 Ft</div>
+                </div>
+                <!-- Related Item 4 -->
+                <div class="group cursor-pointer">
+                    <div class="bg-gray-100 rounded-lg p-4 mb-2 aspect-[4/3] flex items-center justify-center">
+                         <i class="fas fa-shield-alt text-4xl text-green-600 group-hover:scale-110 transition"></i>
+                    </div>
+                    <h3 class="font-bold text-sm mb-1 group-hover:underline">Lloyd - Spinjitzu Mester</h3>
+                    <div class="text-sm font-bold">4 590 Ft</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold mb-4 uppercase text-sm tracking-wide text-gray-400">Rólunk</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">A LEGO Csoport</a></li>
+                        <li><a href="#" class="hover:text-white">Sajtószoba</a></li>
+                        <li><a href="#" class="hover:text-white">Fenntarthatóság</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 uppercase text-sm tracking-wide text-gray-400">Támogatás</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">Kapcsolat</a></li>
+                        <li><a href="#" class="hover:text-white">Építési útmutatók</a></li>
+                        <li><a href="#" class="hover:text-white">Pótalkatrészek</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 uppercase text-sm tracking-wide text-gray-400">Látványosságok</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">LEGO® House</a></li>
+                        <li><a href="#" class="hover:text-white">LEGOLAND® Parkok</a></li>
+                        <li><a href="#" class="hover:text-white">LEGO Discovery Centers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 uppercase text-sm tracking-wide text-gray-400">Kövess minket</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl hover:text-blue-400"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-2xl hover:text-pink-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-2xl hover:text-red-500"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-2xl hover:text-blue-300"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                <div class="mb-4 md:mb-0">
+                    <p>LEGO System A/S, DK-7190 Billund, Dánia. Az online vásárláshoz legalább 18 évesnek kell lenned.</p>
+                    <p class="mt-2">A LEGO, a LEGO logó, a Minifigure, a DUPLO, a LEGENDS OF CHIMA, a NINJAGO, a BIONICLE, a MINDSTORMS és a MIXELS a LEGO Csoport védjegyei. ©2024 The LEGO Group. Minden jog fenntartva.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white">Adatvédelmi szabályzat</a>
+                    <a href="#" class="hover:text-white">Cookie-k</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
