@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>70780 A Víz védelmezője - LEGO® BIONICLE® - LEGO.com (Magyarország)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .lego-yellow {
+            background-color: #FFD502;
+            color: black;
+        }
+
+        .lego-red {
+            background-color: #D01012;
+            color: white;
+        }
+
+        .bionicle-blue {
+            background-color: #008DB9;
+        }
+
+        .bionicle-dark-blue {
+            background-color: #00567A;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #008DB9;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00567A;
+        }
+        
+        .mask-pattern {
+            background-image: radial-gradient(#ffffff 10%, transparent 10%),
+            radial-gradient(#ffffff 10%, transparent 10%);
+            background-color: #008DB9;
+            background-position: 0 0, 10px 10px;
+            background-size: 20px 20px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="lego-yellow h-2 w-full"></div>
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="lego-red w-12 h-12 flex items-center justify-center font-black text-white italic text-xl tracking-tighter border-2 border-black/10 shadow-sm cursor-pointer hover:scale-105 transition-transform">
+                    LEGO
+                </div>
+                <nav class="hidden md:flex space-x-6 font-bold text-gray-700">
+                    <a href="#" class="hover:text-yellow-500 transition">TERMÉKEK</a>
+                    <a href="#" class="hover:text-yellow-500 transition">FELFEDEZÉS</a>
+                    <a href="#" class="hover:text-yellow-500 transition">SEGÍTSÉG</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 hover:text-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </button>
+                <button class="text-gray-600 hover:text-black relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span class="absolute -top-2 -right-2 bg-blue-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Nav Bar (Visual Only) -->
+        <div class="md:hidden bg-gray-100 py-2 px-4 text-sm font-semibold text-center border-t">
+            MENÜ | KERESÉS | KOSÁR
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        
+        <!-- Breadcrumb -->
+        <nav class="text-sm text-gray-500 mb-6">
+            <ol class="list-none p-0 inline-flex">
+                <li class="flex items-center">
+                    <a href="#" class="hover:underline">Kezdőlap</a>
+                    <svg class="w-3 h-3 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </li>
+                <li class="flex items-center">
+                    <a href="#" class="hover:underline">BIONICLE®</a>
+                    <svg class="w-3 h-3 mx-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </li>
+                <li class="font-bold text-gray-800">A Víz védelmezője</li>
+            </ol>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Left Column: Image Gallery -->
+            <div class="space-y-4">
+                <!-- Main Image Placeholder -->
+                <div class="bg-gradient-to-br from-blue-100 to-blue-50 border border-blue-200 rounded-xl aspect-square flex items-center justify-center relative overflow-hidden shadow-lg group">
+                    <div class="absolute inset-0 mask-pattern"></div>
+                    
+                    <img src="https://www.lego.com/cdn/product-assets/product.img.pri/70780_Prod.jpg"
+
+                    <!-- Badge -->
+                    <div class="absolute top-4 left-4 bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded shadow-sm">
+                        KIFUTOTT TERMÉK
+                    </div>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="aspect-square bg-gray-100 rounded-lg cursor-pointer hover:ring-2 hover:ring-blue-500 transition flex items-center justify-center text-gray-400 text-xs font-bold border">
+                        <span class="text-center">[Kép:<br>Hátulnézet]</span>
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded-lg cursor-pointer hover:ring-2 hover:ring-blue-500 transition flex items-center justify-center text-gray-400 text-xs font-bold border">
+                        <span class="text-center">[Kép:<br>Akció]</span>
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded-lg cursor-pointer hover:ring-2 hover:ring-blue-500 transition flex items-center justify-center text-gray-400 text-xs font-bold border">
+                        <span class="text-center">[Kép:<br>Doboz]</span>
+                    </div>
+                    <div class="aspect-square bg-gray-100 rounded-lg cursor-pointer hover:ring-2 hover:ring-blue-500 transition flex items-center justify-center text-gray-400 text-xs font-bold border">
+                        <span class="text-center">[Kép:<br>Kombó]</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Product Details -->
+            <div class="flex flex-col">
+                <div class="mb-4">
+                    <h2 class="text-blue-600 font-bold tracking-widest uppercase text-sm mb-1">LEGO® BIONICLE®</h2>
+                    <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-2">A Víz védelmezője</h1>
+                    <div class="flex items-center space-x-4 text-sm font-medium text-gray-600">
+                        <span class="bg-gray-200 px-2 py-1 rounded">70780</span>
+                        <span>|</span>
+                        <div class="flex text-yellow-500">
+                            ★★★★★ <span class="text-gray-400 ml-1">(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specs Grid -->
+                <div class="grid grid-cols-3 gap-4 mb-8 border-y border-gray-200 py-6">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-800">6-12</div>
+                        <div class="text-xs text-gray-500 uppercase font-bold mt-1">Életkor</div>
+                    </div>
+                    <div class="text-center border-x border-gray-200">
+                        <div class="text-2xl font-bold text-gray-800">71</div>
+                        <div class="text-xs text-gray-500 uppercase font-bold mt-1">Elemek</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-800">2015</div>
+                        <div class="text-xs text-gray-500 uppercase font-bold mt-1">Megjelenés</div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="prose text-gray-700 mb-8 leading-relaxed">
+                    <p class="mb-4 font-bold text-lg text-blue-900">
+                        Győzd le a Koponyapókot a Víz védelmezőjével!
+                    </p>
+                    <p class="mb-4">
+                        Vigyázz! A Koponyapók megpróbálja kipukkantani a védelmezők víz alatti falujának buborékait. Fújd ki ezt a nemkívánatos látogatót a vízből a Víz védelmezőjének gyorstüzelő Elemi torpedóvetőjével!
+                    </p>
+                    <p>
+                        Ez a robusztus figura BIONICLE® fejjel, kétszínű maszkkal és 2 turbinával rendelkezik. Igazi akciójátékra készült, ezért ne késlekedj – álld útját a gonosz ellenségnek, mielőtt megragadná a maszkot és megszerezné a védelmezők erejét!
+                    </p>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="mt-auto bg-gray-50 p-6 rounded-xl border border-gray-200">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm font-bold text-red-600 uppercase">Már nem kapható</span>
+                        <span class="text-3xl font-bold text-gray-400 line-through decoration-red-500">3 490 Ft</span>
+                    </div>
+                    <button class="w-full bg-gray-300 text-gray-500 font-bold py-4 rounded-lg cursor-not-allowed uppercase tracking-wider" disabled>
+                        Kifutott termék
+                    </button>
+                    <div class="mt-4 text-center">
+                        <a href="#" class="text-blue-600 text-sm font-bold hover:underline flex items-center justify-center">
+                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"></path></svg>
+                            Építési útmutató megtekintése
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="mt-16 mb-16">
+            <h3 class="text-2xl font-black text-gray-800 mb-8 text-center uppercase tracking-widest">Jellemzők és Funkciók</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Elemi torpedóvető</h4>
+                    <p class="text-gray-600 text-sm">Gyorstüzelő funkcióval ellátott fegyver, 6 tölténnyel a maximális tűzerőért a víz alatti csatákban.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Koponyapók</h4>
+                    <p class="text-gray-600 text-sm">Tartalmaz egy ezüst színű Koponyapókot, amely megpróbálja ellopni a védelmező maszkját.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Maszk-ledobó funkció</h4>
+                    <p class="text-gray-600 text-sm">A fejbe épített ravasz segítségével a maszk egyetlen mozdulattal lepattintható, ha a pók támad.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition">
+                    <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-full flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Kombinálható</h4>
+                    <p class="text-gray-600 text-sm">Építsd össze a 70786 Gali – A Víz ura készlettel egy még nagyobb, legyőzhetetlen hőssé!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Details Table -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow overflow-hidden">
+            <div class="px-6 py-4 border-b border-gray-200 bg-gray-50">
+                <h3 class="font-bold text-gray-800">Technikai Adatok</h3>
+            </div>
+            <table class="w-full text-sm text-left text-gray-500">
+                <tbody>
+                    <tr class="border-b">
+                        <th class="px-6 py-4 font-medium text-gray-900 bg-gray-50 w-1/3">Készlet száma</th>
+                        <td class="px-6 py-4">70780</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="px-6 py-4 font-medium text-gray-900 bg-gray-50">Téma</th>
+                        <td class="px-6 py-4">LEGO® BIONICLE®</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="px-6 py-4 font-medium text-gray-900 bg-gray-50">Alkatrészek száma</th>
+                        <td class="px-6 py-4">65 db</td>
+                    </tr>
+                    <tr class="border-b">
+                        <th class="px-6 py-4 font-medium text-gray-900 bg-gray-50">Ajánlott életkor</th>
+                        <td class="px-6 py-4">6 - 12 év</td>
+                    </tr>
+                    <tr>
+                        <th class="px-6 py-4 font-medium text-gray-900 bg-gray-50">Méret (Magasság)</th>
+                        <td class="px-6 py-4">Több mint 14 cm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-12 pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-400 uppercase text-xs tracking-wider">Rólunk</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">A LEGO Csoportról</a></li>
+                        <li><a href="#" class="hover:text-white">LEGO Hírek</a></li>
+                        <li><a href="#" class="hover:text-white">Fenntarthatóság</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-400 uppercase text-xs tracking-wider">Támogatás</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">Kapcsolat</a></li>
+                        <li><a href="#" class="hover:text-white">Építési útmutatók</a></li>
+                        <li><a href="#" class="hover:text-white">Szállítás és visszaküldés</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-400 uppercase text-xs tracking-wider">Látnivalók</h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white">LEGO® House</a></li>
+                        <li><a href="#" class="hover:text-white">LEGOLAND® Parkok</a></li>
+                        <li><a href="#" class="hover:text-white">LEGOLAND Discovery Centers</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="font-bold mb-4 text-gray-400 uppercase text-xs tracking-wider">Kövess minket</h4>
+                    <div class="flex space-x-4">
+                         <div class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-600 transition">F</div>
+                         <div class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center cursor-pointer hover:bg-pink-600 transition">I</div>
+                         <div class="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-600 transition">Y</div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+                <p>LEGO, a LEGO logó, a Minifigure, a DUPLO, a BIONICLE logó a LEGO Group védjegyei. ©2015-2025 The LEGO Group. Minden jog fenntartva.</p>
+                <p class="mt-2">Ez egy demonstrációs oldal.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
