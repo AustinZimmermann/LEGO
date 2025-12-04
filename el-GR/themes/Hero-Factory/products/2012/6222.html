@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6222 CORE HUNTER - LEGO® Hero Factory - Προϊόντα - LEGO.com (Ελλάδα)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --hf-green: #39ff14;
+            --hf-dark: #1a1a1a;
+            --hf-panel: #2d2d2d;
+            --hf-red: #ff3333;
+        }
+
+        body {
+            background-color: #000;
+            background-image: 
+                radial-gradient(circle at 50% 50%, #1a2a1a 0%, #000 100%),
+                linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+            color: white;
+            font-family: sans-serif;
+            background-attachment: fixed;
+        }
+
+        .hf-font {
+            font-family: sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .hexagon-bg {
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='40' viewBox='0 0 24 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40c5.523 0 10-4.477 10-10V10c0-5.523-4.477-10-10-10s-10 4.477-10 10v20c0 5.523 4.477 10 10 10z' fill='%23333' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--hf-green);
+            text-shadow: 0 0 10px var(--hf-green);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--hf-green);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .product-card {
+            background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+            border: 1px solid #444;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--hf-green), transparent);
+        }
+
+        .btn-buy {
+            background: linear-gradient(180deg, #ff8c00, #d35400);
+            border: 2px solid #e67e22;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            transition: transform 0.1s, box-shadow 0.2s;
+        }
+
+        .btn-buy:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 140, 0, 0.6);
+        }
+
+        .btn-buy:active {
+            transform: scale(0.95);
+        }
+
+        .hf-panel {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        .stat-bar {
+            background: #111;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+
+        .stat-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--hf-green), #fff);
+            box-shadow: 0 0 10px var(--hf-green);
+            width: 0%;
+            transition: width 1s ease-out;
+        }
+
+        .tech-border {
+            clip-path: polygon(
+                10px 0, 100% 0, 
+                100% calc(100% - 10px), calc(100% - 10px) 100%, 
+                0 100%, 0 10px
+            );
+        }
+
+        .glow-text {
+            text-shadow: 0 0 5px currentColor;
+        }
+        
+        /* 2012 Web Aesthetic Details */
+        .gradient-header {
+            background: linear-gradient(to bottom, #d9d9d9 0%, #a6a6a6 100%);
+            border-bottom: 4px solid #cc0000; /* LEGO Red */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- LEGO Global Header (Simulated 2012 Style) -->
+    <header class="gradient-header text-black p-2 shadow-lg z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center space-x-6">
+                <!-- LEGO Logo Placeholder -->
+                <div class="w-12 h-12 bg-[#cc0000] flex items-center justify-center text-white font-bold italic border-2 border-white shadow-md">
+                    LEGO
+                </div>
+                <nav class="hidden md:flex space-x-6 font-bold text-sm uppercase text-gray-800">
+                    <a href="#" class="hover:text-red-600">Αρχική</a>
+                    <a href="#" class="hover:text-red-600">Προϊόντα</a>
+                    <a href="#" class="hover:text-red-600">Παιχνίδια</a>
+                    <a href="#" class="hover:text-red-600">Γκαλερί</a>
+                    <a href="#" class="hover:text-red-600">Κοινότητα</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="bg-white px-3 py-1 rounded border border-gray-400 flex items-center">
+                    <input type="text" placeholder="Αναζήτηση..." class="bg-transparent border-none outline-none text-sm w-32">
+                    <i class="fas fa-search text-gray-500"></i>
+                </div>
+                <span class="text-sm font-bold text-gray-700">Ελλάδα | GR</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Factory Branding Bar -->
+    <div class="bg-black border-b-2 border-[#39ff14] p-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
+        <div class="container mx-auto flex justify-between items-center relative z-10">
+            <h1 class="hf-font text-3xl md:text-4xl text-white italic tracking-tighter" style="text-shadow: 0 0 10px #39ff14;">
+                <span class="text-[#39ff14]">HERO</span> FACTORY
+            </h1>
+            <div class="text-[#39ff14] text-xs md:text-sm font-mono border border-[#39ff14] px-2 py-1 rounded">
+                MISSION: CATCH ‘EM AND CUFF ‘EM
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="container mx-auto px-4 py-2 text-xs text-gray-400">
+        LEGO.com / Hero Factory / Προϊόντα / 6222 CORE HUNTER
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            <!-- Left Column: Images -->
+            <div class="space-y-4">
+                <div class="product-card p-6 tech-border relative group">
+                    <div class="absolute top-4 right-4 bg-[#cc0000] text-white text-xs font-bold px-3 py-1 rounded transform rotate-3 shadow-lg z-10">
+                        ΝΕΟ 2012
+                    </div>
+                    <!-- Main Product Image Simulation -->
+                    <div class="aspect-square bg-gradient-to-br from-gray-800 to-black rounded-lg flex items-center justify-center border border-gray-700 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-10"></div>
+                        
+                        <!-- Image Placeholder for the Figure -->
+                        <img src="https://www.lego.com/cdn/product-assets/product.img.pri/6222_prod.jpg">
+                    </div>
+
+                    <!-- Thumbnails -->
+                    <div class="flex space-x-3 mt-4 overflow-x-auto pb-2">
+                        <div class="w-20 h-20 bg-gray-800 border border-gray-600 hover:border-[#39ff14] cursor-pointer flex-shrink-0 rounded flex items-center justify-center">
+                            <i class="fas fa-box text-2xl text-gray-500"></i>
+                        </div>
+                        <div class="w-20 h-20 bg-gray-800 border border-gray-600 hover:border-[#39ff14] cursor-pointer flex-shrink-0 rounded flex items-center justify-center">
+                            <i class="fas fa-crosshairs text-2xl text-gray-500"></i>
+                        </div>
+                        <div class="w-20 h-20 bg-gray-800 border border-gray-600 hover:border-[#39ff14] cursor-pointer flex-shrink-0 rounded flex items-center justify-center">
+                            <i class="fas fa-mask text-2xl text-gray-500"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Details -->
+            <div class="flex flex-col space-y-6">
+                
+                <!-- Title Block -->
+                <div class="border-b border-gray-700 pb-4">
+                    <div class="flex justify-between items-start">
+                        <h2 class="hf-font text-4xl md:text-5xl text-white mb-2 tracking-wide uppercase">
+                            CORE HUNTER
+                        </h2>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/2048px-LEGO_logo.svg.png" alt="LEGO" class="w-12 h-12 opacity-80">
+                    </div>
+                    <div class="flex items-center space-x-4 text-gray-400 font-mono text-sm">
+                        <span>Κωδικός: <strong class="text-white">6222</strong></span>
+                        <span>|</span>
+                        <span>Ηλικίες: <strong class="text-white">7-14</strong></span>
+                        <span>|</span>
+                        <span>Τεμάχια: <strong class="text-white">51</strong></span>
+                        <span>|</span>
+                        <span>Πόντοι VIP: <strong class="text-white">12</strong></span>
+                    </div>
+                </div>
+
+                <!-- Price and Buy -->
+                <div class="hf-panel p-6 rounded-lg tech-border flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div>
+                        <span class="text-3xl font-bold text-[#ff3333] glow-text">14,99 €</span>
+                        <div class="text-xs text-[#39ff14] mt-1 flex items-center">
+                            <i class="fas fa-check-circle mr-1"></i> Διαθέσιμο τώρα
+                        </div>
+                    </div>
+                    <button class="btn-buy text-white font-bold py-3 px-8 rounded uppercase tracking-wider w-full md:w-auto flex items-center justify-center gap-2">
+                        <i class="fas fa-shopping-cart"></i> Προσθήκη
+                    </button>
+                </div>
+
+                <!-- Description -->
+                <div class="space-y-4 text-gray-300 leading-relaxed">
+                    <p class="font-bold text-lg text-white">
+                        Συναγερμός στους Ήρωες! Ο CORE HUNTER έχει αποδράσει!
+                    </p>
+                    <p>
+                        Ο CORE HUNTER είναι ελεύθερος και σπέρνει το χάος στο Hero Factory! Αυτός ο επικίνδυνος κακός ταξιδεύει στον γαλαξία αναζητώντας τους Πυρήνες των Ηρώων για να τους προσθέσει στη συλλογή του. Πρέπει να τον σταματήσετε πριν απενεργοποιήσει περισσότερους Ήρωες!
+                    </p>
+                    <ul class="list-none space-y-2 mt-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-[#39ff14] mt-1 mr-2"></i>
+                            <span>Διαθέτει εκτοξευτή πλάσματος Hero Core Remover.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-[#39ff14] mt-1 mr-2"></i>
+                            <span>Εξοπλισμένος με πολυεργαλείο μάχης και ισχυρή θωράκιση.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-[#39ff14] mt-1 mr-2"></i>
+                            <span>Μοναδικός κωδικός στον Πυρήνα για online παιχνίδι στο LEGO® Hero Factory Breakout.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-[#39ff14] mt-1 mr-2"></i>
+                            <span>Συνδυάστε το με τον 6223 BULK για να φτιάξετε ένα σούπερ μοντέλο!</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Stats Simulation -->
+                <div class="hf-panel p-4 rounded bg-black/40 mt-4">
+                    <h3 class="hf-font text-lg text-gray-400 mb-3 uppercase">Στατιστικά Μάχης</h3>
+                    
+                    <div class="mb-2">
+                        <div class="flex justify-between text-xs font-mono text-gray-400 mb-1">
+                            <span>ΔΥΝΑΜΗ</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <div class="flex justify-between text-xs font-mono text-gray-400 mb-1">
+                            <span>ΤΑΧΥΤΗΤΑ</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-xs font-mono text-gray-400 mb-1">
+                            <span>ΕΞΥΠΝΑΔΑ</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Breakout Game Promo Section (Typical of 2012) -->
+        <div class="mt-16 border-t border-gray-800 pt-8">
+            <div class="bg-gradient-to-r from-[#1a1a1a] to-[#0d0d0d] border border-[#39ff14] rounded-lg p-8 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,...');"></div> <!-- Hex pattern -->
+                
+                <div class="z-10 mb-6 md:mb-0 md:pr-8">
+                    <h3 class="hf-font text-3xl text-white mb-2">HERO FACTORY: BREAKOUT</h3>
+                    <p class="text-gray-400 mb-4">
+                        Χρησιμοποίησε τον μοναδικό κωδικό που θα βρεις μέσα στη συσκευασία για να ξεκλειδώσεις αποκλειστικό περιεχόμενο στο online παιχνίδι!
+                    </p>
+                    <button class="border border-[#39ff14] text-[#39ff14] hover:bg-[#39ff14] hover:text-black font-bold py-2 px-6 rounded transition-colors uppercase text-sm">
+                        ΠΑΙΞΕ ΤΩΡΑ
+                    </button>
+                </div>
+                
+                <div class="z-10 w-full md:w-1/3 h-32 bg-black border border-gray-700 flex items-center justify-center">
+                    <span class="text-gray-600 font-mono text-xs text-center p-2">
+                        [Game Banner Placeholder]<br>BREAKOUT GAME
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#111] border-t-4 border-gray-800 text-gray-500 py-8 mt-12 text-sm">
+        <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+                <h4 class="font-bold text-white mb-4 uppercase">Ανακαλύψτε</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Προϊόντα</a></li>
+                    <li><a href="#" class="hover:text-white">Νέα LEGO</a></li>
+                    <li><a href="#" class="hover:text-white">Κατάλογοι</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-white mb-4 uppercase">Υποστήριξη</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Εξυπηρέτηση Πελατών</a></li>
+                    <li><a href="#" class="hover:text-white">Οδηγίες Κατασκευής</a></li>
+                    <li><a href="#" class="hover:text-white">Λείπουν Τεμάχια;</a></li>
+                </ul>
+            </div>
+             <div>
+                <h4 class="font-bold text-white mb-4 uppercase">Σχετικά με εμάς</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-white">Ο Όμιλος LEGO</a></li>
+                    <li><a href="#" class="hover:text-white">Νέα του Ομίλου</a></li>
+                    <li><a href="#" class="hover:text-white">Καριέρα</a></li>
+                </ul>
+            </div>
+             <div>
+                <div class="flex items-center space-x-4 mb-4">
+                    <i class="fab fa-facebook fa-2x hover:text-white cursor-pointer"></i>
+                    <i class="fab fa-twitter fa-2x hover:text-white cursor-pointer"></i>
+                    <i class="fab fa-youtube fa-2x hover:text-white cursor-pointer"></i>
+                </div>
+                <p class="text-xs">
+                    LEGO, το λογότυπο LEGO, το Minifigure, DUPLO, LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS και MIXELS είναι εμπορικά σήματα του Ομίλου LEGO. ©2012 The LEGO Group.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple interactive script for visual feedback
+        document.querySelector('.btn-buy').addEventListener('click', function() {
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i> Προστέθηκε!';
+            this.classList.remove('btn-buy');
+            this.classList.add('bg-green-600');
+            
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.classList.add('btn-buy');
+                this.classList.remove('bg-green-600');
+            }, 2000);
+        });
+
+        // Animate stats on load
+        window.addEventListener('load', () => {
+            const stats = document.querySelectorAll('.stat-fill');
+            stats.forEach(stat => {
+                const width = stat.style.width;
+                stat.style.width = '0%';
+                setTimeout(() => {
+                    stat.style.width = width;
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html>
