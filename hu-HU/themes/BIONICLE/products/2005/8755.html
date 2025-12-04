@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8755 Keetongu - BIONICLE® - Termékek - LEGO.com (HU)</title>
+    <!-- Tailwind CSS a gyors stílusozáshoz -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide ikonok -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --lego-red: #d01012;
+            --lego-yellow: #ffcf00;
+            --bionicle-green: #2a3d2a;
+            --keetongu-yellow: #f5a623;
+            --visorak-red: #8b0000;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #111;
+            color: #ddd;
+        }
+
+        .font-display {
+            font-family: sans-serif;
+        }
+
+        /* 3D Rhotuka Spinner Animation */
+        .spinner-container {
+            perspective: 1000px;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .rhotuka {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff3333 20%, #8b0000 80%);
+            position: absolute;
+            transform-style: preserve-3d;
+            box-shadow: 0 0 15px #ff3333;
+            border: 4px solid #333;
+        }
+
+        .rhotuka::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: silver;
+            border-radius: 50%;
+            box-shadow: inset 0 0 5px #000;
+        }
+
+        .rhotuka-blade {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 140px;
+            height: 10px;
+            background: #ff6666;
+            transform-origin: center;
+        }
+        
+        .blade-1 { transform: translate(-50%, -50%) rotate(0deg); }
+        .blade-2 { transform: translate(-50%, -50%) rotate(120deg); }
+        .blade-3 { transform: translate(-50%, -50%) rotate(240deg); }
+
+        @keyframes spin {
+            0% { transform: rotateZ(0deg); }
+            100% { transform: rotateZ(3600deg); }
+        }
+
+        .spinning {
+            animation: spin 3s cubic-bezier(0.1, 0.7, 1.0, 0.1) forwards;
+        }
+
+        /* Glitch effect for BIONICLE text */
+        .glitch {
+            position: relative;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(#2a3d2a 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .product-image-placeholder {
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Lego Button Style */
+        .btn-lego {
+            background-color: var(--lego-yellow);
+            color: black;
+            font-weight: bold;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+        .btn-lego:hover {
+            background-color: #fff;
+            transform: scale(1.02);
+        }
+
+        .spec-grid div {
+            border-bottom: 1px solid #333;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- LEGO Header -->
+    <header class="bg-[#ffcf00] h-16 flex items-center justify-between px-4 lg:px-12 shadow-md relative z-50">
+        <div class="flex items-center gap-4">
+            <!-- LEGO Logo Placeholder -->
+            <div class="w-10 h-10 bg-[#d01012] flex items-center justify-center text-white font-display text-xs tracking-tighter border-2 border-white">
+                LEGO
+            </div>
+            <nav class="hidden md:flex gap-6 text-black font-bold text-sm uppercase tracking-wide">
+                <a href="#" class="hover:underline">Termékek</a>
+                <a href="#" class="hover:underline">Felfedezés</a>
+                <a href="#" class="hover:underline">Súgó</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4 text-black">
+            <i data-lucide="search" class="w-5 h-5 cursor-pointer"></i>
+            <i data-lucide="shopping-bag" class="w-5 h-5 cursor-pointer"></i>
+            <div class="hidden md:block font-bold">Magyarország</div>
+        </div>
+    </header>
+
+    <!-- BIONICLE Sub-header (Retro Style) -->
+    <div class="bg-black border-b-4 border-[#d01012] py-4 px-4 lg:px-12 flex items-center justify-between bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]">
+        <div class="flex items-center gap-3">
+            <div class="font-display text-3xl text-white tracking-widest italic" style="text-shadow: 0 0 10px #d01012;">BIONICLE</div>
+            <span class="text-gray-500 text-sm hidden sm:block">| WEB OF SHADOWS (2005)</span>
+        </div>
+        <div class="text-[#d01012] font-bold text-sm uppercase tracking-wider">Archivált Termék</div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow bg-pattern text-gray-200">
+        
+        <!-- Breadcrumbs -->
+        <div class="px-4 lg:px-12 py-4 text-xs text-gray-400 uppercase tracking-widest">
+            <span class="hover:text-white cursor-pointer">Kezdőlap</span> / 
+            <span class="hover:text-white cursor-pointer">Termékek</span> / 
+            <span class="hover:text-white cursor-pointer">Bionicle</span> / 
+            <span class="text-white">8755 Keetongu</span>
+        </div>
+
+        <div class="container mx-auto px-4 lg:px-12 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Product Image Area -->
+                <div class="space-y-4">
+                    <div class="product-image-placeholder rounded-lg aspect-square shadow-2xl border border-gray-800 relative group">
+                        <!-- Simulated Product Image using CSS/SVG -->
+                        <div class="relative w-full h-full flex flex-col items-center justify-center p-8">
+                             <!-- Silhouette of Keetongu -->
+                             <svg viewBox="0 0 200 200" class="w-full h-full opacity-90 drop-shadow-[0_0_15px_rgba(245,166,35,0.4)]">
+                                <path d="M100 20 C 120 20 130 40 130 60 C 130 90 150 100 160 120 L 140 180 L 100 160 L 60 180 L 40 120 C 50 100 70 90 70 60 C 70 40 80 20 100 20" fill="#f5a623" stroke="#b37400" stroke-width="2"/>
+                                <!-- The One Eye -->
+                                <circle cx="100" cy="50" r="10" fill="#ff3333" stroke="#500" stroke-width="2" class="animate-pulse"/>
+                                <!-- Chest Shield -->
+                                <circle cx="100" cy="100" r="30" fill="none" stroke="#silver" stroke-width="4"/>
+                                <path d="M100 100 L 120 80" stroke="#333" stroke-width="2"/>
+                            </svg>
+                            <div class="absolute bottom-4 right-4 bg-black/70 px-3 py-1 text-xs rounded text-gray-400">
+                                Illusztráció
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-2">
+                        <div class="aspect-square bg-[#222] rounded cursor-pointer border hover:border-[#f5a623] transition flex items-center justify-center text-xs text-gray-500">Doboz</div>
+                        <div class="aspect-square bg-[#222] rounded cursor-pointer border hover:border-[#f5a623] transition flex items-center justify-center text-xs text-gray-500">Hátlap</div>
+                        <div class="aspect-square bg-[#222] rounded cursor-pointer border hover:border-[#f5a623] transition flex items-center justify-center text-xs text-gray-500">360°</div>
+                        <div class="aspect-square bg-[#222] rounded cursor-pointer border hover:border-[#f5a623] transition flex items-center justify-center text-xs text-gray-500">Akció</div>
+                    </div>
+                </div>
+
+                <!-- Product Details Area -->
+                <div class="flex flex-col">
+                    <div class="flex items-center gap-2 mb-2">
+                         <span class="bg-[#2a3d2a] text-[#81c784] px-2 py-1 text-xs font-bold uppercase rounded">Titánok</span>
+                         <span class="bg-[#333] text-gray-300 px-2 py-1 text-xs font-bold uppercase rounded">2005</span>
+                    </div>
+                    
+                    <h1 class="font-display text-4xl lg:text-5xl text-white mb-2 uppercase">Keetongu</h1>
+                    <p class="text-xl text-gray-400 mb-6">A legendás Rahi</p>
+
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border-l-4 border-[#f5a623] mb-8 shadow-lg">
+                        <p class="text-gray-300 leading-relaxed">
+                            „Keetongu a kulcs a Toa Hordika sorsához. Ő az egyetlen, aki képes legyőzni a Visorak pók mérgét. Ám megtalálni őt nem egyszerű feladat... és még nehezebb túlélni a találkozást a forgó pajzsával!”
+                        </p>
+                    </div>
+
+                    <!-- Tech Specs -->
+                    <div class="grid grid-cols-2 gap-4 mb-8 text-sm">
+                        <div>
+                            <span class="block text-gray-500 uppercase text-xs font-bold">Cikkszám</span>
+                            <span class="text-white text-lg font-bold">8755</span>
+                        </div>
+                        <div>
+                            <span class="block text-gray-500 uppercase text-xs font-bold">Életkor</span>
+                            <span class="text-white text-lg font-bold">9-16</span>
+                        </div>
+                        <div>
+                            <span class="block text-gray-500 uppercase text-xs font-bold">Elemek</span>
+                            <span class="text-white text-lg font-bold">201</span>
+                        </div>
+                        <div>
+                            <span class="block text-gray-500 uppercase text-xs font-bold">VIP Pontok</span>
+                            <span class="text-white text-lg font-bold">N/A</span>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action (Retired) -->
+                    <div class="bg-[#222] p-4 rounded mb-8 flex items-center justify-between border border-gray-700">
+                        <div>
+                            <span class="block text-[#d01012] font-bold uppercase text-sm">Kifutott termék</span>
+                            <span class="text-xs text-gray-500">Ez a termék már nem elérhető a LEGO.com-on.</span>
+                        </div>
+                        <button class="bg-gray-600 text-gray-300 px-6 py-3 rounded font-bold cursor-not-allowed uppercase text-sm opacity-50" disabled>
+                            Kosárba
+                        </button>
+                    </div>
+
+                    <!-- Interactive Feature: Rhotuka Spinner -->
+                    <div class="border border-gray-700 rounded-lg p-6 bg-gradient-to-br from-[#1a1a1a] to-[#000] relative overflow-hidden">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 font-display text-6xl select-none">RHOTUKA</div>
+                        <h3 class="font-display text-xl text-[#ff3333] mb-4">Működő Rhotuka Pörgettyű!</h3>
+                        
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="spinner-container" id="spinnerContainer">
+                                <div class="rhotuka" id="rhotuka">
+                                    <div class="rhotuka-blade blade-1"></div>
+                                    <div class="rhotuka-blade blade-2"></div>
+                                    <div class="rhotuka-blade blade-3"></div>
+                                </div>
+                            </div>
+                            <div class="text-center md:text-left z-10">
+                                <p class="text-sm text-gray-400 mb-4">Húzd meg a kioldózsinórt a kilövéshez! Keetongu mellkasából kilőhető az energia-forgó.</p>
+                                <button onclick="spinRhotuka()" class="btn-lego px-6 py-2 rounded text-sm uppercase tracking-wider shadow-[0_0_10px_#ffcf00]">
+                                    Pörgetés indítása
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Features Tabs -->
+            <div class="mt-16 border-t border-gray-800 pt-8">
+                <h2 class="font-display text-2xl mb-6 text-white">A termék jellemzői</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-[#1a1a1a] p-6 rounded hover:bg-[#222] transition">
+                        <div class="text-[#f5a623] mb-4">
+                            <i data-lucide="eye" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-white">Egyetlen Szem</h3>
+                        <p class="text-sm text-gray-400">Keetongu ikonikus küklopsz szeme érzékeli a mérget és a spirituális energiákat.</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded hover:bg-[#222] transition">
+                        <div class="text-[#f5a623] mb-4">
+                            <i data-lucide="shield" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-white">Forgó Pajzsok</h3>
+                        <p class="text-sm text-gray-400">A bal karján található hatalmas, fogazott pajzs képes visszaverni bármilyen támadást.</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded hover:bg-[#222] transition">
+                        <div class="text-[#ff3333] mb-4">
+                            <i data-lucide="zap" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 text-white">Vörös Rhotuka</h3>
+                        <p class="text-sm text-gray-400">A ritka vörös Rhotuka pörgettyű, amely a gyógyítás vagy a rombolás erejét hordozza.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Story Section -->
+            <div class="mt-16 bg-[#0f0f0f] rounded-xl overflow-hidden border border-gray-800">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                        <h2 class="font-display text-3xl mb-4 text-[#f5a623]">A Legenda</h2>
+                        <p class="text-gray-400 mb-4">
+                            Metru Nui romjai alatt, a Visorak pókok hálójában egy ősi lény figyeli az eseményeket. A Toa Hordikák utolsó reménye Keetongu, az ősi Rahi, aki ismeri a Visorak méreg ellenszerét.
+                        </p>
+                        <p class="text-gray-400">
+                            De vigyázz! Keetongu nem barátkozik könnyen. Csak azok nyerhetik el a bizalmát, akik bizonyítják, hogy szívükben még mindig Toa hősök lakoznak.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 bg-[#151515] relative min-h-[300px] flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+                        <div class="text-center z-10">
+                            <div class="font-display text-6xl text-[#1a1a1a] select-none scale-150">8755</div>
+                            <div class="text-[#d01012] font-bold mt-2">BIONICLE 3: Web of Shadows</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b0b0b] text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4 lg:px-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8 text-sm">
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-500 uppercase">Rólunk</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">A LEGO Csoport</a></li>
+                        <li><a href="#" class="hover:text-white">LEGO Hírek</a></li>
+                        <li><a href="#" class="hover:text-white">Fenntarthatóság</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-500 uppercase">Támogatás</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Lépj kapcsolatba velünk</a></li>
+                        <li><a href="#" class="hover:text-white">Építési útmutatók</a></li>
+                        <li><a href="#" class="hover:text-white">Cserealkatrészek</a></li>
+                    </ul>
+                </div>
+                <!-- More columns could go here -->
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                <p>LEGO, a LEGO logó, a Minifigure, a DUPLO, a BIONICLE a LEGO Csoport védjegyei. ©2005-2025 The LEGO Group.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white">Adatvédelmi nyilatkozat</a>
+                    <a href="#" class="hover:text-white">Cookie-k</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Rhotuka Logic
+        function spinRhotuka() {
+            const rhotuka = document.getElementById('rhotuka');
+            
+            // Reset animation
+            rhotuka.classList.remove('spinning');
+            
+            // Trigger reflow to restart animation
+            void rhotuka.offsetWidth;
+            
+            // Start spinning
+            rhotuka.classList.add('spinning');
+            
+            // Optional: Play sound effect logic could go here
+        }
+    </script>
+</body>
+</html>
