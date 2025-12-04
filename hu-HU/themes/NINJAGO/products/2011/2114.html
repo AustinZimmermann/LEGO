@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2114 Chopov - LEGO® Ninjago - Termékek - LEGO.com (Magyarország)</title>
+    <!-- Tailwind CSS CDN for modern, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f7f7f7; /* Light gray background */
+        }
+        /* Ninjago/LEGO primary color scheme */
+        .lego-red { background-color: #e4002b; }
+        .lego-yellow { color: #fcc400; }
+        .ninjago-green { color: #008744; }
+        .action-button {
+            transition: all 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        /* Mobile optimization: Ensure the main content card takes full width */
+        @media (max-width: 768px) {
+            .main-content-card {
+                padding: 1rem;
+                margin: 0;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header / Navigation Bar -->
+    <header class="lego-red text-white p-4 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- LEGO Logo Placeholder -->
+            <div class="text-2xl font-black tracking-wider">
+                LEGO<span class="text-yellow-300">.com</span>
+            </div>
+            <!-- Breadcrumbs / Secondary Nav -->
+            <nav class="hidden sm:block text-sm">
+                <a href="#" class="hover:underline">Kezdőlap</a> /
+                <a href="#" class="hover:underline">Termékek</a> /
+                <a href="#" class="hover:underline">Ninjago</a> /
+                <span class="font-bold">2114 Chopov</span>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+
+        <!-- Product Card Layout -->
+        <div class="main-content-card bg-white rounded-xl shadow-2xl overflow-hidden md:flex md:space-x-8 p-0">
+
+            <!-- Left Column: Image and Gallery -->
+            <div class="md:w-1/2 p-6 md:p-8 bg-gray-100 flex flex-col items-center">
+                <h1 class="md:hidden text-3xl font-extrabold text-gray-800 mb-4">2114 Chopov</h1>
+                <!-- Product Image Placeholder -->
+                <div class="w-full max-w-sm md:max-w-md bg-white p-4 rounded-lg shadow-xl border border-gray-200">
+                    <!-- The placeholder image is customized to reflect the product and year -->
+                    <img src="https://www.bricklink.com/SL/2114-1.jpg" alt="2114 Chopov" class="w-full h-auto object-contain rounded">
+                </div>
+                <!-- Mini Gallery -->
+                <div class="mt-6 flex space-x-2 justify-center">
+                    <div class="w-16 h-16 bg-gray-300 rounded-lg border-2 border-ninjago-green cursor-pointer"></div>
+                    <div class="w-16 h-16 bg-gray-300 rounded-lg opacity-50 cursor-pointer"></div>
+                    <div class="w-16 h-16 bg-gray-300 rounded-lg opacity-50 cursor-pointer"></div>
+                </div>
+                <p class="text-sm text-gray-500 mt-4">Kattints a képre a nagyításhoz</p>
+            </div>
+
+            <!-- Right Column: Details and Purchase -->
+            <div class="md:w-1/2 p-6 md:p-8">
+                <!-- Product Title (Desktop Only) -->
+                <h1 class="hidden md:block text-4xl font-extrabold text-gray-800 mb-2">2114 Chopov</h1>
+                <h2 class="text-2xl font-semibold text-ninjago-green mb-4">LEGO® Ninjago - Spinjitzu Harcos</h2>
+
+                <!-- Product Details -->
+                <div class="space-y-4 mb-6 text-gray-700">
+                    <p><strong>Termékvonal:</strong> LEGO Ninjago (Spinners)</p>
+                    <p><strong>Kiadás éve:</strong> 2011</p>
+                    <p><strong>Elemszám:</strong> 21 darab</p>
+                    <p><strong>Ajánlott kor:</strong> 6 - 14 év</p>
+                </div>
+
+                <!-- Short Description -->
+                <div class="mb-8 p-4 bg-yellow-100 border-l-4 border-lego-yellow rounded-lg">
+                    <p class="text-sm">
+                        „Légy te a Spinjitzu Mester! Chopov a csontváz harcos forgó erőt hoz a csatamezőre. Gyűjtsd össze az összes Ninjago Spinnert, és mérd össze tudásod barátaiddal. A csomag tartalmazza a Chopov figurát, egy pörgettyűt, három fegyvert és egy karakterkártyát.”
+                    </p>
+                </div>
+
+                <!-- Pricing Section -->
+                <div class="flex items-baseline mb-8">
+                    <span class="text-5xl font-black text-gray-900 mr-3">3.990 Ft</span>
+                    <span class="text-xl text-gray-500 line-through">4.490 Ft</span>
+                </div>
+
+                <!-- Call to Action Buttons -->
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="action-button flex-1 py-3 px-6 bg-green-500 text-white font-bold text-lg rounded-full shadow-lg hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300">
+                        Kosárba
+                    </button>
+                    <button class="action-button flex-1 py-3 px-6 bg-blue-500 text-white font-bold text-lg rounded-full shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        Készletfigyelés
+                    </button>
+                </div>
+
+                <!-- Additional Information Tabs -->
+                <div class="mt-8 border-t pt-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">További Információk</h3>
+                    <div class="space-y-3">
+                        <details class="group bg-gray-50 p-3 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-gray-700 list-none flex justify-between items-center">
+                                A Készlet Tartalma
+                                <span class="group-open:rotate-180 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 pl-4">
+                                <ul class="list-disc space-y-1">
+                                    <li>Chopov figura (csontváz)</li>
+                                    <li>Csont pörgettyű</li>
+                                    <li>3 db fegyver: csont fejsze, csont lándzsa, csont buzogány</li>
+                                    <li>Karakterkártya (élet/támadás pontok)</li>
+                                    <li>Építési útmutató</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="group bg-gray-50 p-3 rounded-lg cursor-pointer">
+                            <summary class="font-semibold text-gray-700 list-none flex justify-between items-center">
+                                Vélemények és Értékelések
+                                <span class="group-open:rotate-180 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                            </summary>
+                            <div class="mt-2 text-sm text-gray-600 pl-4">
+                                <p>Szuper figura! A fiam imádja a pörgettyűvel való csatát. 5/5 csillag.</p>
+                                <p class="pt-2 text-xs italic text-gray-400">Péter, 2011. május</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 p-6 bg-gray-800 text-white text-center">
+        <div class="max-w-7xl mx-auto text-sm">
+            <p>&copy; 2025 LEGO Group. Minden jog fenntartva. | LEGO, a LEGO logó és a NINJAGO a LEGO Csoport védjegyei.</p>
+            <p class="mt-2">Kapcsolat | Adatvédelem | Felhasználási Feltételek</p>
+        </div>
+    </footer>
+
+</body>
+</html>
