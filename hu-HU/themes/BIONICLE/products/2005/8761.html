@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8761 Roodaka - BIONICLE® - Termékek - LEGO.com (Magyarország)</title>
+    <!-- Tailwind CSS betöltése -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Egyedi Tailwind konfiguráció a BIONICLE hangulatért -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bionicle-dark': '#1a1a1a',
+                        'bionicle-accent': '#e53e3e', // Piros/vörös árnyalat
+                        'bionicle-silver': '#a0aec0',
+                        'bionicle-gold': '#ecc94b',
+                    },
+                    fontFamily: {
+                        inter: ['sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #0d0d0d;
+        }
+        /* Egyedi árnyékhatás a kiemeléshez */
+        .product-card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+        }
+        /* Háttér a BIONICLE-hez illő mintával vagy textúrával */
+        .bg-pattern {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="text-white min-h-screen">
+
+    <!-- Fejléc (Header) -->
+    <header class="bg-bionicle-dark p-4 shadow-xl border-b border-bionicle-accent sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-bionicle-silver tracking-wider">LEGO® BIONICLE&reg;</h1>
+            <nav>
+                <a href="#" class="text-bionicle-silver hover:text-bionicle-accent transition duration-300 mx-2 text-sm md:text-base">Termékek</a>
+                <a href="#" class="text-bionicle-silver hover:text-bionicle-accent transition duration-300 mx-2 text-sm md:text-base">Történet</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Fő tartalom (Main Content) -->
+    <main class="max-w-7xl mx-auto p-6 md:p-10">
+        
+        <!-- Cím és Kategória -->
+        <div class="mb-8">
+            <span class="text-xs text-bionicle-silver uppercase">BIONICLE® > 2005 > Visorak</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold mt-1 text-bionicle-accent">8761 Roodaka</h2>
+        </div>
+
+        <!-- Termék Kártya - Reszponzív Elrendezés (kép és részletek) -->
+        <div class="bg-bionicle-dark rounded-xl overflow-hidden product-card-shadow border border-bionicle-silver/20 lg:flex lg:space-x-8">
+            
+            <!-- Bal oldal: Kép és Fő részletek -->
+            <div class="lg:w-1/2 p-6 md:p-8">
+                <!-- Termékkép Placeholder -->
+                <div class="w-full h-64 md:h-96 bg-bionicle-silver/10 rounded-lg flex items-center justify-center mb-6 overflow-hidden border-2 border-bionicle-accent/50">
+                    <img src="https://www.lego.com/cdn/product-assets/product.img.pri/8761_prod.jpg" 
+                         alt="8761 Roodaka"
+                         class="object-cover w-full h-full transform transition duration-500 hover:scale-105"
+                    >
+                </div>
+
+                <!-- Termék Részletek -->
+                <div class="space-y-4">
+                    <p class="text-lg">
+                        <span class="font-bold text-bionicle-gold">Téma:</span> <span class="text-bionicle-silver">BIONICLE®</span>
+                    </p>
+                    <p class="text-lg">
+                        <span class="font-bold text-bionicle-gold">Év:</span> <span class="text-bionicle-silver">2005</span>
+                    </p>
+                    <p class="text-lg">
+                        <span class="font-bold text-bionicle-gold">Darabszám (Becsült):</span> <span class="text-bionicle-silver">233</span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Jobb oldal: Leírás és interakció -->
+            <div class="lg:w-1/2 p-6 md:p-8 bg-bionicle-dark/80 rounded-b-xl lg:rounded-r-xl lg:rounded-bl-none border-t lg:border-t-0 lg:border-l border-bionicle-silver/20">
+                <h3 class="text-3xl font-bold mb-4 text-bionicle-gold border-b pb-2 border-bionicle-accent">Termékleírás</h3>
+                
+                <p class="text-bionicle-silver leading-relaxed mb-6">
+                    A Visorak sereg kegyetlen parancsnoka, Roodaka félelmetes ellenfél. A Toa Hordikát mutáns szörnyekké változtatta, és most a Mágneses Börtön foglyát, Keetongu-t akarja elkapni. A Roodaka figura jellegzetes ezüst és piros páncéllal, hatalmas, hurokvető karmokkal és egy Rhotuka pörgettyűvel érkezik, amely képes a Toa-k mutálására. 
+                </p>
+                
+                <p class="text-bionicle-silver leading-relaxed mb-8">
+                    A 2005-ös történet egyik kulcsfontosságú gonosztevője. Építsd meg és játssz le epikus csatákat a BIONICLE® univerzum többi hősével!
+                </p>
+
+                <!-- Cselekvésre ösztönző gombok (Mock) -->
+                <div class="space-y-4">
+                    <button class="w-full py-3 px-4 bg-bionicle-accent text-white font-bold rounded-lg hover:bg-red-700 transition duration-300 transform hover:scale-[1.02] shadow-lg">
+                        Kosárba (A termék nem elérhető)
+                    </button>
+                    <button class="w-full py-3 px-4 bg-bionicle-silver text-bionicle-dark font-bold rounded-lg hover:bg-bionicle-gold transition duration-300 transform hover:scale-[1.02] shadow-lg">
+                        Keresés az Archívumban
+                    </button>
+                </div>
+
+                <!-- Jellemzők lista -->
+                <div class="mt-8 border-t pt-6 border-bionicle-accent/50">
+                    <h4 class="text-xl font-semibold mb-3 text-bionicle-gold">Főbb jellemzők:</h4>
+                    <ul class="list-disc list-inside space-y-2 text-bionicle-silver ml-4">
+                        <li>Rhotuka pörgettyű a mutációhoz</li>
+                        <li>Összeépíthető a 8755 Keetongu és 8756 Sidorak figurákkal (kiegészítő modellekhez)</li>
+                        <li>Két csuklós kar a Visorak sereg irányításához</li>
+                        <li>Ajánlott korosztály: 8+</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Lábléc (Footer) -->
+    <footer class="mt-12 p-6 bg-bionicle-dark border-t border-bionicle-accent/50">
+        <div class="max-w-7xl mx-auto text-center text-bionicle-silver text-sm">
+            <p>LEGO, a LEGO logó, a BIONICLE és a Roodaka a LEGO Csoport védjegyei. ©2005 The LEGO Group.</p>
+            <p class="mt-2">Ez egy szimulált termékoldal.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
