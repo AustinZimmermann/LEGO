@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2193 JETBUG - LEGO® Hero Factory - Termékek - LEGO.com (Magyarország)</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Hero Factory color scheme */
+        :root {
+            --hf-orange: #FF8000;
+            --hf-dark: #1A1A1A;
+            --hf-blue: #00BFFF;
+        }
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f7;
+            color: var(--hf-dark);
+        }
+        .hf-bg-header {
+            background-color: var(--hf-dark);
+        }
+        .hf-text-primary {
+            color: var(--hf-orange);
+        }
+        .hf-btn {
+            background-color: var(--hf-orange);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .hf-btn:hover {
+            background-color: #E67300;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .product-card {
+            background-color: white;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .responsive-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="hf-bg-header shadow-lg">
+        <div class="max-w-7xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold tracking-widest">LEGO.com</h1>
+            <nav class="hidden sm:block">
+                <a href="#" class="text-gray-300 hover:hf-text-primary px-3 transition duration-150">Termékek</a>
+                <a href="#" class="text-gray-300 hover:hf-text-primary px-3 transition duration-150">Támogatás</a>
+                <a href="#" class="text-gray-300 hover:hf-text-primary px-3 transition duration-150">Fedezd fel</a>
+            </nav>
+            <div class="text-sm text-white">Magyarország (HU)</div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+
+        <!-- Breadcrumb -->
+        <div class="text-sm text-gray-500 mb-6">
+            <a href="#" class="hover:underline">LEGO.com</a> > <a href="#" class="hover:underline">Termékek</a> > <a href="#" class="hover:underline">Hero Factory</a> > 2193 JETBUG
+        </div>
+
+        <!-- Product Card Container -->
+        <div class="product-card rounded-2xl p-6 md:p-10">
+
+            <!-- Title and Main Heading -->
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-2 leading-tight">
+                <span class="hf-text-primary">2193</span> JETBUG
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">LEGO® Hero Factory</p>
+
+            <!-- Product Image and Details Grid -->
+            <div class="responsive-grid">
+
+                <!-- 1. Image Section -->
+                <div class="image-section bg-gray-100 rounded-xl p-4 flex justify-center items-center shadow-inner h-96">
+                    <!-- Placeholder for the Hero Factory product image -->
+                    <div class="text-center text-gray-400 p-8">
+                        <img src="https://www.lego.com/cdn/product-assets/product.img.pri/2193_prod.jpg">
+                        <p class="font-semibold text-lg">JETBUG - Lény Kép</p>
+                        <p class="text-sm">Ebből az évből: 2011</p>
+                    </div>
+                </div>
+
+                <!-- 2. Details and Buy Section -->
+                <div class="details-section flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4 border-b-2 pb-2 hf-text-primary border-gray-200">Készlet Részletek</h3>
+                        <dl class="space-y-3 text-lg">
+                            <div class="flex justify-between">
+                                <dt class="font-medium">Készletszám:</dt>
+                                <dd class="font-semibold">2193</dd>
+                            </div>
+                            <div class="flex justify-between">
+                                <dt class="font-medium">Téma:</dt>
+                                <dd class="font-semibold">Hero Factory</dd>
+                            </div>
+                            <div class="flex justify-between">
+                                <dt class="font-medium">Év:</dt>
+                                <dd class="font-semibold">2011</dd>
+                            </div>
+                            <div class="flex justify-between">
+                                <dt class="font-medium">Elemek száma:</dt>
+                                <dd class="font-semibold">28</dd>
+                            </div>
+                        </dl>
+                        <div class="mt-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                            <p class="font-bold">FONTOS:</p>
+                            <p class="text-sm">Ez a készlet már nem kapható a LEGO.com webáruházban.</p>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action (Mock Button) -->
+                    <div class="mt-8 pt-4 border-t-2 border-gray-100">
+                        <button class="hf-btn w-full py-4 text-xl font-bold rounded-xl uppercase tracking-wider" disabled>
+                            Kosárba (Elérhetetlen)
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Description/Overview Section -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-bold mb-4 border-b-2 pb-2 hf-text-primary border-gray-200">Termék áttekintése</h3>
+                <div class="text-gray-700 space-y-4 text-lg">
+                    <p>A JETBUG egy fenyegető lény, amely a 2011-es LEGO Hero Factory “Breakout” sorozat része. A Hero Factory Hősöknek meg kell küzdeniük ezzel a gyors, szárnyas és veszélyes rovarral a Hero Factory Béta bázisán a galaxis békéjéért!</p>
+                    <p>Ez a kis, de mozgékony gonosztevő 28 elemből áll, ideális kiegészítője minden Hero Factory gyűjteménynek, amely a gonoszok széles választékát mutatja be, akik megszöktek a Főbázisról.</p>
+                    <p class="italic text-sm text-gray-500">A termék a megjelenés éve (2011) óta kikerült a forgalomból.</p>
+                </div>
+            </div>
+
+        </div> <!-- End Product Card -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="hf-bg-header mt-12 py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4 text-gray-300 text-sm">
+                <a href="#" class="hover:hf-text-primary transition duration-150">Súgó</a>
+                <a href="#" class="hover:hf-text-primary transition duration-150">Kapcsolat</a>
+                <a href="#" class="hover:hf-text-primary transition duration-150">Adatvédelem</a>
+                <a href="#" class="hover:hf-text-primary transition duration-150">Általános Szerződési Feltételek</a>
+            </div>
+            <p class="text-gray-500 text-xs">© 2025 The LEGO Group. Minden jog fenntartva. | LEGO, a LEGO logó és a HERO FACTORY a The LEGO Group védjegyei.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
