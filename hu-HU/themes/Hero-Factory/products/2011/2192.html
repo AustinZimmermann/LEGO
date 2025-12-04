@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2192 DRILLDOZER - LEGO® Hero Factory - Termékek - LEGO.com (Magyarország)</title>
+    <!-- Tailwind CSS betöltése -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Egyedi Tailwind konfiguráció az Inter betűtípushoz */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Egyedi stílus a "LEGO.com" hangulat megteremtéséhez */
+        .product-card {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lego-yellow': '#FFCC00',
+                        'lego-blue': '#005C9A',
+                        'hero-red': '#DC2626',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+    <!-- Felső Navigációs Sáv (Egyszerűsítve) -->
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <div class="text-2xl font-bold text-lego-blue">LEGO.com</div>
+            <nav class="hidden sm:flex space-x-4 text-gray-600 font-medium">
+                <a href="#" class="hover:text-lego-yellow transition duration-150">Termékek</a>
+                <a href="#" class="hover:text-lego-yellow transition duration-150">Felfedezés</a>
+                <a href="#" class="hover:text-lego-yellow transition duration-150">Támogatás</a>
+            </nav>
+            <div class="flex items-center space-x-3">
+                <svg class="w-6 h-6 text-gray-600 hover:text-hero-red cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fő Termék Tartalom -->
+    <main class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <!-- Morzsamenü (Breadcrumbs) -->
+        <p class="text-sm text-gray-500 mb-4">
+            <a href="#" class="hover:underline">Főoldal</a> >
+            <a href="#" class="hover:underline">Hero Factory</a> >
+            <span class="font-semibold">2192 DRILLDOZER</span>
+        </p>
+
+        <!-- Termék Kártya -->
+        <div class="product-card bg-white rounded-xl overflow-hidden p-6 sm:p-8 lg:p-10">
+
+            <!-- Cím és Készlet adatok (Mobil: egymás alatt, Desktop: oldalra) -->
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+
+                <!-- Bal oldali oszlop: Kép és Galéria -->
+                <div class="lg:col-span-1 mb-8 lg:mb-0">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-2">2192 DRILLDOZER</h1>
+                    <h2 class="text-xl font-semibold text-hero-red mb-6">LEGO® Hero Factory</h2>
+
+                    <!-- Készlet Év és Darabszám -->
+                    <div class="flex items-center mb-6 space-x-6 text-gray-600 font-medium">
+                        <p class="flex items-center">
+                            <svg class="w-5 h-5 mr-1 text-lego-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            Év: 2011
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="w-5 h-5 mr-1 text-lego-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
+                            Darabszám: kb. 61
+                        </p>
+                    </div>
+
+                    <!-- Kép Placeholder -->
+                    <div class="bg-gray-100 rounded-lg p-4 flex items-center justify-center aspect-square border-4 border-gray-200">
+                        <img src="https://www.lego.com/cdn/product-assets/product.img.pri/2192_prod.jpg" 
+                             alt="2192 DRILLDOZER" 
+                             class="max-w-full h-auto rounded-md shadow-lg"
+                        >
+                    </div>
+
+                    <!-- Képgaléria (Mock) -->
+                    <div class="flex space-x-3 mt-4 overflow-x-auto pb-2">
+                        <div class="w-16 h-16 bg-gray-200 rounded-md border-2 border-lego-blue cursor-pointer"></div>
+                        <div class="w-16 h-16 bg-gray-200 rounded-md border-2 border-transparent hover:border-lego-blue cursor-pointer"></div>
+                        <div class="w-16 h-16 bg-gray-200 rounded-md border-2 border-transparent hover:border-lego-blue cursor-pointer"></div>
+                    </div>
+                </div>
+
+                <!-- Jobb oldali oszlop: Ár és Akciók -->
+                <div class="lg:col-span-1">
+                    
+                    <div class="bg-hero-red/10 border border-hero-red rounded-xl p-6 mb-8">
+                        <div class="text-4xl font-bold text-hero-red mb-2">5.990 Ft</div>
+                        <p class="text-sm text-gray-600 mb-4">A készlet az utolsó Hero Factory (2011) hullám része.</p>
+
+                        <!-- Vásárlási Akciók -->
+                        <div class="flex items-center space-x-2 mb-6">
+                            <span class="bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">Készleten</span>
+                            <span class="text-sm text-gray-500">Azonnali szállításra kész.</span>
+                        </div>
+
+                        <!-- Kosárba Gomb (Nagy és érintésbarát) -->
+                        <button class="w-full bg-lego-blue text-white py-3 rounded-lg font-bold text-lg hover:bg-lego-blue/90 transition duration-150 transform hover:scale-[1.01] shadow-lg shadow-lego-blue/30">
+                            Kosárba
+                        </button>
+                        
+                        <div class="mt-4 text-center">
+                            <button class="text-hero-red font-medium text-sm hover:underline flex items-center justify-center w-full">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                Hozzáadás a kívánságlistához
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Termék Rövid Leírás -->
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3 border-b pb-2 border-gray-200">Termék Adatok</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        A Drilldozer egy kíméletlen gonosztevő, akit a Hero Factory küldetései során fognak el. A 2011-es sorozat tagja, egy hatalmas fúróval és éles karmaival van felszerelve, amelyeket a legkeményebb páncélok áttörésére terveztek. Építsd meg Drilldozert és állítsd szembe őt egy hős figurával (külön megvásárolható) az epikus Hero Factory csatáért!
+                    </p>
+
+                    <!-- Jellemzők (Összecsukható panelként szimulálva) -->
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <button class="flex justify-between items-center w-full text-lg font-semibold text-gray-800">
+                                Fő Jellemzők és Funkciók
+                                <svg class="w-5 h-5 text-lego-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <ul class="list-disc pl-5 mt-3 text-gray-700 text-sm space-y-1">
+                                <li>Mozgatható karok és lábak a pozícionáláshoz.</li>
+                                <li>Hatalmas, forgatható fúró kar.</li>
+                                <li>Éles karom fegyver a másik karon.</li>
+                                <li>Eredeti LEGO BIONICLE/Hero Factory építőelemek.</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <button class="flex justify-between items-center w-full text-lg font-semibold text-gray-800">
+                                Technikai Adatok
+                                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+                            </button>
+                            <!-- A tartalom itt alapból rejtett lenne JS nélkül -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- További Információk (Teljes Szélesség) -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">Még több a 2192 DRILLDOZER készletről</h3>
+                <p class="text-gray-700 mb-4">
+                    A Hero Factory rajongói számára ez a készlet kihagyhatatlan. Drilldozer egyike volt a 2011-es „Brain Attack” (Agyroham) széria gonosztevőinek, bár ez a konkrét modell a korábbi, tiszta 2011-es hullámhoz tartozik. A készlet nagyszerű kiegészítője a Hero Factory gyűjteménynek, különösen a figura magassága miatt, amely megegyezik a többi gonosztevővel.
+                </p>
+
+                <!-- Korosztály Ajánlás -->
+                <div class="flex items-center bg-lego-yellow/20 p-4 rounded-lg font-medium text-gray-800">
+                    <svg class="w-6 h-6 mr-2 text-lego-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Ajánlott korosztály: 6-16 éves korig.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Lábjegyzet (Footer) -->
+        <footer class="mt-12 border-t pt-6 text-center text-sm text-gray-500">
+            <p>© 2025 LEGO Group. Minden jog fenntartva. Ez a termékoldal a magyar LEGO.com stílusát imitálja. | Év: 2011</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // JS a mobilos interakciókhoz (pl. "Kosárba" visszajelzés)
+        document.querySelector('button.bg-lego-blue').addEventListener('click', function() {
+            // Ezt egy egyszerű, nem-blokkoló üzenetdobozként szimuláljuk
+            const messageBox = document.createElement('div');
+            messageBox.className = 'fixed bottom-4 right-4 bg-green-600 text-white px-6 py-3 rounded-lg shadow-xl transition-opacity duration-300';
+            messageBox.textContent = 'A 2192 DRILLDOZER hozzáadva a kosárhoz!';
+            document.body.appendChild(messageBox);
+            
+            setTimeout(() => {
+                messageBox.classList.add('opacity-0');
+                messageBox.addEventListener('transitionend', () => messageBox.remove());
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
