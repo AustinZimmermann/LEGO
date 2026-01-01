@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44021 ΘΗΡΙΟ ΔΙΑΧΩΡΙΣΜΟΥ ΕΝΑΝΤΙΟΝ FURNO & EVO - LEGO® Hero Factory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #fbfbfb;
+        }
+
+        .lego-yellow {
+            background-color: #FFD500;
+        }
+
+        .beast-orange {
+            background: linear-gradient(135deg, #f97316 0%, #7c2d12 100%);
+        }
+
+        .btn-red {
+            background-color: #e30613;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-red:hover {
+            background-color: #b3050f;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Toast notification animation */
+        @keyframes slideIn {
+            from { transform: translate(-50%, 100%); opacity: 0; }
+            to { transform: translate(-50%, 0); opacity: 1; }
+        }
+        
+        .toast-visible {
+            display: flex;
+            animation: slideIn 0.4s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-gray-900 leading-tight">
+
+    <!-- Header / Navigation -->
+    <header class="lego-yellow p-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="bg-red-600 p-2 font-black text-white text-2xl leading-none">LEGO</div>
+                <div class="hidden md:flex flex-col leading-none border-l border-black pl-4">
+                    <span class="font-black text-sm uppercase tracking-tighter">Hero Factory</span>
+                    <span class="text-[10px] font-bold opacity-70 italic text-black uppercase">Invasion From Below</span>
+                </div>
+            </div>
+            <nav class="flex space-x-6 font-bold text-xs uppercase text-black tracking-widest items-center">
+                <a href="#" class="hover:underline">Προϊοντα</a>
+                <a href="#" class="hover:underline">Παιχνιδια</a>
+                <div class="bg-black text-white px-4 py-2 rounded-full cursor-pointer hover:bg-gray-800 transition-colors">SHOP</div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- Breadcrumbs -->
+        <nav class="text-[10px] text-gray-400 mb-8 uppercase tracking-widest font-bold">
+            <a href="#" class="hover:text-orange-700">LEGO.com</a> / <a href="#" class="hover:text-orange-700">Hero Factory</a> / <span class="text-gray-600">44021</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-white p-6 md:p-12 rounded-[2.5rem] shadow-sm border border-gray-100">
+            
+            <!-- Gallery / Image -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="aspect-square bg-gray-50 rounded-3xl overflow-hidden flex items-center justify-center relative border border-gray-100 group">
+                    <div class="text-center p-12">
+                        <!-- Placeholder SVG for the Splitter Beast -->
+                        <svg class="w-48 h-48 mx-auto text-orange-200 group-hover:scale-105 transition-transform duration-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M12 4v1m-6.938 4h13.876M12 21V11m-7 10h14m-14-10a2 2 0 012-2h10a2 2 0 012 2v10a2 2 0 01-2 2H7a2 2 0 01-2-2V11z"></path>
+                        </svg>
+                        <p class="text-gray-300 font-black italic uppercase tracking-widest text-sm mt-6"></p>
+                    </div>
+                    <div class="absolute top-6 left-6 bg-orange-700 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest shadow-lg italic">Special Split Function</div>
+                </div>
+                
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="aspect-square bg-gray-50 rounded-2xl border-2 border-orange-600"></div>
+                    <div class="aspect-square bg-gray-50 rounded-2xl border border-gray-100"></div>
+                    <div class="aspect-square bg-gray-50 rounded-2xl border border-gray-100"></div>
+                    <div class="aspect-square bg-gray-50 rounded-2xl border border-gray-100"></div>
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="lg:col-span-5 flex flex-col justify-center">
+                <div class="mb-10">
+                    <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-4 uppercase leading-none tracking-tighter">ΘΗΡΙΟ ΔΙΑΧΩΡΙΣΜΟΥ ΕΝΑΝΤΙΟΝ FURNO &amp; EVO</h1>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-orange-700 font-black text-xl">Σετ #44021</span>
+                        <div class="flex text-yellow-400">★★★★★</div>
+                    </div>
+                </div>
+
+                <!-- Technical Specs -->
+                <div class="grid grid-cols-3 gap-0 border-y border-gray-100 py-8 mb-10">
+                    <div class="text-center">
+                        <span class="block text-3xl font-black text-gray-800">8-14</span>
+                        <span class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Ηλικιες</span>
+                    </div>
+                    <div class="text-center border-x border-gray-100">
+                        <span class="block text-3xl font-black text-gray-800">108</span>
+                        <span class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Κομματια</span>
+                    </div>
+                    <div class="text-center">
+                        <span class="block text-3xl font-black text-gray-800">2</span>
+                        <span class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Φιγουρες</span>
+                    </div>
+                </div>
+
+                <div class="prose prose-sm text-gray-600 mb-10 leading-relaxed italic border-l-4 border-orange-700 pl-6">
+                    “Προσοχή, Χίροουζ! Το Θηρίο Διαχωρισμού είναι το πιο επικίνδυνο πλάσμα που έχει βγει από τα βάθη. Μπορεί να χωριστεί στα δύο και να επιτεθεί ταυτόχρονα στον FURNO και τον EVO. Χρησιμοποιήστε τα όπλα σας και τις επικοινωνίες σας για να το παγιδεύσετε!”
+                </div>
+
+                <!-- Purchase Card -->
+                <div class="bg-gray-50 p-8 rounded-[2.5rem] border border-gray-100">
+                    <div class="flex justify-between items-end mb-8">
+                        <div>
+                            <span class="text-[10px] font-black text-gray-400 block uppercase mb-1">Τιμη LEGO.com</span>
+                            <span class="text-5xl font-black text-gray-900">19,99 €</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-bold text-green-600 bg-green-100 px-4 py-1 rounded-full uppercase">Διαθεσιμο</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full btn-red py-5 rounded-2xl font-black text-xl uppercase tracking-[0.2em] shadow-xl" onclick="triggerCartToast()">
+                        Προσθηκη στο καλαθι
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Features Section -->
+        <section class="mt-24">
+            <h2 class="text-3xl font-black mb-12 text-gray-900 border-l-[12px] border-orange-700 pl-6 uppercase tracking-tighter italic">Χαρακτηριστικα & Λειτουργιες</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 beast-orange text-white rounded-2xl flex items-center justify-center mb-8 font-black text-2xl shadow-lg italic">!</div>
+                    <h3 class="font-black text-xl mb-4 uppercase italic tracking-tight">Λειτουργια Διαχωρισμου</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Το θηρίο μπορεί να χωριστεί σε δύο ξεχωριστά πλάσματα, το ένα με πύρινα νύχια και το άλλο με παγωμένα σαγόνια.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 beast-orange text-white rounded-2xl flex items-center justify-center mb-8 font-black text-2xl shadow-lg italic">?</div>
+                    <h3 class="font-black text-xl mb-4 uppercase italic tracking-tight">Furno & Evo</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Περιλαμβάνει τις μίνι φιγούρες του FURNO και του EVO με τον πλήρη εξοπλισμό τους και συσκευές επικοινωνίας.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 hover:shadow-lg transition-all">
+                    <div class="w-16 h-16 beast-orange text-white rounded-2xl flex items-center justify-center mb-8 font-black text-2xl shadow-lg italic">+</div>
+                    <h3 class="font-black text-xl mb-4 uppercase italic tracking-tight">Μεγιστο Θηριο</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">Συνδυάστε το με το 44016 ΣΑΓΟΝΑΣ και το 44020 ΙΠΤΑΜΕΝΟ ΘΗΡΙΟ για να δημιουργήσετε ένα ακόμα μεγαλύτερο μοντέλο!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Banner -->
+        <div class="mt-24 beast-orange rounded-[3rem] p-12 text-white flex flex-col md:flex-row items-center justify-between shadow-2xl relative overflow-hidden">
+            <div class="relative z-10 text-center md:text-left">
+                <h3 class="text-4xl font-black mb-4 uppercase italic tracking-tighter">Invasion From Below</h3>
+                <p class="text-orange-100 max-w-md mb-8 text-lg font-light leading-snug">Η πόλη Αντρόπολις Σίτυ κινδυνεύει! Συγκεντρώστε όλους τους ήρωες και τις μηχανές για να σταματήσετε την εισβολή.</p>
+                <button class="bg-white text-orange-900 px-10 py-4 rounded-full font-black uppercase text-sm hover:bg-gray-100 transition-colors tracking-widest shadow-lg">Δειτε ολα τα σετ</button>
+            </div>
+            <div class="hidden md:block opacity-20 transform -rotate-12 scale-150">
+                <svg class="w-64 h-64 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"></path>
+                </svg>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Toast Notification -->
+    <div id="cartToast" class="fixed bottom-12 left-1/2 -translate-x-1/2 z-[100] hidden bg-gray-900 text-white px-10 py-6 rounded-3xl shadow-2xl items-center space-x-6 border border-gray-700">
+        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shrink-0 shadow-inner">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <div class="pr-6">
+            <p class="font-black uppercase text-[10px] tracking-[0.3em] text-green-400 mb-1">Προστεθηκε!</p>
+            <p class="text-sm font-bold opacity-90 uppercase tracking-tighter italic leading-none">Το Θηριο Διαχωρισμου ειναι στο καλαθι.</p>
+        </div>
+        <button class="text-gray-500 hover:text-white transition-colors" onclick="hideToast()">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path></svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-20 mt-24">
+        <div class="container mx-auto px-4 text-center">
+            <div class="bg-red-600 inline-block p-3 font-black text-white text-2xl mb-10 shadow-lg leading-none">LEGO</div>
+            <div class="flex flex-wrap justify-center gap-10 text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-10">
+                <a href="#" class="hover:text-orange-700 transition-colors">Υποστηριξη</a>
+                <a href="#" class="hover:text-orange-700 transition-colors">Οδηγιες Κατασκευης</a>
+                <a href="#" class="hover:text-orange-700 transition-colors">Πολιτικη Cookies</a>
+                <a href="#" class="hover:text-orange-700 transition-colors">Νομικη Σημειωση</a>
+            </div>
+            <p class="text-[9px] text-gray-300 leading-relaxed max-w-3xl mx-auto uppercase font-medium">
+                LEGO, the LEGO logo, the Minifigure and Hero Factory are trademarks of the LEGO Group. <br>©2024 The LEGO Group. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function triggerCartToast() {
+            const toast = document.getElementById('cartToast');
+            toast.classList.remove('hidden');
+            toast.classList.add('toast-visible');
+            
+            setTimeout(() => {
+                hideToast();
+            }, 5000);
+        }
+
+        function hideToast() {
+            const toast = document.getElementById('cartToast');
+            toast.classList.add('opacity-0');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('toast-visible', 'opacity-0');
+            }, 400);
+        }
+    </script>
+
+</body>
+</html>
