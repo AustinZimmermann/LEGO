@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44017 ΜΗΧΑΝΗ ΠΑΓΕΤΟΥ ΤΟΥ STORMER - LEGO® Hero Factory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f4f8;
+        }
+
+        .lego-yellow {
+            background-color: #FFD500;
+        }
+
+        .freeze-gradient {
+            background: linear-gradient(135deg, #2b6cb0 0%, #2c5282 100%);
+        }
+
+        .btn-buy {
+            background-color: #e30613;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-buy:hover {
+            background-color: #b3050f;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image-container {
+            background-image: radial-gradient(circle, #ffffff 0%, #e2e8f0 100%);
+        }
+
+        /* Animation for the notification */
+        @keyframes slideUp {
+            from { transform: translate(-50%, 100%); opacity: 0; }
+            to { transform: translate(-50%, 0); opacity: 1; }
+        }
+        
+        .notification-active {
+            display: flex;
+            animation: slideUp 0.4s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="lego-yellow p-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="bg-red-600 p-2 font-black text-white text-2xl leading-none">LEGO</div>
+                <div class="hidden md:flex flex-col leading-none">
+                    <span class="font-bold text-sm uppercase tracking-tighter">Hero Factory</span>
+                    <span class="text-[10px] font-medium opacity-70 italic text-black">Invasion From Below</span>
+                </div>
+            </div>
+            <nav class="flex space-x-5 font-bold text-xs uppercase text-black items-center">
+                <a href="#" class="hover:underline">Σετ</a>
+                <a href="#" class="hover:underline">Χαρακτηρες</a>
+                <div class="bg-black text-white px-3 py-1 rounded text-[10px]">SHOP</div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- Breadcrumbs -->
+        <nav class="text-[10px] text-gray-400 mb-6 uppercase tracking-widest font-bold">
+            <a href="#" class="hover:text-blue-600">LEGO.com</a> / <a href="#" class="hover:text-blue-600">Hero Factory</a> / <span class="text-gray-600">44017</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-gray-100">
+            
+            <!-- Gallery Section -->
+            <div class="space-y-4">
+                <div class="product-image-container aspect-square rounded-2xl overflow-hidden flex items-center justify-center relative border border-gray-100 group">
+                    <!-- Main Image Placeholder -->
+                    <div class="text-center p-8">
+                        <svg class="w-40 h-40 mx-auto text-blue-200 mb-4 group-hover:scale-110 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                        <p class="text-gray-400 font-bold uppercase text-xs tracking-widest"></p>
+                    </div>
+                    <div class="absolute bottom-4 right-4 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold shadow-sm">
+                        88 Κομμάτια
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-4 gap-4">
+                    <div class="aspect-square bg-gray-50 rounded-xl border-2 border-blue-100 cursor-pointer"></div>
+                    <div class="aspect-square bg-gray-50 rounded-xl border border-gray-100 cursor-pointer"></div>
+                    <div class="aspect-square bg-gray-50 rounded-xl border border-gray-100 cursor-pointer"></div>
+                    <div class="aspect-square bg-gray-50 rounded-xl border border-gray-100 cursor-pointer"></div>
+                </div>
+            </div>
+
+            <!-- Content Section -->
+            <div class="flex flex-col">
+                <div class="mb-8">
+                    <h1 class="text-4xl md:text-5xl font-black text-gray-900 mb-2 uppercase leading-none">ΜΗΧΑΝΗ ΠΑΓΕΤΟΥ ΤΟΥ STORMER</h1>
+                    <div class="flex items-center space-x-3">
+                        <span class="text-blue-600 font-bold">Σετ #44017</span>
+                        <span class="text-gray-300">|</span>
+                        <span class="text-sm font-medium text-gray-500 italic">Invasion From Below</span>
+                    </div>
+                </div>
+
+                <!-- Product Attributes -->
+                <div class="flex items-center justify-between border-y border-gray-100 py-6 mb-8">
+                    <div class="text-center">
+                        <span class="block text-3xl font-black text-gray-800">7-14</span>
+                        <span class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Ηλικιες</span>
+                    </div>
+                    <div class="h-12 w-px bg-gray-100"></div>
+                    <div class="text-center">
+                        <span class="block text-3xl font-black text-gray-800">88</span>
+                        <span class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Κομματια</span>
+                    </div>
+                    <div class="h-12 w-px bg-gray-100"></div>
+                    <div class="text-center">
+                        <span class="block text-3xl font-black text-gray-800">1</span>
+                        <span class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Φιγουρα</span>
+                    </div>
+                </div>
+
+                <div class="prose prose-blue text-gray-600 mb-8 leading-relaxed">
+                    <p>Βοηθήστε τον <strong>STORMER</strong> να ανακτήσει τον έλεγχο της πόλης! Η πανίσχυρη Μηχανή Παγέτου διαθέτει αναδιπλούμενο θώρακα, εκτοξευτή παγωμένων πυραύλων και έναν ειδικό θάλαμο για τη μίνι φιγούρα του Χίροουζ. Καταψύξτε τους εισβολείς πριν φτάσουν στην επιφάνεια!</p>
+                </div>
+
+                <!-- Price and Action -->
+                <div class="mt-auto bg-blue-50 p-6 rounded-2xl border border-blue-100">
+                    <div class="flex justify-between items-center mb-6">
+                        <div>
+                            <span class="text-[10px] font-bold text-blue-400 block uppercase">Τιμη LEGO.com</span>
+                            <span class="text-4xl font-black text-blue-900">14,99 €</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs font-bold text-green-600 bg-green-100 px-3 py-1 rounded-full uppercase">Διαθεσιμο</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full btn-buy py-5 rounded-2xl font-black text-xl uppercase tracking-widest shadow-lg" onclick="triggerNotification()">
+                        Αγορα τωρα
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <section class="mt-16">
+            <h2 class="text-2xl font-black mb-8 text-gray-900 border-l-8 border-blue-600 pl-4 uppercase">Τεχνικα Χαρακτηριστικα</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6 font-bold text-xl">01</div>
+                    <h3 class="font-black text-lg mb-3 uppercase">Freeze Blaster</h3>
+                    <p class="text-sm text-gray-500">Περιλαμβάνει περιστρεφόμενο εκτοξευτή παγέτου και πυραύλους για να σταματήσετε τα θηρία.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6 font-bold text-xl">02</div>
+                    <h3 class="font-black text-lg mb-3 uppercase">Cockpit</h3>
+                    <p class="text-sm text-gray-500">Το θωρακισμένο πιλοτήριο ανοίγει για να τοποθετήσετε τη μίνι φιγούρα STORMER στο εσωτερικό.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6 font-bold text-xl">03</div>
+                    <h3 class="font-black text-lg mb-3 uppercase">Combi Model</h3>
+                    <p class="text-sm text-gray-500">Συνδυάστε το με το 44019 ΣΤΕΛΘ ΜΗΧΑΝΗ ΤΟΥ ROCKA για να φτιάξετε ένα γιγαντιαίο Hero Model!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotional Banner -->
+        <div class="mt-16 freeze-gradient rounded-3xl p-10 text-white flex flex-col md:flex-row items-center justify-between shadow-2xl overflow-hidden relative">
+            <div class="z-10 text-center md:text-left">
+                <h3 class="text-3xl font-black mb-4 uppercase italic tracking-tighter">Invasion From Below</h3>
+                <p class="text-blue-100 max-w-md mb-8">Εξερευνήστε τον υπόγειο κόσμο και σταματήστε την εισβολή με τα νέα Mech σετ του 2014.</p>
+                <button class="bg-white text-blue-900 px-8 py-3 rounded-full font-black uppercase text-sm hover:bg-blue-50 transition-colors">Δειτε ολη τη συλλογη</button>
+            </div>
+            <!-- Decorative SVG circles for the banner -->
+            <svg class="absolute right-0 top-0 opacity-10 w-96 h-96 -mr-20 -mt-20" fill="currentColor" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="40" />
+            </svg>
+        </div>
+    </main>
+
+    <!-- Success Notification (Custom Modal replacement) -->
+    <div id="cartNotification" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-[100] hidden bg-gray-900 text-white px-8 py-5 rounded-2xl shadow-2xl items-center space-x-6 border border-gray-700">
+        <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+        </div>
+        <div class="pr-4">
+            <p class="font-black uppercase text-xs tracking-widest text-green-400">Επιτυχια!</p>
+            <p class="text-sm font-bold">Το σετ 44017 προστέθηκε στο καλάθι.</p>
+        </div>
+        <button class="text-gray-400 hover:text-white" onclick="hideNotification()">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"></path></svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-16 mt-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="bg-red-600 inline-block p-2 font-black text-white text-xl mb-8">LEGO</div>
+            <div class="flex flex-wrap justify-center gap-8 text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">
+                <a href="#" class="hover:text-black transition-colors">Εξυπηρετηση Πελατων</a>
+                <a href="#" class="hover:text-black transition-colors">Οδηγιες Κατασκευης</a>
+                <a href="#" class="hover:text-black transition-colors">Πολιτικη Cookies</a>
+                <a href="#" class="hover:text-black transition-colors">Νομικη Σημειωση</a>
+            </div>
+            <p class="text-[10px] text-gray-400 leading-relaxed max-w-2xl mx-auto uppercase">
+                LEGO, the LEGO logo, the Minifigure, DUPLO, BIONICLE, LEGENDS OF CHIMA, the FRIENDS logo, the MINIFIGURES logo, DIMENSIONS, MINDSTORMS, NINJAGO, and NEXO KNIGHTS are trademarks of the LEGO Group. <br>©2024 The LEGO Group.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function triggerNotification() {
+            const notif = document.getElementById('cartNotification');
+            notif.classList.remove('hidden');
+            notif.classList.add('notification-active');
+            
+            setTimeout(() => {
+                hideNotification();
+            }, 4000);
+        }
+
+        function hideNotification() {
+            const notif = document.getElementById('cartNotification');
+            notif.classList.remove('notification-active');
+            setTimeout(() => {
+                notif.classList.add('hidden');
+            }, 400);
+        }
+    </script>
+
+</body>
+</html>
