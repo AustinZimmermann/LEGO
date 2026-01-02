@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7297 Cingolato Dino - LEGO® Shop Italia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .lego-yellow { background-color: #ffcf00; }
+        .lego-red { background-color: #d11013; }
+        
+        .product-card {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            border-radius: 20px;
+        }
+
+        .btn-add {
+            background-color: #ffcf00;
+            transition: all 0.3s ease;
+        }
+
+        .btn-add:hover {
+            background-color: #f5c400;
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(255, 207, 0, 0.4);
+        }
+
+        .dino-gradient {
+            background: linear-gradient(135deg, #2a4d25 0%, #1a3017 100%);
+        }
+
+        .feature-tag {
+            background-color: #fff9db;
+            color: #8a6d3b;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Banner -->
+    <div class="bg-black text-white py-2.5 text-center">
+        <p class="text-[11px] font-bold uppercase tracking-[0.2em]">Spedizione gratuita su tutti gli ordini superiori a €55</p>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white border-b sticky top-0 z-50">
+        <div class="lego-yellow h-1.5 w-full"></div>
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-10">
+                <div class="bg-red-600 p-2.5 rounded shadow-sm">
+                    <svg width="45" height="45" viewBox="0 0 100 100">
+                        <rect width="100" height="100" fill="#d11013"/>
+                        <text x="50%" y="68%" font-family="Arial Black" font-size="42" fill="white" text-anchor="middle">LEGO</text>
+                    </svg>
+                </div>
+                <nav class="hidden lg:flex space-x-8 font-black text-sm uppercase">
+                    <a href="#" class="hover:text-blue-600 transition">Acquista</a>
+                    <a href="#" class="hover:text-blue-600 transition">Scopri</a>
+                    <a href="#" class="hover:text-blue-600 transition">Aiuto</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-6 text-gray-800 font-bold text-sm">
+                <span class="hidden md:inline cursor-pointer hover:text-blue-600">ACCEDI</span>
+                <div class="flex space-x-4">
+                    <button class="p-2"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <button class="p-2 relative">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                        <span class="absolute top-0 right-0 bg-blue-600 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 lg:py-12">
+        
+        <!-- Breadcrumbs -->
+        <nav class="text-[11px] text-gray-400 mb-10 font-bold uppercase tracking-widest">
+            <a href="#" class="hover:text-black">Home</a> <span class="mx-2">/</span> 
+            <a href="#" class="hover:text-black uppercase">Temi</a> <span class="mx-2">/</span> 
+            <a href="#" class="hover:text-black uppercase">DINO 2010</a> <span class="mx-2">/</span> 
+            <span class="text-black">7297</span>
+        </nav>
+
+        <div class="flex flex-col lg:flex-row gap-16">
+            
+            <!-- Left: Media Showcase -->
+            <div class="lg:w-7/12">
+                <div class="product-card bg-white p-6 md:p-10 relative">
+                    <div class="absolute top-8 left-8 z-10 flex flex-col gap-2">
+                        <span class="dino-gradient text-white text-[10px] font-black px-4 py-1.5 rounded uppercase tracking-tighter shadow-md">Dino 2010</span>
+                        <span class="bg-blue-600 text-white text-[10px] font-black px-4 py-1.5 rounded uppercase tracking-tighter shadow-md">Fuori Catalogo</span>
+                    </div>
+
+                    <!-- Main Image Simulation -->
+                    <div class="aspect-square bg-gray-50 rounded-2xl flex flex-col items-center justify-center border-2 border-dashed border-gray-200 overflow-hidden text-center p-8">
+                        <svg class="w-40 h-40 text-gray-200 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <h2 class="text-3xl font-black text-gray-300 uppercase italic leading-none">Cingolato Dino 7297</h2>
+                        <p class="text-gray-400 mt-4 max-w-sm font-medium">Visuale del veicolo cingolato con unità di contenimento mobile, gru telescopica e T-Rex rosso.</p>
+                    </div>
+
+                    <!-- Gallery Thumbnails -->
+                    <div class="grid grid-cols-4 gap-4 mt-6">
+                        <div class="aspect-square bg-white border-2 border-yellow-400 rounded-xl p-2 cursor-pointer"><div class="w-full h-full bg-gray-100 rounded-lg"></div></div>
+                        <div class="aspect-square bg-white border border-gray-100 rounded-xl p-2 cursor-pointer hover:border-yellow-400 transition"><div class="w-full h-full bg-gray-100 rounded-lg"></div></div>
+                        <div class="aspect-square bg-white border border-gray-100 rounded-xl p-2 cursor-pointer hover:border-yellow-400 transition"><div class="w-full h-full bg-gray-100 rounded-lg"></div></div>
+                        <div class="aspect-square bg-white border border-gray-100 rounded-xl p-2 cursor-pointer hover:border-yellow-400 transition flex items-center justify-center">
+                            <span class="text-xs font-black text-gray-400">+8 Altro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Product Information -->
+            <div class="lg:w-5/12">
+                <div class="sticky top-28">
+                    <div class="mb-4">
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="flex text-yellow-400">★★★★★</div>
+                            <span class="text-xs font-black text-gray-400 underline cursor-pointer">48 Recensioni</span>
+                        </div>
+                        <h1 class="text-5xl font-black tracking-tighter leading-none mb-2">Cingolato Dino</h1>
+                        <p class="text-gray-500 font-bold text-xl uppercase tracking-widest">7297</p>
+                    </div>
+
+                    <div class="mb-8">
+                        <div class="text-5xl font-black text-red-600 mb-1 italic">€69,99</div>
+                        <p class="text-[11px] text-gray-400 font-bold uppercase tracking-tighter">Prezzo originale (2005) - Set da Collezione</p>
+                    </div>
+
+                    <!-- Buy Box -->
+                    <div class="bg-white p-8 rounded-[32px] border border-gray-200 shadow-sm mb-8">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <span class="text-sm font-black uppercase text-red-600">Attualmente non disponibile</span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <button class="w-full bg-gray-200 text-gray-500 py-5 rounded-full font-black text-sm tracking-widest cursor-not-allowed uppercase">
+                                Avvisami quando torna
+                            </button>
+                            <button class="w-full border-2 border-gray-200 py-5 rounded-full font-black text-[11px] tracking-[0.2em] hover:border-black transition uppercase">
+                                Aggiungi alla lista dei desideri
+                            </button>
+                        </div>
+
+                        <div class="mt-8 border-t pt-6">
+                            <div class="flex items-center gap-4">
+                                <div class="bg-blue-50 p-3 rounded-full">
+                                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-black uppercase mb-0.5">Punti LEGO® Insiders</p>
+                                    <p class="text-[10px] text-gray-500 font-medium">Guadagna 525 punti con questo acquisto</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Specs -->
+                    <div class="grid grid-cols-2 gap-px bg-gray-200 rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+                        <div class="bg-white p-5 flex flex-col items-center justify-center">
+                            <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Età</span>
+                            <span class="text-xl font-black italic">8-12</span>
+                        </div>
+                        <div class="bg-white p-5 flex flex-col items-center justify-center">
+                            <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Pezzi</span>
+                            <span class="text-xl font-black italic">362</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detail Sections -->
+        <section class="mt-24">
+            <div class="grid lg:grid-cols-2 gap-12 items-center bg-white p-12 md:p-20 rounded-[48px] shadow-sm">
+                <div>
+                    <h2 class="text-5xl font-black uppercase tracking-tighter italic mb-8 border-l-8 border-yellow-400 pl-8 leading-tight">
+                        Cattura il Gigante del Deserto
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-10 font-medium">
+                        La squadra DINO 2010 non ha mai affrontato nulla di simile! Il set <b>7297 Cingolato Dino</b> è l’unità di cattura più imponente mai costruita. Grazie ai suoi cingoli extra-larghi, può attraversare i terreni più ostili per raggiungere il T-Rex. Utilizza la gru telescopica per abbassare l’unità di contenimento ed intrappolare il predatore prima che scateni il caos.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                            <span class="feature-tag mb-3 inline-block">Funzione 01</span>
+                            <h4 class="font-black uppercase text-sm mb-2 italic">Cingoli Mobili</h4>
+                            <p class="text-xs text-gray-500 leading-normal">Supera ogni ostacolo con il sistema di trazione a cingoli indipendenti.</p>
+                        </div>
+                        <div class="p-6 bg-gray-50 rounded-2xl border border-gray-100">
+                            <span class="feature-tag mb-3 inline-block">Funzione 02</span>
+                            <h4 class="font-black uppercase text-sm mb-2 italic">Gru Idraulica</h4>
+                            <p class="text-xs text-gray-500 leading-normal">Braccio meccanico snodato per sollevare carichi pesanti e dinosauri.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 rounded-3xl aspect-[4/3] flex items-center justify-center border-4 border-white shadow-xl relative overflow-hidden group">
+                     <div class="text-center opacity-30 group-hover:scale-110 transition duration-700">
+                        <p class="font-black text-4xl uppercase italic text-gray-400">Video Action <br>7297</p>
+                     </div>
+                     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Table -->
+        <section class="mt-24 border-t border-gray-200 pt-16">
+            <h3 class="text-3xl font-black uppercase tracking-tighter italic mb-12">Specifiche del Prodotto</h3>
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="space-y-6">
+                    <div class="flex justify-between items-end border-b-2 border-gray-100 pb-4">
+                        <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Minifigure incluse</span>
+                        <span class="font-black text-lg italic uppercase">2 Agenti Dino</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b-2 border-gray-100 pb-4">
+                        <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Dinosauri inclusi</span>
+                        <span class="font-black text-lg italic uppercase">1 T-Rex Gigante (Rosso/Nero)</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b-2 border-gray-100 pb-4">
+                        <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Dimensioni Veicolo</span>
+                        <span class="font-black text-lg italic uppercase">Oltre 35cm di lunghezza</span>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="flex justify-between items-end border-b-2 border-gray-100 pb-4">
+                        <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Anno di rilascio</span>
+                        <span class="font-black text-lg italic uppercase">2005</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b-2 border-gray-100 pb-4">
+                        <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Tema secondario</span>
+                        <span class="font-black text-lg italic uppercase">Dino 2010 (Europe)</span>
+                    </div>
+                    <div class="flex justify-between items-end border-b-2 border-gray-100 pb-4">
+                        <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Difficoltà</span>
+                        <span class="font-black text-lg italic uppercase">Intermedio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a1a] text-white mt-32 pt-20 pb-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12 mb-20 border-b border-gray-800 pb-20">
+                <div class="col-span-2 md:col-span-1">
+                    <div class="bg-red-600 inline-block p-2 rounded mb-8">
+                         <svg width="35" height="35" viewBox="0 0 100 100"><rect width="100" height="100" fill="#d11013"/><text x="50%" y="68%" font-family="Arial Black" font-size="40" fill="white" text-anchor="middle">L</text></svg>
+                    </div>
+                    <p class="text-[10px] text-gray-500 font-black uppercase leading-relaxed tracking-widest">LEGO System A/S, DK-7190 Billund, Danimarca. Solo gli adulti possono effettuare acquisti online.</p>
+                </div>
+                <div>
+                    <h5 class="font-black text-xs uppercase mb-8 tracking-[0.2em]">Supporto</h5>
+                    <ul class="text-[11px] text-gray-500 space-y-4 font-black uppercase tracking-wider">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Contattaci</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Istruzioni</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Pezzi di ricambio</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-black text-xs uppercase mb-8 tracking-[0.2em]">Novità</h5>
+                    <ul class="text-[11px] text-gray-500 space-y-4 font-black uppercase tracking-wider">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Nuovi Set</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">LEGO® Insiders</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Catalogo</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-black text-xs uppercase mb-8 tracking-[0.2em]">Social</h5>
+                    <div class="flex gap-4">
+                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-blue-600 transition">F</div>
+                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-pink-600 transition">I</div>
+                        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center cursor-pointer hover:bg-red-600 transition">Y</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex flex-wrap gap-8 text-[9px] text-gray-600 font-black uppercase tracking-[0.2em]">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">Note Legali</a>
+                    <a href="#">Accessibilità</a>
+                </div>
+                <p class="text-[9px] text-gray-700 font-black uppercase tracking-[0.1em]">LEGO, the LEGO logo and the Minifigure are trademarks of the LEGO Group. ©2026 The LEGO Group.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
