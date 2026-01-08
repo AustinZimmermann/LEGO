@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7700 Невидимый охотник - LEGO® EXO-FORCE™ - LEGO.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --lego-red: #d0021b;
+            --exo-orange: #ff6600;
+            --exo-blue: #00aaff;
+            --dark-bg: #121212;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .exo-header {
+            background: linear-gradient(90deg, #000 0%, #333 50%, #000 100%);
+            border-bottom: 4px solid var(--exo-orange);
+        }
+
+        .lego-logo {
+            background-color: var(--lego-red);
+            padding: 10px;
+            font-weight: 900;
+            color: white;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle, #ffffff 0%, #e0e0e0 100%);
+        }
+
+        .badge {
+            background: var(--exo-orange);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .btn-buy {
+            background-color: #2c8c2c;
+            transition: all 0.3s ease;
+        }
+
+        .btn-buy:hover {
+            background-color: #247024;
+            transform: scale(1.02);
+        }
+
+        .tech-border {
+            border: 2px solid #ddd;
+            position: relative;
+        }
+
+        .tech-border::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            width: 20px;
+            height: 20px;
+            border-top: 4px solid var(--exo-orange);
+            border-left: 4px solid var(--exo-orange);
+        }
+
+        .character-card {
+            background: #222;
+            color: #fff;
+            border-left: 5px solid var(--exo-blue);
+        }
+
+        #message-box {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            border-left: 4px solid var(--exo-orange);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="exo-header p-4 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <div class="lego-logo text-2xl">LEGO</div>
+                <nav class="hidden md:flex space-x-4 font-bold text-sm uppercase tracking-widest">
+                    <a href="#" class="hover:text-orange-500">Магазин</a>
+                    <a href="#" class="text-orange-500">Продукты</a>
+                    <a href="#" class="hover:text-orange-500">Игры</a>
+                    <a href="#" class="hover:text-orange-500">Exo-Force</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="hidden sm:inline text-xs">РОССИЯ (РУССКИЙ)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto py-4 px-4 text-xs text-gray-500">
+        <a href="#" class="hover:underline">Главная</a> > 
+        <a href="#" class="hover:underline">Наборы LEGO®</a> > 
+        <a href="#" class="hover:underline">EXO-FORCE™</a> > 
+        <span class="text-gray-800 font-bold">7700 Невидимый охотник</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 pb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Image Gallery -->
+            <div class="space-y-4">
+                <div class="hero-gradient tech-border rounded-lg overflow-hidden p-8 flex justify-center items-center min-h-[400px]">
+                    <div class="text-center">
+                        <img id="main-image" src="https://images.brickset.com/sets/images/7700-1.jpg" alt="7700 Невидимый охотник" class="max-w-full h-auto drop-shadow-2xl" onerror="this.src='https://via.placeholder.com/500x500?text=7700+Stealth+Hunter'">
+                    </div>
+                </div>
+                <div class="grid grid-cols-4 gap-2">
+                    <button onclick="changeImage(0)" class="border-2 border-orange-500 p-1 bg-white hover:opacity-80"><img src="https://images.brickset.com/sets/images/7700-1.jpg" class="w-full" onerror="this.src='https://via.placeholder.com/100'"></button>
+                    <button onclick="changeImage(1)" class="border-2 border-transparent p-1 bg-white hover:border-orange-500"><img src="https://images.brickset.com/sets/images/7700-1.jpg" style="filter: hue-rotate(90deg)" class="w-full" onerror="this.src='https://via.placeholder.com/100'"></button>
+                    <button onclick="changeImage(2)" class="border-2 border-transparent p-1 bg-white hover:border-orange-500"><img src="https://images.brickset.com/sets/AdditionalImages/7700-1/7700_alt1.jpg" class="w-full" onerror="this.src='https://via.placeholder.com/100'"></button>
+                    <button class="border-2 border-transparent p-1 bg-gray-200 flex items-center justify-center text-xs font-bold uppercase">Видео</button>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="flex flex-col">
+                <div class="mb-2">
+                    <span class="badge uppercase">Раритет</span>
+                </div>
+                <h1 class="text-4xl font-black italic uppercase mb-2">7700 Невидимый охотник</h1>
+                <p class="text-gray-500 font-bold mb-6 italic">LEGO® EXO-FORCE™</p>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-6 tech-border">
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-3xl font-bold">1 499 руб.</span>
+                        <span class="text-green-600 font-bold">В наличии</span>
+                    </div>
+                    
+                    <button onclick="addToBag()" class="btn-buy w-full text-white font-black py-4 rounded uppercase text-xl shadow-lg mb-4">
+                        Добавить в корзину
+                    </button>
+                    
+                    <div class="grid grid-cols-3 gap-4 border-t pt-4 text-center text-sm">
+                        <div>
+                            <p class="text-gray-400">Возраст</p>
+                            <p class="font-bold">7-14</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">Детали</p>
+                            <p class="font-bold">165</p>
+                        </div>
+                        <div>
+                            <p class="text-gray-400">Артикул</p>
+                            <p class="font-bold">7700</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prose prose-sm max-w-none">
+                    <h3 class="font-bold uppercase text-orange-600">Нанеси удар из тени!</h3>
+                    <p>Пилотируемый опытным <b>Хикару</b>, «Невидимый охотник» — это вершина технологий команды EXO-FORCE. Обладая способностью становиться практически невидимым, этот высокотехнологичный боевой робот может незаметно пробираться в тыл врага и наносить сокрушительные удары своей гигантской лазерной винтовкой.</p>
+                    <ul class="list-disc pl-5 space-y-2 mt-4">
+                        <li>Включает минифигурку Хикару с уникальной прической в стиле аниме!</li>
+                        <li>Робот оснащен огромной снайперской винтовкой и острым как бритва клинком.</li>
+                        <li>Полностью подвижные конечности позволяют принимать любые боевые позы.</li>
+                        <li>Размеры: более 19 см в высоту!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Character & Tech Section -->
+        <section class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="character-card p-6 rounded-lg flex items-center space-x-6">
+                <div class="flex-shrink-0 w-24 h-24 bg-blue-500 rounded-full flex items-center justify-center overflow-hidden border-4 border-white">
+                    <img src="https://images.brickset.com/sets/minifigs/exf001.jpg" alt="Hikaru" onerror="this.src='https://via.placeholder.com/100?text=Hikaru'">
+                </div>
+                <div>
+                    <h4 class="text-xl font-black uppercase text-blue-400 italic">Пилот: Хикару</h4>
+                    <p class="text-sm text-gray-300 mt-2">Хикару — самый спокойный и сосредоточенный из команды EXO-FORCE. Его острый глаз и холодный расчет делают его идеальным пилотом для скрытных операций.</p>
+                </div>
+            </div>
+
+            <div class="bg-orange-600 text-white p-6 rounded-lg relative overflow-hidden">
+                <div class="relative z-10">
+                    <h4 class="text-xl font-black uppercase italic mb-2">Секретный код внутри!</h4>
+                    <p class="text-sm">Используй специальный код с кирпичика Light Brick, чтобы разблокировать эксклюзивный контент на LEGO.com/EXO-FORCE!</p>
+                </div>
+                <div class="absolute right-[-20px] bottom-[-20px] opacity-20 transform rotate-12">
+                     <svg width="150" height="150" viewBox="0 0 24 24" fill="white"><path d="M12 2L1 21h22L12 2zm0 3.45l8.15 14.1H3.85L12 5.45zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z"/></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Placeholder -->
+        <section class="mt-16">
+            <h3 class="text-2xl font-black uppercase italic border-b-4 border-black inline-block mb-8">Отзывы фанатов</h3>
+            <div class="space-y-4">
+                <div class="bg-white p-4 rounded shadow-sm border border-gray-200">
+                    <div class="flex items-center mb-2">
+                        <div class="flex text-orange-500 mr-2">★★★★★</div>
+                        <span class="font-bold">BricksFan2006</span>
+                    </div>
+                    <p class="text-sm">Это мой любимый робот из первой волны! Очень крутой дизайн крыльев и винтовки. Хикару выглядит отлично.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-10 px-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="lego-logo mb-4">LEGO</div>
+                <p class="text-xs text-gray-400">LEGO, логотип LEGO, EXO-FORCE и минифигурка являются товарными знаками LEGO Group. © 2006 The LEGO Group.</p>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4 uppercase text-sm">Поддержка</h5>
+                <ul class="text-xs space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Инструкции по сборке</a></li>
+                    <li><a href="#" class="hover:text-white">Запасные части</a></li>
+                    <li><a href="#" class="hover:text-white">Свяжитесь с нами</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4 uppercase text-sm">О нас</h5>
+                <ul class="text-xs space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white">LEGO Group</a></li>
+                    <li><a href="#" class="hover:text-white">Новости LEGO</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-bold mb-4 uppercase text-sm">Подписка</h5>
+                <p class="text-xs text-gray-400 mb-4">Получайте новости о новых наборах Exo-Force!</p>
+                <div class="flex">
+                    <input type="email" placeholder="Email" class="p-2 text-black w-full text-xs outline-none">
+                    <button class="bg-orange-600 px-4 py-2 text-xs font-bold uppercase">OK</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Message Box -->
+    <div id="message-box">
+        Товар успешно добавлен в вашу корзину!
+    </div>
+
+    <script>
+        function changeImage(index) {
+            const mainImg = document.getElementById('main-image');
+            const thumbs = document.querySelectorAll('.grid button');
+            
+            // Сброс границ всех превью
+            thumbs.forEach(btn => btn.classList.remove('border-orange-500'));
+            thumbs.forEach(btn => btn.classList.add('border-transparent'));
+            
+            // Установка активного превью
+            thumbs[index].classList.add('border-orange-500');
+            thumbs[index].classList.remove('border-transparent');
+
+            // Смена изображения (эмуляция)
+            if (index === 1) {
+                mainImg.style.filter = 'hue-rotate(90deg)';
+            } else {
+                mainImg.style.filter = 'none';
+                if (index === 2) {
+                    mainImg.src = 'https://images.brickset.com/sets/AdditionalImages/7700-1/7700_alt1.jpg';
+                } else {
+                    mainImg.src = 'https://images.brickset.com/sets/images/7700-1.jpg';
+                }
+            }
+        }
+
+        function addToBag() {
+            const msg = document.getElementById('message-box');
+            msg.style.display = 'block';
+            
+            setTimeout(() => {
+                msg.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
