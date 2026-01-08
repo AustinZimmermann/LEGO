@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8905 Thok (Ток) - BIONICLE® - LEGO.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bionicle-blue: #00a3da;
+            --bionicle-ice: #e0f2fe;
+            --piraka-white: #f8fafc;
+            --dark-bg: #0f172a;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .ice-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+
+        .thok-glow {
+            filter: drop-shadow(0 0 20px rgba(0, 163, 218, 0.4));
+        }
+
+        .btn-lego {
+            background: #ffd500;
+            color: black;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-lego:hover {
+            background: #ffea00;
+            transform: scale(1.05);
+        }
+
+        /* Анимация ледяного дыхания */
+        @keyframes drift {
+            0% { transform: translate(0, 0); opacity: 0.3; }
+            50% { transform: translate(10px, -10px); opacity: 0.5; }
+            100% { transform: translate(0, 0); opacity: 0.3; }
+        }
+
+        .ice-mist {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            pointer-events: none;
+            animation: drift 8s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="ice-gradient min-h-screen">
+
+    <!-- Навигация -->
+    <nav class="p-4 flex justify-between items-center max-w-7xl mx-auto border-b border-white/10">
+        <div class="flex items-center space-x-4">
+            <div class="bg-[#d00000] p-2 rounded-sm font-black text-white text-xl">LEGO</div>
+            <div class="tracking-[0.2em] font-light text-sm hidden md:block">BIONICLE®</div>
+        </div>
+        <div class="flex space-x-6 text-sm font-medium">
+            <a href="#" class="hover:text-blue-400 transition">ПРОДУКТЫ</a>
+            <a href="#" class="hover:text-blue-400 transition">ИСТОРИЯ</a>
+            <a href="#" class="hover:text-blue-400 transition">ИГРЫ</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 relative">
+        <div class="ice-mist"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Секция изображения -->
+            <div class="relative group">
+                <div class="absolute -inset-4 bg-blue-500/20 blur-3xl rounded-full opacity-50"></div>
+                <!-- Плейсхолдер для основного изображения Тока -->
+                <div class="relative aspect-square glass-panel flex items-center justify-center overflow-hidden">
+                    <svg viewBox="0 0 400 400" class="w-4/5 h-4/5 thok-glow">
+                        <!-- Стилизованный силуэт Пирака -->
+                        <path d="M200 50 L150 100 L160 180 L100 250 L120 350 L200 300 L280 350 L300 250 L240 180 L250 100 Z" fill="white" opacity="0.9" />
+                        <path d="M180 120 Q200 110 220 120" stroke="#00a3da" stroke-width="4" fill="none" />
+                        <circle cx="185" cy="115" r="4" fill="#ff2200" />
+                        <circle cx="215" cy="115" r="4" fill="#ff2200" />
+                        <!-- Ледяной бур/копье -->
+                        <path d="M300 150 L350 50 L320 40 Z" fill="#94a3b8" />
+                    </svg>
+                    
+                    <div class="absolute bottom-6 left-6 text-xs bg-black/40 px-3 py-1 rounded-full uppercase tracking-widest border border-white/10">
+                        Набор: 8905 | Пирака Льда
+                    </div>
+                </div>
+
+                <!-- Мини-галерея -->
+                <div class="flex mt-6 space-x-4">
+                    <div class="w-20 h-20 glass-panel cursor-pointer hover:border-blue-400 flex items-center justify-center p-2">
+                         <div class="w-full h-full bg-white/10 rounded"></div>
+                    </div>
+                    <div class="w-20 h-20 glass-panel cursor-pointer hover:border-blue-400 flex items-center justify-center p-2">
+                        <div class="w-full h-full bg-white/10 rounded"></div>
+                    </div>
+                    <div class="w-20 h-20 glass-panel cursor-pointer hover:border-blue-400 flex items-center justify-center p-2">
+                        <div class="w-full h-full bg-white/10 rounded"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Секция информации -->
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-blue-400 font-bold tracking-widest text-xl mb-2">PIRAKA</h2>
+                    <h1 class="text-6xl font-black italic tracking-tighter uppercase">Thok <span class="text-blue-500">/ Ток</span></h1>
+                    <p class="text-gray-400 mt-4 text-lg leading-relaxed">
+                        Хладнокровный и расчетливый одиночка. Ток — это ледяной ветер острова Войя Нуи. Он предпочитает работать в тени, ожидая идеального момента, чтобы предать своих «товарищей» Пирака.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass-panel p-4">
+                        <span class="text-xs text-blue-300 block mb-1">Оружие</span>
+                        <span class="font-bold">Ледяной Ледоруб</span>
+                    </div>
+                    <div class="glass-panel p-4">
+                        <span class="text-xs text-blue-300 block mb-1">Снаряд</span>
+                        <span class="font-bold">Сфера Замор</span>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-6">
+                    <button class="btn-lego px-8 py-4 rounded-xl text-lg flex items-center space-x-3">
+                        <span>КУПИТЬ СЕЙЧАС</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102z"/>
+                        </svg>
+                    </button>
+                    <div class="text-2xl font-bold">799 руб.</div>
+                </div>
+
+                <div class="border-t border-white/10 pt-6">
+                    <h3 class="font-bold mb-4">ОСОБЕННОСТИ НАБОРА:</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li class="flex items-center space-x-2">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span>Светящиеся в темноте глаза и зубы</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span>Пусковая установка сфер Замор</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                            <span>42 детали для сборки легендарного злодея</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция дополнительных данных -->
+        <section class="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="glass-panel p-8 text-center hover:bg-white/10 transition">
+                <div class="text-blue-400 text-4xl mb-4 italic font-black">7-16</div>
+                <div class="text-sm font-bold uppercase">Возраст</div>
+            </div>
+            <div class="glass-panel p-8 text-center hover:bg-white/10 transition">
+                <div class="text-blue-400 text-4xl mb-4 italic font-black">42</div>
+                <div class="text-sm font-bold uppercase">Деталей</div>
+            </div>
+            <div class="glass-panel p-8 text-center hover:bg-white/10 transition">
+                <div class="text-blue-400 text-4xl mb-4 italic font-black">8905</div>
+                <div class="text-sm font-bold uppercase">Артикул</div>
+            </div>
+        </section>
+
+        <!-- Цитата персонажа -->
+        <div class="mt-24 relative p-12 overflow-hidden rounded-3xl">
+            <div class="absolute inset-0 bg-blue-600/10 blur-xl"></div>
+            <blockquote class="relative z-10 text-center">
+                <p class="text-3xl italic font-light text-blue-100">
+                    «Друзья приходят и уходят... но лед остается навсегда.»
+                </p>
+                <cite class="block mt-4 text-blue-400 font-bold not-italic">— ТОК</cite>
+            </blockquote>
+        </div>
+
+    </main>
+
+    <footer class="bg-black/50 py-12 mt-24">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center opacity-60">
+            <div class="text-xs space-y-2 text-center md:text-left">
+                <p>LEGO, the LEGO logo and BIONICLE are trademarks of the LEGO Group. © 2006 The LEGO Group.</p>
+                <p>Все права защищены.</p>
+            </div>
+            <div class="mt-6 md:mt-0 flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#" class="hover:text-white">Конфиденциальность</a>
+                <a href="#" class="hover:text-white">Поддержка</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Простая интерактивность для элементов
+        document.querySelectorAll('.glass-panel').forEach(panel => {
+            panel.addEventListener('mousemove', (e) => {
+                const rect = panel.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                panel.style.setProperty('--mouse-x', `${x}px`);
+                panel.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
