@@ -1,22 +1,343 @@
 <!DOCTYPE html>
-<html lang="ja-JP">
+<html lang="ja">
 <head>
-<title>アイアン・プレデターvs.Tレックス - 7476 - レゴ®ダイノ・アタック - 製品 - LEGO.com JP</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://pages-themes.github.io/cayman/assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7476 アイアン・プレデターvs.Tレックス - LEGO.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Windows XP / IE6 Visual Styles */
+        body {
+            background-color: #5B7EDC; /* XP Blue Desktop */
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .ie-window {
+            width: 1024px;
+            height: 90vh;
+            margin: 10px auto;
+            background-color: #ECE9D8;
+            border: 3px solid #0054E3;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title-bar {
+            background: linear-gradient(to right, #0058EE 0%, #378DF0 27%, #2279ED 70%, #0054E3 100%);
+            height: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .menu-bar {
+            background-color: #ECE9D8;
+            border-bottom: 1px solid #ACA899;
+            padding: 2px 8px;
+            font-size: 11px;
+            display: flex;
+            gap: 12px;
+        }
+
+        .toolbar {
+            background-color: #ECE9D8;
+            border-bottom: 1px solid #ACA899;
+            padding: 4px 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .address-bar-container {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 8px;
+            background-color: #ECE9D8;
+            border-bottom: 1px solid #ACA899;
+            font-size: 12px;
+        }
+
+        .address-input {
+            background-color: white;
+            border: 1px solid #7F9DB9;
+            flex-grow: 1;
+            padding: 2px 4px;
+            font-family: sans-serif;
+        }
+
+        /* LEGO.com 2006 - Dino Attack Theme */
+        .web-content {
+            background-color: #000;
+            flex-grow: 1;
+            overflow-y: scroll;
+            color: #ccc;
+        }
+
+        .lego-header {
+            background-color: #FFD200;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 4px solid #E3000B;
+        }
+
+        .lego-logo {
+            background-color: #E3000B;
+            padding: 8px;
+            border: 2px solid white;
+            color: white;
+            font-weight: 900;
+            font-size: 26px;
+            line-height: 1;
+        }
+
+        .dino-hero-section {
+            background: linear-gradient(180deg, #1a1a1a 0%, #000 100%);
+            padding: 40px;
+            position: relative;
+        }
+
+        .hazard-line {
+            height: 15px;
+            background: repeating-linear-gradient(45deg, #FFD200, #FFD200 15px, #000 15px, #000 30px);
+            border-bottom: 2px solid #333;
+        }
+
+        .mission-status {
+            font-family: 'Courier New', Courier, monospace;
+            color: #0F0;
+            font-size: 12px;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px #0F0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .product-image-frame {
+            background-color: #fff;
+            padding: 20px;
+            border: 5px solid #333;
+            position: relative;
+            box-shadow: 0 0 30px rgba(255, 210, 0, 0.1);
+        }
+
+        .top-secret-stamp {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: 3px solid #E3000B;
+            color: #E3000B;
+            padding: 5px 15px;
+            font-weight: bold;
+            transform: rotate(15deg);
+            opacity: 0.8;
+            font-size: 18px;
+        }
+
+        .set-title {
+            color: #FFD200;
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .price-tag {
+            display: inline-block;
+            background-color: #E3000B;
+            color: white;
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #FFD200;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        .flash-button {
+            background: linear-gradient(to bottom, #444, #111);
+            color: #FFD200;
+            border: 1px solid #FFD200;
+            padding: 10px 30px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+
+        .flash-button:hover {
+            background: #FFD200;
+            color: #000;
+        }
+
+        .status-bar {
+            background-color: #ECE9D8;
+            border-top: 1px solid #ACA899;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            font-size: 11px;
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif;">
-<main id="content" class="main-content" role="main">
-<h1>レゴ®ダイノ・アタック</h1>
-<h2>製品</h2>
-<h3 style="font-weight: bold;">
-<span id="number">7476</span>
-<span id="title">アイアン・プレデターvs.Tレックス</span>
-</h3>
-<p><img src="https://www.lego.com/cdn/product-assets/product.img.pri/7476_prod.jpg" height="350"></p>
-<p class="description">スペックス、ディガー、バイパーが操縦するアイアン・プレデターは、任務を遂行する準備ができている。Z-1キネティック・ランチャーやクライオサーミック・キャノンを使って、モンスターによる恐怖の支配を終わらせよう。</p>
-<p class="ipa">[sɯ̥pekːɯ̥sɯ | diɡaː | bai̯paː ɡa soːd͡ʑɯː sɯɾɯ aiaɴ pɯɾedetaː ɰa | ɲimmɯ o sɯikoː sɯɾɯ d͡ʑɯmbi ɡa dekite iɾɯ ‖ zetːo ɰaɴ kiɲetikːɯ̥ ɾant͡ɕaː ja kɯɾaio̞saːmikːɯ̥ kʲanoɴ o t͡sɯ̥katːe | moɴsɯ̥taː ɲi joɾɯ kʲoːɸɯ no ɕihai o oɰaɾasejoː]</p>
-<p style="font-size: 12px; text-align: center;">©2005 The LEGO Group. All rights reserved.</p>
-</main>  
+<body>
+
+<div class="ie-window">
+    <!-- IE6 Title Bar -->
+    <div class="title-bar">
+        <span style="font-family: serif; font-style: italic; font-weight: bold; margin-right: 8px; font-size: 16px;">e</span>
+        7476 アイアン・プレデターvs.Tレックス - LEGO.com - Microsoft Internet Explorer
+        <div style="margin-left: auto; display: flex; gap: 2px;">
+            <div style="width: 21px; height: 18px; background: #eee; border: 1px solid #fff; border-right-color: #888; border-bottom-color: #888; color: black; font-size: 10px; display: flex; align-items: center; justify-content: center;">_</div>
+            <div style="width: 21px; height: 18px; background: #eee; border: 1px solid #fff; border-right-color: #888; border-bottom-color: #888; color: black; font-size: 10px; display: flex; align-items: center; justify-content: center;">□</div>
+            <div style="width: 21px; height: 18px; background: #E81123; border: 1px solid #fff; border-right-color: #888; border-bottom-color: #888; color: white; font-size: 10px; display: flex; align-items: center; justify-content: center;">X</div>
+        </div>
+    </div>
+
+    <!-- IE6 Menus -->
+    <div class="menu-bar">
+        <span>ファイル(F)</span> <span>編集(E)</span> <span>表示(V)</span> <span>お気に入り(A)</span> <span>ツール(T)</span> <span>ヘルプ(H)</span>
+    </div>
+
+    <div class="toolbar">
+        <button style="border: 1px solid #ACA899; padding: 1px 8px; font-size: 11px; background: #eee;">← 戻る</button>
+        <button style="border: 1px solid #ACA899; padding: 1px 8px; font-size: 11px; background: #eee;">進む →</button>
+        <div style="width: 1px; height: 20px; background: #999; margin: 0 5px;"></div>
+        <button style="border: 1px solid #ACA899; padding: 1px 8px; font-size: 11px; background: #eee;">中止</button>
+        <button style="border: 1px solid #ACA899; padding: 1px 8px; font-size: 11px; background: #eee;">更新</button>
+        <button style="border: 1px solid #ACA899; padding: 1px 8px; font-size: 11px; background: #eee;">ホーム</button>
+    </div>
+
+    <div class="address-bar-container">
+        <span>アドレス(D)</span>
+        <div class="address-input">http://www.lego.com/ja-jp/dinoattack/products/7476.aspx</div>
+        <button style="border: 1px solid #ACA899; padding: 1px 5px; font-size: 11px; background: #eee;">移動</button>
+    </div>
+
+    <!-- Web Content -->
+    <div class="web-content">
+        <header class="lego-header">
+            <div class="lego-logo">LEGO</div>
+            <div style="margin-left: 40px; display: flex; gap: 20px; color: #333; font-weight: bold; font-size: 14px;">
+                <span>製品情報</span>
+                <span>オンラインショップ</span>
+                <span>クラブ</span>
+                <span>ゲーム</span>
+            </div>
+            <div style="margin-left: auto;">
+                <span style="font-size: 11px; color: #333;">検索:</span>
+                <input type="text" style="border: 1px solid #999; font-size: 12px; width: 100px;">
+                <button style="font-size: 11px;">Go</button>
+            </div>
+        </header>
+
+        <main class="dino-hero-section">
+            <div class="mission-status">
+                > SYSTEM ACCESS GRANTED...<br>
+                > MISSION LOG UPDATED: 2006.03.03 12:36:12 JST<br>
+                > TARGET: TYRANNOSAURUS REX (MUTANT LEVEL: CRITICAL)
+            </div>
+
+            <div class="product-grid">
+                <div class="product-image-frame">
+                    <div class="top-secret-stamp">極秘 / TOP SECRET</div>
+                    <!-- Set Image Placeholder -->
+                    <img src="https://img.bricklink.com/ItemImage/SN/0/7476-1.png" alt="7476 アイアン・プレデターvs.Tレックス" style="width: 100%; height: auto;">
+                    <div style="text-align: center; margin-top: 10px; font-size: 11px; color: #666;">
+                        [画像：クリックで360度回転表示]
+                    </div>
+                </div>
+
+                <div>
+                    <div style="color: #E3000B; font-weight: bold; font-size: 14px; margin-bottom: 5px;">DINO ATTACK - MISSION #4</div>
+                    <h1 class="set-title">アイアン・プレデター<br>vs.Tレックス</h1>
+                    
+                    <p style="font-size: 15px; line-height: 1.7; color: #bbb;">
+                        究極の決戦が始まる！ダイノ・アタック・チーム最大の重戦車「アイアン・プレデター」を操り、巨大なTレックスに立ち向かえ。この巨獣は光る目と咆哮、そして強力な顎を持っている。アイアン・プレデターの大型ミサイルとキャプチャー・ネットで、街を破壊する王者を捕獲するんだ！
+                    </p>
+
+                    <div class="price-tag">￥8,400</div>
+
+                    <div class="feature-box">
+                        <strong style="color: #FFD200;">装備スペック:</strong>
+                        <ul style="font-size: 13px; margin-top: 8px; list-style-type: square; padding-left: 20px;">
+                            <li>Tレックス：電子サウンド＆ライトギミック搭載</li>
+                            <li>アイアン・プレデター：超大型キャタピラと可動式砲塔</li>
+                            <li>発射可能なキャプチャー・ネットとツイン・ミサイル</li>
+                            <li>ダイノ・アタック・チームのミニフィギュア4体付属</li>
+                            <li>ピース数：671ピース</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 30px; display: flex; gap: 15px;">
+                        <button class="flash-button">🛒 ショップへ移動</button>
+                        <button class="flash-button">🎥 ムービーを見る</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hazard-line" style="margin-top: 50px;"></div>
+            
+            <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px;">
+                <div style="background: #222; padding: 10px; border: 1px solid #444; text-align: center;">
+                    <div style="height: 60px; background: #333; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">7473</div>
+                    <div style="font-size: 10px;">ストリート・スプリンター</div>
+                </div>
+                <div style="background: #222; padding: 10px; border: 1px solid #444; text-align: center;">
+                    <div style="height: 60px; background: #333; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">7474</div>
+                    <div style="font-size: 10px;">アーバン・アベンジャー</div>
+                </div>
+                <div style="background: #222; padding: 10px; border: 1px solid #444; text-align: center;">
+                    <div style="height: 60px; background: #333; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">7475</div>
+                    <div style="font-size: 10px;">ファイヤー・ハマー</div>
+                </div>
+                <div style="background: #E3000B; padding: 10px; border: 1px solid #FFD200; text-align: center; color: white;">
+                    <div style="height: 60px; background: #900; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">NOW SHOWING</div>
+                    <div style="font-size: 10px; font-weight: bold;">アイアン・プレデター</div>
+                </div>
+            </div>
+        </main>
+
+        <footer style="background-color: #eee; color: #666; padding: 20px; text-align: center; border-top: 1px solid #ccc;">
+            <div style="font-size: 11px; margin-bottom: 10px;">
+                <a href="#" style="color: blue;">プライバシーポリシー</a> | 
+                <a href="#" style="color: blue;">利用規約</a> | 
+                <a href="#" style="color: blue;">カスタマーサービス</a>
+            </div>
+            <p style="font-size: 10px;">&copy;2006 The LEGO Group. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- IE6 Status Bar -->
+    <div class="status-bar">
+        <div style="flex-grow: 1; border-right: 1px solid #ACA899;">ページが表示されました</div>
+        <div style="width: 120px; padding: 0 5px; border-right: 1px solid #ACA899; display: flex; align-items: center; gap: 5px;">
+             <img src="https://www.lego.com/favicon.ico" style="width: 14px; filter: grayscale(1);"> インターネット
+        </div>
+        <div style="width: 60px; text-align: center;">100%</div>
+    </div>
+</div>
+
 </body>
 </html>
