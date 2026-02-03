@@ -1,22 +1,347 @@
 <!DOCTYPE html>
-<html lang="ja-JP">
+<html lang="ja">
 <head>
-<title>ファイヤー・ハマーvs.ミュータント・リザード - 7475 - レゴ®ダイノ・アタック - 製品 - LEGO.com JP</title>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://pages-themes.github.io/cayman/assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7475 ファイヤー・ハマーvs.ミュータント・リザード - LEGO.com</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Windows XP Luna Theme & IE6 UI */
+        body {
+            background-color: #5B7EDC;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ie6-container {
+            width: 1000px;
+            margin: 10px auto;
+            background-color: #ECE9D8;
+            border: 3px solid #0054E3;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        .title-bar {
+            background: linear-gradient(to right, #0058EE, #378DF0 27%, #2279ED 70%, #0054E3 100%);
+            height: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .menu-bar {
+            background-color: #ECE9D8;
+            border-bottom: 1px solid #ACA899;
+            padding: 2px 5px;
+            display: flex;
+            gap: 12px;
+            font-size: 11px;
+        }
+
+        .tool-bar {
+            padding: 4px;
+            background-color: #ECE9D8;
+            border-bottom: 1px solid #ACA899;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .address-bar {
+            background-color: white;
+            border: 1px solid #7F9DB9;
+            padding: 2px 5px;
+            flex-grow: 1;
+            font-size: 12px;
+        }
+
+        /* LEGO.com 2006 Styles */
+        .lego-content {
+            background-color: #FFFFFF;
+            height: 700px;
+            overflow-y: scroll;
+        }
+
+        .global-header {
+            background-color: #FFD200;
+            height: 60px;
+            border-bottom: 4px solid #E3000B;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .lego-logo {
+            background-color: #E3000B;
+            padding: 10px;
+            border: 2px solid white;
+            color: white;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .dino-theme-area {
+            background-color: #000000;
+            background-image: radial-gradient(circle at center, #222 0%, #000 100%);
+            color: #FFFFFF;
+            padding: 0;
+            min-height: 600px;
+        }
+
+        .hazard-border {
+            height: 12px;
+            background: repeating-linear-gradient(45deg, #FFD200, #FFD200 10px, #000 10px, #000 20px);
+        }
+
+        .mission-status-bar {
+            background-color: #1a1a1a;
+            padding: 10px 30px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: monospace;
+            font-size: 12px;
+        }
+
+        .product-section {
+            padding: 40px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .image-frame {
+            background-color: #fff;
+            padding: 20px;
+            border: 4px solid #333;
+            box-shadow: 0 0 15px rgba(255, 210, 0, 0.3);
+            width: 480px;
+        }
+
+        .info-panel {
+            flex: 1;
+        }
+
+        .set-title {
+            color: #FFD200;
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .set-number {
+            background-color: #E3000B;
+            color: white;
+            padding: 2px 8px;
+            font-weight: bold;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .price-box {
+            background: linear-gradient(#333, #111);
+            border: 1px solid #444;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .flash-buy-btn {
+            background: linear-gradient(#FFD200, #F0A000);
+            color: #000;
+            border: 2px solid #000;
+            padding: 12px 30px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 3px 3px 0px #666;
+        }
+
+        .flash-buy-btn:active {
+            box-shadow: 1px 1px 0px #666;
+            transform: translate(2px, 2px);
+        }
+
+        .spec-list {
+            font-size: 13px;
+            color: #ccc;
+            margin-top: 20px;
+            line-height: 2;
+        }
+
+        .spec-list li::before {
+            content: "▶ ";
+            color: #FFD200;
+        }
+
+        .status-footer {
+            background-color: #ECE9D8;
+            border-top: 1px solid #ACA899;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            padding: 0 5px;
+            font-size: 11px;
+        }
+    </style>
 </head>
-<body style="font-family: sans-serif;">
-<main id="content" class="main-content" role="main">
-<h1>レゴ®ダイノ・アタック</h1>
-<h2>製品</h2>
-<h3 style="font-weight: bold;">
-<span id="number">7475</span>
-<span id="title">ファイヤー・ハマーvs.ミュータント・リザード</span>
-</h3>
-<p><img src="https://www.lego.com/cdn/product-assets/product.img.pri/7475_prod.jpg" height="350"></p>
-<p class="description">ミュータント化した恐竜が都市の一部を占領した。スペックスがファイヤー・ハマーに乗り、必死に阻止しようとしている！ゼノン・マルチモード・ランチャーは、恐ろしい生き物をやっつけてくれる。スペックスと恐竜3頭のフィギュア付き。</p>
-<p class="ipa">[mʲɯːtanto kaɕita kʲoːɾʲɯː ɡa toɕi no itɕibɯ o seɴɾʲoː ɕita ‖ sɯpekkɯsɯ ɡa ɸaijaː hamaː ni noɾi | çiɕɕi ni soɕi ɕijoː to ɕite iɾɯ ‖ dzeɴoɴ maɾɯtɕimoːdo ɾantɕaː wa | osoɾoɕiː ikimono o jattsɯ̥kete kɯɾeɾɯ ‖ sɯpekkɯsɯ to kʲoːɾʲɯː santoː no ɸiɡʲɯa tsɯki]</p>
-<p style="font-size: 12px; text-align: center;">©2005 The LEGO Group. All rights reserved.</p>
-</main>  
+<body>
+
+<div class="ie6-container">
+    <!-- IE6 Title Bar -->
+    <div class="title-bar">
+        <span style="font-family: serif; font-style: italic; font-weight: bold; margin-right: 5px; font-size: 16px;">e</span>
+        7475 ファイヤー・ハマーvs.ミュータント・リザード - LEGO.com - Microsoft Internet Explorer
+        <div style="margin-left: auto; display: flex; gap: 2px;">
+            <div style="width: 21px; height: 18px; background: #eee; border: 1px solid #fff; border-right-color: #888; border-bottom-color: #888; color: black; display: flex; align-items: center; justify-content: center; font-size: 10px;">_</div>
+            <div style="width: 21px; height: 18px; background: #eee; border: 1px solid #fff; border-right-color: #888; border-bottom-color: #888; color: black; display: flex; align-items: center; justify-content: center; font-size: 10px;">□</div>
+            <div style="width: 21px; height: 18px; background: #E81123; border: 1px solid #fff; border-right-color: #888; border-bottom-color: #888; color: white; display: flex; align-items: center; justify-content: center; font-size: 10px;">X</div>
+        </div>
+    </div>
+
+    <!-- Menus and Navigation -->
+    <div class="menu-bar">
+        <span>ファイル(F)</span> <span>編集(E)</span> <span>表示(V)</span> <span>お気に入り(A)</span> <span>ツール(T)</span> <span>ヘルプ(H)</span>
+    </div>
+
+    <div class="tool-bar">
+        <button style="border: 1px solid #ACA899; padding: 1px 10px; font-size: 11px; background: #eee;">← 戻る</button>
+        <button style="border: 1px solid #ACA899; padding: 1px 10px; font-size: 11px; background: #eee;">進む →</button>
+        <span style="font-size: 11px; margin-left: 10px;">アドレス(D)</span>
+        <div class="address-bar">http://www.lego.com/ja-jp/dinoattack/products/7475.aspx</div>
+        <button style="border: 1px solid #ACA899; padding: 1px 5px; font-size: 11px; background: #eee;">移動</button>
+    </div>
+
+    <!-- Web Content Area -->
+    <div class="lego-content">
+        <header class="global-header">
+            <div class="lego-logo">LEGO</div>
+            <div style="margin-left: 30px; font-weight: bold; font-size: 14px; display: flex; gap: 20px; color: #333;">
+                <span>製品情報</span>
+                <span>オンラインショップ</span>
+                <span>クラブ</span>
+                <span>ゲーム</span>
+            </div>
+            <div style="margin-left: auto;">
+                <input type="text" value="検索" style="border: 1px solid #999; padding: 2px; font-size: 12px; width: 120px;">
+                <button style="font-size: 12px; background: #ddd; border: 1px solid #999;">Go</button>
+            </div>
+        </header>
+
+        <main class="dino-theme-area">
+            <div class="hazard-border"></div>
+            
+            <div class="mission-status-bar">
+                <div style="color: #FFD200;">> ACCESSING MISSION DATABASE...</div>
+                <div id="timestamp" style="color: #0F0;">2006.03.03 12:24:18</div>
+            </div>
+
+            <div class="product-section">
+                <div class="image-frame">
+                    <img src="https://img.bricklink.com/ItemImage/SN/0/7475-1.png" alt="7475 ファイヤー・ハマーvs.ミュータント・リザード" style="width: 100%; height: auto;">
+                    <div style="text-align: center; margin-top: 15px; font-size: 11px; color: #666;">
+                        マウスをのせてズーム [Adobe Flash Playerが必要です]
+                    </div>
+                </div>
+
+                <div class="info-panel">
+                    <div class="set-number">SET #7475</div>
+                    <h1 class="set-title">ファイヤー・ハマー<br>vs.ミュータント・リザード</h1>
+                    
+                    <p style="font-size: 14px; line-height: 1.6; color: #ddd; margin-bottom: 20px;">ダイノ・アタック・チームの重装甲マシン「ファイヤー・ハマー」が出動！<br>巨大な4連装ミサイルランチャーと超大型タイヤで、どんな悪路も突き進め。強力な熱線攻撃を仕掛けてくるミュータント・リザードを捕獲し、都市の平和を取り戻すんだ！</p>
+
+                    <ul class="spec-list">
+                        <li>ミサイル発射ギミック搭載の回転式大型砲塔</li>
+                        <li>スプリングサスペンション風構造の巨大オフロードタイヤ</li>
+                        <li>ダイノ・アタック・チームのミニフィギュア1体付属</li>
+                        <li>可動式ミュータント・リザード・フィギュア付属</li>
+                        <li>ピース数：281ピース</li>
+                    </ul>
+
+                    <div class="price-box">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <span style="font-size: 12px; color: #999;">メーカー希望小売価格</span><br>
+                                <span style="font-size: 28px; font-weight: bold; color: #fff;">￥4,500</span>
+                            </div>
+                            <button class="flash-buy-btn">カートに入れる</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 10px;">
+                        <div style="background: #222; border: 1px solid #333; padding: 10px; flex: 1; text-align: center;">
+                            <img src="https://www.lego.com/favicon.ico" style="width: 16px; margin-bottom: 5px; filter: grayscale(1);">
+                            <div style="font-size: 11px;">組み立て説明書 (PDF)</div>
+                        </div>
+                        <div style="background: #222; border: 1px solid #333; padding: 10px; flex: 1; text-align: center;">
+                            <div style="color: #FFD200; font-size: 12px; font-weight: bold;">FLASH GAME</div>
+                            <div style="font-size: 11px;">ダイノ・ディフェンス</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 20px 40px; background: rgba(255,210,0,0.1); border-top: 1px solid #333;">
+                <h2 style="color: #FFD200; font-size: 18px; margin-bottom: 10px;">チームを強化せよ</h2>
+                <div style="display: flex; gap: 20px;">
+                    <div style="width: 120px; text-align: center;">
+                        <div style="height: 80px; background: #333; border: 1px solid #444; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">7473</div>
+                        <div style="font-size: 10px;">ストリート・スプリンター</div>
+                    </div>
+                    <div style="width: 120px; text-align: center;">
+                        <div style="height: 80px; background: #333; border: 1px solid #444; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">7474</div>
+                        <div style="font-size: 10px;">アーバン・アベンジャー</div>
+                    </div>
+                    <div style="width: 120px; text-align: center;">
+                        <div style="height: 80px; background: #333; border: 1px solid #444; margin-bottom: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px;">7476</div>
+                        <div style="font-size: 10px;">アイアン・プレデター</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hazard-border" style="margin-top: 40px;"></div>
+        </main>
+
+        <footer style="background-color: #f0f0f0; padding: 30px; border-top: 1px solid #ccc; text-align: center;">
+            <div style="font-size: 11px; color: #666; margin-bottom: 15px;">
+                <a href="#" style="color: #0054E3; margin: 0 10px;">プライバシーポリシー</a> | 
+                <a href="#" style="color: #0054E3; margin: 0 10px;">クッキーについて</a> | 
+                <a href="#" style="color: #0054E3; margin: 0 10px;">法的事項</a> | 
+                <a href="#" style="color: #0054E3; margin: 0 10px;">お問い合わせ</a>
+            </div>
+            <p style="font-size: 10px; color: #999;">&copy;2006 The LEGO Group. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- IE6 Status Bar -->
+    <div class="status-footer">
+        <div style="flex-grow: 1; border-right: 1px solid #ACA899; padding-right: 5px;">ページが表示されました</div>
+        <div style="width: 150px; padding: 0 5px; border-right: 1px solid #ACA899; display: flex; align-items: center; gap: 5px;">
+             <img src="https://www.lego.com/favicon.ico" style="width: 14px; filter: saturate(0.5);"> インターネット
+        </div>
+        <div style="width: 60px; text-align: center;">100%</div>
+    </div>
+</div>
+
+<script>
+    // 2006年当時のWebサイトによくあった、ステータスバーを点滅させるような簡単なスクリプト
+    setInterval(() => {
+        const ts = document.getElementById('timestamp');
+        const now = new Date();
+        const timeStr = "2006.03.03 12:24:" + String(now.getSeconds()).padStart(2, '0');
+        ts.innerText = timeStr;
+    }, 1000);
+</script>
+
 </body>
 </html>
