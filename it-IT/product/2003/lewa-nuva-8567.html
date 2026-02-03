@@ -3,241 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lewa Nuva 8567 | BIONICLE® | LEGO.com Italia</title>
+    <title>LEGO.com BIONICLE - Prodotti - 8567 Lewa Nuva</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
+
+        :root {
+            --ie-gray: #D4D0C8;
+            --ie-blue: #0A246A;
+            --bionicle-bg: #000000;
+        }
+
         body {
-            font-family: sans-serif;
-            background-color: #f4f4f4;
+            background-color: #3A6EA5; /* Classic Win98/XP solid color */
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
         }
 
-        .bionicle-gradient {
-            background: linear-gradient(135deg, #2d5a27 0%, #1a3317 100%);
+        /* IE6 Browser Chrome UI */
+        .ie-window {
+            background-color: var(--ie-gray);
+            border: 2px solid;
+            border-color: #FFFFFF #808080 #808080 #FFFFFF;
+            width: 100%;
+            max-width: 1024px;
+            margin: 20px auto;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
-        .lego-yellow {
-            background-color: #fdcf00;
+        .ie-title-bar {
+            background: linear-gradient(90deg, #0A246A 0%, #A6CAF0 100%);
+            padding: 3px 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 13px;
         }
 
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
+        .ie-menu-bar {
+            display: flex;
+            font-size: 11px;
+            padding: 2px 5px;
+            border-bottom: 1px solid #808080;
         }
 
-        .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
+        .ie-menu-bar span {
+            padding: 2px 6px;
+        }
+
+        .ie-menu-bar span:first-letter {
+            text-decoration: underline;
+        }
+
+        .ie-toolbar {
+            display: flex;
+            padding: 4px;
+            border-bottom: 1px solid #808080;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .ie-address-bar {
+            display: flex;
+            align-items: center;
+            padding: 4px;
+            border-bottom: 1px solid #808080;
+            font-size: 12px;
+        }
+
+        .ie-address-input {
+            background: white;
+            border: 1px solid #808080;
+            flex-grow: 1;
+            margin-left: 5px;
+            padding: 2px 4px;
+            font-family: 'Tahoma';
+        }
+
+        /* LEGO.com Bionicle Site Styles */
+        .bionicle-container {
+            background-color: #000;
+            color: #ccc;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #444;
+            background-image: radial-gradient(circle at center, #1a2a1a 0%, #000 70%);
+        }
+
+        .flash-header {
+            height: 80px;
+            background: #111;
+            border-bottom: 2px solid #333;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            justify-content: space-between;
+        }
+
+        .bionicle-logo {
+            font-family: 'Impact', sans-serif;
+            color: #fff;
+            letter-spacing: 2px;
+            font-size: 24px;
+            text-transform: uppercase;
+            border: 1px solid #555;
+            padding: 2px 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #00ff00;
+        }
+
+        .product-area {
+            display: flex;
+            padding: 30px;
+            gap: 40px;
+        }
+
+        .product-image-container {
+            width: 400px;
+            height: 400px;
+            background: #050505;
+            border: 1px solid #222;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0,255,0,0.05);
+        }
+
+        .product-image-container::before {
+            content: "";
+            position: absolute;
+            top: 10px; left: 10px; right: 10px; bottom: 10px;
+            border: 1px solid #111;
+            pointer-events: none;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(0,255,0,0.3);
+        }
+
+        .product-id {
+            color: #00ff00;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .product-description {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #aaa;
+            margin-bottom: 25px;
+        }
+
+        .buy-button {
+            background: #222;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 8px 20px;
+            font-size: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .buy-button:hover {
+            background: #004400;
+            border-color: #00ff00;
+        }
+
+        .sidebar-tech {
+            position: absolute;
+            right: 0;
+            top: 80px;
+            bottom: 0;
+            width: 60px;
+            border-left: 1px solid #222;
+            background: repeating-linear-gradient(0deg, #111, #111 2px, #000 2px, #000 4px);
+        }
+
+        .footer-status {
+            background: var(--ie-gray);
+            border-top: 1px solid #808080;
+            padding: 2px 5px;
+            font-size: 11px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .clock-display {
+            border-left: 1px solid #808080;
+            padding-left: 10px;
         }
     </style>
 </head>
-<body class="text-gray-900">
+<body>
 
-    <!-- Header Simulata -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-            <div class="flex items-center space-x-8">
-                <div class="lego-yellow p-2 rounded">
-                    <svg class="w-10 h-10" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="100" height="100" fill="#d0021b"/>
-                        <text x="50" y="65" font-size="35" fill="white" text-anchor="middle">LEGO</text>
-                    </svg>
-                </div>
-                <nav class="hidden md:flex space-x-6 font-bold uppercase text-sm tracking-widest">
-                    <a href="#" class="hover:text-blue-600 transition">Shop</a>
-                    <a href="#" class="hover:text-blue-600 transition text-blue-600">Esplora</a>
-                    <a href="#" class="hover:text-blue-600 transition">Supporto</a>
-                </nav>
-            </div>
-            <div class="flex items-center space-x-4">
-                <span class="hidden sm:inline text-xs font-bold uppercase text-gray-500">BIONICLE Collection</span>
-                <button class="p-2 hover:bg-gray-100 rounded-full">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                </button>
-            </div>
+<div class="ie-window">
+    <!-- IE Title Bar -->
+    <div class="ie-title-bar">
+        <div class="flex items-center gap-1">
+            <svg width="14" height="14" viewBox="0 0 16 16"><rect width="16" height="16" fill="#0000ff"/></svg>
+            <span>LEGO.com BIONICLE - Prodotti - 8567 Lewa Nuva - Microsoft Internet Explorer</span>
         </div>
-    </header>
-
-    <!-- Breadcrumbs -->
-    <nav class="max-w-7xl mx-auto px-4 py-4 text-xs text-gray-500 uppercase font-bold tracking-tighter">
-        <a href="#" class="hover:underline">Home</a> / 
-        <a href="#" class="hover:underline">Temi</a> / 
-        <a href="#" class="hover:underline">BIONICLE</a> / 
-        <span class="text-gray-900">8567 Lewa Nuva</span>
-    </nav>
-
-    <main>
-        <!-- Product Section -->
-        <section class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
-            <!-- Gallery -->
-            <div class="space-y-4">
-                <div class="bg-white rounded-2xl p-8 shadow-sm flex items-center justify-center relative overflow-hidden group">
-                    <div class="absolute inset-0 bionicle-gradient opacity-5"></div>
-                    <!-- Simulazione immagine set -->
-                    <div class="relative z-10 text-center">
-                        <svg class="w-64 h-64 mx-auto mb-4 text-green-700" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
-                        </svg>
-                        <p class="text-gray-400 italic text-sm">[Immagine Concept: Lewa Nuva con Katana dell’Aria]</p>
-                    </div>
-                    <span class="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 text-xs font-bold rounded">FUORI CATALOGO</span>
-                </div>
-                <div class="grid grid-cols-4 gap-4">
-                    <div class="bg-white p-2 rounded-lg border-2 border-blue-500 cursor-pointer hover:shadow-md transition"><div class="aspect-square bg-green-100 rounded"></div></div>
-                    <div class="bg-white p-2 rounded-lg border border-gray-200 cursor-pointer hover:shadow-md transition"><div class="aspect-square bg-gray-100 rounded"></div></div>
-                    <div class="bg-white p-2 rounded-lg border border-gray-200 cursor-pointer hover:shadow-md transition"><div class="aspect-square bg-gray-100 rounded"></div></div>
-                    <div class="bg-white p-2 rounded-lg border border-gray-200 cursor-pointer hover:shadow-md transition flex items-center justify-center text-xl font-bold text-gray-400">+3</div>
-                </div>
-            </div>
-
-            <!-- Info Box -->
-            <div class="space-y-6">
-                <div>
-                    <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-1">BIONICLE® Toa Nuva</h2>
-                    <h1 class="text-4xl md:text-5xl font-black text-gray-900">Lewa Nuva</h1>
-                    <p class="text-xl text-gray-600 mt-2 font-light italic tracking-tight">“Veloce come il vento, tagliente come il ghiaccio.”</p>
-                </div>
-
-                <div class="flex items-center space-x-6 border-y border-gray-200 py-4">
-                    <div>
-                        <span class="block text-xs text-gray-500 font-bold uppercase">Articolo</span>
-                        <span class="text-lg font-bold">8567</span>
-                    </div>
-                    <div class="h-8 w-px bg-gray-200"></div>
-                    <div>
-                        <span class="block text-xs text-gray-500 font-bold uppercase">Età</span>
-                        <span class="text-lg font-bold">7+</span>
-                    </div>
-                    <div class="h-8 w-px bg-gray-200"></div>
-                    <div>
-                        <span class="block text-xs text-gray-500 font-bold uppercase">Pezzi</span>
-                        <span class="text-lg font-bold">36</span>
-                    </div>
-                </div>
-
-                <div class="space-y-4">
-                    <p class="text-gray-700 leading-relaxed">
-                        Domina i cieli di Mata Nui con <b>Lewa Nuva</b>, il Toa dell’Aria potenziato. Equipaggiato con le leggendarie <b>Katane dell’Aria</b> che si trasformano in ali per il volo ad alta quota e una nuova maschera <b>Miru Nuva</b> super-corazzata, Lewa è pronto a sconfiggere le minacce dei Bohrok-Kal.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <span class="text-green-600 mr-2">✔</span>
-                            <span>Braccio articolato con meccanismo a ingranaggi posteriore.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-green-600 mr-2">✔</span>
-                            <span>Le lame possono essere agganciate ai piedi come ali o usate come spade.</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-green-600 mr-2">✔</span>
-                            <span>Contenitore a capsula originale per l’esposizione o lo stoccaggio.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="pt-6">
-                    <button class="w-full bg-gray-200 text-gray-500 font-black py-4 rounded-full cursor-not-allowed uppercase tracking-widest text-sm shadow-inner">
-                        Prodotto non disponibile
-                    </button>
-                    <button class="w-full mt-4 border-2 border-blue-600 text-blue-600 font-black py-4 rounded-full uppercase tracking-widest text-sm hover:bg-blue-50 transition">
-                        Aggiungi alla Lista dei Desideri
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Story Section -->
-        <section class="hero-bg py-20 mt-12 text-white relative">
-            <div class="absolute inset-0 bg-black opacity-60"></div>
-            <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
-                <h2 class="text-4xl font-black italic uppercase mb-6">Potenza Elementale</h2>
-                <p class="text-lg md:text-xl font-light mb-8">
-                    Dopo essere stato immerso nel Protodermis Energizzato, Lewa è diventato Lewa Nuva. Le sue abilità di controllo dell’aria sono ora raddoppiate, permettendogli di creare vortici ciclonici in pochi secondi. La sua giungla di Le-Wahi non è mai stata così sicura.
-                </p>
-                <div class="inline-block glass-effect p-6 rounded-2xl text-gray-900 max-w-sm">
-                    <h3 class="font-bold uppercase mb-2">Sapevi che...</h3>
-                    <p class="text-sm">Le due Katane Nuva possono essere collegate alle braccia o alle gambe di Lewa per permettergli di planare tra i rami degli alberi giganti di Le-Koro.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Details -->
-        <section class="max-w-7xl mx-auto px-4 py-16">
-            <h2 class="text-2xl font-bold mb-8 uppercase italic border-l-4 border-green-600 pl-4">Dettagli del Prodotto</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-lg mb-3">Caratteristiche Nuva</h3>
-                    <p class="text-sm text-gray-600">Include la maschera Kanohi Miru Nuva e armature argentate pettorali per una protezione extra in battaglia.</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-lg mb-3">Costruisci il Toa Kaita</h3>
-                    <p class="text-sm text-gray-600">Combina Lewa Nuva con Gali Nuva (8560) e Kopaka Nuva (8571) per creare il potentissimo Wairuha Nuva!</p>
-                </div>
-                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                    <h3 class="font-bold text-lg mb-3">Manuali d’istruzioni</h3>
-                    <p class="text-sm text-gray-600">Cerca il codice set 8567 nella sezione Supporto per scaricare il manuale PDF digitale gratuito.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-            <div>
-                <h4 class="font-bold uppercase text-sm mb-4">Chi siamo</h4>
-                <ul class="text-gray-400 text-sm space-y-2">
-                    <li><a href="#" class="hover:text-white">LEGO Group</a></li>
-                    <li><a href="#" class="hover:text-white">Sostenibilità</a></li>
-                    <li><a href="#" class="hover:text-white">Dichiarazione di trasparenza</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold uppercase text-sm mb-4">Supporto</h4>
-                <ul class="text-gray-400 text-sm space-y-2">
-                    <li><a href="#" class="hover:text-white">Contattaci</a></li>
-                    <li><a href="#" class="hover:text-white">Istruzioni di montaggio</a></li>
-                    <li><a href="#" class="hover:text-white">Parti mancanti</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold uppercase text-sm mb-4">Attrazioni</h4>
-                <ul class="text-gray-400 text-sm space-y-2">
-                    <li><a href="#" class="hover:text-white">LEGOLAND® Parks</a></li>
-                    <li><a href="#" class="hover:text-white">LEGOLAND Discovery Centers</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold uppercase text-sm mb-4">Altro da noi</h4>
-                <ul class="text-gray-400 text-sm space-y-2">
-                    <li><a href="#" class="hover:text-white">LEGO® LIFE</a></li>
-                    <li><a href="#" class="hover:text-white">LEGO Education</a></li>
-                </ul>
-            </div>
+        <div class="flex gap-1">
+            <div class="w-4 h-4 bg-[#d4d0c8] border border-white text-black flex items-center justify-center text-[10px] shadow-sm">_</div>
+            <div class="w-4 h-4 bg-[#d4d0c8] border border-white text-black flex items-center justify-center text-[10px] shadow-sm">□</div>
+            <div class="w-4 h-4 bg-[#cc0000] border border-white text-white flex items-center justify-center text-[10px] shadow-sm">X</div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 pt-8 border-t border-gray-800 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p>LEGO, il logo LEGO, BIONICLE e la Minifigure sono marchi registrati di The LEGO Group. ©2003-2024 The LEGO Group.</p>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-white">Informativa sulla Privacy</a>
-                <a href="#" class="hover:text-white">Cookie</a>
-                <a href="#" class="hover:text-white">Note Legali</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Notifica di Mockup -->
-    <div id="notification" class="fixed bottom-4 right-4 bg-blue-600 text-white p-4 rounded-lg shadow-2xl flex items-center space-x-4 animate-bounce">
-        <div class="bg-white text-blue-600 rounded-full w-6 h-6 flex items-center justify-center font-bold">!</div>
-        <p class="text-sm">Pagina Storica Archiviata (Mockup Creativo)</p>
     </div>
 
-    <script>
-        // Semplice interazione per la galleria
-        const notification = document.getElementById('notification');
-        setTimeout(() => {
-            notification.classList.remove('animate-bounce');
-        }, 5000);
-    </script>
+    <!-- IE Menus -->
+    <div class="ie-menu-bar">
+        <span>File</span><span>Modifica</span><span>Visualizza</span><span>Preferiti</span><span>Strumenti</span><span>?</span>
+    </div>
+
+    <!-- IE Toolbar -->
+    <div class="ie-toolbar">
+        <div class="flex items-center gap-1 opacity-60">
+            <div class="bg-gray-300 border p-1 text-[10px]">Indietro</div>
+            <div class="bg-gray-300 border p-1 text-[10px]">Avanti</div>
+        </div>
+        <div class="w-px h-6 bg-gray-500"></div>
+        <div class="bg-gray-300 border p-1 text-[10px]">Termina</div>
+        <div class="bg-gray-300 border p-1 text-[10px]">Aggiorna</div>
+        <div class="bg-gray-300 border p-1 text-[10px]">Pagina iniziale</div>
+    </div>
+
+    <!-- IE Address Bar -->
+    <div class="ie-address-bar">
+        <span class="text-gray-600">Indirizzo</span>
+        <div class="ie-address-input">http://www.lego.com/it-it/bionicle/products/8567.asp</div>
+        <div class="ml-2 bg-gray-300 border px-2 text-[11px]">Vai</div>
+    </div>
+
+    <!-- MAIN CONTENT (The 2003 Website) -->
+    <div class="bionicle-container">
+        <div class="flash-header">
+            <div class="bionicle-logo">BIONICLE</div>
+            <div class="nav-links">
+                <a href="#">Storia</a>
+                <a href="#" style="color: #00ff00;">Prodotti</a>
+                <a href="#">Mata Nui</a>
+                <a href="#">Giochi</a>
+                <a href="#">Download</a>
+            </div>
+            <div class="text-[9px] text-gray-500 font-bold">LEGO.com SHOP</div>
+        </div>
+
+        <div class="product-area">
+            <div class="product-image-container">
+                <!-- Fallback to placeholder if link is broken, per instructions -->
+                <img 
+                    src="https://www.bricklink.com/OL/8567-1.jpg" 
+                    alt="8567 Lewa Nuva" 
+                    class="max-w-[90%] max-h-[90%] object-contain">
+            </div>
+
+            <div class="product-info">
+                <div class="product-title">Lewa Nuva</div>
+                <div class="product-id">Articolo: 8567 | Età: 7+</div>
+                
+                <div class="product-description">
+                    <p class="mb-4">
+                        Il maestro dell’aria è diventato ancora più potente! Lewa Nuva ora possiede le Katana dell’Aria gemelle, che può utilizzare come ali per solcare i cieli di Mata Nui o come armi letali nel combattimento ravvicinato.
+                    </p>
+                    <p>
+                        Grazie alla sua nuova armatura Nuva e alla maschera Kanohi Miru Nuva, Lewa è pronto a sfidare le minacce più oscure delle caverne di Mata Nui. Combinalo con gli altri Toa Nuva per formare i potenti modelli Kaita!
+                    </p>
+                </div>
+
+                <div class="flex flex-col gap-4">
+                    <div class="text-white font-bold text-xl">€ 8,99</div>
+                    <button class="buy-button">Aggiungi al carrello</button>
+                    <div class="text-[10px] text-gray-500 italic">Disponibilità: Disponibile ora</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Techy details -->
+        <div class="sidebar-tech"></div>
+        <div class="absolute bottom-5 right-20 text-[10px] text-[#004400] font-mono">
+            PROTOCOL: TOA_NUVA_UNIT_8567<br>
+            LOCATION: LE-WAHI<br>
+            STATUS: ACTIVE
+        </div>
+        
+        <!-- Bottom Glow -->
+        <div class="absolute bottom-0 left-0 w-full h-1 bg-green-900 shadow-[0_-10px_30px_green]"></div>
+    </div>
+
+    <!-- IE Status Bar -->
+    <div class="footer-status">
+        <div><img src="https://www.google.com/favicon.ico" class="inline w-3 h-3 grayscale opacity-50 mr-1" alt=""> Operazione completata</div>
+        <div class="flex gap-4">
+            <div class="px-4 border-l border-gray-400">Internet</div>
+            <div class="clock-display" id="ie-clock">15:00 - 10/01/2003</div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center text-white/50 text-[11px] mt-4">
+    Nota: Questa è una simulazione storica per scopi dimostrativi.
+</div>
+
+<script>
+    // Just to keep the immersion, though the time is requested to be static
+    console.log("Internet Explorer 6.0.2800.1106 detected...");
+    console.log("Loading LEGO.com Flash Assets...");
+</script>
+
 </body>
 </html>
