@@ -14,7 +14,7 @@
 
 ### 8902 Vezok (Везок)
 
-<img src="https://www.bticklink.com/SL/8902-1.jpg" height="350">
+<img src="https://www.bricklink.com/SL/8902-1.jpg" height="350">
 
 **«Беспощадный и яростный»**
 
