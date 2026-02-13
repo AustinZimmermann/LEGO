@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44017 STORMEROVA MRAZIVÁ PUŠKA - Produkty - LEGO.com</title>
+    <meta name="description" content="Kupte si LEGO® Hero Factory 44017 STORMEROVA MRAZIVÁ PUŠKA. Připravte se na bitvu s obřími bestiemi!">
+    <style>
+        /* RESET & BASIC SETUP */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: #e6e6e6; /* Light grey background common in that era */
+            color: #333;
+            line-height: 1.4;
+        }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* HEADER (2014 Style) */
+        header {
+            background-color: #fff;
+            border-bottom: 5px solid #ffcf00; /* LEGO Yellow */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .top-bar {
+            background-color: #333;
+            color: #fff;
+            font-size: 11px;
+            padding: 5px 0;
+            text-align: right;
+        }
+        .container {
+            width: 960px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .lego-logo {
+            background-color: #d01012; /* LEGO Red */
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: middle;
+            position: relative;
+            top: 5px;
+        }
+        .lego-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+        .main-nav {
+            display: inline-block;
+            vertical-align: middle;
+            height: 60px;
+            line-height: 60px;
+        }
+        .main-nav ul li {
+            display: inline-block;
+            margin-right: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .main-nav ul li:hover { color: #d01012; }
+
+        /* HERO FACTORY BRANDING BAR */
+        .hf-banner {
+            background: linear-gradient(to right, #001f3f, #003366);
+            color: #fff;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-style: italic;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #0099cc;
+        }
+        .hf-banner span {
+            color: #00ccff;
+        }
+
+        /* BREADCRUMBS */
+        .breadcrumbs {
+            font-size: 11px;
+            color: #666;
+            padding: 10px 0;
+        }
+
+        /* MAIN PRODUCT AREA */
+        .product-page {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT: IMAGES */
+        .product-gallery {
+            width: 50%;
+            padding-right: 20px;
+            text-align: center;
+        }
+        .main-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #eee;
+            position: relative;
+            overflow: hidden;
+        }
+        /* CSS Drawing of the Set (Abstract) */
+        .mech-drawing {
+            position: relative;
+            width: 200px;
+            height: 250px;
+        }
+        .mech-body {
+            width: 60px;
+            height: 80px;
+            background: #fff;
+            border: 3px solid #ccc;
+            position: absolute;
+            top: 50px;
+            left: 70px;
+            z-index: 2;
+        }
+        .mech-head {
+            width: 40px;
+            height: 50px;
+            background: #fff;
+            border: 2px solid #ccc;
+            position: absolute;
+            top: 10px;
+            left: 80px;
+            border-radius: 5px;
+            z-index: 3;
+        }
+        .mech-visor {
+            width: 30px;
+            height: 10px;
+            background: #00ccff; /* Ice Blue */
+            position: absolute;
+            top: 20px;
+            left: 85px;
+            z-index: 4;
+            box-shadow: 0 0 5px #00ccff;
+        }
+        .mech-leg-l {
+            width: 25px;
+            height: 100px;
+            background: #fff;
+            border: 2px solid #ccc;
+            position: absolute;
+            top: 120px;
+            left: 50px;
+            transform: rotate(10deg);
+        }
+        .mech-leg-r {
+            width: 25px;
+            height: 100px;
+            background: #fff;
+            border: 2px solid #ccc;
+            position: absolute;
+            top: 120px;
+            left: 125px;
+            transform: rotate(-10deg);
+        }
+        .mech-arm-l {
+            width: 80px;
+            height: 20px;
+            background: #333;
+            position: absolute;
+            top: 60px;
+            left: -10px;
+            transform: rotate(-20deg);
+        }
+        .mech-arm-r {
+            width: 80px;
+            height: 20px;
+            background: #333;
+            position: absolute;
+            top: 60px;
+            left: 130px;
+            transform: rotate(20deg);
+        }
+        .ice-blast {
+            width: 0; 
+            height: 0; 
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 60px solid #aaddff;
+            position: absolute;
+            top: 50px;
+            left: -60px;
+            opacity: 0.8;
+        }
+        
+        /* RIGHT: DETAILS */
+        .product-info {
+            width: 50%;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .product-meta {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .product-meta span {
+            margin-right: 15px;
+        }
+        .price-box {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        .price {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d01012;
+        }
+        .availability {
+            color: #008a00; /* LEGO Green */
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .add-to-cart-btn {
+            background: linear-gradient(to bottom, #ffcf00 0%, #ffbf00 100%);
+            border: 1px solid #e5ac00;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 12px 30px;
+            cursor: pointer;
+            border-radius: 3px;
+            display: block;
+            margin-top: 15px;
+            text-transform: uppercase;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .add-to-cart-btn:hover {
+            background: linear-gradient(to bottom, #ffe066 0%, #ffcf00 100%);
+        }
+        .vip-points {
+            font-size: 11px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* DESCRIPTION & TABS */
+        .product-tabs {
+            margin-top: 30px;
+            border-bottom: 1px solid #ccc;
+        }
+        .tab-btn {
+            background: none;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            padding: 10px 20px;
+            margin-right: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #666;
+            border-radius: 3px 3px 0 0;
+            background-color: #f4f4f4;
+        }
+        .tab-btn.active {
+            background-color: #fff;
+            color: #333;
+            position: relative;
+            top: 1px;
+            border-bottom: 1px solid #fff;
+        }
+        .tab-content {
+            padding: 20px 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .features-list {
+            margin-top: 15px;
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+        .features-list li {
+            margin-bottom: 5px;
+        }
+
+        /* FOOTER (Simplified 2014) */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .footer-col h4 {
+            color: #ccc;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .footer-col ul li {
+            margin-bottom: 5px;
+        }
+        .footer-col a:hover {
+            text-decoration: underline;
+        }
+        .legal {
+            text-align: center;
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            color: #999;
+        }
+
+        /* UTILITY */
+        .badge-new {
+            background-color: #d01012;
+            color: #fff;
+            padding: 2px 6px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            vertical-align: top;
+            margin-left: 5px;
+        }
+
+        /* Responsive Mobile Tweak */
+        @media (max-width: 768px) {
+            .container { width: 100%; padding: 0 10px; }
+            .product-page { flex-direction: column; }
+            .product-gallery, .product-info { width: 100%; }
+            .product-gallery { margin-bottom: 20px; }
+        }
+
+        /* Toast Notification */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 14px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            VIP Program | Stav objednávky | Hledat prodejnu | Přihlásit se
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="lego-logo">
+                <svg viewBox="0 0 100 100">
+                    <rect width="100" height="100" fill="#d01012"/>
+                    <text x="50" y="65" font-family="Arial Black, sans-serif" font-size="28" fill="white" text-anchor="middle" style="font-style:italic; stroke:black; stroke-width:2px; letter-spacing: -2px;">LEGO</text>
+                    <rect x="5" y="5" width="90" height="90" fill="none" stroke="yellow" stroke-width="2"/>
+                </svg>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li>Produkty</li>
+                    <li>Hry</li>
+                    <li>Vytvářej & Sdílej</li>
+                    <li>Nákup</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO FACTORY BANNER -->
+    <div class="container">
+        <div class="hf-banner">
+            LEGO® <span>HERO FACTORY</span>
+        </div>
+    </div>
+
+    <!-- BREADCRUMBS -->
+    <div class="container">
+        <div class="breadcrumbs">
+            Domů > Produkty > Hero Factory > 44017 STORMEROVA MRAZIVÁ PUŠKA
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+        <div class="product-page">
+            
+            <!-- LEFT: IMAGE GALLERY -->
+            <div class="product-gallery">
+                <div class="main-image-placeholder">
+                    <!-- CSS Art for the set -->
+                    <div class="mech-drawing">
+                        <div class="ice-blast"></div>
+                        <div class="mech-arm-l"></div>
+                        <div class="mech-arm-r"></div>
+                        <div class="mech-leg-l"></div>
+                        <div class="mech-leg-r"></div>
+                        <div class="mech-body"></div>
+                        <div class="mech-head"></div>
+                        <div class="mech-visor"></div>
+                    </div>
+                </div>
+                <p style="margin-top:10px; font-size:11px; color:#999;">Obrázek je simulace. Skutečný produkt se může lišit.</p>
+            </div>
+
+            <!-- RIGHT: INFO -->
+            <div class="product-info">
+                <h1>44017 STORMEROVA MRAZIVÁ PUŠKA <span class="badge-new">NOVÉ</span></h1>
+                
+                <div class="product-meta">
+                    <span>Věk: 7-14</span>
+                    <span>Dílky: 88</span>
+                    <span>Číslo výrobku: 44017</span>
+                </div>
+
+                <p>Připrav se na ledový útok! Zmraz obří bestie a skákavce pomocí Stormerova nového stroje.</p>
+
+                <div class="price-box">
+                    <div class="price">399,00 Kč</div>
+                    <div class="availability">Skladem - Ihned k odeslání</div>
+                    <div class="vip-points">Získejte 25 VIP bodů</div>
+                    <button class="add-to-cart-btn" onclick="addToCart()">Přidat do košíku</button>
+                </div>
+
+                <!-- DESCRIPTION TABS -->
+                <div class="product-tabs">
+                    <button class="tab-btn active">Popis</button>
+                    <button class="tab-btn">Technické údaje</button>
+                </div>
+                <div class="tab-content">
+                    <p><strong>POZOR, HRDINOVÉ!</strong> Bestie útočí na město Antropolis! STORMERE, nastartuj svůj Mrazivý stroj a vyraz do boje. Tento oblek je vybaven rotujícími ledovými čepelemi a mrazivými raketami.</p>
+                    <ul class="features-list">
+                        <li>Obsahuje minirobota Stormera se zbraní a doplňkem.</li>
+                        <li>Stroj má odnímatelné sedadlo pro hrdinu, otáčecí ledové čepele, vystřelovač raket a otevírací pancéřový kokpit.</li>
+                        <li>Obsahuje také 2 skákavce - zatlač na ně prstem a vystřel je!</li>
+                        <li>Kombinuj se sadou 44019 ROCKA a jeho STEALTH STROJ pro vytvoření ještě většího hrdinského modelu.</li>
+                        <li>Stojí přes 17 cm na výšku.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>O nás</h4>
+                    <ul>
+                        <li><a href="#">O LEGO Group</a></li>
+                        <li><a href="#">Novinky LEGO</a></li>
+                        <li><a href="#">Udržitelnost</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Podpora</h4>
+                    <ul>
+                        <li><a href="#">Kontaktujte nás</a></li>
+                        <li><a href="#">Najít návod k stavění</a></li>
+                        <li><a href="#">Náhradní dílky</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Atrakce</h4>
+                    <ul>
+                        <li><a href="#">LEGO® House</a></li>
+                        <li><a href="#">LEGOLAND® Parks</a></li>
+                        <li><a href="#">LEGOLAND Discovery Centers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Sledujte nás</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal">
+                <p>LEGO, logo LEGO, minifigurka, DUPLO, logo LEGENDS OF CHIMA, NINJAGO, BIONICLE, MINDSTORMS a MIXELS jsou ochranné známky a/nebo autorská práva LEGO Group. ©2014 The LEGO Group. Všechna práva vyhrazena.</p>
+                <br>
+                <p>Používáním těchto stránek souhlasíte s podmínkami použití.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast">Přidáno do košíku: 44017 STORMEROVA MRAZIVÁ PUŠKA</div>
+
+    <script>
+        function addToCart() {
+            var x = document.getElementById("toast");
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+</body>
+</html>
