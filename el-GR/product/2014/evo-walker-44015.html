@@ -2,368 +2,324 @@
 <html lang="el-GR">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>44015 ΟΧΗΜΑ ΤΟΥ EVO - LEGO® Hero Factory - LEGO.com</title>
-    <meta name="description" content="Πολεμήστε τα θηρία με το ΟΧΗΜΑ ΤΟΥ EVO της LEGO® Hero Factory!">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44015 ΟΧΗΜΑ ΤΟΥ EVO - LEGO® Hero Factory - LEGO.com GR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .hf-gradient {
+            background: linear-gradient(to bottom, #1a1a1a, #000000);
+        }
+        .lego-red { background-color: #d11013; }
+        .hero-factory-yellow { color: #facc15; }
+        .tab-active { background-color: #facc15; color: black; }
+        .product-card {
+            background: #262626;
+            border: 1px solid #404040;
+            transition: transform 0.2s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+            border-color: #facc15;
+        }
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a1a1a; }
+        ::-webkit-scrollbar-thumb { background: #444; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #facc15; }
+    </style>
+
+    <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
       "@type": "Product",
-      "name": "ΟΧΗΜΑ ΤΟΥ EVO",
+      "name": "44015 ΟΧΗΜΑ ΤΟΥ EVO",
       "image": "https://www.lego.com/cdn/product-assets/product.img.pri/44015_prod.jpg",
-      "description": "Προσοχή, EVO! Ένας τεράστιος σεισμός άφησε ρωγμές στους δρόμους της Αντρόπολις Σίτυ. Ετοιμάσου να αντιμετωπίσεις τα θηρία με το νέο ΟΧΗΜΑ ΤΟΥ EVO.",
+      "description": "Προσοχή, EVO! Ένας τεράστιος σεισμός άφησε τεράστιες ρωγμές στους δρόμους της Αντρόπολις Σίτυ. Γιγάντια τέρατα και μια ομάδα από κακούς Τζαμπέρζ επιτίθενται.",
       "brand": {
         "@type": "Brand",
-        "name": "LEGO"
+        "name": "LEGO Hero Factory"
       },
       "sku": "44015",
-      "gtin13": "5702015114753",
       "offers": {
         "@type": "Offer",
-        "url": "http://www.lego.com/el-gr/herofactory/products/44015",
+        "url": "https://www.lego.com/el-gr/product/evo-walker-44015",
         "priceCurrency": "EUR",
-        "price": "11.99",
-        "priceValidUntil": "2014-12-31",
-        "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition"
+        "availability": "https://schema.org/InStock"
       }
     }
     </script>
-
-    <style>
-        /* RESET & BASIC TYPOGRAPHY - 2014 Style */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Helvetica, sans-serif; /* Web safe fonts */
-            background-color: #e6e6e6; /* Light grey background */
-            background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Subtle texture */
-            color: #333;
-        }
-
-        a { text-decoration: none; color: #006db7; }
-        a:hover { text-decoration: underline; }
-
-        /* LAYOUT UTILITIES */
-        .container {
-            width: 960px; /* Classic fixed width */
-            margin: 0 auto;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
-
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-        /* HEADER - The Classic Yellow LEGO Header */
-        header {
-            background: linear-gradient(to bottom, #ffcf02 0%, #ffbf00 100%);
-            height: 60px;
-            border-bottom: 4px solid #d01012; /* LEGO Red */
-            position: relative;
-        }
-
-        .logo {
-            float: left;
-            margin-left: 20px;
-            margin-top: 5px;
-            width: 50px;
-            height: 50px;
-            background-color: #d01012;
-            color: white;
-            font-weight: bold;
-            text-align: center;
-            line-height: 50px;
-            font-size: 14px;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-        }
-
-        .top-nav {
-            float: right;
-            margin-right: 20px;
-            line-height: 60px;
-            font-size: 12px;
-            color: #333;
-        }
-
-        .top-nav span { margin-left: 15px; cursor: pointer; }
-
-        /* BREADCRUMBS */
-        .breadcrumbs {
-            padding: 10px 20px;
-            font-size: 11px;
-            color: #666;
-            background: #f4f4f4;
-            border-bottom: 1px solid #ddd;
-        }
-
-        /* PRODUCT HERO SECTION */
-        .product-hero {
-            padding: 30px;
-        }
-
-        .product-image-col {
-            float: left;
-            width: 55%;
-            text-align: center;
-        }
-
-        .product-image-col img {
-            max-width: 100%;
-            border: 1px solid #eee;
-            padding: 10px;
-        }
-
-        .product-info-col {
-            float: right;
-            width: 40%;
-        }
-
-        /* TYPOGRAPHY & DETAILS */
-        h1 {
-            font-size: 28px;
-            margin: 0 0 10px 0;
-            color: #333;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-        }
-
-        .meta-data {
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px dotted #ccc;
-        }
-
-        .meta-data span {
-            margin-right: 15px;
-            font-weight: bold;
-        }
-
-        /* PRICE & BUY BOX */
-        .buy-box {
-            background: #f8f8f8;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
-        }
-
-        .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #d01012;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .btn-add {
-            display: block;
-            width: 100%;
-            background: linear-gradient(to bottom, #ffcf02 0%, #ff9900 100%);
-            border: 1px solid #e68a00;
-            color: #333;
-            font-weight: bold;
-            font-size: 16px;
-            padding: 12px 0;
-            text-align: center;
-            cursor: pointer;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.4);
-            border-radius: 3px;
-            transition: background 0.2s;
-        }
-
-        .btn-add:hover {
-            background: linear-gradient(to bottom, #ffd633 0%, #ffaa00 100%);
-            text-decoration: none;
-        }
-
-        .btn-wishlist {
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-            font-size: 11px;
-            color: #666;
-        }
-
-        /* TABS UI (Classic Implementation) */
-        .tabs {
-            margin-top: 40px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .tab-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #eee;
-            border: 1px solid #ccc;
-            border-bottom: none;
-            margin-right: 5px;
-            border-radius: 5px 5px 0 0;
-            cursor: pointer;
-            font-weight: bold;
-            color: #555;
-        }
-
-        .tab-link.active {
-            background: #fff;
-            color: #d01012;
-            position: relative;
-            top: 1px; /* Covers the bottom border */
-        }
-
-        .tab-content {
-            padding: 20px;
-            line-height: 1.6;
-            font-size: 14px;
-            display: none;
-        }
-
-        .tab-content.active { display: block; }
-
-        /* FOOTER */
-        footer {
-            background: #333;
-            color: #999;
-            padding: 20px 0;
-            margin-top: 40px;
-            text-align: center;
-            font-size: 11px;
-        }
-
-        footer a { color: #ccc; margin: 0 10px; }
-
-        /* HERO FACTORY BRANDING STRIP */
-        .hf-strip {
-            background: #000 url('https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Hero_Factory_logo.png/250px-Hero_Factory_logo.png') no-repeat 20px center;
-            background-size: contain;
-            height: 80px;
-            border-bottom: 2px solid #ff6600; /* HF Orange */
-        }
-    </style>
 </head>
-<body>
+<body class="bg-gray-100">
 
-    <div class="container">
-        
-        <header>
-            <div class="logo">LEGO</div>
-            <div class="top-nav">
-                <span>ΠΡΟΪΟΝΤΑ</span>
-                <span>ΠΑΙΧΝΙΔΙΑ</span>
-                <span>ΑΝΑΖΗΤΗΣΗ</span>
-                <span>ΤΟ ΚΑΛΑΘΙ ΜΟΥ (0)</span>
+    <!-- Top Navigation Bar -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-12 text-sm font-bold">
+            <div class="flex items-center space-x-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg" alt="LEGO Logo" class="h-8">
+                <a href="#" class="text-blue-600 hover:underline">Αρχική</a>
+                <a href="#" class="hover:text-blue-600">Προϊόντα</a>
+                <a href="#" class="hover:text-blue-600">Παιχνίδια</a>
+                <a href="#" class="hover:text-blue-600">Δημιουργία & Κοινή Χρήση</a>
+                <a href="#" class="hover:text-blue-600">Βίντεο</a>
+                <a href="#" class="hover:text-blue-600">Κατάστημα</a>
             </div>
-        </header>
-
-        <div class="hf-strip"></div>
-
-        <div class="breadcrumbs">
-            Αρχική > Θέματα > Hero Factory > Προϊόντα > 44015 ΟΧΗΜΑ ΤΟΥ EVO
+            <div class="flex items-center space-x-4">
+                <div class="flex items-center">
+                    <img src="https://www.countryflags.com/wp-content/uploads/greece-flag-png-large.png" alt="Ελλάδα" class="h-4 mr-2">
+                    <span class="text-xs text-gray-500 uppercase">Αλλαγή Περιοχής</span>
+                </div>
+                <div class="relative">
+                    <input type="text" placeholder="Αναζήτηση..." class="border border-gray-300 rounded-full px-3 py-1 text-xs outline-none focus:ring-1 focus:ring-yellow-400">
+                    <button class="absolute right-2 top-1 text-blue-600">🔍</button>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <div class="product-hero clearfix">
+    <!-- Hero Factory Header -->
+    <header class="bg-black text-white py-2 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg" alt="LEGO" class="h-10">
+                <div class="border-l border-gray-700 h-10 mx-2"></div>
+                <h1 class="text-2xl font-black tracking-tighter uppercase">Hero Factory</h1>
+            </div>
+            <nav class="flex space-x-6 text-xs font-bold uppercase tracking-widest">
+                <a href="#" class="flex flex-col items-center hover:text-yellow-400">
+                    <span class="mb-1 text-xl">📦</span> ΠΡΟΪΟΝΤΑ
+                </a>
+                <a href="#" class="flex flex-col items-center hover:text-yellow-400">
+                    <span class="mb-1 text-xl">🎮</span> ΠΑΙΧΝΙΔΙΑ
+                </a>
+                <a href="#" class="flex flex-col items-center hover:text-yellow-400">
+                    <span class="mb-1 text-xl">🎬</span> ΒΙΝΤΕΟ
+                </a>
+                <a href="#" class="flex flex-col items-center hover:text-yellow-400">
+                    <span class="mb-1 text-xl">🌐</span> ΕΞΕΡΕΥΝΗΣΗ
+                </a>
+                <a href="#" class="flex flex-col items-center hover:text-yellow-400">
+                    <span class="mb-1 text-xl">💾</span> ΛΗΨΕΙΣ
+                </a>
+            </nav>
+            <div class="flex items-center">
+                <span class="text-yellow-400 font-black italic text-lg uppercase">Invasion From Below</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Secondary Navigation (Filters) -->
+    <div class="bg-gray-800 text-white text-xs font-bold uppercase py-1">
+        <div class="max-w-7xl mx-auto px-4 flex space-x-4">
+            <a href="#" class="hover:bg-gray-700 px-3 py-1 rounded">ΟΛΑ</a>
+            <a href="#" class="bg-yellow-400 text-black px-3 py-1 rounded">ΗΡΩΕΣ</a>
+            <a href="#" class="hover:bg-gray-700 px-3 py-1 rounded">ΘΗΡΙΑ</a>
+            <a href="#" class="hover:bg-gray-700 px-3 py-1 rounded">ΣΥΝΔΥΑΣΤΙΚΑ ΜΟΝΤΕΛΑ</a>
+            <a href="#" class="hover:bg-gray-700 px-3 py-1 rounded">ΑΡΧΕΙΟ</a>
+        </div>
+    </div>
+
+    <!-- Main Content Body -->
+    <main class="hf-gradient min-h-screen pt-8 pb-16 px-4">
+        <div class="max-w-5xl mx-auto bg-black/60 rounded-xl border border-gray-800 p-6 backdrop-blur-sm">
             
-            <div class="product-image-col">
-                <img src="https://www.lego.com/cdn/product-assets/product.img.pri/44015_prod.jpg" alt="44015 ΟΧΗΜΑ ΤΟΥ EVO">
-                
+            <!-- Product Identity -->
+            <h2 class="text-white text-3xl font-black mb-6">44015 ΟΧΗΜΑ ΤΟΥ EVO</h2>
+
+            <!-- Tabs -->
+            <div class="flex space-x-1 mb-0">
+                <button onclick="switchTab('instructions')" id="tab-instructions" class="tab-active px-6 py-2 text-xs font-bold uppercase rounded-t-lg transition">Οδηγίες Κατασκευής</button>
+                <button onclick="switchTab('product')" id="tab-product" class="bg-gray-700 text-white hover:bg-gray-600 px-6 py-2 text-xs font-bold uppercase rounded-t-lg transition">Προϊόν</button>
+                <button onclick="switchTab('view360')" id="tab-view360" class="bg-gray-700 text-white hover:bg-gray-600 px-6 py-2 text-xs font-bold uppercase rounded-t-lg transition">360° Προβολή</button>
             </div>
 
-            <div class="product-info-col">
-                <h1>ΟΧΗΜΑ ΤΟΥ EVO</h1>
+            <!-- Main Interactive Display Area -->
+            <div class="bg-black border-2 border-gray-700 p-1 relative min-h-[400px] flex items-center justify-center overflow-hidden">
+                <!-- Background Image (Conceptual Cityscape) -->
+                <div class="absolute inset-0 opacity-40 bg-[url('https://placehold.co/1200x800/111/444?text=Antropolis+City')] bg-cover bg-center"></div>
                 
-                <div class="meta-data">
-                    <span>Κωδικός: 44015</span>
-                    <span>Ηλικία: 6-12</span>
-                    <span>Κομμάτια: 51</span>
+                <!-- Main Content Placeholder -->
+                <div id="content-display" class="relative z-10 w-full h-full flex flex-col items-center justify-center p-4">
+                    <img src="https://www.lego.com/cdn/product-assets/product.img.pri/44015_prod.jpg" alt="44015 ΟΧΗΜΑ ΤΟΥ EVO" class="max-h-[350px] drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]">
+                    
+                    <button class="absolute top-4 right-4 bg-yellow-400 text-black font-black px-6 py-2 rounded shadow-lg flex items-center hover:bg-yellow-300 transition uppercase text-sm">
+                        <span class="mr-2">⬇</span> ΛΗΨΗ
+                    </button>
                 </div>
+            </div>
 
-                <div class="buy-box">
-                    <span class="price">11,99 €</span>
-                    <button class="btn-add" onclick="addToCart()">Προσθήκη στο Καλάθι</button>
-                    <a href="#" class="btn-wishlist">+ Προσθήκη στη Λίστα Επιθυμιών</a>
+            <!-- Description Text -->
+            <div class="mt-6 text-gray-300 text-sm leading-relaxed max-w-3xl">
+                <p>
+                    Προσοχή, EVO! Ένας τεράστιος σεισμός άφησε τεράστιες ρωγμές στους δρόμους της Αντρόπολις Σίτυ. Γιγάντια τέρατα και μια άγρια ομάδα από κακούς Τζαμπέρζ βγαίνουν από τη χαράδρα για να επιτεθούν. Ενεργοποίησε το όχημά σου, κλείδωσε το γείσο του καθίσματος και πήγαινε να ελέγξεις την κατάσταση. Χρησιμοποίησε τη συσκευή επικοινωνίας σου για να καλέσεις τους άλλους Χίροουζ και απώθησε τους κακούς εισβολείς με το εκτοξευτή και το κοφτερό πριόνι μέχρι να φτάσουν οι ενισχύσεις. Περιλαμβάνει μίνι ρομπότ EVO με όπλο και αξεσουάρ.
+                </p>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-8 flex items-center justify-between border-t border-gray-800 pt-6">
+                <div class="flex space-x-4">
+                    <button class="bg-gray-800 p-2 rounded border border-gray-600 hover:border-yellow-400 group" title="Προσθήκη στη Λίστα">
+                        <span class="text-xl">📝</span>
+                    </button>
+                    <button class="bg-gray-800 p-2 rounded border border-gray-600 hover:border-yellow-400" title="Προσθήκη στο Καλάθι">
+                        <span class="text-xl">🛒</span>
+                    </button>
                 </div>
+                <div class="flex items-center space-x-6">
+                    <div class="flex items-center text-white font-bold">
+                        <span class="mr-2">👍</span> 8601
+                    </div>
+                    <button class="bg-yellow-400 text-black font-black px-8 py-2 rounded-full hover:bg-yellow-300 transition uppercase text-sm italic">
+                        ΜΟΥ ΑΡΕΣΕΙ ΑΥΤΟ
+                    </button>
+                </div>
+            </div>
 
-                <div style="font-size: 13px; color: #555;">
-                    <p><strong>Διαθεσιμότητα:</strong> Άμεσα διαθέσιμο</p>
-                    <p>Κέρδισε <strong>11 πόντους VIP</strong></p>
+            <!-- Related Products Grid -->
+            <div class="mt-12">
+                <h3 class="text-gray-400 text-xs font-bold uppercase tracking-widest mb-6">ΠΕΡΙΣΣΟΤΕΡΕΣ ΜΗΧΑΝΕΣ</h3>
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <!-- Item 1 (Selected) -->
+                    <div class="product-card p-2 rounded border-2 border-yellow-400 ring-2 ring-yellow-400/20">
+                        <img src="https://www.lego.com/cdn/product-assets/product.img.pri/44015_prod.jpg" alt="44015" class="w-full h-32 object-contain mb-2">
+                        <div class="text-[10px] text-yellow-400 font-black italic leading-tight">44015 ΟΧΗΜΑ ΤΟΥ EVO</div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="product-card p-2 rounded cursor-pointer">
+                        <img src="https://placehold.co/200x200/222/aaa?text=44017" alt="44017" class="w-full h-32 object-contain mb-2">
+                        <div class="text-[10px] text-gray-400 font-black italic leading-tight uppercase">44017 ΜΗΧΑΝΗ ΠΑΓΕΤΟΥ ΤΟΥ STORMER</div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="product-card p-2 rounded cursor-pointer">
+                        <img src="https://placehold.co/200x200/222/aaa?text=44018" alt="44018" class="w-full h-32 object-contain mb-2">
+                        <div class="text-[10px] text-gray-400 font-black italic leading-tight uppercase">44018 ΜΗΧΑΝΗ ΤΖΕΤ ΤΟΥ FURNO</div>
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="product-card p-2 rounded cursor-pointer">
+                        <img src="https://placehold.co/200x200/222/aaa?text=44019" alt="44019" class="w-full h-32 object-contain mb-2">
+                        <div class="text-[10px] text-gray-400 font-black italic leading-tight uppercase">44019 ΣΤΕΛΘ ΜΗΧΑΝΗ ΤΟΥ ROCKA</div>
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="product-card p-2 rounded cursor-pointer">
+                        <img src="https://placehold.co/200x200/222/aaa?text=44022" alt="44022" class="w-full h-32 object-contain mb-2">
+                        <div class="text-[10px] text-gray-400 font-black italic leading-tight uppercase">44022 ΜΗΧΑΝΗ XL ΤΟΥ EVO</div>
+                    </div>
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class="product-details">
-            <div class="tabs">
-                <div class="tab-link active" onclick="openTab('desc')">Περιγραφή</div>
-                <div class="tab-link" onclick="openTab('specs')">Χαρακτηριστικά</div>
-                <div class="tab-link" onclick="openTab('reviews')">Κριτικές</div>
-            </div>
-
-            <div id="desc" class="tab-content active">
-                <h3>Αντιμετώπισε τους εισβολείς με το ΟΧΗΜΑ ΤΟΥ EVO!</h3>
-                <p>Προσοχή, EVO! Ένας τεράστιος σεισμός άφησε τεράστιες ρωγμές στους δρόμους της Αντρόπολις Σίτυ. Γιγαντιαία θηρία και άγριοι άλτες ξεχύνονται από τις ρωγμές για να επιτεθούν. Ενεργοποίησε το περιπατητικό σου όχημα, κλείσε το γείσο του καθίσματος και πήγαινε να ελέγξεις την κατάσταση.</p>
-                <p>Χρησιμοποίησε τη συσκευή επικοινωνίας για να καλέσεις τους άλλους Χίροουζ και απώθησε τους κακούς εισβολείς με το εκτοξευτήρα και το κοφτερό πριόνι. Περιλαμβάνει τη μίνι φιγούρα ρομπότ EVO με όπλο και αξεσουάρ.</p>
-                <ul>
-                    <li>Περιλαμβάνει μίνι ρομπότ EVO με όπλο και αξεσουάρ</li>
-                    <li>Διαθέτει αποσπώμενο κάθισμα, ρυθμιζόμενο γείσο, περιστρεφόμενο κορμό, εκτοξευτήρα, πριόνι και ημιδιαφανή στοιχεία</li>
-                    <li>Περιλαμβάνει 3 άγριους άλτες – κάνε τους να πηδήξουν με ένα πάτημα του δακτύλου!</li>
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-300">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-5 gap-8 text-sm">
+            <div>
+                <h4 class="font-bold text-blue-600 mb-4">Εξυπηρέτηση Πελατών</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="hover:underline">Οδηγίες Κατασκευής</a></li>
+                    <li><a href="#" class="hover:underline">Εξαρτήματα που λείπουν</a></li>
+                    <li><a href="#" class="hover:underline">Επικοινωνία</a></li>
+                    <li><a href="#" class="hover:underline">Ανακλήσεις Προϊόντων</a></li>
                 </ul>
             </div>
-
-            <div id="specs" class="tab-content">
-                <p><strong>Συνδύασε το:</strong> Συνδύασε το με το 44018 ΜΗΧΑΝΗ ΤΖΕΤ ΤΟΥ FURNO για να δημιουργήσεις ένα ακόμα μεγαλύτερο μοντέλο ήρωα χρησιμοποιώντας τις οδηγίες κατασκευής που είναι διαθέσιμες στο LEGO.com/herofactory.</p>
-                <p>Το ύψος του οχήματος ξεπερνά τα 11 εκατοστά.</p>
-            </div>
-            
-            <div id="reviews" class="tab-content">
-                <p>Δεν υπάρχουν ακόμα κριτικές για αυτό το προϊόν.</p>
-            </div>
-        </div>
-
-        <footer>
-            <div style="margin-bottom:10px;">
-                <a href="#">Σχετικά με εμάς</a> | 
-                <a href="#">Υποστήριξη</a> | 
-                <a href="#">Όροι Χρήσης</a> | 
-                <a href="#">Πολιτική Απορρήτου</a>
+            <div>
+                <h4 class="font-bold text-blue-600 mb-4">Σχετικά με εμάς</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="hover:underline">Υπευθυνότητα</a></li>
+                    <li><a href="#" class="hover:underline">Θέσεις Εργασίας</a></li>
+                    <li><a href="#" class="hover:underline">Νομικές Πληροφορίες</a></li>
+                    <li><a href="#" class="hover:underline">Αίθουσα Τύπου</a></li>
+                </ul>
             </div>
             <div>
-                LEGO, the LEGO logo, the Minifigure, and HERO FACTORY are trademarks of the LEGO Group. ©2014 The LEGO Group.
+                <h4 class="font-bold text-blue-600 mb-4">Για Γονείς</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="hover:underline">Εύρεση Δώρου</a></li>
+                    <li><a href="#" class="hover:underline">Ασφάλεια στο Διαδίκτυο</a></li>
+                    <li><a href="#" class="hover:underline">Ανάπτυξη Παιδιού</a></li>
+                </ul>
             </div>
-        </footer>
+            <div>
+                <h4 class="font-bold text-blue-600 mb-4">Εκπαιδευτικοί</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="hover:underline">LEGO Education</a></li>
+                    <li><a href="#" class="hover:underline">Προϊόντα Εκπαίδευσης</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold text-blue-600 mb-4">LEGOLAND</h4>
+                <ul class="space-y-2 text-gray-600">
+                    <li><a href="#" class="hover:underline">Πάρκα</a></li>
+                    <li><a href="#" class="hover:underline">Discovery Centers</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-12 pt-6 border-t border-gray-200 text-center">
+            <p class="text-xs text-gray-400">
+                LEGO, το λογότυπο LEGO, η Μινιφιγούρα, το DUPLO, το λογότυπο FRIENDS, το λογότυπο MINIFIGURES, το DREAMZzz, το NINJAGO, το VIDIYO και το MINDSTORMS είναι εμπορικά σήματα του Ομίλου LEGO. ©2024 The LEGO Group.
+            </p>
+        </div>
+    </footer>
 
+    <!-- Cookie Notice -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900/90 text-white p-4 text-[10px] z-50 flex items-center justify-between">
+        <div class="max-w-7xl mx-auto px-4 flex-1">
+            Χρησιμοποιούμε cookies για να αποθηκεύσουμε τις επιλογές σας στον ιστότοπό μας, καθώς και για τη συγκέντρωση στατιστικών στοιχείων και την εξατομίκευση των προωθητικών μας ενεργειών. Κάνοντας κλικ στο κουμπί "Συμφωνώ", αποδέχεστε τη χρήση των cookies. 
+            <a href="#" class="underline text-blue-400">Διαβάστε περισσότερα για τη χρήση των cookies</a>.
+        </div>
+        <button onclick="document.getElementById('cookie-banner').remove()" class="px-4 py-1 bg-white text-black font-bold rounded">ΣΥΜΦΩΝΩ</button>
     </div>
 
     <script>
-        // Simple Tab Switching Logic (Compatible with older JS engines)
-        function openTab(tabName) {
-            // Hide all contents
-            var contents = document.getElementsByClassName('tab-content');
-            for (var i = 0; i < contents.length; i++) {
-                contents[i].style.display = 'none';
-                contents[i].className = contents[i].className.replace(" active", "");
-            }
-
-            // Remove active class from buttons
-            var links = document.getElementsByClassName('tab-link');
-            for (var i = 0; i < links.length; i++) {
-                links[i].className = links[i].className.replace(" active", "");
-            }
-
-            // Show current
-            document.getElementById(tabName).style.display = 'block';
-            document.getElementById(tabName).className += " active";
+        /**
+         * Switches the content display based on the selected tab
+         * @param {string} tabName - The ID of the tab to activate
+         */
+        function switchTab(tabName) {
+            const tabs = ['instructions', 'product', 'view360'];
+            const display = document.getElementById('content-display');
             
-            // Highlight current button (simple logic for demo)
-            event.target.className += " active";
-        }
+            // Reset styles for all tabs
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                btn.classList.remove('tab-active');
+                btn.classList.add('bg-gray-700', 'text-white');
+            });
 
-        function addToCart() {
-            alert('Το προϊόν "44015 ΟΧΗΜΑ ΤΟΥ EVO" προστέθηκε στο καλάθι σας!');
+            // Activate current tab
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            activeBtn.classList.add('tab-active');
+            activeBtn.classList.remove('bg-gray-700', 'text-white');
+
+            // Change content logic
+            if (tabName === 'instructions') {
+                display.innerHTML = `
+                    <img src="https://www.lego.com/cdn/product-assets/product.img.pri/44015_prod.jpg" alt="44015 Οδηγίες" class="max-h-[350px] drop-shadow-2xl">
+                    <button class="absolute top-4 right-4 bg-yellow-400 text-black font-black px-6 py-2 rounded shadow-lg flex items-center hover:bg-yellow-300 transition uppercase text-sm">
+                        <span class="mr-2">⬇</span> ΛΗΨΗ PDF
+                    </button>
+                `;
+            } else if (tabName === 'product') {
+                display.innerHTML = `
+                    <div class="text-white text-center">
+                        <h3 class="text-2xl font-black italic mb-4">ΠΛΗΡΟΦΟΡΙΕΣ ΠΡΟΪΟΝΤΟΣ</h3>
+                        <p class="text-gray-400">Τεμάχια: 51 | Ηλικίες: 6-12</p>
+                        <div class="mt-4 flex space-x-2 justify-center">
+                            <span class="bg-blue-600 px-3 py-1 rounded text-xs">LEGO Factory</span>
+                            <span class="bg-gray-800 px-3 py-1 rounded text-xs">Model: 44015</span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                display.innerHTML = `
+                    <div class="w-48 h-48 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin"></div>
+                    <p class="text-yellow-400 mt-4 font-bold">ΦΟΡΤΩΣΗ 360° ΠΡΟΒΟΛΗΣ...</p>
+                `;
+            }
         }
     </script>
 </body>
