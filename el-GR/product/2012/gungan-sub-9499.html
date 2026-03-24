@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="el-GR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO® Star Wars™ - 9499 Gungan Sub™ | LEGO.com GR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        .lego-yellow { background-color: #ffd500; }
+        .lego-blue { background-color: #006cb7; }
+        
+        .product-image-container {
+            transition: all 0.3s ease;
+        }
+
+        .thumbnail:hover {
+            border-color: #006cb7;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="bg-white border-b">
+        <div class="lego-yellow h-12 flex items-center justify-center font-bold text-sm tracking-wide">
+            ΔΩΡΕΑΝ ΜΕΤΑΦΟΡΙΚΑ ΓΙΑ ΠΑΡΑΓΓΕΛΙΕΣ ΑΝΩ ΤΩΝ 50€!
+        </div>
+        <nav class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-8">
+                <div class="bg-red-600 p-2 rounded-sm cursor-pointer">
+                    <span class="text-white font-black text-2xl tracking-tighter">LEGO</span>
+                </div>
+                <div class="hidden md:flex space-x-6 font-bold text-sm uppercase">
+                    <a href="#" class="hover:text-blue-600 transition">ΚΑΤΑΣΤΗΜΑ</a>
+                    <a href="#" class="hover:text-blue-600 transition">ΕΝΔΙΑΦΕΡΟΝΤΑ</a>
+                    <a href="#" class="hover:text-blue-600 transition">ΒΟΗΘΕΙΑ</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-5">
+                <i data-lucide="search" class="w-6 h-6 cursor-pointer"></i>
+                <i data-lucide="heart" class="w-6 h-6 cursor-pointer"></i>
+                <div class="relative cursor-pointer">
+                    <i data-lucide="shopping-bag" class="w-6 h-6"></i>
+                    <span class="absolute -top-2 -right-2 bg-blue-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full" id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        
+        <!-- Breadcrumbs -->
+        <div class="text-xs text-gray-500 mb-6 flex items-center space-x-2">
+            <a href="#" class="hover:underline">Αρχική</a>
+            <span>/</span>
+            <a href="#" class="hover:underline">Star Wars™</a>
+            <span>/</span>
+            <span class="text-gray-900 font-semibold">9499 Gungan Sub™</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Gallery Section (6/12) -->
+            <div class="lg:col-span-7 space-y-4">
+                <div class="bg-white rounded-xl p-8 border product-image-container relative overflow-hidden group">
+                    <div class="absolute top-4 left-4 z-10 space-y-2">
+                        <span class="bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase">Hard to find</span>
+                    </div>
+                    <img id="main-product-image" src="https://images.brickset.com/sets/Large/9499-1.jpg" alt="LEGO 9499 Gungan Sub" class="w-full h-auto transition duration-500 transform group-hover:scale-105" onerror="this.src='https://via.placeholder.com/600x400?text=LEGO+9499+Gungan+Sub'">
+                </div>
+                <div class="flex space-x-4 overflow-x-auto pb-2">
+                    <button onclick="changeImage(0)" class="thumbnail flex-shrink-0 w-24 h-24 border-2 border-blue-600 rounded-lg p-2 bg-white">
+                        <img src="https://images.brickset.com/sets/Large/9499-1.jpg" class="w-full h-full object-contain">
+                    </button>
+                    <button onclick="changeImage(1)" class="thumbnail flex-shrink-0 w-24 h-24 border-2 border-transparent rounded-lg p-2 bg-white">
+                        <img src="https://images.brickset.com/sets/AdditionalImages/9499-1/9499_alt1.jpg" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/100?text=Alt+1'">
+                    </button>
+                    <button onclick="changeImage(2)" class="thumbnail flex-shrink-0 w-24 h-24 border-2 border-transparent rounded-lg p-2 bg-white">
+                        <img src="https://images.brickset.com/sets/AdditionalImages/9499-1/9499_alt2.jpg" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/100?text=Alt+2'">
+                    </button>
+                    <button onclick="changeImage(3)" class="thumbnail flex-shrink-0 w-24 h-24 border-2 border-transparent rounded-lg p-2 bg-white">
+                        <img src="https://images.brickset.com/sets/AdditionalImages/9499-1/9499_minifigs1.jpg" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/100?text=Minifigs'">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Info Section (5/12) -->
+            <div class="lg:col-span-5">
+                <div class="space-y-2 mb-6">
+                    <h2 class="text-sm font-bold text-gray-500 uppercase tracking-widest">Star Wars™</h2>
+                    <h1 class="text-4xl font-extrabold text-gray-900">Gungan Sub™</h1>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex text-yellow-400">
+                            <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                            <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                            <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                            <i data-lucide="star" class="fill-current w-4 h-4"></i>
+                            <i data-lucide="star" class="fill-current w-4 h-4 text-gray-300"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-blue-600 underline cursor-pointer">48 Αξιολογήσεις</span>
+                    </div>
+                </div>
+
+                <div class="border-t border-b py-6 my-6 space-y-4">
+                    <div class="flex justify-between items-center">
+                        <span class="text-3xl font-bold">79,99 €</span>
+                        <span class="text-green-600 font-bold flex items-center text-sm">
+                            <span class="w-2 h-2 bg-green-600 rounded-full mr-2"></span>
+                            Διαθέσιμο
+                        </span>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Βυθιστείτε στα βάθη των ωκεανών του Naboo με το Gungan Sub™! Διαθέτει ανοιγόμενα πιλοτήρια, εκτοξευτές πυραύλων και ένα αποσπώμενο mini-sub. Περιλαμβάνει τη σπάνια μίνι φιγούρα της Βασίλισσας Αμιντάλα!
+                    </p>
+                </div>
+
+                <!-- Product Features Grid -->
+                <div class="grid grid-cols-3 gap-4 mb-8">
+                    <div class="text-center p-3 bg-white rounded-lg border">
+                        <span class="block text-xs text-gray-500">Ηλικία</span>
+                        <span class="font-bold">8-14</span>
+                    </div>
+                    <div class="text-center p-3 bg-white rounded-lg border">
+                        <span class="block text-xs text-gray-500">Κομμάτια</span>
+                        <span class="font-bold">465</span>
+                    </div>
+                    <div class="text-center p-3 bg-white rounded-lg border">
+                        <span class="block text-xs text-gray-500">Σετ #</span>
+                        <span class="font-bold">9499</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="space-y-3">
+                    <button id="add-to-cart-btn" onclick="addToCart()" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-extrabold py-4 rounded-lg shadow-lg transform active:scale-95 transition-all flex items-center justify-center space-x-2">
+                        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                        <span>ΠΡΟΣΘΗΚΗ ΣΤΟ ΚΑΛΑΘΙ</span>
+                    </button>
+                    <button class="w-full bg-white hover:bg-gray-50 border-2 border-gray-200 text-gray-900 font-bold py-4 rounded-lg flex items-center justify-center space-x-2">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                        <span>ΠΡΟΣΘΗΚΗ ΣΤΗ ΛΙΣΤΑ ΕΠΙΘΥΜΙΩΝ</span>
+                    </button>
+                </div>
+
+                <!-- VIP Notice -->
+                <div class="mt-6 flex items-start space-x-4 bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <div class="bg-blue-600 p-1.5 rounded-full text-white">
+                        <span class="font-black text-xs italic">VIP</span>
+                    </div>
+                    <div class="text-xs text-blue-900 leading-tight">
+                        <p class="font-bold mb-1">Κερδίστε 520 πόντους Insiders!</p>
+                        <p>Εγγραφείτε δωρεάν και ξεκινήστε να κερδίζετε προνόμια σήμερα.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Description Section -->
+        <section class="mt-20 border-t pt-12">
+            <h2 class="text-3xl font-extrabold mb-12 text-center italic uppercase tracking-tighter">Χαρακτηριστικά του Σετ</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border group hover:shadow-md transition">
+                    <div class="h-48 mb-6 overflow-hidden rounded-xl">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/bltf922709e9999086d/9499_alt3.jpg" alt="Minifigures" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/300x200?text=Minifigures'">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">4 Μοναδικές Φιγούρες</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Περιλαμβάνει τον **Qui-Gon Jinn**, τον **Obi-Wan Kenobi**, τον **Jar Jar Binks** και την αποκλειστική **Βασίλισσα Αμιντάλα** με το εντυπωσιακό φόρεμα της!
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border group hover:shadow-md transition">
+                    <div class="h-48 mb-6 overflow-hidden rounded-xl">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/blt9e7a96860f478e58/9499_alt4.jpg" alt="Play Features" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/300x200?text=Gungan+Sub+Detail'">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Λειτουργικότητα</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Το υποβρύχιο διαθέτει 3 ανοιγόμενα πιλοτήρια (ένα για κάθε ήρωα), περιστρεφόμενους κινητήρες και αποθηκευτικό χώρο για τα όπλα τους.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border group hover:shadow-md transition">
+                    <div class="h-48 mb-6 overflow-hidden rounded-xl">
+                        <img src="https://www.lego.com/cdn/cs/set/assets/blta653d9e8d4629471/9499_alt5.jpg" alt="Mini-sub" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://via.placeholder.com/300x200?text=Mini-Sub+Action'">
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mini-Sub & Πύραυλοι</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Απελευθερώστε το μικρό υποβρύχιο για κατασκοπεία ή εκτοξεύστε τους πυραύλους για να αμυνθείτε από τα τέρατα του βυθού.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specs Accordion -->
+        <section class="mt-20 max-w-4xl mx-auto">
+            <div class="border rounded-xl overflow-hidden bg-white">
+                <button onclick="toggleSpecs()" class="w-full px-8 py-6 flex items-center justify-between font-bold text-xl hover:bg-gray-50 transition">
+                    <span>Τεχνικές Προδιαγραφές</span>
+                    <i data-lucide="chevron-down" id="spec-icon" class="transition-transform duration-300"></i>
+                </button>
+                <div id="spec-content" class="hidden px-8 py-8 border-t space-y-6 text-sm text-gray-700">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-4">
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-semibold">Κωδικός Προϊόντος</span>
+                            <span>9499</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-semibold">Θέμα</span>
+                            <span>Star Wars™</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-semibold">Έτος Κυκλοφορίας</span>
+                            <span>2012</span>
+                        </div>
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="font-semibold">Διαστάσεις Sub</span>
+                            <span>43cm Μήκος / 27cm Πλάτος</span>
+                        </div>
+                    </div>
+                    <p>
+                        Το Gungan Sub™ (9499) είναι ένα κλασικό πλέον σετ από την ταινία "Η Αόρατη Απειλή". Η φιγούρα της Βασίλισσας Αμιντάλα θεωρείται μία από τις πιο περιζήτητες φιγούρες στην ιστορία της LEGO λόγω της εξαιρετικής λεπτομέρειας στο τύπωμα και του μοναδικού καλουπιού για το κεφάλι και το φόρεμα.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Success Message Pop-up (Hidden) -->
+    <div id="cart-modal" class="fixed inset-0 z-[100] flex items-center justify-center hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50" onclick="hideModal()"></div>
+        <div class="bg-white w-full max-w-md p-8 rounded-2xl relative z-10 shadow-2xl transform scale-95 transition-all">
+            <button onclick="hideModal()" class="absolute top-4 right-4 text-gray-400 hover:text-black">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Προστέθηκε στο Καλάθι!</h3>
+                <p class="text-gray-500 mb-6">Το σετ 9499 Gungan Sub™ είναι πλέον έτοιμο για αγορά.</p>
+                <div class="flex space-x-3">
+                    <button onclick="hideModal()" class="flex-1 border-2 border-gray-200 py-3 rounded-lg font-bold hover:bg-gray-50 transition">ΣΥΝΕΧΕΙΑ</button>
+                    <button class="flex-1 bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition">ΚΑΛΑΘΙ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-24 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-800 pb-12 mb-12">
+                <div class="space-y-4">
+                    <h4 class="font-bold text-sm uppercase">ΣΧΕΤΙΚΑ ΜΕ ΕΜΑΣ</h4>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Η LEGO Group</a></li>
+                        <li><a href="#" class="hover:text-white transition">Βιωσιμότητα</a></li>
+                        <li><a href="#" class="hover:text-white transition">Δελτία Τύπου</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-sm uppercase">ΥΠΟΣΤΗΡΙΞΗ</h4>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Επικοινωνία</a></li>
+                        <li><a href="#" class="hover:text-white transition">Οδηγίες Συναρμολόγησης</a></li>
+                        <li><a href="#" class="hover:text-white transition">Ανταλλακτικά</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-sm uppercase">ΑΤΡΑΞΙΟΝ</h4>
+                    <ul class="text-sm text-gray-400 space-y-2">
+                        <li><a href="#" class="hover:text-white transition">LEGOLAND® Parks</a></li>
+                        <li><a href="#" class="hover:text-white transition">LEGO® House</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-sm uppercase">SOCIAL</h4>
+                    <div class="flex space-x-4">
+                        <i data-lucide="facebook" class="w-5 h-5 cursor-pointer"></i>
+                        <i data-lucide="instagram" class="w-5 h-5 cursor-pointer"></i>
+                        <i data-lucide="youtube" class="w-5 h-5 cursor-pointer"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-xs text-gray-500">
+                <p>LEGO, the LEGO logo, the Minifigure, DUPLO, the FRIENDS logo, the MINIFIGURES logo, DREAMZzz, NINJAGO, VIDIYO and MINDSTORMS are trademarks of the LEGO Group. ©2024 The LEGO Group.</p>
+                <p class="mt-2">© & ™ Lucasfilm Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Image Gallery Logic
+        const images = [
+            "https://images.brickset.com/sets/Large/9499-1.jpg",
+            "https://images.brickset.com/sets/AdditionalImages/9499-1/9499_alt1.jpg",
+            "https://images.brickset.com/sets/AdditionalImages/9499-1/9499_alt2.jpg",
+            "https://images.brickset.com/sets/AdditionalImages/9499-1/9499_minifigs1.jpg"
+        ];
+
+        function changeImage(index) {
+            const mainImg = document.getElementById('main-product-image');
+            mainImg.style.opacity = '0';
+            
+            setTimeout(() => {
+                mainImg.src = images[index];
+                mainImg.style.opacity = '1';
+                
+                // Update active thumbnail border
+                const thumbnails = document.querySelectorAll('.thumbnail');
+                thumbnails.forEach((thumb, i) => {
+                    if (i === index) {
+                        thumb.classList.add('border-blue-600');
+                        thumb.classList.remove('border-transparent');
+                    } else {
+                        thumb.classList.remove('border-blue-600');
+                        thumb.classList.add('border-transparent');
+                    }
+                });
+            }, 200);
+        }
+
+        // Cart Interaction
+        let cartItems = 0;
+        function addToCart() {
+            const btn = document.getElementById('add-to-cart-btn');
+            const cartCount = document.getElementById('cart-count');
+            const modal = document.getElementById('cart-modal');
+            
+            // Animation for button
+            btn.innerHTML = 'ΠΡΟΣΤΙΘΕΤΑΙ...';
+            btn.classList.add('opacity-80');
+            
+            setTimeout(() => {
+                cartItems++;
+                cartCount.innerText = cartItems;
+                
+                // Show modal
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.querySelector('div:last-child').classList.remove('scale-95');
+                    modal.querySelector('div:last-child').classList.add('scale-100');
+                }, 50);
+
+                // Reset button
+                btn.innerHTML = '<i data-lucide="shopping-cart" class="w-5 h-5"></i><span>ΠΡΟΣΘΗΚΗ ΣΤΟ ΚΑΛΑΘΙ</span>';
+                btn.classList.remove('opacity-80');
+                lucide.createIcons();
+            }, 800);
+        }
+
+        function hideModal() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.add('hidden');
+        }
+
+        // Accordion Logic
+        function toggleSpecs() {
+            const content = document.getElementById('spec-content');
+            const icon = document.getElementById('spec-icon');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body>
+</html>
