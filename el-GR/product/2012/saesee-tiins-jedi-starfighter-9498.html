@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="el-GR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO® Star Wars™ 9498 - Saesee Tiin’s Jedi Starfighter™</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --lego-yellow: #FFD500;
+            --sw-blue: #2e5f9e;
+            --dark-bg: #0a0a0b;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark-bg);
+            color: #e2e8f0;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .star-wars-gradient {
+            background: linear-gradient(135deg, #1a1a1c 0%, #0a0a0b 100%);
+        }
+        .card-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .lego-btn {
+            background-color: var(--lego-yellow);
+            color: black;
+            transition: all 0.3s ease;
+        }
+        .lego-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 213, 0, 0.4);
+        }
+        .product-image-container:hover img {
+            transform: scale(1.02);
+        }
+        .tab-active {
+            border-bottom: 3px solid var(--lego-yellow);
+            color: var(--lego-yellow);
+        }
+        #notification {
+            transform: translateY(100px);
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #notification.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Πλοήγηση -->
+    <nav class="p-6 border-b border-white/10 flex justify-between items-center sticky top-0 bg-black/80 backdrop-blur-md z-50">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-red-600 flex items-center justify-center rounded font-bold text-white text-xs">LEGO</div>
+            <span class="text-xl font-bold tracking-widest hidden md:inline">STAR WARS</span>
+        </div>
+        <div class="flex space-x-6 text-sm font-medium uppercase tracking-wider">
+            <a href="#" class="hover:text-yellow-400 transition">Προϊόντα</a>
+            <a href="#" class="hover:text-yellow-400 transition">Χαρακτήρες</a>
+            <a href="#" class="hover:text-yellow-400 transition">Συλλογές</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="max-w-7xl mx-auto px-4 py-8 md:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Εικόνα Προϊόντος -->
+            <div class="product-image-container relative group transition-all duration-500">
+                <div class="absolute -inset-4 bg-blue-500/10 rounded-full blur-3xl group-hover:bg-blue-500/20 transition-all"></div>
+                <img 
+                    src="https://www.lego.com/cdn/product-assets/product.img.pri/9498_prod.jpg" 
+                    alt="Saesee Tiin’s Jedi Starfighter" 
+                    class="relative w-full h-auto rounded-2xl shadow-2xl transition-transform duration-500"
+                    onerror="this.src='https://via.placeholder.com/800x600?text=LEGO+9498+Starfighter'"
+                >
+                <div class="absolute bottom-4 left-4 flex space-x-2">
+                    <span class="bg-black/60 px-3 py-1 rounded-full text-xs border border-white/20">9498</span>
+                    <span class="bg-black/60 px-3 py-1 rounded-full text-xs border border-white/20">7-12 ετών</span>
+                </div>
+            </div>
+
+            <!-- Λεπτομέρειες -->
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-blue-400 text-sm font-bold tracking-widest uppercase mb-2">Jedi Starfighter™</h2>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight">Saesee Tiin’s Jedi Starfighter™</h1>
+                    <p class="text-gray-400 mt-4 text-lg leading-relaxed">
+                        Προετοιμαστείτε για επικές μάχες στον γαλαξία με το μοναδικό Starfighter του Saesee Tiin. Αυτό το ευέλικτο σκάφος είναι εξοπλισμένο με πυραύλους flick και cockpit που ανοίγει!
+                    </p>
+                </div>
+
+                <div class="flex items-center space-x-8">
+                    <div>
+                        <span class="block text-2xl font-bold">244</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-tighter">Κομμάτια</span>
+                    </div>
+                    <div class="w-px h-10 bg-white/10"></div>
+                    <div>
+                        <span class="block text-2xl font-bold">3</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-tighter">Φιγούρες</span>
+                    </div>
+                    <div class="w-px h-10 bg-white/10"></div>
+                    <div>
+                        <span class="block text-2xl font-bold">€34.99</span>
+                        <span class="text-xs text-gray-500 uppercase tracking-tighter">Τιμή (MSRP)</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="addToCart()" class="lego-btn px-10 py-4 rounded-lg font-bold text-lg flex-1">
+                        ΠΡΟΣΘΗΚΗ ΣΤΟ ΚΑΛΑΘΙ
+                    </button>
+                    <button class="px-10 py-4 rounded-lg font-bold border border-white/20 hover:bg-white/5 transition flex-1">
+                        ΛΙΣΤΑ ΕΠΙΘΥΜΙΩΝ
+                    </button>
+                </div>
+
+                <!-- Tabs -->
+                <div class="mt-12">
+                    <div class="flex border-b border-white/10">
+                        <button onclick="switchTab('desc')" id="tab-desc-btn" class="px-6 py-2 font-bold text-sm tab-active uppercase tracking-wider">Περιγραφή</button>
+                        <button onclick="switchTab('specs')" id="tab-specs-btn" class="px-6 py-2 font-bold text-sm text-gray-500 hover:text-white uppercase tracking-wider">Προδιαγραφές</button>
+                    </div>
+                    <div id="tab-content" class="py-6 text-sm text-gray-400 leading-loose min-h-[100px]">
+                        Το Saesee Tiin’s Jedi Starfighter™ περιλαμβάνει αποσπώμενη κάψουλα διαφυγής, αναδιπλούμενο σύστημα προσγείωσης και χώρο για το droid. 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Minifigures Section -->
+    <section class="star-wars-gradient py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">ΠΕΡΙΛΑΜΒΑΝΟΜΕΝΕΣ ΦΙΓΟΥΡΕΣ</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Saesee Tiin -->
+                <div class="card-glass p-8 rounded-2xl text-center group cursor-default">
+                    <div class="w-32 h-32 bg-yellow-400/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:bg-yellow-400/20 transition">
+                        <span class="text-5xl">👤</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Saesee Tiin</h3>
+                    <p class="text-sm text-gray-500">Jedi Master με πράσινο φωτόσπαθο</p>
+                </div>
+
+                <!-- Even Piell -->
+                <div class="card-glass p-8 rounded-2xl text-center group cursor-default">
+                    <div class="w-32 h-32 bg-blue-400/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:bg-blue-400/20 transition">
+                        <span class="text-5xl">👤</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Even Piell</h3>
+                    <p class="text-sm text-gray-500">Σπάνια φιγούρα με μοναδική κεφαλή</p>
+                </div>
+
+                <!-- R3-D5 -->
+                <div class="card-glass p-8 rounded-2xl text-center group cursor-default">
+                    <div class="w-32 h-32 bg-red-400/10 rounded-full mx-auto mb-6 flex items-center justify-center group-hover:bg-red-400/20 transition">
+                        <span class="text-5xl">🤖</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">R3-D5</h3>
+                    <p class="text-sm text-gray-500">Astromech Droid σε κόκκινο χρώμα</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-4 border-t border-white/5 text-center">
+        <p class="text-xs text-gray-600 max-w-2xl mx-auto">
+            LEGO, το λογότυπο LEGO και οι Minifigures είναι εμπορικά σήματα του LEGO Group. ©2024 The LEGO Group. STAR WARS™ και όλοι οι σχετικοί χαρακτήρες είναι ιδιοκτησία της Lucasfilm Ltd.
+        </p>
+    </footer>
+
+    <!-- Notification -->
+    <div id="notification" class="fixed bottom-8 right-8 left-8 md:left-auto md:w-80 bg-green-600 text-white px-6 py-4 rounded-xl shadow-2xl z-[100] flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+            <span class="text-2xl">✓</span>
+            <div>
+                <p class="font-bold">Επιτυχία!</p>
+                <p class="text-sm opacity-90">Το σετ προστέθηκε στο καλάθι.</p>
+            </div>
+        </div>
+        <button onclick="hideNotification()" class="text-white/50 hover:text-white">✕</button>
+    </div>
+
+    <script>
+        // Διαχείριση Tabs
+        function switchTab(tab) {
+            const content = document.getElementById('tab-content');
+            const descBtn = document.getElementById('tab-desc-btn');
+            const specsBtn = document.getElementById('tab-specs-btn');
+
+            if (tab === 'desc') {
+                content.innerHTML = "Το Saesee Tiin’s Jedi Starfighter™ περιλαμβάνει αποσπώμενη κάψουλα διαφυγής, αναδιπλούμενο σύστημα προσγείωσης, cockpit που ανοίγει, flick missiles και χώρο για το R3-D5. Ένα απαραίτητο κομμάτι για κάθε συλλογή Clone Wars!";
+                descBtn.classList.add('tab-active');
+                descBtn.classList.remove('text-gray-500');
+                specsBtn.classList.remove('tab-active');
+                specsBtn.classList.add('text-gray-500');
+            } else {
+                content.innerHTML = `
+                    <ul class="space-y-1">
+                        <li><strong>Κωδικός:</strong> 9498</li>
+                        <li><strong>Θέμα:</strong> Star Wars / The Clone Wars</li>
+                        <li><strong>Έτος Κυκλοφορίας:</strong> 2012</li>
+                        <li><strong>Διαστάσεις:</strong> 8cm ύψος, 29cm μήκος</li>
+                    </ul>
+                `;
+                specsBtn.classList.add('tab-active');
+                specsBtn.classList.remove('text-gray-500');
+                descBtn.classList.remove('tab-active');
+                descBtn.classList.add('text-gray-500');
+            }
+        }
+
+        // Ειδοποίηση Καλαθιού
+        function addToCart() {
+            const notif = document.getElementById('notification');
+            notif.classList.add('show');
+            
+            setTimeout(() => {
+                hideNotification();
+            }, 4000);
+        }
+
+        function hideNotification() {
+            const notif = document.getElementById('notification');
+            notif.classList.remove('show');
+        }
+
+        // Responsive Resizing for Canvas content (αν χρειαζόταν canvas)
+        window.addEventListener('resize', () => {
+            // Logic for resizing if needed
+        });
+    </script>
+</body>
+</html>
