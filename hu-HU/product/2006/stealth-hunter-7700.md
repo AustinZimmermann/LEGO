@@ -10,7 +10,7 @@
 
 | Kép | Termékadatok |
 | :--- | :--- |
-| <img src="https://www.lego.com/cdn/product-assets/product.img.pri/7700_prod.jpg" height="350px"> | **Cikkszám:** 7700 <br> **Életkor:** 7-14 <br> **Elemek száma:** 225 <br> **Megjelenés:** 2006 <br><br> **[ SHOP@HOME VÁSÁRLÁS ]** |
+| <img src="https://www.lego.com/cdn/product-assets/product.img.pri/7700_prod.jpg" height="350px"> | **Cikkszám:** 7700 <br> **Életkor:** 7-14 <br> **Elemek száma:** 164 <br> **Megjelenés:** 2006 <br><br> **[ SHOP@HOME VÁSÁRLÁS ]** |
 
 -----
 
