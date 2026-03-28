@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO.com BIONICLE : Termékek - 8900 Reidak</title>
+    <style>
+        /* 2006 Flash Website Aesthetic CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+        :root {
+            --bionicle-gold: #c6a052;
+            --bionicle-red: #cc0000;
+            --piraka-dark: #111111;
+            --piraka-grey: #2a2a2a;
+            --piraka-border: #4a4a4a;
+            --glow: 0 0 15px rgba(204, 0, 0, 0.8);
+            --gold-glow: 0 0 10px rgba(198, 160, 82, 0.6);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000;
+            background-image: 
+                radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 80%),
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 4px);
+            color: #dcdcdc;
+            font-family: 'Exo 2', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* 2006 LEGO Global Header */
+        #lego-global-header {
+            width: 100%;
+            background-color: #ffcf00;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 2px solid #b39100;
+            position: relative;
+            z-index: 100;
+        }
+
+        .lego-logo {
+            background-color: #e3000f;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-weight: 900;
+            font-size: 18px;
+            padding: 5px 10px;
+            border: 1px solid white;
+            box-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+            text-decoration: none;
+            letter-spacing: -1px;
+            margin-top: 10px;
+        }
+
+        .lego-nav {
+            margin-left: 20px;
+            display: flex;
+            gap: 15px;
+            font-family: Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .lego-nav a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .lego-nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main BIONICLE Wrapper */
+        .flash-container {
+            width: 100%;
+            max-width: 960px;
+            margin: 20px auto;
+            background: linear-gradient(180deg, var(--piraka-dark) 0%, #000 100%);
+            border: 3px solid var(--piraka-border);
+            border-radius: 5px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.9), inset 0 0 20px rgba(255,255,255,0.05);
+            position: relative;
+        }
+
+        /* BIONICLE Header */
+        .bio-header {
+            height: 120px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="%23111" /><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23222" stroke-width="2"/></svg>') center/cover;
+            border-bottom: 2px solid var(--piraka-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 0 20px 0px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bio-logo-text {
+            font-family: 'Teko', sans-serif;
+            font-size: 70px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 20px var(--bionicle-gold);
+            margin-bottom: -15px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .bio-nav {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+            z-index: 10;
+        }
+
+        .bio-nav a {
+            background: linear-gradient(180deg, #444 0%, #222 100%);
+            color: var(--bionicle-gold);
+            text-decoration: none;
+            padding: 8px 15px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: 1px solid #555;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.2s;
+        }
+
+        .bio-nav a.active {
+            background: linear-gradient(180deg, #666 0%, var(--piraka-dark) 100%);
+            color: #fff;
+            border-color: #777;
+            text-shadow: var(--glow);
+        }
+
+        .bio-nav a:hover:not(.active) {
+            background: linear-gradient(180deg, #555 0%, #333 100%);
+            color: #fff;
+        }
+
+        /* Content Area */
+        .content-area {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            gap: 30px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="%23000" /><circle cx="100" cy="100" r="1" fill="%23333" /></svg>') repeat;
+        }
+
+        /* Left Column - Image */
+        .product-image-container {
+            flex: 1 1 400px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-frame {
+            border: 2px solid #333;
+            background: radial-gradient(circle at 50% 50%, #2a2a2a 0%, #000 100%);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 0 15px rgba(255,0,0,0.1);
+            position: relative;
+        }
+
+        .image-frame::after {
+            content: '';
+            position: absolute;
+            top: -5px; right: -5px; bottom: -5px; left: -5px;
+            border: 1px solid var(--bionicle-red);
+            border-radius: 12px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0px 15px 20px rgba(204,0,0,0.4));
+        }
+
+        /* Right Column - Info */
+        .product-info {
+            flex: 1 1 400px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .new-badge {
+            color: #fff;
+            background-color: var(--bionicle-red);
+            padding: 3px 10px;
+            font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            align-self: flex-start;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px var(--bionicle-red);
+            transform: skew(-10deg);
+        }
+
+        .product-title {
+            font-family: 'Teko', sans-serif;
+            font-size: 50px;
+            color: #fff;
+            line-height: 1;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0 #000, -1px -1px 0 var(--bionicle-gold);
+        }
+
+        .product-subtitle {
+            font-size: 20px;
+            color: var(--bionicle-gold);
+            font-weight: 700;
+            font-style: italic;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .product-desc {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #bbb;
+            background: rgba(20,20,20,0.8);
+            padding: 15px;
+            border-left: 3px solid var(--bionicle-gold);
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .features-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .features-list li::before {
+            content: '►';
+            position: absolute;
+            left: 0;
+            color: var(--bionicle-red);
+            font-size: 12px;
+            top: 2px;
+        }
+
+        .stats-box {
+            background: linear-gradient(90deg, #111 0%, #222 100%);
+            border: 1px solid #444;
+            padding: 15px;
+            display: flex;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #888;
+            text-transform: uppercase;
+        }
+
+        .stat-value {
+            font-family: 'Teko', sans-serif;
+            font-size: 24px;
+            color: var(--bionicle-gold);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: auto;
+        }
+
+        .btn {
+            background: linear-gradient(180deg, #555 0%, #222 100%);
+            border: 1px solid #777;
+            color: white;
+            padding: 12px 25px;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(180deg, #ffcc00 0%, #cc9900 100%);
+            color: #000;
+            border-color: #fff;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(180deg, #ffe666 0%, #e6b800 100%);
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+        }
+
+        .btn:hover:not(.btn-primary) {
+            background: linear-gradient(180deg, #666 0%, #333 100%);
+            border-color: var(--bionicle-gold);
+            color: var(--bionicle-gold);
+        }
+
+        /* 360 View / Extras */
+        .extras {
+            width: 100%;
+            border-top: 1px dashed #444;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .zamor-interactive {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #111;
+            padding: 10px 20px;
+            border: 1px solid #333;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .zamor-sphere {
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle at 30% 30%, #aaffaa 0%, #00cc00 50%, #003300 100%);
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00ff00;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .zamor-interactive:hover .zamor-sphere {
+            transform: scale(1.3) translateX(10px);
+            box-shadow: 0 0 20px #00ff00;
+        }
+
+        /* Footer */
+        .bio-footer {
+            background-color: #000;
+            border-top: 2px solid #222;
+            padding: 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+            font-family: sans-serif;
+            width: 100%;
+            max-width: 960px;
+            margin-bottom: 40px;
+        }
+
+        .bio-footer a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .bio-footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ambient effects */
+        .ambient-glow {
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(204,0,0,0.1) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Sound Control (Fake Flash Toggle) */
+        .sound-toggle {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 20;
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #aaa;
+        }
+        
+        .sound-icon {
+            width: 15px;
+            height: 15px;
+            border: 1px solid #aaa;
+            display: flex;
+            align-items: flex-end;
+            padding: 2px;
+            gap: 1px;
+        }
+
+        .bar { width: 3px; background: #aaa; }
+        .bar1 { height: 40%; }
+        .bar2 { height: 70%; }
+        .bar3 { height: 100%; animation: eq 0.5s infinite alternate; }
+        
+        @keyframes eq {
+            0% { height: 30%; }
+            100% { height: 100%; }
+        }
+
+        .sound-toggle.muted .bar3 { animation: none; height: 30%; }
+        .sound-toggle.muted { color: #555; }
+        .sound-toggle.muted .sound-icon { border-color: #555; }
+        .sound-toggle.muted .bar { background: #555; }
+
+        @media (max-width: 768px) {
+            .content-area { flex-direction: column; }
+            .bio-header { flex-direction: column; align-items: center; height: auto; padding-top: 20px; }
+            .bio-nav { margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+            .extras { flex-direction: column; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Global LEGO Header -->
+    <div id="lego-global-header">
+        <a href="#" class="lego-logo">LEGO</a>
+        <div class="lego-nav">
+            <a href="#">Termékek</a>
+            <a href="#">Játékok</a>
+            <a href="#">Üzenőtáblák</a>
+            <a href="#">LEGO Shop</a>
+        </div>
+    </div>
+
+    <!-- Main Flash-like Interface -->
+    <div class="flash-container">
+        
+        <div class="ambient-glow"></div>
+
+        <div class="sound-toggle" id="soundToggle" onclick="toggleSound()">
+            <span id="soundText">Zene: BE</span>
+            <div class="sound-icon">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+        </div>
+
+        <div class="bio-header">
+            <div class="bio-logo-text">BIONICLE</div>
+            <div class="bio-nav">
+                <a href="#">Főoldal</a>
+                <a href="#" class="active">Termékek</a>
+                <a href="#">Történet</a>
+                <a href="#">Játékok</a>
+                <a href="#">Letöltések</a>
+            </div>
+        </div>
+
+        <div class="content-area">
+            
+            <!-- Product Image -->
+            <div class="product-image-container">
+                <div class="image-frame">
+                    <img src="https://www.lego.com/cdn/product-assets/product.img.pri/8900_prod.jpg" alt="8900 Reidak - BIONICLE Piraka" class="product-image" onerror="this.src='https://via.placeholder.com/400x400/111111/c6a052?text=8900+Reidak+Image+N/A'">
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="product-info">
+                <div class="new-badge">Új!</div>
+                <h1 class="product-title">8900 Reidak</h1>
+                <h2 class="product-subtitle">A Nyomkereső</h2>
+                
+                <div class="product-desc">
+                    A brutális és türelmetlen Reidak sosem veszít kétszer ugyanúgy! Amint legyőzik, a teste azonnal alkalmazkodik a támadáshoz, így szinte lehetetlen megállítani. Sötétben világító fogai és izzó szemei félelmet keltenek Voya Nui lakóiban. Kombinált fegyvere hatalmas körfűrészként és fúróként is pusztít!
+                </div>
+
+                <ul class="features-list">
+                    <li>Tartalmazza a Zamor gömbvetőt!</li>
+                    <li>A szemei világítanak, a fogai a sötétben is látszanak!</li>
+                    <li>Forgó fűrész/fúró fegyverzet!</li>
+                    <li>Kombináld a 8903 Zaktan készlettel egy újabb mutáns megépítéséhez!</li>
+                </ul>
+
+                <div class="stats-box">
+                    <div class="stat">
+                        <span class="stat-label">Korosztály</span>
+                        <span class="stat-value">7-16</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Kódszám</span>
+                        <span class="stat-value">8900</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Elemek</span>
+                        <span class="stat-value">41</span>
+                    </div>
+                </div>
+
+                <div class="extras">
+                    <div class="zamor-interactive" onclick="fireZamor()">
+                        <span style="font-size: 12px; font-weight: bold; color: #fff;">ZAMOR TESZT:</span>
+                        <div class="zamor-sphere" id="zamorSphere"></div>
+                    </div>
+                    <a href="#" style="color: var(--bionicle-gold); font-size: 12px; text-decoration: none; font-weight: bold;">► Építési útmutató (PDF)</a>
+                </div>
+
+                <div class="action-buttons" style="margin-top: 25px;">
+                    <a href="#" class="btn btn-primary">Kosárba</a>
+                    <a href="#" class="btn">Kívánságlista</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bio-footer">
+        <p>A LEGO, a LEGO logó, a BIONICLE és a Piraka a LEGO Csoport védjegyei. ©2006 The LEGO Group. Minden jog fenntartva.</p>
+        <p style="margin-top: 10px;">
+            <a href="#">Adatvédelmi irányelvek</a> | 
+            <a href="#">Felhasználási feltételek</a>
+        </p>
+    </div>
+
+    <script>
+        // Fake Flash interactions
+        let isMuted = false;
+        
+        function toggleSound() {
+            const toggle = document.getElementById('soundToggle');
+            const text = document.getElementById('soundText');
+            isMuted = !isMuted;
+            
+            if (isMuted) {
+                toggle.classList.add('muted');
+                text.innerText = 'Zene: KI';
+            } else {
+                toggle.classList.remove('muted');
+                text.innerText = 'Zene: BE';
+                // In a real 2006 site, the Piraka Rap would start playing here.
+                console.log("Yo Yo Piraka playing...");
+            }
+        }
+
+        function fireZamor() {
+            const sphere = document.getElementById('zamorSphere');
+            sphere.style.transition = 'transform 0.1s ease-out';
+            sphere.style.transform = 'translateX(200px) scale(0.5)';
+            sphere.style.opacity = '0';
+            
+            setTimeout(() => {
+                sphere.style.transition = 'none';
+                sphere.style.transform = 'translateX(0) scale(1)';
+                
+                setTimeout(() => {
+                    sphere.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s';
+                    sphere.style.opacity = '1';
+                }, 50);
+            }, 200);
+        }
+    </script>
+</body>
+</html>
