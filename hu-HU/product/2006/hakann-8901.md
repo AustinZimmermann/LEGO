@@ -6,6 +6,8 @@
 
 # 8901 Hakann
 
+<img src="https://www.lego.com/cdn/product-assets/product.img.pri/8901_prod.jpg" height="350px">
+
 ### **A Zsarnok\!**
 
 Hakann senkit sem szeret, és őt sem szereti senki. Még a többi Piraka is folyamatosan a hátát figyeli, ha a közelben van, mert tudják, hogy bármikor hajlandó elárulni őket. Kíméletlen, ravasz és hihetetlenül veszélyes. Kettős fegyverzetével – pusztító hőlátásával és robbanó lávavetőjével – letarol mindent, ami Voya Nui szigetén az útjába kerül, hogy elsőként szerezze meg a legendás Élet Maszkját\!
