@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inseguimento del Generale Grievous™ 7255 | Star Wars™ | LEGO® Official Shop IT</title>
+    <link rel="icon" href="https://www.lego.com/favicon.ico" type="image/x-icon">
+    <style>
+        /* CSS Reset & Variables */
+        :root {
+            --lego-yellow: #FFD500;
+            --lego-red: #E3000B;
+            --lego-black: #111111;
+            --lego-dark-gray: #2C2C2C;
+            --lego-light-gray: #F8F8F8;
+            --lego-border: #E0E0E0;
+            --lego-blue: #006DB7;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: #FFFFFF;
+            color: var(--lego-black);
+            line-height: 1.5;
+        }
+
+        /* Top Banner & Header */
+        .top-bar {
+            background-color: var(--lego-black);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        header {
+            border-bottom: 1px solid var(--lego-border);
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            background: #FFF;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .lego-logo {
+            width: 50px;
+            height: 50px;
+            background-color: var(--lego-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--lego-yellow);
+            font-weight: 900;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 0 #990000;
+            border-radius: 2px;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--lego-black);
+        }
+
+        .nav-links a:hover {
+            color: var(--lego-red);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 16px auto;
+            padding: 0 20px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Product Container Layout */
+        .product-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Gallery Section */
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 420px;
+            background-color: var(--lego-light-gray);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--lego-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-image svg {
+            width: 80%;
+            height: 80%;
+        }
+
+        .retire-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background-color: var(--lego-dark-gray);
+            color: #FFF;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .thumbnails {
+            display: flex;
+            gap: 12px;
+        }
+
+        .thumb {
+            width: 80px;
+            height: 80px;
+            background: var(--lego-light-gray);
+            border: 2px solid transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .thumb.active {
+            border-color: var(--lego-blue);
+        }
+
+        .thumb svg {
+            width: 60%;
+            height: 60%;
+        }
+
+        /* Product Details Section */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .theme-logo {
+            font-weight: 800;
+            font-size: 0.9rem;
+            color: var(--lego-red);
+            letter-spacing: 1px;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .product-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 0.9rem;
+            color: #555;
+            align-items: center;
+        }
+
+        .badge-list {
+            display: flex;
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .badge {
+            background-color: var(--lego-light-gray);
+            border: 1px solid var(--lego-border);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .badge-title {
+            font-size: 0.75rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .badge-value {
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-top: 4px;
+        }
+
+        .price-container {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin: 8px 0;
+        }
+
+        .status-box {
+            background-color: #FFF3CD;
+            color: #856404;
+            border: 1px solid #FFEEBA;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .btn-add {
+            background-color: #D3D3D3;
+            color: #666;
+            border: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: not-allowed;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Accordion / Info Tabs */
+        .info-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            border-top: 1px solid var(--lego-border);
+            padding-top: 20px;
+        }
+
+        .accordion {
+            border-bottom: 1px solid var(--lego-border);
+        }
+
+        .accordion-header {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            text-align: left;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .accordion-content {
+            display: none;
+            padding-bottom: 20px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .accordion-content.open {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--lego-black);
+            color: #FFF;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+            color: #AAA;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        SPEDIZIONE GRATUITA CON ORDINI SUPERIORI A 35€! | DIVENTA UN LEGO® INSIDER
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header>
+        <div class="logo-container">
+            <a href="#" class="lego-logo">LEGO</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Set</a></li>
+            <li><a href="#">Temi</a></li>
+            <li><a href="#">Offerte</a></li>
+            <li><a href="#">Scoprilo</a></li>
+        </ul>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="#">Home</a> &gt; 
+        <a href="#">Temi</a> &gt; 
+        <a href="#">Star Wars™</a> &gt; 
+        <span>Inseguimento del Generale Grievous (7255)</span>
+    </nav>
+
+    <!-- Main Product Layout -->
+    <main class="product-container">
+        
+        <!-- Left: Image Gallery -->
+        <section class="gallery-container">
+            <div class="main-image">
+                <span class="retire-tag">Prodotto Fuori Catalogo</span>
+                <svg id="displayed-svg" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Placeholder Graphic for Set 7255 Box / Set -->
+                    <rect width="100%" height="100%" fill="#EAEAEA" />
+                    <text x="50%" y="30%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#333">LEGO® Star Wars™</text>
+                    <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="#E3000B">7255</text>
+                    <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#666">General Grievous Chase</text>
+                    <!-- Graphic Elements -->
+                    <circle cx="120" cy="220" r="30" fill="#006DB7" opacity="0.3" />
+                    <rect x="220" y="200" width="80" height="40" fill="#FFD500" opacity="0.5" rx="5" />
+                    <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#999">[ Immagine Illustrativa Set (2005) ]</text>
+                </svg>
+            </div>
+            
+            <div class="thumbnails">
+                <div class="thumb active" onclick="switchImage(1)">
+                    <svg viewBox="0 0 100 100"><rect width="100%" height="100%" fill="#DDD"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="12" font-weight="bold">Box</text></svg>
+                </div>
+                <div class="thumb" onclick="switchImage(2)">
+                    <svg viewBox="0 0 100 100"><rect width="100%" height="100%" fill="#DDD"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="12" font-weight="bold">Boga</text></svg>
+                </div>
+                <div class="thumb" onclick="switchImage(3)">
+                    <svg viewBox="0 0 100 100"><rect width="100%" height="100%" fill="#DDD"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" font-weight="bold">Wheel Bike</text></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right: Product Information & Purchase Status -->
+        <section class="product-details">
+            <span class="theme-logo">STAR WARS™ | EPISODIO III</span>
+            <h1 class="product-title">Inseguimento del Generale Grievous</h1>
+            
+            <div class="product-meta">
+                <span>Articolo: <strong>7255</strong></span>
+                <span>•</span>
+                <span>Anno: <strong>2005</strong></span>
+            </div>
+
+            <!-- Set Specifications Badges -->
+            <div class="badge-list">
+                <div class="badge">
+                    <div class="badge-title">Età</div>
+                    <div class="badge-value">7+</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-title">Pezzi</div>
+                    <div class="badge-value">111</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-title">Minifigures</div>
+                    <div class="badge-value">2</div>
+                </div>
+            </div>
+
+            <div class="price-container">
+                19,99 € <span style="font-size: 0.9rem; color: #777; font-weight: normal;">(Prezzo di listino originale 2005)</span>
+            </div>
+
+            <div class="status-box">
+                Ritirato: Questo set non è più disponibile sul sito ufficiale LEGO.com.
+            </div>
+
+            <button class="btn-add" disabled>Non disponibile</button>
+        </section>
+
+    </main>
+
+    <!-- Product Details Accordion Section -->
+    <section class="info-section">
+        <div class="accordion">
+            <button class="accordion-header" onclick="toggleAccordion('desc')">
+                <span>Descrizione del prodotto</span>
+                <span id="icon-desc">-</span>
+            </button>
+            <div id="desc" class="accordion-content open">
+                <p>Riuscirà Obi-Wan Kenobi a catturare il malvagio Generale Grievous? L’inseguimento è iniziato!</p>
+                <br>
+                <p>Obi-Wan Kenobi cavalca la sua gigantesca cavalcatura rettiliana Boga all’inseguimento del Generale Grievous. Ma anche se riuscirà a raggiungere la Wheel Bike a due modalità del Generale droni, dovrà affrontare le sue quattro micidiali spade laser!</p>
+                <br>
+                <ul>
+                    <li>Include la minifigure di <strong>Obi-Wan Kenobi</strong> e la minifigure esclusiva del <strong>Generale Grievous</strong>.</li>
+                    <li>Include la creatura <strong>Boga</strong> costruibile e la <strong>Wheel Bike</strong> trasformabile con due modalità (camminata e ruota).</li>
+                    <li>Ricrea le leggendarie scene d'azione di <em>Star Wars: Episodio III - La vendetta dei Sith</em>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <button class="accordion-header" onclick="toggleAccordion('specs')">
+                <span>Specifiche tecniche</span>
+                <span id="icon-specs">+</span>
+            </button>
+            <div id="specs" class="accordion-content">
+                <p><strong>Nome Set:</strong> Inseguimento del Generale Grievous (General Grievous Chase)</p>
+                <p><strong>Numero di identificazione:</strong> 7255</p>
+                <p><strong>Anno di pubblicazione:</strong> 2005</p>
+                <p><strong>Numero di pezzi:</strong> 111</p>
+                <p><strong>Minifigures inclusi:</strong> Obi-Wan Kenobi (con mantello in tessuto) e Generale Grievous (versione originale del 2005)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2005 - 2026 The LEGO Group. Tutti i diritti riservati.</p>
+        <p>Questo sito è una ricostruzione a scopo dimostrativo basata sull'interfaccia di LEGO.com (it-IT).</p>
+    </footer>
+
+    <!-- JavaScript interactivity -->
+    <script>
+        // Interactive Accordion function
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                content.classList.add('open');
+                icon.textContent = '-';
+            }
+        }
+
+        // Image switcher logic
+        function switchImage(index) {
+            const thumbs = document.querySelectorAll('.thumb');
+            thumbs.forEach((thumb, i) => {
+                if (i === index - 1) {
+                    thumb.classList.add('active');
+                } else {
+                    thumb.classList.remove('active');
+                }
+            });
+
+            const displayedSvg = document.getElementById('displayed-svg');
+            
+            if (index === 1) {
+                displayedSvg.innerHTML = `
+                    <rect width="100%" height="100%" fill="#EAEAEA" />
+                    <text x="50%" y="30%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#333">LEGO® Star Wars™</text>
+                    <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="#E3000B">7255</text>
+                    <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#666">General Grievous Chase</text>
+                    <circle cx="120" cy="220" r="30" fill="#006DB7" opacity="0.3" />
+                    <rect x="220" y="200" width="80" height="40" fill="#FFD500" opacity="0.5" rx="5" />
+                    <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#999">[ Scatola Originale (2005) ]</text>
+                `;
+            } else if (index === 2) {
+                displayedSvg.innerHTML = `
+                    <rect width="100%" height="100%" fill="#E3F2FD" />
+                    <path d="M 100 200 Q 200 100 300 200" stroke="#4CAF50" stroke-width="8" fill="none" />
+                    <text x="50%" y="40%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#2E7D32">Boga ( Varactyl )</text>
+                    <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#666">[ Cavalcatura di Obi-Wan Kenobi ]</text>
+                `;
+            } else if (index === 3) {
+                displayedSvg.innerHTML = `
+                    <rect width="100%" height="100%" fill="#FFF3E0" />
+                    <circle cx="200" cy="150" r="60" stroke="#FF9800" stroke-width="12" fill="none" />
+                    <text x="50%" y="70%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#E65100">Wheel Bike del Cenerale Grievous</text>
+                    <text x="50%" y="85%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#666">[ Modalità Veicolo / Camminatore ]</text>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
