@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone Scout Walker™ 7250 | Star Wars™ | LEGO® Official Shop IT</title>
+    <link rel="shortcut icon" href="https://www.lego.com/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #2c2c2c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        @media (min-width: 640px) {
+            .product-card {
+                flex-direction: row;
+            }
+        }
+
+        .product-image {
+            background-color: #f0f0f0;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .badge-retired {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background-color: #e53238;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .product-details {
+            flex: 1;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .theme-tag {
+            color: #d11013;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .product-title {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+
+        .item-number {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+            border-top: 1px solid #eeeeee;
+            border-bottom: 1px solid #eeeeee;
+            padding: 16px 0;
+        }
+
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spec-label {
+            font-size: 12px;
+            color: #666666;
+            text-transform: uppercase;
+        }
+
+        .spec-value {
+            font-size: 16px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #484848;
+            margin-bottom: 24px;
+        }
+
+        .status-button {
+            width: 100%;
+            padding: 14px;
+            background-color: #e0e0e0;
+            color: #666666;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: not-allowed;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <article class="product-card">
+        <div class="product-image">
+            <span class="badge-retired">Prodotto fuori produzione</span>
+            <img src="https://images.brickset.com/sets/images/7250-1.jpg" alt="LEGO Star Wars Clone Scout Walker 7250">
+        </div>
+
+        <div class="product-details">
+            <div>
+                <div class="theme-tag">Star Wars™</div>
+                <h1 class="product-title">Clone Scout Walker™</h1>
+                <div class="item-number">Articolo #7250</div>
+
+                <div class="spec-grid">
+                    <div class="spec-item">
+                        <span class="spec-label">Età</span>
+                        <span class="spec-value">7+</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Pezzi</span>
+                        <span class="spec-value">108</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Minifigure</span>
+                        <span class="spec-value">1</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">Anno di uscita</span>
+                        <span class="spec-value">2005</span>
+                    </div>
+                </div>
+
+                <p class="description">
+                    Pattuglia i pianeti della galassia con il Clone Scout Walker! Questo iconico camminatore AT-RT dell’<i>Episodio III</i> ha gambe snodabili e una torretta girevole per difendere la Repubblica. Include la minifigura esclusiva del Clone Trooper da ricognizione.
+                </p>
+            </div>
+
+            <button class="status-button" disabled>Non più disponibile</button>
+        </div>
+    </article>
+
+</body>
+</html>
