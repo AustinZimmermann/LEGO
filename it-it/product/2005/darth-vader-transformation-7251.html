@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La trasformazione di Darth Vader™ 7251 | Star Wars™ | LEGO® Official Shop IT</title>
+  <link rel="shortcut icon" href="https://www.lego.com/favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --lego-yellow: #ffcf00;
+      --lego-red: #e3000b;
+      --lego-dark: #121212;
+      --lego-gray-light: #f8f8f8;
+      --lego-gray-border: #e0e0e0;
+      --text-main: #2c2c2c;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cera Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Top Utility Bar */
+    .utility-bar {
+      background-color: #202020;
+      color: #fff;
+      padding: 8px 24px;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .utility-bar span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Primary Navigation */
+    header {
+      background-color: var(--lego-yellow);
+      border-bottom: 3px solid var(--lego-red);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: var(--lego-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: -1px;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    /* Main Product Layout */
+    main {
+      max-width: 1200px;
+      margin: 24px auto;
+      background: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      flex: 1;
+    }
+
+    .breadcrumb {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: #006db7;
+      text-decoration: none;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Product Gallery */
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .main-stage {
+      width: 100%;
+      height: 380px;
+      background-color: var(--lego-gray-light);
+      border: 1px solid var(--lego-gray-border);
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .render-box {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .render-box svg {
+      width: 180px;
+      height: 180px;
+    }
+
+    .status-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background-color: var(--lego-dark);
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* Product Details & Purchase Controls */
+    .details-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .theme-tag {
+      font-size: 14px;
+      font-weight: bold;
+      color: #d9381e;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: #000;
+      line-height: 1.2;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      background: var(--lego-gray-light);
+      border: 1px solid var(--lego-gray-border);
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .price-box {
+      margin: 12px 0;
+    }
+
+    .old-price {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .notice-retired {
+      background-color: #fff3cd;
+      border: 1px solid #ffeeba;
+      color: #856404;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .action-btn {
+      background-color: #ccc;
+      color: #666;
+      border: none;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: not-allowed;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* Description Section */
+    .description-section {
+      margin-top: 40px;
+      border-top: 1px solid var(--lego-gray-border);
+      padding-top: 24px;
+    }
+
+    .description-section h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .description-section p {
+      line-height: 1.6;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .minifigs-list {
+      margin-top: 16px;
+      list-style-type: square;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    /* Interactive Toy Simulator Section */
+    .interactive-section {
+      margin-top: 40px;
+      background: #111;
+      color: #fff;
+      padding: 24px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .interactive-section h3 {
+      color: var(--lego-yellow);
+      margin-bottom: 12px;
+    }
+
+    .transformation-stage {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin: 20px 0;
+      min-height: 120px;
+    }
+
+    .fig-card {
+      background: #222;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #444;
+      width: 140px;
+      transition: all 0.3s ease;
+    }
+
+    .fig-card.active {
+      border-color: var(--lego-yellow);
+      box-shadow: 0 0 10px rgba(255, 207, 0, 0.5);
+    }
+
+    .transform-btn {
+      background: var(--lego-red);
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-weight: bold;
+      font-size: 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .transform-btn:hover {
+      background: #b30008;
+    }
+
+    footer {
+      background: var(--lego-dark);
+      color: #fff;
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Utility Header -->
+  <div class="utility-bar">
+    <span><span>🇮🇹</span> Italia (it-IT)</span>
+    <span>Sito Ufficiale LEGO® - Archivio Storico Prodotti</span>
+  </div>
+
+  <!-- Main Navigation -->
+  <header>
+    <div class="nav-brand">
+      <div class="logo">LEGO</div>
+      <ul class="nav-links">
+        <li><a href="#">Prodotti</a></li>
+        <li><a href="#">Temi</a></li>
+        <li><a href="#">Offerte</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Product Page Content -->
+  <main>
+    <!-- Breadcrumb Navigation -->
+    <nav class="breadcrumb">
+      <a href="#">Home</a> &gt; <a href="#">Set</a> &gt; <a href="#">Star Wars™</a> &gt; <a href="#">Episode III</a> &gt; 7251
+    </nav>
+
+    <div class="product-grid">
+      <!-- Product Gallery / Image Placeholder -->
+      <div class="gallery-container">
+        <div class="main-stage">
+          <span class="status-badge">Fuori Produzione</span>
+          <div class="render-box">
+            <!-- Graphical representation of Set 7251 -->
+            <svg viewBox="0 0 100 100">
+              <rect x="10" y="70" width="80" height="15" fill="#555" rx="2"/>
+              <circle cx="50" cy="50" r="25" fill="#777" />
+              <!-- Bed / Table -->
+              <rect x="30" y="45" width="40" height="10" fill="#222" transform="rotate(-15 50 50)"/>
+              <!-- Droid Arm -->
+              <path d="M 20 40 L 35 45 L 30 55" stroke="#aaa" stroke-width="3" fill="none"/>
+            </svg>
+            <p style="font-size: 12px; color: #666; margin-top: 10px;">Set 7251 - La Trasformazione di Darth Vader™ (2005)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Information -->
+      <div class="details-container">
+        <span class="theme-tag">Star Wars™ • Episodio III</span>
+        <h1>La trasformazione di Darth Vader™</h1>
+        
+        <div class="meta-pills">
+          <span class="pill">Articolo: <strong>7251</strong></span>
+          <span class="pill">Età: <strong>6+</strong></span>
+          <span class="pill">Pezzi: <strong>53</strong></span>
+          <span class="pill">Anno: <strong>2005</strong></span>
+        </div>
+
+        <div class="price-box">
+          <span class="old-price">6,99 €</span>
+        </div>
+
+        <div class="notice-retired">
+          <strong>Prodotto Non Più Disponibile</strong><br>
+          Questo set LEGO® del 2005 è fuori produzione ed è stato ritirato dal catalogo ufficiale.
+        </div>
+
+        <button class="action-btn" disabled>Esaurito / Fuori Catalogo</button>
+      </div>
+    </div>
+
+    <!-- Set Description -->
+    <section class="description-section">
+      <h2>Descrizione del Prodotto</h2>
+      <p>
+        Rivivi la nascita del più grande cattivo della galassia con il set <strong>LEGO® Star Wars 7251 - La trasformazione di Darth Vader™</strong>!
+        Ferito in battaglia su Mustafar, Anakin Skywalker viene adagiato sul tavolo medico per indossare la leggendaria armatura nera e completare la sua trasformazione nell’Oscuro Signore dei Sith, Darth Vader.
+      </p>
+      
+      <p style="margin-top: 12px;"><strong>Il set include:</strong></p>
+      <ul class="minifigs-list">
+        <li>Minifigure di Anakin Skywalker™ (versione ferito/bruciato)</li>
+        <li>Minifigure di Darth Vader™ (senza mantello)</li>
+        <li>Droide Medico FX-6 assemblabile con accessori</li>
+        <li>Tavolo di trasformazione ruotabile per rivelare l'Oscuro Signore dei Sith</li>
+      </ul>
+    </section>
+
+    <!-- Interactive JS Feature -->
+    <section class="interactive-section">
+      <h3>Simulatore del Meccanismo di Gioco (2005)</h3>
+      <p style="font-size: 13px; color: #ccc;">Ruota la piattaforma per trasformare Anakin in Darth Vader!</p>
+
+      <div class="transformation-stage">
+        <div id="card-anakin" class="fig-card active">
+          <div style="font-size: 24px;">🩹</div>
+          <strong style="font-size: 12px;">Anakin Skywalker</strong>
+        </div>
+        <div style="font-size: 20px; color: var(--lego-yellow);">➔</div>
+        <div id="card-vader" class="fig-card">
+          <div style="font-size: 24px;">🦹‍♂️</div>
+          <strong style="font-size: 12px;">Darth Vader</strong>
+        </div>
+      </div>
+
+      <button class="transform-btn" onclick="toggleTransformation()">Ruota Tavolo Medico</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>LEGO, il logo LEGO e la Minifigure sono marchi registrati del LEGO Group. ©2005-2026 The LEGO Group.</p>
+    <p style="margin-top: 8px; color: #888;">Ricostruzione archivio storico LEGO.com (it-IT) per il Set 7251.</p>
+  </footer>
+
+  <!-- JavaScript Functionality -->
+  <script>
+    let isVader = false;
+
+    function toggleTransformation() {
+      isVader = !isVader;
+      const cardAnakin = document.getElementById('card-anakin');
+      const cardVader = document.getElementById('card-vader');
+
+      if (isVader) {
+        cardAnakin.classList.remove('active');
+        cardVader.classList.add('active');
+      } else {
+        cardVader.classList.remove('active');
+        cardAnakin.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
