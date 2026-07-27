@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Истребитель V-wing™ 6205 | Star Wars™ | Официальный магазин LEGO® RU</title>
+    <link rel="shortcut icon" href="https://www.lego.com/favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --lego-yellow: #ffcf00;
+            --lego-red: #e3000b;
+            --lego-black: #111111;
+            --lego-gray: #f8f8f8;
+            --lego-border: #e0e0e0;
+            --lego-text-dark: #2c2c2c;
+            --lego-blue-btn: #006db7;
+            --lego-blue-hover: #004d80;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: var(--lego-text-dark);
+            line-height: 1.5;
+        }
+
+        /* Top Bar & Header */
+        header {
+            background-color: var(--lego-yellow);
+            border-bottom: 2px solid #e0b000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: var(--lego-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 4px;
+            letter-spacing: -1px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+
+        .theme-tag {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            color: #000;
+        }
+
+        nav a {
+            color: var(--lego-black);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            margin-left: 20px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 15px auto 0;
+            padding: 0 20px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Product Layout */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Gallery */
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-image-container {
+            position: relative;
+            background-color: var(--lego-gray);
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--lego-border);
+        }
+
+        .main-image {
+            max-width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .badge-retired {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #666;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+        }
+
+        .thumb {
+            width: 70px;
+            height: 70px;
+            border: 2px solid var(--lego-border);
+            border-radius: 6px;
+            cursor: pointer;
+            padding: 5px;
+            background: #fff;
+            object-fit: contain;
+        }
+
+        .thumb.active {
+            border-color: var(--lego-blue-btn);
+        }
+
+        /* Product Details */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 5px;
+        }
+
+        .set-number {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .specs-grid {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-top: 1px solid var(--lego-border);
+            border-bottom: 1px solid var(--lego-border);
+            margin-bottom: 20px;
+        }
+
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spec-label {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .spec-value {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .price-box {
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #111;
+        }
+
+        .status-text {
+            color: #d9363e;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            border: none;
+            transition: background 0.2s;
+        }
+
+        .btn-primary {
+            background-color: #e0e0e0;
+            color: #777;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background-color: var(--lego-yellow);
+            color: #000;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f0c000;
+        }
+
+        .description {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features-section {
+            grid-column: 1 / -1;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--lego-border);
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .features-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #444;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--lego-black);
+            color: #fff;
+            margin-top: 60px;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: var(--lego-yellow);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="#" class="logo">LEGO</a>
+                <span class="theme-tag">STAR WARS™</span>
+            </div>
+            <nav>
+                <a href="#details">Описание</a>
+                <a href="#specs">Характеристики</a>
+                <a href="#instructions">Инструкции</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumb">
+        <a href="#">Главная</a> &gt; 
+        <a href="#">Темы</a> &gt; 
+        <a href="#">Star Wars™</a> &gt; 
+        <a href="#">Эпизод III</a> &gt; 
+        Истребитель V-wing™ (6205)
+    </div>
+
+    <!-- Product Container -->
+    <main>
+        <!-- Product Images -->
+        <section class="product-gallery">
+            <div class="main-image-container">
+                <span class="badge-retired">Снято с производства</span>
+                <img id="current-img" class="main-image" src="https://images.brickset.com/sets/images/6205-1.jpg" alt="LEGO Star Wars 6205 V-wing Fighter">
+            </div>
+            <div class="thumbnails">
+                <img class="thumb active" src="https://images.brickset.com/sets/images/6205-1.jpg" alt="Вид спереди" onclick="setImage(this.src, this)">
+                <img class="thumb" src="https://img.brickowl.com/files/large/lego-v-wing-fighter-set-6205-1-15.jpg" alt="Минифигурки" onclick="setImage(this.src, this)">
+            </div>
+        </section>
+
+        <!-- Product Details -->
+        <section class="product-details">
+            <h1 class="product-title">Истребитель V-wing™</h1>
+            <div class="set-number">Артикул: 6205 | Год выпуска: 2006</div>
+
+            <div class="specs-grid" id="specs">
+                <div class="spec-item">
+                    <span class="spec-label">Возраст</span>
+                    <span class="spec-value">6-12</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Детали</span>
+                    <span class="spec-value">118</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">Минифигурки</span>
+                    <span class="spec-value">1</span>
+                </div>
+            </div>
+
+            <div class="price-box">
+                <div class="price">10.00 $ <small style="font-size: 14px; color: #777;">(Рекомендованная цена 2006 г.)</small></div>
+                <div class="status-text">Товар снят с продажи на LEGO.com</div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-primary" disabled>Нет в наличии</button>
+                <a href="https://www.lego.com/ru-ru/service/buildinginstructions/6205" target="_blank" class="btn btn-secondary" style="text-decoration: none;">
+                    📄 Скачать инструкцию (PDF)
+                </a>
+            </div>
+
+            <div class="description" id="details">
+                <p>Приготовьтесь к битве за Республику! Звездный истребитель V-wing готов защищать Галактику с помощью крыльев, трансформирующихся в боевой режим, открывающейся кабины и встроенного астроида.</p>
+            </div>
+        </section>
+
+        <!-- Features & Info -->
+        <section class="features-section">
+            <h2 class="section-title">Особенности набора</h2>
+            <ul class="features-list">
+                <li>В набор входит минифигурка пилота клонов (Clone Pilot) с бластером и шлемом, а также голова астродроида Q7.</li>
+                <li>Складные крылья позволяют легко переключаться между режимами полета и атаки.</li>
+                <li>Открывающаяся кабина с местом для минифигурки пилота.</li>
+                <li>Воссоздайте легендарные сцены из фильма <i>«Звёздные войны. Эпизод III: Месть ситхов»</i>.</li>
+                <li>Длина корабля в собранном виде составляет около 15 см.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2006–2026 The LEGO Group. Все права защищены.</p>
+        <p style="margin-top: 5px; color: #aaa;">LEGO, логотип LEGO и концепция минифигурок являются товарными знаками The LEGO Group.</p>
+    </footer>
+
+    <!-- Interactive JS -->
+    <script>
+        function setImage(src, element) {
+            document.getElementById('current-img').src = src;
+            const thumbs = document.querySelectorAll('.thumb');
+            thumbs.forEach(thumb => thumb.classList.remove('active'));
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
