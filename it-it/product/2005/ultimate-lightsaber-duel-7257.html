@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duello Finale con Spade Laser 7257 | LEGO® Star Wars™ | LEGO.com IT</title>
+  <link rel="icon" href="https://www.lego.com/favicon.ico">
+  <style>
+    /* CSS Reset & General Rules */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cera Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f8f8f8;
+      color: #2c2c2c;
+      line-height: 1.5;
+    }
+
+    /* LEGO Brand Header Bar */
+    header {
+      background-color: #ffcf00;
+      border-bottom: 3px solid #e3000b;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .top-bar {
+      background-color: #000;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 6px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 15px;
+    }
+
+    .main-nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .lego-logo {
+      width: 50px;
+      height: 50px;
+      background-color: #e3000b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.4rem;
+      border: 2px solid #000;
+      box-shadow: 2px 2px 0px #000;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      padding: 5px 0;
+    }
+
+    .nav-links a:hover {
+      border-bottom: 2px solid #e3000b;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .btn-icon {
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 5px;
+    }
+
+    /* Retired Banner */
+    .retired-banner {
+      background-color: #2c2c2c;
+      color: #fff;
+      text-align: center;
+      padding: 8px 15px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .retired-banner span {
+      background-color: #e3000b;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-left: 8px;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      max-width: 1200px;
+      margin: 15px auto 0;
+      padding: 0 20px;
+      font-size: 0.8rem;
+      color: #666;
+    }
+
+    .breadcrumbs a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .product-detail {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    @media (min-width: 850px) {
+      .product-detail {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    /* Media Gallery */
+    .gallery-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .main-image-box {
+      position: relative;
+      background-color: #0b0e14;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 4/3;
+      border: 1px solid #e0e0e0;
+    }
+
+    .main-image-box svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .lightsaber-glow-toggle {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(227, 0, 11, 0.9);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.8rem;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+      transition: all 0.2s ease;
+    }
+
+    .lightsaber-glow-toggle:hover {
+      transform: scale(1.05);
+      background: #ff0000;
+    }
+
+    .thumbnail-list {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+    }
+
+    .thumb-btn {
+      width: 70px;
+      height: 70px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      background: #f0f0f0;
+      cursor: pointer;
+      overflow: hidden;
+      padding: 2px;
+      flex-shrink: 0;
+    }
+
+    .thumb-btn.active {
+      border-color: #e3000b;
+    }
+
+    /* Product Info Panel */
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .theme-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      color: #000;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+
+    .product-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #000;
+      line-height: 1.2;
+    }
+
+    .set-meta {
+      display: flex;
+      gap: 15px;
+      font-size: 0.85rem;
+      color: #555;
+      font-weight: 600;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 12px;
+    }
+
+    /* Key Specs Badges */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 10px 0;
+      background: #f9f9f9;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+    }
+
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-right: 1px solid #e0e0e0;
+    }
+
+    .spec-item:last-child {
+      border-right: none;
+    }
+
+    .spec-icon {
+      font-size: 1.2rem;
+      margin-bottom: 2px;
+    }
+
+    .spec-value {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #000;
+    }
+
+    .spec-label {
+      font-size: 0.7rem;
+      color: #666;
+      text-transform: uppercase;
+    }
+
+    .price-box {
+      margin: 10px 0;
+    }
+
+    .old-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #000;
+    }
+
+    .retired-status {
+      color: #d9251d;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-top: 4px;
+    }
+
+    /* Action Buttons */
+    .action-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-disabled {
+      width: 100%;
+      padding: 15px;
+      background-color: #cccccc;
+      color: #666666;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: not-allowed;
+      text-align: center;
+    }
+
+    .btn-wishlist {
+      width: 100%;
+      padding: 12px;
+      background-color: transparent;
+      color: #000;
+      border: 2px solid #000;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-wishlist:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Highlight Feature Box */
+    .feature-highlight {
+      background-color: #fff9e6;
+      border: 1px solid #ffe082;
+      border-radius: 6px;
+      padding: 12px 15px;
+      font-size: 0.85rem;
+      color: #5c4100;
+    }
+
+    /* Content Tabs / Description */
+    .details-section {
+      margin-top: 30px;
+      background: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ffcf00;
+      padding-bottom: 5px;
+      display: inline-block;
+    }
+
+    .description-text p {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .feature-list {
+      margin-left: 20px;
+      margin-bottom: 15px;
+      font-size: 0.9rem;
+    }
+
+    .feature-list li {
+      margin-bottom: 6px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c2c2c;
+      color: #fff;
+      margin-top: 50px;
+      padding: 40px 20px 20px;
+      font-size: 0.85rem;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      border-bottom: 1px solid #444;
+      padding-bottom: 30px;
+    }
+
+    .footer-col h4 {
+      color: #ffcf00;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      text-align: center;
+      color: #888;
+      font-size: 0.75rem;
+    }
+
+    /* Light-Up Blade Glow Effect in SVG */
+    .blade-glow-red {
+      filter: drop-shadow(0px 0px 8px #ff0000) drop-shadow(0px 0px 15px #ff4444);
+      transition: filter 0.3s;
+    }
+    .blade-glow-blue {
+      filter: drop-shadow(0px 0px 8px #00aaff) drop-shadow(0px 0px 15px #00ffff);
+      transition: filter 0.3s;
+    }
+    .glow-off {
+      filter: none !important;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div>LEGO® Italia (it-IT) — Servizio Clienti Ufficiale</div>
+    <div>
+      <a href="#">Spedizione</a>
+      <a href="#">Istruzioni di montaggio</a>
+      <a href="#">Trova un LEGO® Store</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header>
+    <div class="main-nav">
+      <div class="logo-container">
+        <a href="#" class="lego-logo" title="LEGO.com Italia">LEGO</a>
+        <ul class="nav-links">
+          <li><a href="#">Prodotti</a></li>
+          <li><a href="#">Temi</a></li>
+          <li><a href="#">Offerte</a></li>
+          <li><a href="#">Esclusivi</a></li>
+        </ul>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-icon" title="Cerca">🔍</button>
+        <button class="btn-icon" title="Preferiti">❤️</button>
+        <button class="btn-icon" title="Carrello">🛒</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Retired Product Banner -->
+  <div class="retired-banner">
+    Questo set del 2005 non è più in produzione su LEGO.com <span>Prodotto Passato</span>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs">
+    <a href="#">Home</a> &gt; 
+    <a href="#">Temi</a> &gt; 
+    <a href="#">Star Wars™</a> &gt; 
+    <a href="#">Episodio III</a> &gt; 
+    <span>Duello Finale con Spade Laser (7257)</span>
+  </nav>
+
+  <!-- Main Product Detail -->
+  <main class="container">
+    <div class="product-detail">
+      
+      <!-- Left Column: Gallery -->
+      <div class="gallery-container">
+        <div class="main-image-box" id="mainDisplay">
+          <!-- Interactive SVG representation of Set 7257 -->
+          <svg viewBox="0 0 600 450" id="svgCanvas">
+            <!-- Background: Mustafar Lava Planet theme -->
+            <rect width="600" height="450" fill="#120607"/>
+            
+            <!-- Lava Flow Effect -->
+            <path d="M 0,320 Q 150,280 300,340 T 600,310 L 600,450 L 0,450 Z" fill="#e63900"/>
+            <path d="M 0,360 Q 200,320 400,380 T 600,350 L 600,450 L 0,450 Z" fill="#ff9900"/>
+            <circle cx="120" cy="380" r="15" fill="#ffcc00" opacity="0.6"/>
+            <circle cx="480" cy="360" r="22" fill="#ffcc00" opacity="0.5"/>
+
+            <!-- Set Title in Graphic -->
+            <text x="300" y="40" fill="#ffe600" font-family="sans-serif" font-weight="900" font-size="22" text-anchor="middle" letter-spacing="2">STAR WARS</text>
+            <text x="300" y="62" fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="12" text-anchor="middle">EPISODE III — REVENGE OF THE SITH</text>
+
+            <!-- Mining Platform Structure (Set 7257 Build) -->
+            <rect x="100" y="240" width="400" height="20" fill="#33333f" rx="3"/>
+            <rect x="80" y="260" width="440" height="15" fill="#22222a"/>
+            <rect x="150" y="275" width="30" height="60" fill="#1a1a20"/>
+            <rect x="420" y="275" width="30" height="60" fill="#1a1a20"/>
+            
+            <!-- Rotating Spinner Platforms (Play Mechanism) -->
+            <circle cx="210" cy="240" r="45" fill="#444455" stroke="#666677" stroke-width="3"/>
+            <circle cx="390" cy="240" r="45" fill="#444455" stroke="#666677" stroke-width="3"/>
+
+            <!-- Control Handles (Mechanism to turn minifigs) -->
+            <path d="M 210,285 L 210,310" stroke="#777" stroke-width="6"/>
+            <circle cx="210" cy="315" r="10" fill="#e3000b"/>
+            
+            <path d="M 390,285 L 390,310" stroke="#777" stroke-width="6"/>
+            <circle cx="390" cy="315" r="10" fill="#e3000b"/>
+
+            <!-- Minifigure 1: Anakin Skywalker / Darth Vader (Light-Up Red Lightsaber) -->
+            <g id="minifigAnakin" transform="translate(190, 140)">
+              <!-- Torso & Cloak -->
+              <path d="M 10,50 L 30,50 L 35,85 L 5,85 Z" fill="#111115"/>
+              <rect x="12" y="85" width="7" height="25" fill="#15151a"/>
+              <rect x="21" y="85" width="7" height="25" fill="#15151a"/>
+              <!-- Head -->
+              <circle cx="20" cy="36" r="11" fill="#f2c89d"/>
+              <!-- Hair -->
+              <path d="M 10,32 Q 20,20 30,32 Q 25,24 15,28 Z" fill="#5a3d28"/>
+              <!-- Arm & Light-Up Hand Mechanism -->
+              <path d="M 30,52 L 48,58" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+              <!-- Lightsaber Hilt (Press down head mechanism) -->
+              <rect x="46" y="48" width="5" height="18" fill="#aaa" transform="rotate(25 46 48)"/>
+              <!-- LIGHT-UP RED BLADE -->
+              <line x1="53" y1="46" x2="95" y2="15" stroke="#ff0033" stroke-width="5" stroke-linecap="round" id="redBlade" class="blade-glow-red"/>
+            </g>
+
+            <!-- Minifigure 2: Obi-Wan Kenobi (Light-Up Blue Lightsaber) -->
+            <g id="minifigObiWan" transform="translate(370, 140)">
+              <!-- Torso & Robes -->
+              <path d="M 10,50 L 30,50 L 35,85 L 5,85 Z" fill="#8c6f4d"/>
+              <rect x="12" y="85" width="7" height="25" fill="#4a3b2c"/>
+              <rect x="21" y="85" width="7" height="25" fill="#4a3b2c"/>
+              <!-- Head -->
+              <circle cx="20" cy="36" r="11" fill="#f2c89d"/>
+              <!-- Hair & Beard -->
+              <path d="M 9,34 Q 20,22 31,34 Z" fill="#a66d3b"/>
+              <path d="M 12,42 Q 20,48 28,42" fill="none" stroke="#a66d3b" stroke-width="2"/>
+              <!-- Arm -->
+              <path d="M 10,52 L -8,58" stroke="#8c6f4d" stroke-width="6" stroke-linecap="round"/>
+              <!-- Lightsaber Hilt -->
+              <rect x="-12" y="48" width="5" height="18" fill="#aaa" transform="rotate(-25 -12 48)"/>
+              <!-- LIGHT-UP BLUE BLADE -->
+              <line x1="-15" y1="48" x2="-58" y2="18" stroke="#00d2ff" stroke-width="5" stroke-linecap="round" id="blueBlade" class="blade-glow-blue"/>
+            </g>
+
+            <!-- Vintage Box Art Stamp -->
+            <rect x="20" y="20" width="60" height="30" fill="#e3000b" rx="3"/>
+            <text x="50" y="40" fill="#fff" font-family="sans-serif" font-weight="900" font-size="14" text-anchor="middle">2005</text>
+          </svg>
+
+          <button class="lightsaber-glow-toggle" onclick="toggleLightsabers()">
+            ⚡ Premi Teste Minifigure (Luce ON/OFF)
+          </button>
+        </div>
+
+        <div class="thumbnail-list">
+          <button class="thumb-btn active" onclick="setGalleryView('main')">
+            <svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#120607"/><circle cx="50" cy="50" r="30" fill="#ff3300"/></svg>
+          </button>
+          <button class="thumb-btn" onclick="setGalleryView('minifigs')">
+            <svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#222"/><circle cx="35" cy="40" r="15" fill="#f2c89d"/><circle cx="65" cy="40" r="15" fill="#f2c89d"/></svg>
+          </button>
+          <button class="thumb-btn" onclick="setGalleryView('box')">
+            <svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#e3000b"/><text x="50" y="55" fill="#fff" font-size="20" font-weight="bold" text-anchor="middle">BOX</text></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Column: Info & Purchase/Retired Block -->
+      <div class="product-info">
+        <div class="theme-badge">
+          <span>LEGO® STAR WARS™</span> • <span>EPISODIO III</span>
+        </div>
+
+        <h1 class="product-title">Duello Finale con Spade Laser</h1>
+        
+        <div class="set-meta">
+          <span>Art. 7257</span>
+          <span>•</span>
+          <span>Anno: 2005</span>
+          <span>•</span>
+          <span>Valutazione: ★★★★★ (4.8/5)</span>
+        </div>
+
+        <!-- Spec Badges -->
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-icon">👶</span>
+            <span class="spec-value">8-12</span>
+            <span class="spec-label">Età</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">🧩</span>
+            <span class="spec-value">282</span>
+            <span class="spec-label">Pezzi</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-icon">👤</span>
+            <span class="spec-value">2</span>
+            <span class="spec-label">Minifigures</span>
+          </div>
+        </div>
+
+        <div class="price-box">
+          <div class="old-price">34,99 € <span style="font-size:0.8rem; font-weight:normal; color:#666;">(Prezzo di listino originale 2005)</span></div>
+          <div class="retired-status">⚠️ Questo articolo è fuori produzione (Retired Product).</div>
+        </div>
+
+        <div class="feature-highlight">
+          <strong>✨ Caratteristica Speciale Vintage 2005:</strong> Include le storiche minifigure di Anakin Skywalker e Obi-Wan Kenobi dotate di <em>spade laser luminose</em> (Light-up Lightsabers) che si illuminano premendo la testa!
+        </div>
+
+        <div class="action-group">
+          <button class="btn-disabled" disabled>Non disponibile su LEGO.com</button>
+          <button class="btn-wishlist" onclick="alert('Set 7257 aggiunto alla tua Lista dei Desideri da Collezione!')">❤️ Aggiungi alla Lista dei Desideri</button>
+        </div>
+
+        <div style="font-size: 0.8rem; color: #666; margin-top: 10px;">
+          Cerchi le istruzioni? Puoi scaricare gratuitamente il manuale PDF originale del set 7257 nella sezione Assistenza.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Details and Description Section -->
+    <div class="details-section">
+      <h2 class="section-title">Descrizione del Prodotto</h2>
+      <div class="description-text">
+        <p>
+          Rivivi la drammatica resa dei conti finale sul pianeta vulcanico Mustafar con il set <strong>LEGO® Star Wars™ 7257 - Duello Finale con Spade Laser (Ultimate Lightsaber Duel)</strong>! Rilasciato nel 2005 in occasione dell’uscita cinematografica di <em>Star Wars: Episodio III – La vendetta dei Sith</em>, questo iconico set riproduce il leggendario scontro tra il Maestro Jedi Obi-Wan Kenobi e il suo ex apprendista Anakin Skywalker.
+        </p>
+        <p>
+          Il set presenta una piattaforma di duello snodabile situata sopra i fiumi di lava di Mustafar, completa di ingranaggi ruotabili manualmente per far duellare i due personaggi in frenetici combattimenti con le spade laser.
+        </p>
+        
+        <h3 style="margin: 15px 0 10px; font-size: 1.1rem;">Caratteristiche del set:</h3>
+        <ul class="feature-list">
+          <li><strong>Minifigure Light-up Ufficiali:</strong> Include le rarissime minifigure di Anakin Skywalker e Obi-Wan Kenobi con spade laser traslucide integrate che si illuminano tramite LED integrato al torso quando si preme il capo del personaggio.</li>
+          <li><strong>Meccanismo di combattimento:</strong> Piattaforme girevoli e leve di comando per ricreare i duelli acclamati del film.</li>
+          <li><strong>Dettagli del pianeta Mustafar:</strong> Strutture della stazione mineraria, passerelle di servizio ed elementi fiammeggianti di lava.</li>
+          <li><strong>Pezzi totali:</strong> 282 elementi LEGO®.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Specifications / Metadata Box -->
+    <div class="details-section" style="margin-top:20px;">
+      <h2 class="section-title">Dettagli e Specifiche Tecniche</h2>
+      <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+        <tr style="border-bottom:1px solid #eee;">
+          <td style="padding:8px; font-weight:bold; width:30%;">Codice Prodotto</td>
+          <td style="padding:8px;">7257</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee;">
+          <td style="padding:8px; font-weight:bold;">Nome Originale</td>
+          <td style="padding:8px;">Ultimate Lightsaber Duel</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee;">
+          <td style="padding:8px; font-weight:bold;">Linea / Tema</td>
+          <td style="padding:8px;">LEGO® Star Wars™ / Episode III Revenge of the Sith</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee;">
+          <td style="padding:8px; font-weight:bold;">Anno di Rilascio</td>
+          <td style="padding:8px;">2005 (Aprile 2005 - Dicembre 2005)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee;">
+          <td style="padding:8px; font-weight:bold;">Batterie richieste</td>
+          <td style="padding:8px;">Batterie a bottone integrate non sostituibili per le minifigure Light-Up</td>
+        </tr>
+      </table>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Chi siamo</h4>
+        <ul>
+          <li><a href="#">Il Groupo LEGO</a></li>
+          <li><a href="#">Lego® News</a></li>
+          <li><a href="#">Sostenibilità</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Supporto</h4>
+        <ul>
+          <li><a href="#">Contattaci</a></li>
+          <li><a href="#">Istruzioni di montaggio 7257</a></li>
+          <li><a href="#">Pezzi di ricambio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Attrazioni</h4>
+        <ul>
+          <li><a href="#">LEGO® House</a></li>
+          <li><a href="#">I Parchi LEGOLAND®</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>LEGO, il logo LEGO, la Minifigura e le composizioni dei mattoncini sono marchi registrati di The LEGO Group. ©2005-2026 The LEGO Group. Tutti i diritti riservati.</p>
+      <p>© & ™ Lucasfilm Ltd. Star Wars™</p>
+    </div>
+  </footer>
+
+  <script>
+    // State variable for lightsaber lights
+    let lightsOn = true;
+
+    function toggleLightsabers() {
+      const redBlade = document.getElementById('redBlade');
+      const blueBlade = document.getElementById('blueBlade');
+      
+      lightsOn = !lightsOn;
+      
+      if (lightsOn) {
+        redBlade.classList.remove('glow-off');
+        blueBlade.classList.remove('glow-off');
+        redBlade.classList.add('blade-glow-red');
+        blueBlade.classList.add('blade-glow-blue');
+      } else {
+        redBlade.classList.remove('blade-glow-red');
+        blueBlade.classList.remove('blade-glow-blue');
+        redBlade.classList.add('glow-off');
+        blueBlade.classList.add('glow-off');
+      }
+    }
+
+    function setGalleryView(view) {
+      const buttons = document.querySelectorAll('.thumb-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      
+      // Highlight active thumb
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+      }
+
+      // Quick visual feedback / mode switch simulated
+      const svg = document.getElementById('svgCanvas');
+      if (view === 'minifigs') {
+        svg.style.transform = "scale(1.2)";
+        svg.style.transition = "transform 0.3s ease";
+      } else if (view === 'box') {
+        svg.style.transform = "scale(0.95)";
+        svg.style.transition = "transform 0.3s ease";
+      } else {
+        svg.style.transform = "scale(1)";
+        svg.style.transition = "transform 0.3s ease";
+      }
+    }
+  </script>
+</body>
+</html>
