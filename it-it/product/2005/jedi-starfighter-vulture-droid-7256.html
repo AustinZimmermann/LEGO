@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jedi Starfighter™ & Droid-Avvoltoio™ 7256 | Star Wars™ | LEGO® Official Shop IT</title>
+    <!-- Favicon LEGO ufficiale -->
+    <link rel="icon" href="https://www.lego.com/favicon.ico" type="image/x-icon">
+    
+    <style>
+        :root {
+            --lego-yellow: #FFD500;
+            --lego-red: #E3000B;
+            --lego-dark-red: #B30006;
+            --lego-blue: #006CB7;
+            --lego-black: #111111;
+            --lego-gray-bg: #F8F8F8;
+            --lego-gray-border: #E0E0E0;
+            --lego-text-muted: #666666;
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: #FFFFFF;
+            color: var(--lego-black);
+            line-height: 1.5;
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--lego-yellow);
+            border-bottom: 2px solid #E5BE00;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .top-bar {
+            background-color: var(--lego-black);
+            color: #FFF;
+            text-align: center;
+            padding: 6px 12px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .logo-box {
+            background-color: var(--lego-red);
+            padding: 8px 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 2px;
+        }
+
+        .logo-text {
+            color: #FFF;
+            font-weight: 900;
+            font-size: 1.8rem;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 0px #000, -1px -1px 0px #000, 1px -1px 0px #000, -1px 1px 0px #000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--lego-black);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: var(--lego-red);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .wishlist-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 15px auto 0;
+            padding: 0 20px;
+            font-size: 0.85rem;
+            color: var(--lego-text-muted);
+        }
+
+        .breadcrumb a {
+            color: var(--lego-text-muted);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* MAIN LAYOUT */
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .product-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .product-hero {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* GALLERY */
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-image-box {
+            background-color: var(--lego-gray-bg);
+            border: 1px solid var(--lego-gray-border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            min-height: 380px;
+            position: relative;
+        }
+
+        .vintage-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: #2E7D32;
+            color: #FFF;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .thumbnail-list {
+            display: flex;
+            gap: 10px;
+        }
+
+        .thumb {
+            width: 70px;
+            height: 70px;
+            border: 2px solid var(--lego-gray-border);
+            border-radius: 6px;
+            background-color: var(--lego-gray-bg);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.2s;
+        }
+
+        .thumb.active, .thumb:hover {
+            border-color: var(--lego-blue);
+        }
+
+        /* PRODUCT DETAILS */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .theme-logo {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--lego-red);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .product-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--lego-text-muted);
+        }
+
+        .rating {
+            color: #FFB400;
+            font-weight: bold;
+        }
+
+        .specs-pills {
+            display: flex;
+            gap: 12px;
+            margin: 10px 0;
+        }
+
+        .pill {
+            background-color: var(--lego-gray-bg);
+            border: 1px solid var(--lego-gray-border);
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .pill-label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--lego-text-muted);
+            text-transform: uppercase;
+        }
+
+        .pill-value {
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+
+        .retired-notice {
+            background-color: #FFF3CD;
+            border: 1px solid #FFEEBA;
+            color: #856404;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            margin: 10px 0;
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--lego-black);
+        }
+
+        .price-sub {
+            font-size: 0.8rem;
+            color: var(--lego-text-muted);
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-retired {
+            background-color: #E0E0E0;
+            color: #757575;
+            border: none;
+            padding: 14px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: not-allowed;
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background-color: #FFF;
+            border: 2px solid var(--lego-black);
+            color: var(--lego-black);
+            padding: 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--lego-gray-bg);
+        }
+
+        /* TABS / EXTRA INFO */
+        .info-tabs {
+            border-top: 1px solid var(--lego-gray-border);
+            margin-top: 40px;
+            padding-top: 30px;
+        }
+
+        .tab-headers {
+            display: flex;
+            gap: 20px;
+            border-bottom: 2px solid var(--lego-gray-border);
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            padding: 10px 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--lego-text-muted);
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+
+        .tab-btn.active {
+            color: var(--lego-black);
+            border-bottom-color: var(--lego-red);
+        }
+
+        .tab-content {
+            display: none;
+            font-size: 0.95rem;
+            color: #333;
+            max-width: 800px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-content p {
+            margin-bottom: 12px;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            background-color: var(--lego-gray-bg);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spec-title {
+            font-size: 0.8rem;
+            color: var(--lego-text-muted);
+        }
+
+        .spec-val {
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--lego-black);
+            color: #FFF;
+            margin-top: 60px;
+            padding: 40px 20px 20px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--lego-yellow);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col a {
+            color: #CCC;
+            text-decoration: none;
+            font-size: 0.85rem;
+            line-height: 2;
+        }
+
+        .footer-col a:hover {
+            color: #FFF;
+        }
+
+        .copyright {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP NOTIFICATION BAR -->
+    <div class="top-bar">
+        Spedizione gratuita per ordini superiori a €50! | Italia (IT-IT)
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo-box" title="LEGO® Official Shop">
+                <span class="logo-text">LEGO</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Set</a></li>
+                    <li><a href="#">Temi</a></li>
+                    <li><a href="#">Star Wars™</a></li>
+                    <li><a href="#">Offerte</a></li>
+                    <li><a href="#">Aiuto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="wishlist-btn" onclick="toggleWishlist()">
+                    ❤️ Preferiti (<span id="wishlist-count">0</span>)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <a href="#">Home</a> &gt; 
+        <a href="#">Temi</a> &gt; 
+        <a href="#">Star Wars™</a> &gt; 
+        <span>Jedi Starfighter™ & Droid-Avvoltoio™ (7256)</span>
+    </div>
+
+    <!-- PRODUCT HERO SECTION -->
+    <main>
+        <div class="product-hero">
+            <!-- GALLERY -->
+            <div class="gallery-container">
+                <div class="main-image-box">
+                    <span class="vintage-badge">Classico 2005</span>
+                    <div id="image-display">
+                        <!-- SVG Graphic representing 7256 Jedi Starfighter & Vulture Droid -->
+                        <svg width="320" height="240" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Accent -->
+                            <circle cx="160" cy="120" r="100" fill="#E8ECEF"/>
+                            
+                            <!-- Anakin's Yellow Jedi Starfighter (Eta-2) Mockup -->
+                            <g transform="translate(40, 50)">
+                                <!-- Main Body -->
+                                <polygon points="60,20 140,40 120,80 40,60" fill="#FFD500" stroke="#111" stroke-width="2"/>
+                                <!-- Cockpit Glass -->
+                                <ellipse cx="90" cy="45" rx="20" ry="12" fill="#006CB7" opacity="0.8"/>
+                                <!-- Wings -->
+                                <polygon points="120,40 180,10 160,50" fill="#E3000B" stroke="#111" stroke-width="2"/>
+                                <polygon points="100,70 150,110 120,80" fill="#E3000B" stroke="#111" stroke-width="2"/>
+                                <text x="50" y="100" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333">Jedi Starfighter</text>
+                            </g>
+
+                            <!-- Vulture Droid Mockup -->
+                            <g transform="translate(170, 110)">
+                                <polygon points="30,20 70,10 80,40 40,50" fill="#006CB7" stroke="#111" stroke-width="2"/>
+                                <!-- Walker legs/wings -->
+                                <path d="M 30,20 L 10,70 L 25,70 L 40,30 Z" fill="#888" stroke="#111" stroke-width="1.5"/>
+                                <path d="M 70,10 L 100,60 L 85,60 L 60,25 Z" fill="#888" stroke="#111" stroke-width="1.5"/>
+                                <text x="20" y="85" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333">Droid-Avvoltoio</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="thumbnail-list">
+                    <div class="thumb active" onclick="switchImage(1, this)">
+                        <span style="font-size:0.75rem; font-weight:bold;">Set</span>
+                    </div>
+                    <div class="thumb" onclick="switchImage(2, this)">
+                        <span style="font-size:0.75rem; font-weight:bold;">Minifig</span>
+                    </div>
+                    <div class="thumb" onclick="switchImage(3, this)">
+                        <span style="font-size:0.75rem; font-weight:bold;">Scatola</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DETAILS -->
+            <div class="product-details">
+                <span class="theme-logo">LEGO® Star Wars™ — Episodio III</span>
+                <h1 class="product-title">Jedi Starfighter™ & Droid-Avvoltoio™</h1>
+                
+                <div class="product-meta">
+                    <span>Articolo: <strong>7256</strong></span>
+                    <span class="rating">★★★★★ 4.9 (48 recensioni)</span>
+                </div>
+
+                <div class="specs-pills">
+                    <div class="pill">
+                        <span class="pill-label">Età</span>
+                        <span class="pill-value">7+</span>
+                    </div>
+                    <div class="pill">
+                        <span class="pill-label">Pezzi</span>
+                        <span class="pill-value">222</span>
+                    </div>
+                    <div class="pill">
+                        <span class="pill-label">Minifigure</span>
+                        <span class="pill-value">1</span>
+                    </div>
+                    <div class="pill">
+                        <span class="pill-label">Anno</span>
+                        <span class="pill-value">2005</span>
+                    </div>
+                </div>
+
+                <div class="retired-notice">
+                    🔒 <strong>Prodotto Fuori Produzione</strong><br>
+                    Questo set LEGO® del 2005 non è più in produzione ed è ufficialmente ritirato.
+                </div>
+
+                <div>
+                    <div class="price-tag">€ 24,99</div>
+                    <div class="price-sub">Prezzo di listino originale (2005)</div>
+                </div>
+
+                <div class="actions">
+                    <button class="btn-retired" disabled>Fuori produzione</button>
+                    <button class="btn-secondary" onclick="toggleWishlist()">+ Aggiungi alla Lista dei Desideri</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DETAILED TABS -->
+        <div class="info-tabs">
+            <div class="tab-headers">
+                <button class="tab-btn active" onclick="showTab('desc', this)">Descrizione</button>
+                <button class="tab-btn" onclick="showTab('specs', this)">Specifiche</button>
+                <button class="tab-btn" onclick="showTab('instructions', this)">Istruzioni</button>
+            </div>
+
+            <!-- Tab 1: Descrizione -->
+            <div id="tab-desc" class="tab-content active">
+                <p>Rivivi le epiche battaglie spaziali all'inizio di <em>Star Wars: Episodio III - La vendetta dei Sith</em>!</p>
+                <p>Sali a bordo del nuovo <strong>Jedi Starfighter Eta-2</strong> guidato da Anakin Skywalker per affrontare le forze dei separatisti. Il caccia Jedi è dotato di ali con posizione d’attacco regolabile e cabina apribile. Ad affrontarlo c’è il temibile <strong>Droid-Avvoltoio (Vulture Droid)</strong>, in grado di trasformarsi dalla modalità di volo alla modalità camminatore per attacchi di terra!</p>
+                <ul>
+                    <li>Include la minifigura di <strong>Anakyn Skywalker</strong> con spada laser blu.</li>
+                    <li>Il Jedi Starfighter misura oltre 18 cm di lunghezza.</li>
+                    <li>Il Droid-Avvoltoio si converte facilmente tra caccia stellare e walker.</li>
+                    <li>Lanciato originariamente nel 2005 in occasione dell’uscita del film al cinema.</li>
+                </ul>
+            </div>
+
+            <!-- Tab 2: Specifiche -->
+            <div id="tab-specs" class="tab-content">
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <span class="spec-title">Codice Prodotto</span>
+                        <span class="spec-val">7256</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Nome Ufficiale</span>
+                        <span class="spec-val">Jedi Starfighter & Vulture Droid</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Tema</span>
+                        <span class="spec-val">LEGO® Star Wars™</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Subtema</span>
+                        <span class="spec-val">Episodio III – La vendetta dei Sith</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Anno di Uscita</span>
+                        <span class="spec-val">2005</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Numero Pezzi</span>
+                        <span class="spec-val">222</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Minifigure Incluse</span>
+                        <span class="spec-val">1 (Anakin Skywalker)</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-title">Stato Ufficiale</span>
+                        <span class="spec-val">Fuori produzione (Ritirato)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Istruzioni -->
+            <div id="tab-instructions" class="tab-content">
+                <p>Cerchi le istruzioni di montaggio originali per il set LEGO® 7256?</p>
+                <p>Puoi scaricare gratuitamente il libretto delle istruzioni in formato PDF direttamente dal servizio clienti LEGO®.</p>
+                <br>
+                <a href="https://www.lego.com/it-it/service/buildinginstructions/7256" target="_blank" class="btn-secondary" style="display:inline-block; text-decoration:none;">📥 Scarica Istruzioni PDF (7256)</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-col">
+                <h4>CHI SIAMO</h4>
+                <ul>
+                    <li><a href="#">Il LEGO Group</a></li>
+                    <li><a href="#">Notizie LEGO</a></li>
+                    <li><a href="#">Sostenibilità</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>SUPPORTO</h4>
+                <ul>
+                    <li><a href="#">Contattaci</a></li>
+                    <li><a href="#">Istruzioni di montaggio</a></li>
+                    <li><a href="#">Pezzi mancanti</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ATTRAZIONI</h4>
+                <ul>
+                    <li><a href="#">LEGO® House</a></li>
+                    <li><a href="#">I Parchi LEGOLAND®</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            LEGO, il logo LEGO, la Minifigura e STAR WARS sono marchi registrati di The LEGO Group e Lucasfilm Ltd. ©2005-2026 The LEGO Group. Tutti i diritti riservati.
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Gestione Lista Desideri
+        let inWishlist = false;
+        let wishlistCount = 0;
+
+        function toggleWishlist() {
+            inWishlist = !inWishlist;
+            wishlistCount = inWishlist ? 1 : 0;
+            document.getElementById('wishlist-count').innerText = wishlistCount;
+            
+            if (inWishlist) {
+                alert("Set 7256 aggiunto alla tua Lista dei Desideri!");
+            } else {
+                alert("Set 7256 rimosso dalla Lista dei Desideri.");
+            }
+        }
+
+        // Switcher Immagini Galleria
+        function switchImage(index, element) {
+            const display = document.getElementById('image-display');
+            
+            // Rimuovi classe active dai thumb
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            element.classList.add('active');
+
+            if (index === 1) {
+                // Set Completo
+                display.innerHTML = `
+                    <svg width="320" height="240" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="160" cy="120" r="100" fill="#E8ECEF"/>
+                        <g transform="translate(40, 50)">
+                            <polygon points="60,20 140,40 120,80 40,60" fill="#FFD500" stroke="#111" stroke-width="2"/>
+                            <ellipse cx="90" cy="45" rx="20" ry="12" fill="#006CB7" opacity="0.8"/>
+                            <polygon points="120,40 180,10 160,50" fill="#E3000B" stroke="#111" stroke-width="2"/>
+                            <polygon points="100,70 150,110 120,80" fill="#E3000B" stroke="#111" stroke-width="2"/>
+                            <text x="50" y="100" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333">Jedi Starfighter</text>
+                        </g>
+                        <g transform="translate(170, 110)">
+                            <polygon points="30,20 70,10 80,40 40,50" fill="#006CB7" stroke="#111" stroke-width="2"/>
+                            <path d="M 30,20 L 10,70 L 25,70 L 40,30 Z" fill="#888" stroke="#111" stroke-width="1.5"/>
+                            <path d="M 70,10 L 100,60 L 85,60 L 60,25 Z" fill="#888" stroke="#111" stroke-width="1.5"/>
+                            <text x="20" y="85" font-family="sans-serif" font-size="10" font-weight="bold" fill="#333">Droid-Avvoltoio</text>
+                        </g>
+                    </svg>`;
+            } else if (index === 2) {
+                // Minifigure Anakin
+                display.innerHTML = `
+                    <svg width="320" height="240" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="160" cy="120" r="100" fill="#FFF0D4"/>
+                        <!-- Head -->
+                        <rect x="140" y="60" width="40" height="35" rx="5" fill="#FFC87C" stroke="#111" stroke-width="2"/>
+                        <!-- Hair -->
+                        <path d="M 138,65 Q 160,45 182,65" fill="#6A3B00" stroke="#111" stroke-width="2"/>
+                        <!-- Torso -->
+                        <polygon points="135,95 185,95 190,150 130,150" fill="#222" stroke="#111" stroke-width="2"/>
+                        <!-- Legs -->
+                        <rect x="135" y="150" width="22" height="45" fill="#333" stroke="#111" stroke-width="2"/>
+                        <rect x="163" y="150" width="22" height="45" fill="#333" stroke="#111" stroke-width="2"/>
+                        <!-- Lightsaber -->
+                        <line x1="190" y1="130" x2="220" y2="70" stroke="#00D2FF" stroke-width="5" stroke-linecap="round"/>
+                        <line x1="185" y1="140" x2="192" y2="125" stroke="#888" stroke-width="4"/>
+                        <text x="110" y="215" font-family="sans-serif" font-size="12" font-weight="bold" fill="#333">Anakin Skywalker (2005)</text>
+                    </svg>`;
+            } else if (index === 3) {
+                // Scatola 2005
+                display.innerHTML = `
+                    <svg width="320" height="240" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="30" width="220" height="180" rx="6" fill="#E3000B" stroke="#111" stroke-width="3"/>
+                        <rect x="60" y="40" width="200" height="160" fill="#111"/>
+                        <text x="70" y="65" font-family="sans-serif" font-size="16" font-weight="900" fill="#FFD500">LEGO STAR WARS</text>
+                        <text x="70" y="85" font-family="sans-serif" font-size="10" fill="#FFF">7256 | Età 7-12</text>
+                        <rect x="80" y="100" width="160" height="80" fill="#222" rx="4"/>
+                        <text x="105" y="145" font-family="sans-serif" font-size="12" fill="#FFF" font-weight="bold">[ Scatola Originale ]</text>
+                    </svg>`;
+            }
+        }
+
+        // Gestione Tab
+        function showTab(tabName, element) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            element.classList.add('active');
+            document.getElementById('tab-' + tabName).classList.add('active');
+        }
+    </script>
+</body>
+</html>
