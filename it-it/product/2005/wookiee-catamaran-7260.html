@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catamarano Wookiee™ 7260 | Star Wars™ | LEGO® Official Shop IT</title>
+    <link rel="icon" type="image/x-icon" href="https://www.lego.com/favicon.ico">
+    <style>
+        :root {
+            --lego-yellow: #FFCF00;
+            --lego-red: #E3000B;
+            --lego-black: #111111;
+            --lego-dark-gray: #2C2C2C;
+            --lego-light-gray: #F8F8F8;
+            --lego-border-gray: #E0E0E0;
+            --lego-blue: #006DB7;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: #FFFFFF;
+            color: var(--lego-black);
+            line-height: 1.5;
+        }
+
+        /* Top Bar & Header */
+        .top-banner {
+            background-color: var(--lego-black);
+            color: #FFFFFF;
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 8px 16px;
+            font-weight: 500;
+        }
+
+        header {
+            background-color: var(--lego-yellow);
+            border-bottom: 2px solid var(--lego-yellow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .lego-logo {
+            background-color: var(--lego-red);
+            color: white;
+            font-weight: 900;
+            font-size: 1.8rem;
+            padding: 4px 12px;
+            text-decoration: none;
+            letter-spacing: -1px;
+            border-radius: 2px;
+            display: inline-block;
+            box-shadow: inset 0 0 0 2px #FFFFFF;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: var(--lego-black);
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .badge-archived {
+            background-color: #666;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 15px auto;
+            padding: 0 20px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Container */
+        .product-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 850px) {
+            .product-page {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Gallery */
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background-color: var(--lego-light-gray);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--lego-border-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-image svg {
+            width: 70%;
+            height: auto;
+        }
+
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+        }
+
+        .thumb {
+            width: 70px;
+            height: 70px;
+            border: 2px solid var(--lego-border-gray);
+            border-radius: 6px;
+            cursor: pointer;
+            background-color: var(--lego-light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+            transition: all 0.2s;
+        }
+
+        .thumb.active, .thumb:hover {
+            border-color: var(--lego-blue);
+        }
+
+        /* Product Details */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .theme-logo {
+            font-weight: 800;
+            color: #000;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .product-title {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .product-meta {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #555;
+            border-bottom: 1px solid var(--lego-border-gray);
+            padding-bottom: 15px;
+        }
+
+        .price-area {
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--lego-black);
+        }
+
+        .status-tag {
+            display: inline-block;
+            margin-top: 5px;
+            color: #d9363e;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* Stats Grid */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background-color: var(--lego-light-gray);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .spec-item .value {
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: block;
+        }
+
+        .spec-item .label {
+            font-size: 0.75rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .btn-archived {
+            background-color: #CCCCCC;
+            color: #555555;
+            border: none;
+            padding: 16px;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: not-allowed;
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Accordion / Content Sections */
+        .details-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .accordion-item {
+            border-top: 1px solid var(--lego-border-gray);
+        }
+
+        .accordion-header {
+            padding: 20px 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .accordion-content {
+            padding-bottom: 20px;
+            color: #333;
+            display: none;
+        }
+
+        .accordion-item.open .accordion-content {
+            display: block;
+        }
+
+        .minifig-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .minifig-card {
+            background: var(--lego-light-gray);
+            border-radius: 6px;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--lego-dark-gray);
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+            font-size: 0.85rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-copy {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Announcement -->
+    <div class="top-banner">
+        SPEDIZIONE GRATUITA CON ORDINI SUPERIORI A 35€! | PRODOTTO FUORI PRODUZIONE (2005)
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <a href="#" class="lego-logo">LEGO</a>
+                <span class="badge-archived">Archivio Prodotti</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Set</a></li>
+                <li><a href="#">Temi</a></li>
+                <li><a href="#">Novità</a></li>
+                <li><a href="#">Offerte</a></li>
+            </ul>
+            <div class="user-actions">
+                <span>IT (EUR)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="#">Home</a> &gt; <a href="#">Star Wars™</a> &gt; <a href="#">Episodio III</a> &gt; Catamarano Wookiee™ (7260)
+    </nav>
+
+    <!-- Product Main Content -->
+    <main class="product-page">
+        
+        <!-- Image Gallery -->
+        <div class="gallery-container">
+            <div class="main-image" id="mainImageDisplay">
+                <!-- SVG Illustration of Wookiee Catamaran -->
+                <svg viewBox="0 0 400 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#EBF4F8"/>
+                    <!-- Water / Background -->
+                    <path d="M0 240 Q100 235 200 240 T400 240 L400 300 L0 300 Z" fill="#92C5DE" />
+                    <!-- Swamp Vegetation -->
+                    <circle cx="50" cy="220" r="30" fill="#4A7C59" />
+                    <circle cx="360" cy="210" r="40" fill="#3B6346" />
+                    
+                    <!-- Catamaran Hull (Brown Wood style) -->
+                    <path d="M 80 210 L 300 210 L 330 190 L 320 220 L 70 220 Z" fill="#8B5A2B" stroke="#5C3A1E" stroke-width="2"/>
+                    <path d="M 100 190 L 280 190 L 300 170 L 80 170 Z" fill="#A0522D" stroke="#5C3A1E" stroke-width="2"/>
+                    
+                    <!-- Propeller / Rotor Assembly -->
+                    <circle cx="140" cy="140" r="25" fill="#D2B48C" stroke="#8B5A2B" stroke-width="2"/>
+                    <line x1="140" y1="115" x2="140" y2="165" stroke="#5C3A1E" stroke-width="4"/>
+                    <line x1="115" y1="140" x2="165" y2="140" stroke="#5C3A1E" stroke-width="4"/>
+                    
+                    <!-- Canopy / Cockpit -->
+                    <path d="M 220 170 C 220 130, 270 130, 280 170 Z" fill="#ADD8E6" opacity="0.7" stroke="#4682B4" stroke-width="2"/>
+                    
+                    <!-- Swamp Speeder Sub-vehicle -->
+                    <rect x="20" y="225" width="80" height="25" rx="10" fill="#808080" stroke="#404040" stroke-width="2"/>
+                    <circle cx="40" cy="237" r="8" fill="#00FF00" opacity="0.6"/>
+                    
+                    <!-- Text Overlay -->
+                    <text x="200" y="50" font-family="Arial" font-size="18" font-weight="bold" fill="#2C2C2C" text-anchor="middle">LEGO® Star Wars™ 7260</text>
+                    <text x="200" y="75" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Wookiee Catamaran (2005)</text>
+                </svg>
+            </div>
+            <div class="thumbnails">
+                <div class="thumb active" onclick="switchImage(0)">
+                    <svg viewBox="0 0 100 100" width="40"><rect width="100" height="100" fill="#8B5A2B"/><text x="50" y="55" font-size="20" fill="#fff" text-anchor="middle">Set</text></svg>
+                </div>
+                <div class="thumb" onclick="switchImage(1)">
+                    <svg viewBox="0 0 100 100" width="40"><circle cx="50" cy="40" r="20" fill="#333"/><rect x="30" y="65" width="40" height="30" fill="#333"/><text x="50" y="95" font-size="12" fill="#fff" text-anchor="middle">Minifig</text></svg>
+                </div>
+                <div class="thumb" onclick="switchImage(2)">
+                    <svg viewBox="0 0 100 100" width="40"><rect x="10" y="20" width="80" height="60" fill="#E3000B"/><text x="50" y="55" font-size="18" fill="#fff" text-anchor="middle">Box</text></svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Purchase / Info Area -->
+        <div class="product-details">
+            <div class="theme-logo">LEGO® STAR WARS™ / EPISODIO III</div>
+            <h1 class="product-title">Catamarano Wookiee™</h1>
+            
+            <div class="product-meta">
+                <span>Articolo: <strong>7260</strong></span>
+                <span>Età: <strong>8-12</strong></span>
+                <span>Pezzi: <strong>376</strong></span>
+            </div>
+
+            <div class="price-area">
+                <div class="price">49,99 €</div>
+                <div class="status-tag">Fuori produzione dal 2005 (Non più disponibile)</div>
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <span class="value">376</span>
+                    <span class="label">Pezzi</span>
+                </div>
+                <div class="spec-item">
+                    <span class="value">6</span>
+                    <span class="label">Minifigure</span>
+                </div>
+                <div class="spec-item">
+                    <span class="value">2005</span>
+                    <span class="label">Anno Uscita</span>
+                </div>
+            </div>
+
+            <button class="btn-archived" disabled>Prodotto non più acquistabile</button>
+
+            <p style="font-size: 0.9rem; color: #555; margin-top: 10px;">
+                Unisciti al Maestro Yoda e a Chewbacca a bordo del potente Catamarano Wookiee per difendere il pianeta Kashyyyk dall’invasione dei Separatisti!
+            </p>
+        </div>
+    </main>
+
+    <!-- Details Accordion Sections -->
+    <section class="details-section">
+        
+        <!-- Description -->
+        <div class="accordion-item open">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Descrizione del prodotto
+                <span>&#9660;</span>
+            </div>
+            <div class="accordion-content">
+                <p>
+                    Naviga verso la battaglia con Maestro Yoda e Chewbacca! Solo il magnifico Catamarano Wookiee può ribaltare le sorti dello scontro contro le forze separatiste che invadono il pianeta forestale di Kashyyyk.
+                </p>
+                <br>
+                <p>
+                    Questo classico set LEGO® <em>Star Wars</em>™ del 2005 (tratto da <em>Star Wars: Episodio III – La vendetta dei Sith</em>) include la maestosa imbarcazione Wookiee dotata di eliche rotanti, cabina apribile e dettagli in stile legno, oltre a uno Swamp Speeder dei Clone Trooper di supporto.
+                </p>
+            </div>
+        </div>
+
+        <!-- Minifigures Included -->
+        <div class="accordion-item open">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Minifigure Incluse (6)
+                <span>&#9660;</span>
+            </div>
+            <div class="accordion-content">
+                <div class="minifig-list">
+                    <div class="minifig-card">
+                        <div>🧙‍♂️</div>
+                        Yoda
+                    </div>
+                    <div class="minifig-card">
+                        <div>🐻</div>
+                        Chewbacca
+                    </div>
+                    <div class="minifig-card">
+                        <div>🏹</div>
+                        Guerriero Wookiee
+                    </div>
+                    <div class="minifig-card">
+                        <div>💡</div>
+                        Luminara Unduli<br><small>(Spada laser luminosa!)</small>
+                    </div>
+                    <div class="minifig-card">
+                        <div>🪖</div>
+                        Clone Trooper (Battaglione d'Assalto)
+                    </div>
+                    <div class="minifig-card">
+                        <div>🪖</div>
+                        Clone Trooper (Battaglione d'Assalto)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Details / Specifications -->
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Specifiche Tecniche
+                <span>&#9650;</span>
+            </div>
+            <div class="accordion-content">
+                <ul style="list-style-position: inside; line-height: 1.8;">
+                    <li><strong>Nome originale:</strong> Wookiee Catamaran™</li>
+                    <li><strong>Codice Set:</strong> 7260</li>
+                    <li><strong>Linea:</strong> LEGO® Star Wars™ / Episode III</li>
+                    <li><strong>Anno di pubblicazione:</strong> 2005</li>
+                    <li><strong>Numero di pezzi:</strong> 376</li>
+                    <li><strong>Minifigure esclusive:</strong> Luminara Unduli con spada laser ad accensione luminosa (Light-Up Lightsaber) e Clone Trooper con dettagli verdi.</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="lego-logo" style="margin-bottom: 10px;">LEGO</div>
+                <p>LEGO System A/S, DK-7190 Billund, Danimarca.</p>
+            </div>
+            <div>
+                <h4>Supporto</h4>
+                <p>Istruzioni di montaggio (#7260)</p>
+                <p>Pezzi di ricambio</p>
+            </div>
+            <div>
+                <h4>Informazioni Legali</h4>
+                <p>Informativa sulla privacy</p>
+                <p>Cookie Settings</p>
+            </div>
+        </div>
+        <div class="footer-copy">
+            &copy; 2005 - 2026 The LEGO Group. Tutti i diritti riservati. Lucasfilm Ltd. & TM.
+        </div>
+    </footer>
+
+    <!-- Interactive JS Script -->
+    <script>
+        function toggleAccordion(header) {
+            const item = header.parentElement;
+            item.classList.toggle('open');
+            const arrow = header.querySelector('span');
+            if (item.classList.contains('open')) {
+                arrow.innerHTML = '&#9660;';
+            } else {
+                arrow.innerHTML = '&#9650;';
+            }
+        }
+
+        function switchImage(index) {
+            const thumbs = document.querySelectorAll('.thumb');
+            thumbs.forEach((t, i) => {
+                if (i === index) {
+                    t.classList.add('active');
+                } else {
+                    t.classList.remove('active');
+                }
+            });
+
+            const display = document.getElementById('mainImageDisplay');
+            if (index === 0) {
+                display.innerHTML = `
+                <svg viewBox="0 0 400 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#EBF4F8"/>
+                    <path d="M0 240 Q100 235 200 240 T400 240 L400 300 L0 300 Z" fill="#92C5DE" />
+                    <circle cx="50" cy="220" r="30" fill="#4A7C59" />
+                    <circle cx="360" cy="210" r="40" fill="#3B6346" />
+                    <path d="M 80 210 L 300 210 L 330 190 L 320 220 L 70 220 Z" fill="#8B5A2B" stroke="#5C3A1E" stroke-width="2"/>
+                    <path d="M 100 190 L 280 190 L 300 170 L 80 170 Z" fill="#A0522D" stroke="#5C3A1E" stroke-width="2"/>
+                    <circle cx="140" cy="140" r="25" fill="#D2B48C" stroke="#8B5A2B" stroke-width="2"/>
+                    <line x1="140" y1="115" x2="140" y2="165" stroke="#5C3A1E" stroke-width="4"/>
+                    <line x1="115" y1="140" x2="165" y2="140" stroke="#5C3A1E" stroke-width="4"/>
+                    <path d="M 220 170 C 220 130, 270 130, 280 170 Z" fill="#ADD8E6" opacity="0.7" stroke="#4682B4" stroke-width="2"/>
+                    <rect x="20" y="225" width="80" height="25" rx="10" fill="#808080" stroke="#404040" stroke-width="2"/>
+                    <text x="200" y="50" font-family="Arial" font-size="18" font-weight="bold" fill="#2C2C2C" text-anchor="middle">LEGO® Star Wars™ 7260</text>
+                    <text x="200" y="75" font-family="Arial" font-size="14" fill="#666" text-anchor="middle">Catamarano Wookiee (Vista principale)</text>
+                </svg>`;
+            } else if (index === 1) {
+                display.innerHTML = `
+                <svg viewBox="0 0 400 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#F8F8F8"/>
+                    <text x="200" y="40" font-family="Arial" font-size="18" font-weight="bold" fill="#111" text-anchor="middle">Minifigure Incolluite (6)</text>
+                    <!-- Luminara Unduli Light-up -->
+                    <circle cx="80" cy="120" r="20" fill="#2C2C2C"/>
+                    <rect x="70" y="140" width="20" height="40" fill="#2C2C2C"/>
+                    <line x1="100" y1="130" x2="160" y2="130" stroke="#00FF00" stroke-width="6" filter="drop-shadow(0px 0px 5px #00FF00)"/>
+                    <text x="80" y="200" font-size="12" text-anchor="middle" font-weight="bold">Luminara (Light-Up)</text>
+                    <!-- Yoda -->
+                    <circle cx="200" cy="130" r="15" fill="#8FBC8F"/>
+                    <rect x="190" y="145" width="20" height="30" fill="#C19A6B"/>
+                    <text x="200" y="200" font-size="12" text-anchor="middle" font-weight="bold">Yoda</text>
+                    <!-- Chewbacca -->
+                    <rect x="300" y="110" width="25" height="70" rx="10" fill="#8B4513"/>
+                    <text x="312" y="200" font-size="12" text-anchor="middle" font-weight="bold">Chewbacca</text>
+                </svg>`;
+            } else if (index === 2) {
+                display.innerHTML = `
+                <svg viewBox="0 0 400 300" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100%" height="100%" fill="#111"/>
+                    <rect x="50" y="30" width="300" height="240" fill="#E3000B" rx="8"/>
+                    <rect x="60" y="40" width="280" height="220" fill="#0A192F" rx="4"/>
+                    <text x="80" y="80" font-family="Arial" font-size="24" font-weight="900" fill="#FFF">LEGO</text>
+                    <text x="80" y="105" font-family="Arial" font-size="12" font-weight="bold" fill="#FFCF00">STAR WARS</text>
+                    <text x="310" y="80" font-family="Arial" font-size="20" font-weight="bold" fill="#FFF" text-anchor="end">7260</text>
+                    <text x="310" y="100" font-family="Arial" font-size="12" fill="#AAA" text-anchor="end">Età 8-12</text>
+                    <text x="200" y="170" font-family="Arial" font-size="18" font-weight="bold" fill="#FFF" text-anchor="middle">Wookiee™ Catamaran</text>
+                    <text x="200" y="230" font-family="Arial" font-size="12" fill="#E3000B" font-weight="bold" text-anchor="middle">SCATOLA ORIGINALE 2005</text>
+                </svg>`;
+            }
+        }
+    </script>
+</body>
+</html>
