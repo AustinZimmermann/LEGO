@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attacco Wookiee™ 7258 | Star Wars™ | Ufficiale LEGO® Shop IT</title>
+  <link rel="icon" href="https://www.lego.com/favicon.ico" type="image/x-icon" />
+  
+  <style>
+    /* RESET & BASE STYLES */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Cera Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    :root {
+      --lego-yellow: #ffcf00;
+      --lego-red: #e3000b;
+      --lego-dark-blue: #00205b;
+      --lego-blue: #006db7;
+      --lego-gray-bg: #f8f8f8;
+      --lego-gray-border: #e0e0e0;
+      --lego-text-dark: #2c2c2c;
+      --lego-text-muted: #666666;
+      --lego-green: #00853d;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: var(--lego-text-dark);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* TOP ANNOUNCEMENT BAR */
+    .top-bar {
+      background-color: var(--lego-dark-blue);
+      color: #ffffff;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* MAIN HEADER */
+    header {
+      background-color: var(--lego-yellow);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .lego-logo {
+      width: 50px;
+      height: 50px;
+      background-color: var(--lego-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      box-shadow: inset 0 0 0 2px #ffffff;
+    }
+
+    .lego-logo span {
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 1.3rem;
+      letter-spacing: -1px;
+      text-shadow: 2px 2px 0 #000;
+      transform: skewX(-5deg);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .region-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #ffffff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      font-size: 0.8rem;
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      max-width: 1200px;
+      margin: 16px auto;
+      padding: 0 20px;
+      font-size: 0.85rem;
+      color: var(--lego-text-muted);
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+      color: var(--lego-blue);
+    }
+
+    /* MAIN CONTAINER */
+    .product-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 40px 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 850px) {
+      .product-container {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+
+    /* GALLERY SECTION */
+    .gallery-section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .main-image-box {
+      width: 100%;
+      background-color: var(--lego-gray-bg);
+      border-radius: 12px;
+      border: 1px solid var(--lego-gray-border);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 380px;
+    }
+
+    .main-image-box svg {
+      width: 80%;
+      max-height: 320px;
+      transition: transform 0.3s ease;
+    }
+
+    .main-image-box:hover svg {
+      transform: scale(1.03);
+    }
+
+    .badge-retired {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background-color: #e02b2b;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-vintage {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background-color: var(--lego-dark-blue);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .thumbnails {
+      display: flex;
+      gap: 12px;
+    }
+
+    .thumb-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      border: 2px solid var(--lego-gray-border);
+      background-color: var(--lego-gray-bg);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      transition: border-color 0.2s;
+    }
+
+    .thumb-btn.active, .thumb-btn:hover {
+      border-color: var(--lego-blue);
+    }
+
+    /* PRODUCT DETAILS SECTION */
+    .details-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .theme-logo {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--lego-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .product-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--lego-text-dark);
+    }
+
+    .meta-info {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--lego-text-muted);
+    }
+
+    .rating-stars {
+      color: #ffb800;
+      font-weight: bold;
+    }
+
+    /* QUICK SPECS GRID */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      background-color: var(--lego-gray-bg);
+      border: 1px solid var(--lego-gray-border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .spec-value {
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .spec-label {
+      font-size: 0.75rem;
+      color: var(--lego-text-muted);
+      text-transform: uppercase;
+    }
+
+    /* STATUS BOX */
+    .status-card {
+      background-color: #fff8e5;
+      border: 1px solid #ffe0b2;
+      border-radius: 8px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .status-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .price-original {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--lego-text-dark);
+    }
+
+    .retired-tag {
+      color: var(--lego-red);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* ACTION BUTTONS */
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 24px;
+      font-size: 1rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.2s ease;
+      width: 100%;
+    }
+
+    .btn-primary {
+      background-color: var(--lego-green);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background-color: #006830;
+    }
+
+    .btn-secondary {
+      background-color: #ffffff;
+      color: var(--lego-text-dark);
+      border: 2px solid var(--lego-text-dark);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--lego-gray-bg);
+    }
+
+    /* ACCORDION / TABS SECTION */
+    .info-tabs {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .tab-headers {
+      display: flex;
+      border-bottom: 2px solid var(--lego-gray-border);
+      gap: 24px;
+    }
+
+    .tab-btn {
+      padding: 12px 0;
+      font-weight: 700;
+      font-size: 1.1rem;
+      background: none;
+      border: none;
+      border-bottom: 4px solid transparent;
+      cursor: pointer;
+      color: var(--lego-text-muted);
+    }
+
+    .tab-btn.active {
+      color: var(--lego-text-dark);
+      border-bottom-color: var(--lego-red);
+    }
+
+    .tab-content {
+      display: none;
+      padding: 24px 0;
+      line-height: 1.7;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* MINIFIGURES LIST */
+    .minifig-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .minifig-card {
+      background-color: var(--lego-gray-bg);
+      border: 1px solid var(--lego-gray-border);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .minifig-icon {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+    }
+
+    .minifig-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    /* REVIEWS SECTION */
+    .review-item {
+      border-bottom: 1px solid var(--lego-gray-border);
+      padding: 16px 0;
+    }
+
+    .review-author {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: var(--lego-dark-blue);
+      color: #ffffff;
+      padding: 40px 20px 20px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 32px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .footer-col h4 {
+      font-size: 1rem;
+      margin-bottom: 16px;
+      color: var(--lego-yellow);
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+
+    .footer-col ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 20px auto 0 auto;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #cccccc;
+    }
+
+    /* TOAST NOTIFICATION */
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--lego-dark-blue);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 2000;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <span>Spedizione gratuita per ordini qualificati su LEGO.com | Italia (it-IT)</span>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-left">
+      <a href="#" class="lego-logo" title="LEGO Home">
+        <span>LEGO</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#">Set</a></li>
+          <li><a href="#">Temi</a></li>
+          <li><a href="#">Star Wars™</a></li>
+          <li><a href="#">Novità</a></li>
+          <li><a href="#">Offerte</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-right">
+      <div class="region-badge">
+        <span>🇮🇹</span>
+        <span>it-IT</span>
+      </div>
+      <a href="#" style="text-decoration: none;">🔍 Cerca</a>
+      <a href="#" style="text-decoration: none;">❤️ Preferiti (<span id="fav-count">0</span>)</a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="#">Home</a> &gt; 
+    <a href="#">Temi</a> &gt; 
+    <a href="#">Star Wars™</a> &gt; 
+    <a href="#">Episode III</a> &gt; 
+    <span>Attacco Wookiee™ (7258)</span>
+  </div>
+
+  <!-- MAIN PRODUCT SECTION -->
+  <main class="product-container">
+    
+    <!-- LEFT GALLERY -->
+    <section class="gallery-section">
+      <div class="main-image-box">
+        <span class="badge-retired">Prodotto Fuori Produzione</span>
+        <span class="badge-vintage">Set Classico (2005)</span>
+
+        <!-- SVG Illustration representing Set 7258 Wookiee Attack -->
+        <svg id="gallery-main-svg" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background Forest / Kashyyyk vibe -->
+          <rect width="500" height="400" fill="#f0f4f1" />
+          <path d="M0 320 Q 150 290, 300 330 T 500 310 L 500 400 L 0 400 Z" fill="#b2d8b2" />
+          
+          <!-- Box Art Style Frame / Logo -->
+          <rect x="20" y="20" width="120" height="35" rx="4" fill="#e3000b" />
+          <text x="80" y="42" font-family="sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle">LEGO 7258</text>
+          
+          <!-- SW Episode III Logo simulation -->
+          <text x="480" y="40" font-family="sans-serif" font-weight="800" font-size="14" fill="#333" text-anchor="end">STAR WARS™</text>
+          <text x="480" y="55" font-family="sans-serif" font-size="10" fill="#666" text-anchor="end">EPISODE III</text>
+
+          <!-- Vehicle 1: Wookiee Flyer / Catamaran Vehicle -->
+          <g transform="translate(60, 110)">
+            <!-- Wings / Rotors -->
+            <ellipse cx="100" cy="50" rx="75" ry="12" fill="#8B4513" stroke="#5c2d0c" stroke-width="3" />
+            <ellipse cx="100" cy="50" rx="35" ry="6" fill="#cd853f" />
+            <!-- Main Body -->
+            <path d="M 60 50 L 100 120 L 140 50 Z" fill="#a0522d" stroke="#5c2d0c" stroke-width="2" />
+            <!-- Cockpit Canopy -->
+            <circle cx="100" cy="80" r="16" fill="#87ceeb" opacity="0.8" stroke="#333" stroke-width="2" />
+            <!-- Blasters -->
+            <rect x="40" y="45" width="15" height="10" fill="#333" />
+            <rect x="145" y="45" width="15" height="10" fill="#333" />
+            <text x="100" y="150" font-size="12" font-weight="bold" fill="#5c2d0c" text-anchor="middle">Wookiee Flyer</text>
+          </g>
+
+          <!-- Vehicle 2: Corporate Alliance Droid / Tank Droid -->
+          <g transform="translate(270, 160)">
+            <!-- Central Track Wheel -->
+            <circle cx="90" cy="90" r="55" fill="#555" stroke="#222" stroke-width="4" />
+            <circle cx="90" cy="90" r="40" fill="#888" />
+            <circle cx="90" cy="90" r="15" fill="#333" />
+            <!-- Side Outriggers & Cannons -->
+            <rect x="20" y="75" width="60" height="16" fill="#4682b4" rx="4" />
+            <rect x="100" y="75" width="60" height="16" fill="#4682b4" rx="4" />
+            <circle cx="15" cy="83" r="6" fill="#cc0000" />
+            <circle cx="165" cy="83" r="6" fill="#cc0000" />
+            <text x="90" y="165" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Tank Droid (NR-N99)</text>
+          </g>
+
+          <!-- Dwarf Spider Droid -->
+          <g transform="translate(200, 260)">
+            <ellipse cx="30" cy="20" rx="18" ry="12" fill="#778899" />
+            <line x1="15" y1="20" x2="0" y2="35" stroke="#333" stroke-width="3" />
+            <line x1="45" y1="20" x2="60" y2="35" stroke="#333" stroke-width="3" />
+            <rect x="25" y="8" width="10" height="6" fill="#cc0000" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- GALLERY THUMBNAILS -->
+      <div class="thumbnails">
+        <button class="thumb-btn active" onclick="switchView('main')">
+          <span style="font-size: 0.7rem; font-weight: bold;">Vista Set</span>
+        </button>
+        <button class="thumb-btn" onclick="switchView('box')">
+          <span style="font-size: 0.7rem; font-weight: bold;">Scatola 2005</span>
+        </button>
+        <button class="thumb-btn" onclick="switchView('figs')">
+          <span style="font-size: 0.7rem; font-weight: bold;">Minifigure</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- RIGHT DETAILS -->
+    <section class="details-section">
+      <div>
+        <div class="theme-logo">LEGO® Star Wars™ — Episode III</div>
+        <h1 class="product-title">Attacco Wookiee™</h1>
+        <div class="meta-info" style="margin-top: 8px;">
+          <span>Art. <strong>7258</strong></span>
+          <span>•</span>
+          <span class="rating-stars">★ ★ ★ ★ ☆</span>
+          <span>(4.8 / 5)</span>
+        </div>
+      </div>
+
+      <!-- QUICK SPECS -->
+      <div class="specs-grid">
+        <div class="spec-item">
+          <span class="spec-value">8+</span>
+          <span class="spec-label">Età</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-value">366</span>
+          <span class="spec-label">Pezzi</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-value">5</span>
+          <span class="spec-label">Minifigures</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-value">2005</span>
+          <span class="spec-label">Anno</span>
+        </div>
+      </div>
+
+      <!-- STATUS & PRICE CARD -->
+      <div class="status-card">
+        <div class="status-header">
+          <div>
+            <span style="font-size: 0.8rem; color: #666; display: block;">Prezzo originale di listino (2005):</span>
+            <span class="price-original">€ 29,99</span>
+          </div>
+          <span class="retired-tag">Non più disponibile</span>
+        </div>
+        <p style="font-size: 0.85rem; color: #555;">
+          Questo set storico del 2005 è ufficialmente fuori produzione. Puoi scaricare gratuitamente le istruzioni originali in formato PDF qui sotto.
+        </p>
+      </div>
+
+      <!-- ACTIONS -->
+      <div class="actions">
+        <button class="btn btn-primary" onclick="downloadInstructions()">
+          📄 Scarica Istruzioni di Montaggio (PDF)
+        </button>
+        <button class="btn btn-secondary" onclick="toggleWishlist()">
+          ❤️ <span id="wishlist-btn-text">Aggiungi ai Preferiti</span>
+        </button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- TABS SECTION -->
+  <section class="info-tabs">
+    <div class="tab-headers">
+      <button class="tab-btn active" onclick="openTab(event, 'tab-desc')">Descrizione</button>
+      <button class="tab-btn" onclick="openTab(event, 'tab-minifigs')">Minifigure Incluse (5)</button>
+      <button class="tab-btn" onclick="openTab(event, 'tab-specs')">Specifiche Tecniche</button>
+      <button class="tab-btn" onclick="openTab(event, 'tab-reviews')">Recensioni Fan</button>
+    </div>
+
+    <!-- TAB: DESCRIPTION -->
+    <div id="tab-desc" class="tab-content active">
+      <h3>Difendi il pianeta Kashyyyk dall’invasione dei Droidi!</h3>
+      <p style="margin-top: 10px;">
+        Rivivi le avvincenti battaglie di <em>Star Wars: Episodio III – La vendetta dei Sith</em> con il set classico <strong>LEGO® Star Wars™ 7258 - Attacco Wookiee™</strong> rilasciato nel 2005.
+      </p>
+      <p style="margin-top: 10px;">
+        Le forze separatiste stanno sferrando un attacco su Kashyyyk! I coraggiosi guerrieri Wookiee si sollevano in volo sul loro agile Volante Wookiee per contrastare il potente Droide Carro Armato dell’Alleanza Corporate e il Droide Ragno Nano. Il set include veicoli altamente dettagliati per l’epoca, dotati di cannoni e cabina apribile.
+      </p>
+    </div>
+
+    <!-- TAB: MINIFIGURES -->
+    <div id="tab-minifigs" class="tab-content">
+      <h3>Minifigure e Personaggi del Set</h3>
+      <div class="minifig-grid">
+        <div class="minifig-card">
+          <div class="minifig-icon">🐻</div>
+          <div class="minifig-name">Wookiee Warrior</div>
+          <div style="font-size: 0.8rem; color: #666; margin-top: 4px;">Quantità: 2</div>
+        </div>
+        <div class="minifig-card">
+          <div class="minifig-icon">🤖</div>
+          <div class="minifig-name">Battle Droid</div>
+          <div style="font-size: 0.8rem; color: #666; margin-top: 4px;">Quantità: 2</div>
+        </div>
+        <div class="minifig-card">
+          <div class="minifig-icon">🕷️</div>
+          <div class="minifig-name">Dwarf Spider Droid</div>
+          <div style="font-size: 0.8rem; color: #666; margin-top: 4px;">Costruibile (1x)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: SPECS -->
+    <div id="tab-specs" class="tab-content">
+      <ul style="list-style: square; padding-left: 20px;">
+        <li><strong>Codice Prodotto:</strong> 7258</li>
+        <li><strong>Nome Ufficiale:</strong> Attacco Wookiee™ (Wookiee Attack)</li>
+        <li><strong>Anno di Uscita:</strong> 2005</li>
+        <li><strong>Linea:</strong> LEGO® Star Wars™ / Episodio III</li>
+        <li><strong>Conteggio Pezzi:</strong> 366 pezzi</li>
+        <li><strong>Dimensioni Scatola:</strong> 38.4 x 28.8 x 6 cm</li>
+        <li><strong>Peso:</strong> ~ 0.46 kg</li>
+      </ul>
+    </div>
+
+    <!-- TAB: REVIEWS -->
+    <div id="tab-reviews" class="tab-content">
+      <h3>Valutazioni degli Appassionati LEGO®</h3>
+      <div class="review-item">
+        <div class="review-author">Marco88 ★★★★★</div>
+        <p style="font-size: 0.9rem; color: #444;">"Un set nostalgico fantastico del 2005! Il Droide Carro Armato è strutturato benissimo e i minifig Wookiee sono unici."</p>
+      </div>
+      <div class="review-item">
+        <div class="review-author">BrickFan_IT ★★★★☆</div>
+        <p style="font-size: 0.9rem; color: #444;">"Ottima giocabilità per l'epoca. Uno dei primi set dedicati alla battaglia di Kashyyyk."</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Chi siamo</h4>
+        <ul>
+          <li><a href="#">Il LEGO Group</a></li>
+          <li><a href="#">Notizie LEGO</a></li>
+          <li><a href="#">Sostenibilità</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Assistenza</h4>
+        <ul>
+          <li><a href="#">Contattaci</a></li>
+          <li><a href="#">Istruzioni di montaggio</a></li>
+          <li><a href="#">Pezzi di ricambio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Attrazioni</h4>
+        <ul>
+          <li><a href="#">LEGOLAND® Parks</a></li>
+          <li><a href="#">LEGO® House</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>LEGO, il logo LEGO, la Minifigure e le configurazioni dei mattoncini sono marchi registrati di The LEGO Group. ©2005-2026 The LEGO Group. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast" class="toast"></div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    let isWishlisted = false;
+    let favCount = 0;
+
+    function openTab(evt, tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    function toggleWishlist() {
+      isWishlisted = !isWishlisted;
+      const btnText = document.getElementById('wishlist-btn-text');
+      const favCounter = document.getElementById('fav-count');
+
+      if (isWishlisted) {
+        btnText.textContent = "Rimuovi dai Preferiti";
+        favCount++;
+        showToast("Set 7258 aggiunto ai tuoi preferiti! ❤️");
+      } else {
+        btnText.textContent = "Aggiungi ai Preferiti";
+        favCount--;
+        showToast("Set 7258 rimosso dai preferiti.");
+      }
+      favCounter.textContent = favCount;
+    }
+
+    function downloadInstructions() {
+      showToast("Download del manuale di istruzioni 7258 PDF avvito...");
+      setTimeout(() => {
+        window.open('https://www.lego.com/en-us/service/buildinginstructions/7258', '_blank');
+      }, 800);
+    }
+
+    function switchView(viewType) {
+      const svg = document.getElementById('gallery-main-svg');
+      const buttons = document.querySelectorAll('.thumb-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+
+      if (viewType === 'main') {
+        buttons[0].classList.add('active');
+        svg.style.filter = 'none';
+        showToast("Visualizzazione: Set completo");
+      } else if (viewType === 'box') {
+        buttons[1].classList.add('active');
+        svg.style.filter = 'sepia(0.2) contrast(1.1)';
+        showToast("Visualizzazione: Scatola originale 2005");
+      } else if (viewType === 'figs') {
+        buttons[2].classList.add('active');
+        svg.style.filter = 'hue-rotate(90deg)';
+        showToast("Visualizzazione: Minifigure Wookiee e Droidi");
+      }
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.style.display = 'block';
+      setTimeout(() => {
+        toast.style.display = 'none';
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
