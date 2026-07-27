@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caccia Stellare ARC-170 7259 | Star Wars™ | LEGO® Official Shop IT</title>
+  <link rel="icon" href="https://www.lego.com/favicon.ico" type="image/x-icon">
+  <style>
+    :root {
+      --lego-yellow: #ffcf00;
+      --lego-red: #e3000b;
+      --lego-dark-blue: #00205b;
+      --lego-grey-bg: #f8f8f8;
+      --text-main: #2c2c2c;
+      --text-muted: #666;
+      --border-color: #e0e0e0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: var(--text-main);
+      line-height: 1.5;
+    }
+
+    /* Top Utility Bar */
+    .utility-bar {
+      background-color: var(--lego-grey-bg);
+      border-bottom: 1px solid var(--border-color);
+      font-size: 12px;
+      padding: 6px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .utility-bar span {
+      font-weight: 600;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--lego-yellow);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-square {
+      width: 50px;
+      height: 50px;
+      background-color: var(--lego-red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--lego-yellow);
+      font-weight: 900;
+      font-size: 20px;
+      border: 2px solid #000;
+      box-shadow: 2px 2px 0px #000;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      font-weight: bold;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .breadcrumbs a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    /* Product Layout */
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Image Gallery */
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .main-image-container {
+      background-color: var(--lego-grey-bg);
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .main-image-container img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .badge-classic {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: var(--lego-dark-blue);
+      color: white;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    /* Product Details */
+    .product-info h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .set-meta {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 15px;
+    }
+
+    .price-tag {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .retired-notice {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      padding: 12px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 15px 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .spec-item strong {
+      display: block;
+      font-size: 16px;
+    }
+
+    .spec-item span {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .cta-button {
+      width: 100%;
+      background-color: var(--lego-red);
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .cta-button:hover {
+      background-color: #b30008;
+    }
+
+    /* Product Description Section */
+    .description-section {
+      background-color: var(--lego-grey-bg);
+      padding: 30px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .description-section h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+
+    .description-section p {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .features-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #444;
+    }
+
+    .features-list li {
+      margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2c2c2c;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="utility-bar">
+    <div>Spedizione gratuita per ordini superiori a 55 €</div>
+    <div>Paese/Regione: <span>Italia (EUR €)</span></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-square">LEGO</div>
+      <nav>
+        <ul>
+          <li><a href="#">Set</a></li>
+          <li><a href="#">Temi</a></li>
+          <li><a href="#">Novità</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <a href="#">Home</a> &gt; 
+      <a href="#">Temi</a> &gt; 
+      <a href="#">Star Wars™</a> &gt; 
+      <span>Caccia Stellare ARC-170 (7259)</span>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+      
+      <!-- Gallery -->
+      <div class="gallery">
+        <div class="main-image-container">
+          <span class="badge-classic">Classico (2005)</span>
+          <!-- Dynamic SVG Graphic representing ARC-170 Set -->
+          <svg width="280" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+            <rect width="300" height="200" fill="#f8f8f8" />
+            <!-- Starfighter Body -->
+            <polygon points="150,30 170,140 130,140" fill="#d1d5db" stroke="#374151" stroke-width="2"/>
+            <polygon points="150,20 160,50 140,50" fill="#dc2626" />
+            <!-- Wings Expanded -->
+            <polygon points="170,80 280,120 270,135 170,100" fill="#ffffff" stroke="#374151" stroke-width="2"/>
+            <polygon points="130,80 20,120 30,135 130,100" fill="#ffffff" stroke="#374151" stroke-width="2"/>
+            <polygon points="170,90 290,70 285,55 170,80" fill="#d1d5db" stroke="#374151" stroke-width="2"/>
+            <polygon points="130,90 10,70 15,55 130,80" fill="#d1d5db" stroke="#374151" stroke-width="2"/>
+            <!-- Cockpit Glass -->
+            <ellipse cx="150" cy="75" rx="10" ry="25" fill="#38bdf8" opacity="0.7" />
+            <ellipse cx="150" cy="115" rx="8" ry="15" fill="#38bdf8" opacity="0.7" />
+            <!-- Engines -->
+            <rect x="165" y="80" width="20" height="40" rx="5" fill="#9ca3af" stroke="#374151"/>
+            <rect x="115" y="80" width="20" height="40" rx="5" fill="#9ca3af" stroke="#374151"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Details Column -->
+      <div class="product-info">
+        <div class="set-meta">Articolo: 7259 | Tema: LEGO® Star Wars™</div>
+        <h1>Caccia Stellare ARC-170™</h1>
+        
+        <div class="price-tag" id="product-price">49,99 €</div>
+
+        <div class="retired-notice">
+          <i>⚠️</i>
+          <div>Prodotto fuori produzione. Rilasciato originalmente nel <strong>2005</strong>.</div>
+        </div>
+
+        <div class="spec-grid">
+          <div class="spec-item">
+            <strong id="spec-age">8+</strong>
+            <span>Età</span>
+          </div>
+          <div class="spec-item">
+            <strong id="spec-pieces">396</strong>
+            <span>Pezzi</span>
+          </div>
+          <div class="spec-item">
+            <strong id="spec-minifigs">4</strong>
+            <span>Minifigures</span>
+          </div>
+        </div>
+
+        <button class="cta-button" onclick="handleWishlist()">Aggiungi alla Lista dei Desideri</button>
+      </div>
+    </div>
+
+    <!-- Details Section -->
+    <div class="description-section">
+      <h2>Dettagli del prodotto</h2>
+      <p>
+        Azione garantita con il <strong>Caccia Stellare ARC-170 LEGO® Star Wars (7259)</strong>! Ispirato direttamente da <em>Star Wars: Episodio III – La vendetta dei Sith</em>, questo iconico caccia della Repubblica è guidato da un equipaggio scelto di cloni piloti pronto per le missioni più pericolose della galassia.
+      </p>
+      <p>
+        Dotato di un meccanismo speciale per aprire le ali in posizione d’attacco e di una funzione di sgancio bombe integrata, questo set del 2005 rappresenta una pietra miliare per ogni collezionista LEGO® <i>Star Wars</i>&trade;.
+      </p>
+      <h3>Caratteristiche del Set:</h3>
+      <ul class="features-list">
+        <li>Include 4 minifigure: 3 Cloni Piloti e 1 Ddroide Astromeccanico R4-D5.</li>
+        <li>Ali con meccanismo di apertura/chiusura per la modalità di attacco.</li>
+        <li>Funzione di sgancio di “bombe” dal fondo dell'astronave.</li>
+        <li>Torretta posteriore orientabile con cannoni laser.</li>
+        <li>Rilasciato originariamente nel marzo 2005.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2005 - 2026 The LEGO Group. Tutti i diritti riservati.</p>
+    <p>Ricreazione storica della pagina prodotto LEGO.com (it-IT) per il set 7259.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Product Object Data
+    const setDetails = {
+      itemNo: 7259,
+      title: "Caccia Stellare ARC-170™",
+      releaseYear: 2005,
+      pieces: 396,
+      minifigures: 4,
+      originalPriceEUR: "49,99 €",
+      ageRange: "8-12"
+    };
+
+    // Render Dynamic Content on Load
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("spec-pieces").innerText = setDetails.pieces;
+      document.getElementById("spec-minifigs").innerText = setDetails.minifigures;
+      document.getElementById("spec-age").innerText = setDetails.ageRange;
+      document.getElementById("product-price").innerText = setDetails.originalPriceEUR;
+    });
+
+    // Wishlist Button Handler
+    function handleWishlist() {
+      alert(`Il set LEGO Star Wars ${setDetails.itemNo} (${setDetails.title}) è stato aggiunto alla tua lista dei desideri!`);
+    }
+  </script>
+</body>
+</html>
