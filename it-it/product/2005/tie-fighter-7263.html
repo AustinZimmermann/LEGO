@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIE Fighter™ 7263 | Star Wars™ | LEGO® Official Shop IT</title>
+    <link rel="icon" href="https://www.lego.com/favicon.ico" type="image/x-icon">
+    <style>
+        /* CSS Reset & Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #2c2c2c;
+            line-height: 1.5;
+        }
+
+        /* LEGO Header Styling */
+        header {
+            background-color: #ffcf00;
+            border-bottom: 2px solid #e0b000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .lego-logo {
+            width: 50px;
+            height: 50px;
+            background-color: #e3000b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            color: #ffcf00;
+            font-size: 22px;
+            letter-spacing: -1px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+        }
+
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 15px auto;
+            padding: 0 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #006db7;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Product Main Container */
+        .product-container {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+        }
+
+        /* Product Gallery */
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .main-image-container {
+            width: 100%;
+            height: 380px;
+            border-radius: 8px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .main-image-container svg {
+            width: 80%;
+            height: 80%;
+        }
+
+        .thumbnail-list {
+            display: flex;
+            gap: 10px;
+        }
+
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #fafafa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #555;
+            transition: all 0.2s;
+        }
+
+        .thumbnail.active, .thumbnail:hover {
+            border-color: #006db7;
+        }
+
+        /* Product Info & Actions */
+        .product-details {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .theme-badge {
+            font-size: 14px;
+            font-weight: bold;
+            color: #e3000b;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .product-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .status-tag {
+            display: inline-block;
+            background-color: #e5f3ff;
+            color: #006db7;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            width: fit-content;
+        }
+
+        .price-tag {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2c2c2c;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .spec-item .value {
+            font-weight: bold;
+            font-size: 16px;
+            display: block;
+        }
+
+        .spec-item .label {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* CTA Buttons */
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .btn-disabled {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background-color: #006db7;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #005691;
+        }
+
+        /* Description & Details Section */
+        .description-section {
+            max-width: 1200px;
+            margin: 0 auto 40px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .description-section h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .description-section p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .features-list {
+            margin-left: 20px;
+            color: #444;
+        }
+
+        .features-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ffffff;
+            padding: 30px 20px;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #ffcf00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="#" class="lego-logo">LEGO</a>
+                <ul class="nav-links">
+                    <li><a href="#">Set</a></li>
+                    <li><a href="#">Temi</a></li>
+                    <li><a href="#">Sconti</a></li>
+                </ul>
+            </div>
+            <div class="user-actions">
+                <span>🇮🇹 Italia (IT)</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumb">
+        <a href="#">Home</a> &gt; <a href="#">Temi</a> &gt; <a href="#">Star Wars™</a> &gt; <strong>TIE Fighter™ (7263)</strong>
+    </div>
+
+    <!-- Main Product Layout -->
+    <main class="product-container">
+        
+        <!-- Image Gallery -->
+        <section class="product-gallery">
+            <div class="main-image-container" id="mainImageContainer">
+                <!-- SVG Mock Graphic of 2005 TIE Fighter Set -->
+                <svg viewBox="0 0 400 300" width="100%" height="100%">
+                    <rect width="400" height="300" fill="#1a1a24"/>
+                    <!-- Star Wars Space background stars -->
+                    <circle cx="50" cy="40" r="1" fill="#fff" />
+                    <circle cx="320" cy="60" r="1.5" fill="#fff" />
+                    <circle cx="80" cy="220" r="1" fill="#fff" />
+                    <circle cx="350" cy="230" r="1" fill="#fff" />
+                    
+                    <!-- Classic 2005 Blue & Black TIE Fighter Illustration -->
+                    <g transform="translate(50, 20)">
+                        <!-- Left Wing -->
+                        <polygon points="40,20 100,20 120,120 100,220 40,220 20,120" fill="#003366" stroke="#000" stroke-width="3"/>
+                        <polygon points="50,35 90,35 105,120 90,205 50,205 35,120" fill="#111" />
+                        <!-- Left Pylon -->
+                        <rect x="95" y="110" width="50" height="20" fill="#708090" rx="3"/>
+                        
+                        <!-- Center Cockpit Pod -->
+                        <circle cx="175" cy="120" r="45" fill="#708090" stroke="#000" stroke-width="3"/>
+                        <circle cx="175" cy="120" r="35" fill="#003366" />
+                        <!-- Cockpit Window Pattern -->
+                        <circle cx="175" cy="120" r="20" fill="#87CEEB" opacity="0.7"/>
+                        <line x1="175" y1="100" x2="175" y2="140" stroke="#000" stroke-width="2"/>
+                        <line x1="155" y1="120" x2="195" y2="120" stroke="#000" stroke-width="2"/>
+
+                        <!-- Right Pylon -->
+                        <rect x="205" y="110" width="50" height="20" fill="#708090" rx="3"/>
+                        <!-- Right Wing -->
+                        <polygon points="255,20 315,20 335,120 315,220 255,220 235,120" fill="#003366" stroke="#000" stroke-width="3"/>
+                        <polygon points="265,35 305,35 320,120 305,205 265,205 250,120" fill="#111" />
+                    </g>
+                    
+                    <!-- Minifigure Preview: Light-up Darth Vader -->
+                    <g transform="translate(30, 180)">
+                        <rect x="0" y="20" width="25" height="40" fill="#111" rx="2"/> <!-- Body -->
+                        <circle cx="12.5" cy="12" r="10" fill="#111"/> <!-- Helmet -->
+                        <!-- Red Lightup Lightsaber Blade -->
+                        <line x1="25" y1="35" x2="65" y2="10" stroke="#ff0000" stroke-width="4" stroke-linecap="round"/>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="thumbnail-list">
+                <div class="thumbnail active" onclick="switchImage(1)">Set Principale</div>
+                <div class="thumbnail" onclick="switchImage(2)">Darth Vader™</div>
+                <div class="thumbnail" onclick="switchImage(3)">TIE Pilot</div>
+                <div class="thumbnail" onclick="switchImage(4)">Scatola (2005)</div>
+            </div>
+        </section>
+
+        <!-- Product Purchase / Info Column -->
+        <section class="product-details">
+            <span class="theme-badge">Star Wars™ / Episode IV</span>
+            <h1 class="product-title">TIE Fighter™</h1>
+            
+            <div class="product-meta">
+                <span>Codice prodotto: <strong>7263</strong></span>
+                <span>Anno: <strong>2005</strong></span>
+            </div>
+
+            <div class="status-tag">Prodotto fuori produzione (Ritirato)</div>
+
+            <div class="price-tag">
+                Prezzo originale: 19,99 €
+            </div>
+
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <span class="value">159</span>
+                    <span class="label">Pezzi</span>
+                </div>
+                <div class="spec-item">
+                    <span class="value">2</span>
+                    <span class="label">Minifigure</span>
+                </div>
+                <div class="spec-item">
+                    <span class="value">7+</span>
+                    <span class="label">Età</span>
+                </div>
+            </div>
+
+            <button class="btn btn-disabled" disabled>Non disponibile</button>
+            <a href="https://www.lego.com/it-it/service/buildinginstructions/7263" target="_blank" class="btn btn-secondary">
+                Istruzioni di montaggio (PDF)
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Product Description -->
+    <article class="description-section">
+        <h2>Descrizione del prodotto</h2>
+        <p>
+            Attento alla potenza del <b>TIE Fighter™</b>! Il caccia stellare più temibile della flotta Imperiale torna nella classica versione del 2005. Ciò che manca al TIE Fighter in corazzatura, lo compensa con una velocità incredibile e doppi torbolaser. Darth Vader in persona comanda questa astronave!
+        </p>
+        
+        <h2>Caratteristiche del set (7263)</h2>
+        <ul class="features-list">
+            <li>Include la rara minifigure di <b>Darth Vader™ con Spada Laser che si illumina</b> (Light-up Lightsaber).</li>
+            <li>Include la minifigure del <b>Pilota di TIE Fighter</b>.</li>
+            <li>Apri il portellone superiore del caccia e manovra le ali solari laterali.</li>
+            <li>Design classico Star Wars con dettagli cromatici blu e neri originali dell’era 2000-2005.</li>
+            <li>Contiene 159 pezzi originali LEGO®.</li>
+        </ul>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2005–2026 The LEGO Group. Tutti i diritti riservati.</p>
+        <p style="margin-top: 8px; color: #999;">Pagina d'archivio ricreata per scopi dimostrativi basata sullo store LEGO.com (Italia).</p>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        function switchImage(index) {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnails[index - 1].classList.add('active');
+
+            const container = document.getElementById('mainImageContainer');
+            
+            // Interactive switching of set artwork
+            if (index === 1) {
+                container.innerHTML = `
+                    <svg viewBox="0 0 400 300" width="100%" height="100%">
+                        <rect width="400" height="300" fill="#1a1a24"/>
+                        <circle cx="50" cy="40" r="1" fill="#fff" />
+                        <circle cx="320" cy="60" r="1.5" fill="#fff" />
+                        <g transform="translate(50, 20)">
+                            <polygon points="40,20 100,20 120,120 100,220 40,220 20,120" fill="#003366" stroke="#000" stroke-width="3"/>
+                            <polygon points="50,35 90,35 105,120 90,205 50,205 35,120" fill="#111" />
+                            <rect x="95" y="110" width="50" height="20" fill="#708090" rx="3"/>
+                            <circle cx="175" cy="120" r="45" fill="#708090" stroke="#000" stroke-width="3"/>
+                            <circle cx="175" cy="120" r="35" fill="#003366" />
+                            <circle cx="175" cy="120" r="20" fill="#87CEEB" opacity="0.7"/>
+                            <line x1="175" y1="100" x2="175" y2="140" stroke="#000" stroke-width="2"/>
+                            <line x1="155" y1="120" x2="195" y2="120" stroke="#000" stroke-width="2"/>
+                            <rect x="205" y="110" width="50" height="20" fill="#708090" rx="3"/>
+                            <polygon points="255,20 315,20 335,120 315,220 255,220 235,120" fill="#003366" stroke="#000" stroke-width="3"/>
+                            <polygon points="265,35 305,35 320,120 305,205 265,205 250,120" fill="#111" />
+                        </g>
+                    </svg>`;
+            } else if (index === 2) {
+                container.innerHTML = `
+                    <svg viewBox="0 0 400 300" width="100%" height="100%">
+                        <rect width="400" height="300" fill="#222"/>
+                        <text x="50%" y="40" fill="#ffcf00" font-size="16" font-weight="bold" text-anchor="middle">Minifigure: Darth Vader (Light-Up)</text>
+                        <g transform="translate(160, 70)">
+                            <!-- Vader Minifig Illustration -->
+                            <path d="M15,120 L65,120 L75,200 L5,200 Z" fill="#111" /> <!-- Cape -->
+                            <rect x="20" y="90" width="40" height="50" fill="#222" rx="4"/> <!-- Torso -->
+                            <circle cx="40" cy="70" r="18" fill="#111"/> <!-- Helmet -->
+                            <rect x="30" y="65" width="20" height="4" fill="#000"/>
+                            <!-- Lightup Red Saber -->
+                            <rect x="65" y="100" width="8" height="25" fill="#aaa"/>
+                            <line x1="69" y1="100" x2="69" y2="10" stroke="#ff0000" stroke-width="8" stroke-linecap="round"/>
+                        </g>
+                    </svg>`;
+            } else if (index === 3) {
+                container.innerHTML = `
+                    <svg viewBox="0 0 400 300" width="100%" height="100%">
+                        <rect width="400" height="300" fill="#222"/>
+                        <text x="50%" y="40" fill="#ffcf00" font-size="16" font-weight="bold" text-anchor="middle">Minifigure: Imperial TIE Pilot</text>
+                        <g transform="translate(160, 80)">
+                            <rect x="20" y="80" width="40" height="50" fill="#111" rx="4"/>
+                            <circle cx="40" cy="60" r="18" fill="#111"/>
+                            <circle cx="33" cy="58" r="4" fill="#fff"/>
+                            <circle cx="47" cy="58" r="4" fill="#fff"/>
+                            <!-- Imperial Crest Symbol Mock -->
+                            <circle cx="40" cy="95" r="6" fill="#708090"/>
+                        </g>
+                    </svg>`;
+            } else if (index === 4) {
+                container.innerHTML = `
+                    <svg viewBox="0 0 400 300" width="100%" height="100%">
+                        <rect width="400" height="300" fill="#3a1c02"/>
+                        <rect x="50" y="30" width="300" height="240" fill="#0a0a14" stroke="#ffcf00" stroke-width="4" rx="8"/>
+                        <text x="70" y="70" fill="#e3000b" font-size="24" font-weight="900">LEGO</text>
+                        <text x="70" y="95" fill="#fff" font-size="14" font-weight="bold">STAR WARS</text>
+                        <text x="310" y="70" fill="#fff" font-size="18" font-weight="bold">7263</text>
+                        <text x="310" y="90" fill="#aaa" font-size="12">Età 7-12</text>
+                    </svg>`;
+            }
+        }
+    </script>
+</body>
+</html>
