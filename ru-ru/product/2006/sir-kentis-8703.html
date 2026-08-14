@@ -1,163 +1,491 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>LEGO.com KNIGHTS’ KINGDOM - Сэр Кентис (8703) - Microsoft Internet Explorer</title>
-    <style>
-        body {
-            background-color: #708090;
-            margin: 0;
-            padding: 0;
-            font-family: Helvetica, sans-serif;
-            font-size: 11px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LEGO.com : KNIGHTS’ KINGDOM™ - 8703 Сэр Кентис</title>
+  <style>
+    /* Базовые стили эпохи Web 2.0 / Flash 2006 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, sans-serif;
+    }
 
-        /* IE6 Browser Chrome */
-        #browser-header {
-            background: #d4d0c8;
-            border-bottom: 2px solid #808080;
-            padding: 2px;
-        }
-        #address-bar {
-            background: white;
-            border: 1px inset #808080;
-            padding: 2px;
-            margin: 2px;
-            font-size: 12px;
-        }
+    body {
+      background: #11141a url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" opacity="0.05"><rect width="20" height="20" fill="%23fff"/><rect x="20" y="20" width="20" height="20" fill="%23fff"/></svg>') repeat;
+      color: #e0e5eb;
+      font-size: 13px;
+    }
 
-        /* LEGO Website Layout */
-        #wrapper {
-            width: 760px;
-            margin: 10px auto;
-            background-color: #000; /* Knights Kingdom theme was dark */
-            border: 1px solid #333;
-            color: white;
-        }
+    /* Верхняя глобальная шапка LEGO 2006 */
+    #lego-global-nav {
+      background: #ffcf00;
+      height: 38px;
+      border-bottom: 2px solid #d49b00;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+    }
 
-        #lego-header {
-            background-color: #FF0000;
-            height: 60px;
-            padding: 5px;
-            border-bottom: 3px solid #FFD700;
-        }
+    .lego-logo-box {
+      background: #d11013;
+      width: 48px;
+      height: 32px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
 
-        #nav-main {
-            background: #333;
-            padding: 5px;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 10px;
-            color: #ccc;
-        }
+    .lego-logo-text {
+      color: #fff;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 15px;
+      letter-spacing: -1px;
+      text-shadow: 1px 1px 0 #000, -1px -1px 0 #ffcf00;
+    }
 
-        /* Product Section */
-        #product-content {
-            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); /* Simulating 2006 texture */
-            padding: 20px;
-            display: flex;
-        }
+    .lego-nav-links {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      font-size: 11px;
+      font-weight: bold;
+    }
 
-        #product-image {
-            width: 300px;
-            background: #1a1a1a;
-            border: 2px solid #555;
-            padding: 10px;
-            text-align: center;
-        }
+    .lego-nav-links a {
+      color: #003366;
+      text-decoration: none;
+    }
 
-        #product-info {
-            padding-left: 30px;
-            width: 400px;
-        }
+    .lego-nav-links a:hover {
+      text-decoration: underline;
+    }
 
-        h1 {
-            color: #FFD700;
-            font-size: 24px;
-            margin-top: 0;
-        }
+    /* Основной контейнер */
+    #page-wrapper {
+      max-width: 900px;
+      margin: 15px auto;
+      background: #1a222e;
+      border: 3px solid #3c4f68;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8), inset 0 0 10px #090c12;
+      border-radius: 6px;
+      overflow: hidden;
+    }
 
-        .price-box {
-            background: #222;
-            padding: 10px;
-            border: 1px solid #FFD700;
-            margin: 10px 0;
-        }
+    /* Баннер Knights' Kingdom */
+    #theme-header {
+      background: linear-gradient(180deg, #374b68 0%, #151d2a 100%);
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #c59b27;
+      position: relative;
+    }
 
-        .buy-button {
-            background: #008000;
-            color: white;
-            padding: 10px 20px;
-            border: 2px solid #00FF00;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
+    .theme-title h1 {
+      font-size: 22px;
+      color: #ffcc00;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px #000;
+    }
 
-        .description {
-            line-height: 1.5;
-            color: #ddd;
-        }
+    .theme-title span {
+      font-size: 12px;
+      color: #9cb1cc;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-        footer {
-            background: #111;
-            padding: 10px;
-            font-size: 9px;
-            text-align: center;
-            border-top: 1px solid #333;
-        }
-    </style>
+    .shield-badge {
+      background: radial-gradient(circle, #5b7396 0%, #1c2738 100%);
+      border: 2px solid #d4af37;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-weight: bold;
+      color: #ffdf79;
+      font-size: 11px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    /* Навигация подтемы */
+    #sub-nav {
+      background: #0f1622;
+      display: flex;
+      border-bottom: 1px solid #273549;
+    }
+
+    .sub-nav-btn {
+      flex: 1;
+      padding: 10px 0;
+      text-align: center;
+      background: linear-gradient(180deg, #243247 0%, #141c28 100%);
+      color: #c9d7ea;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      border-right: 1px solid #33445c;
+      transition: all 0.2s;
+    }
+
+    .sub-nav-btn:hover, .sub-nav-btn.active {
+      background: linear-gradient(180deg, #3d5477 0%, #1d293d 100%);
+      color: #ffcc00;
+    }
+
+    /* Макет товара */
+    #product-layout {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      background: radial-gradient(circle at 30% 40%, #263346 0%, #121721 100%);
+    }
+
+    /* Левая колонка: Изображение */
+    .product-visual {
+      flex: 1.1;
+      background: #0b0f16;
+      border: 2px solid #32435b;
+      border-radius: 4px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+      position: relative;
+    }
+
+    .product-badge-year {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #c59b27;
+      color: #10151f;
+      font-weight: bold;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .main-img {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 10px 15px rgba(0,0,0,0.9));
+      transition: transform 0.3s ease;
+    }
+
+    .main-img:hover {
+      transform: scale(1.03);
+    }
+
+    .view-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .action-btn {
+      flex: 1;
+      background: linear-gradient(180deg, #445b7c 0%, #223044 100%);
+      border: 1px solid #5a769e;
+      color: #e5edf8;
+      padding: 6px;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 3px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .action-btn:hover {
+      background: #53709b;
+      color: #fff;
+    }
+
+    /* Правая колонка: Инфо */
+    .product-details {
+      flex: 1.2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-header-info {
+      border-bottom: 2px solid #2d3e56;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+    }
+
+    .item-id {
+      color: #ff9900;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .item-title {
+      color: #ffffff;
+      font-size: 24px;
+      margin: 2px 0 6px 0;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    .meta-tags {
+      display: flex;
+      gap: 12px;
+      font-size: 11px;
+      color: #9cb1cc;
+    }
+
+    .meta-tag b {
+      color: #ffcc00;
+    }
+
+    /* Вкладки (Tabs) */
+    .tabs-nav {
+      display: flex;
+      gap: 4px;
+      border-bottom: 2px solid #3c506d;
+      margin-bottom: 12px;
+    }
+
+    .tab-item {
+      background: #17212e;
+      padding: 7px 14px;
+      font-size: 11px;
+      font-weight: bold;
+      color: #8c9eb4;
+      cursor: pointer;
+      border: 1px solid #28374c;
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .tab-item.active {
+      background: #2f4058;
+      color: #ffcc00;
+      border-color: #3c506d;
+    }
+
+    .tab-content {
+      display: none;
+      line-height: 1.6;
+      font-size: 12px;
+      color: #c4d3e5;
+      min-height: 110px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Панель покупки / Характеристики */
+    .buy-panel {
+      margin-top: auto;
+      background: linear-gradient(180deg, #1b2636 0%, #101621 100%);
+      border: 1px solid #334661;
+      padding: 12px 16px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .status-box {
+      font-size: 11px;
+    }
+
+    .status-box .available {
+      color: #4cd964;
+      font-weight: bold;
+    }
+
+    .btn-lego-shop {
+      background: linear-gradient(180deg, #ff9900 0%, #cc6600 100%);
+      border: 1px solid #ffaa2b;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 3px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .btn-lego-shop:hover {
+      background: linear-gradient(180deg, #ffaa1a 0%, #e67300 100%);
+    }
+
+    /* Подвал 2006 года */
+    #page-footer {
+      background: #0a0d13;
+      padding: 15px;
+      text-align: center;
+      font-size: 10px;
+      color: #637285;
+      border-top: 1px solid #1c2635;
+    }
+
+    #page-footer a {
+      color: #8c9eb4;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
 
-<div id="browser-header">
-    <div style="padding: 2px;"><b>LEGO.com KNIGHTS’ KINGDOM - Microsoft Internet Explorer</b></div>
-    <div style="background: #eee; padding: 2px; border: 1px outset white;">
-        Файл &nbsp; Правка &nbsp; Вид &nbsp; Избранное &nbsp; Сервис &nbsp; Справка
+  <!-- Глобальный бар LEGO -->
+  <div id="lego-global-nav">
+    <div class="lego-logo-box">
+      <span class="lego-logo-text">LEGO</span>
     </div>
-    <div id="address-bar">
-        Адрес: http://www.lego.com/ru-ru/knightskingdom/products/8703.aspx
-    </div>
-</div>
+    <ul class="lego-nav-links">
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Продукция</a></li>
+      <li><a href="#">Клуб LEGO</a></li>
+      <li><a href="#">Магазин</a></li>
+    </ul>
+  </div>
 
-<div id="wrapper">
-    <div id="lego-header">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg" height="50" alt="LEGO Logo">
-    </div>
+  <!-- Главный контейнер страницы -->
+  <div id="page-wrapper">
     
-    <div id="nav-main">
-        ГЛАВНАЯ &nbsp;|&nbsp; ПРОДУКЦИЯ &nbsp;|&nbsp; ИГРЫ &nbsp;|&nbsp; КЛУБ &nbsp;|&nbsp; МАГАЗИН
-    </div>
+    <!-- Шапка темы -->
+    <header id="theme-header">
+      <div class="theme-title">
+        <h1>Knights' Kingdom™</h1>
+        <span>Рыцари Королевства Мория</span>
+      </div>
+      <div class="shield-badge">
+        СИМВОЛ: ЖЕРЕБЕЦ ♞
+      </div>
+    </header>
 
-    <div id="product-content">
-        <div id="product-image">
-            <img src="https://www.bricklink.com/SL/8703-1.jpg" width="280" alt="Сэр Кентис">
-            <p style="font-size: 9px; color: #888;">Увеличить изображение</p>
+    <!-- Навигация раздела -->
+    <nav id="sub-nav">
+      <a href="#" class="sub-nav-btn">ГЕРОИ</a>
+      <a href="#" class="sub-nav-btn active">НАБОРЫ</a>
+      <a href="#" class="sub-nav-btn">ИГРЫ</a>
+      <a href="#" class="sub-nav-btn">КАРТА МОРИИ</a>
+    </nav>
+
+    <!-- Содержимое карточки товара -->
+    <main id="product-layout">
+      
+      <!-- Левая колонка: Изображение -->
+      <section class="product-visual">
+        <div class="product-badge-year">КОЛЛЕКЦИЯ 2006</div>
+        <img 
+          id="productImg" 
+          class="main-img" 
+          src="https://www.lego.com/cdn/product-assets/product.img.pri/8703_prod.jpg" 
+          alt="LEGO 8703 Сэр Кентис (Sir Kentis)"
+        >
+        <div class="view-actions">
+          <button class="action-btn" onclick="zoomImage()">🔍 Увеличить</button>
+          <button class="action-btn" onclick="showWallpapers()">🖼 Обои</button>
+        </div>
+      </section>
+
+      <!-- Правая колонка: Описание и параметры -->
+      <section class="product-details">
+        
+        <div class="product-header-info">
+          <div class="item-id">Артикул: 8703</div>
+          <h2 class="item-title">Сэр Кентис</h2>
+          <div class="meta-tags">
+            <span class="meta-tag">Возраст: <b>6–12 лет</b></span>
+            <span class="meta-tag">Деталей: <b>45</b></span>
+            <span class="meta-tag">Оружие: <b>Булава</b></span>
+          </div>
         </div>
 
-        <div id="product-info">
-            <p style="color: #FFD700; margin: 0;">KNIGHTS’ KINGDOM™</p>
-            <h1>8703 Сэр Кентис</h1>
-            
-            <div class="description">
-                <p><strong>Быстрый как молния!</strong></p>
-                <p>Сэр Кентис — самый быстрый из рыцарей Моравии. Вооруженный своим тяжелым копьем и щитом, он готов защищать королевство от любых врагов. Используйте специальное колесо на его спине, чтобы управлять его боевыми движениями!</p>
-            </div>
-
-            <div class="price-box">
-                <p>Возраст: 6-12</p>
-                <p>Деталей: 45</p>
-                <p style="font-size: 18px; font-weight: bold;">Цена: 499 руб.</p>
-                <div class="buy-button">КУПИТЬ СЕЙЧАС</div>
-            </div>
+        <!-- Вкладки -->
+        <div class="tabs-nav">
+          <div class="tab-item active" onclick="switchTab(event, 'tab-desc')">Описание</div>
+          <div class="tab-item" onclick="switchTab(event, 'tab-spec')">Характеристики</div>
+          <div class="tab-item" onclick="switchTab(event, 'tab-lore')">История героя</div>
         </div>
-    </div>
 
-    <footer>
-        &copy; 2006 The LEGO Group. Все права защищены. LEGO, логотип LEGO и KNIGHTS’ KINGDOM являются товарными знаками LEGO Group.
+        <!-- Содержимое вкладок -->
+        <div id="tab-desc" class="tab-content active">
+          <p>Сэр Кентис, рыцарь Жеребца, — искусный мастер боевых искусств. Его кольчужная броня и мощная булава помогают ему сражаться с самыми сильными противниками!</p>
+          <br>
+          <p>• Полностью подвижные шарнирные соединения для боевых поз.<br>
+             • В комплект входит щит с геральдическим символом жеребца и тяжелая рыцарская булава.</p>
+        </div>
+
+        <div id="tab-spec" class="tab-content">
+          <p><strong>Серия:</strong> KNIGHTS’ KINGDOM™ II</p>
+          <p><strong>Год выпуска:</strong> 2006</p>
+          <p><strong>Высота собранной фигуры:</strong> ~20 см</p>
+          <p><strong>Цветовая гамма:</strong> Металлический / Серебристо-серый / Медный</p>
+        </div>
+
+        <div id="tab-lore" class="tab-content">
+          <p>Сэр Кентис славится несокрушимой выдержкой и преданностью. Он тренируется без устали, оттачивая искусство ближнего боя, чтобы отразить любую угрозу королевству!</p>
+        </div>
+
+        <!-- Нижняя панель действий -->
+        <div class="buy-panel">
+          <div class="status-box">
+            <span>Статус:</span> <span class="available">● В наличии</span>
+          </div>
+          <button class="btn-lego-shop" onclick="addToWishlist()">В список желаний</button>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Подвал страницы -->
+    <footer id="page-footer">
+      <p>© 2006 The LEGO Group. Все права защищены.</p>
+      <p style="margin-top: 4px;">Использование этого сайта означает согласие с правилами и условиями обслуживания LEGO.com.</p>
     </footer>
-</div>
+
+  </div>
+
+  <!-- Интерактивный функционал -->
+  <script>
+    function switchTab(evt, tabId) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      const tabs = document.querySelectorAll('.tab-item');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      evt.currentTarget.classList.add('active');
+    }
+
+    function addToWishlist() {
+      alert('Набор «8703 Сэр Кентис» успешно добавлен в ваш список желаний LEGO Club!');
+    }
+
+    function zoomImage() {
+      const img = document.getElementById('productImg');
+      if (img.style.transform === 'scale(1.2)') {
+        img.style.transform = 'scale(1)';
+      } else {
+        img.style.transform = 'scale(1.2)';
+      }
+    }
+
+    function showWallpapers() {
+      alert('Загрузка обоев для рабочего стола (1024x768 / 800x600)...');
+    }
+  </script>
 
 </body>
 </html>
