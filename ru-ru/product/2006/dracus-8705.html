@@ -1,209 +1,477 @@
 <!DOCTYPE html>
-<html lang="ru-RU">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>LEGO.com KNIGHTS’ KINGDOM - 8705 Дракус</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEGO.com : KNIGHTS’ KINGDOM™ - 8705 Дракус</title>
     <style>
-        /* Internet Explorer 6 / Windows XP Simulation Styles */
-        body {
-            background-color: #003366; /* Deep blue of Knights Kingdom */
-            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
-            font-family: Helvetica, sans-serif;
+        /* Базовые стили эпохи Web 2.0 / середины 2000-х */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            color: #FFFFFF;
         }
 
-        #ie-header {
-            background: linear-gradient(to bottom, #ebe9ed 0%, #d8d8d8 100%);
-            border-bottom: 1px solid #999;
-            color: #000;
-            padding: 2px 5px;
-            font-size: 12px;
-            height: 20px;
-        }
-
-        #wrapper {
-            width: 760px; /* Standard 800x600 resolution width */
-            margin: 0 auto;
-            background-color: #001a33;
-            border: 3px solid #0055aa;
-            min-height: 600px;
-        }
-
-        header {
-            background-color: #FF0000;
-            padding: 10px;
-            border-bottom: 4px solid #FFD700;
-        }
-
-        .logo {
-            width: 50px;
-            height: 50px;
-            vertical-align: middle;
-        }
-
-        nav {
-            background: #002b55;
-            padding: 5px;
+        body {
+            font-family: Helvetica, sans-serif;
             font-size: 11px;
-            border-bottom: 1px solid #0055aa;
+            color: #333333;
+            background-color: #E5E5E5;
+            background-image: radial-gradient(#d0d0d0 15%, transparent 16%);
+            background-size: 8px 8px;
         }
 
-        nav a {
-            color: #FFD700;
+        a {
+            color: #003399;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #CC0000;
             text-decoration: none;
-            margin-right: 15px;
-            text-transform: uppercase;
+        }
+
+        /* Главный контейнер фиксированной ширины */
+        #container {
+            width: 770px;
+            margin: 10px auto;
+            background-color: #FFFFFF;
+            border: 1px solid #999999;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        /* Шапка сайта LEGO 2006 */
+        header {
+            background-color: #FFCC00;
+            border-bottom: 3px solid #CC0000;
+        }
+
+        .top-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 6px 12px;
+            background-color: #EFEFEF;
+            border-bottom: 1px solid #CCCCCC;
+            font-size: 10px;
+        }
+
+        .country-selector {
+            color: #666;
+        }
+
+        .main-header {
+            display: flex;
+            align-items: center;
+            padding: 8px 15px;
+            background: linear-gradient(to bottom, #FFE866 0%, #FFCC00 100%);
+        }
+
+        .lego-logo {
+            width: 52px;
+            height: 52px;
+            background-color: #D11013;
+            border: 2px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFE600;
+            font-family: "Arial Black", Impact, sans-serif;
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px #000, -1px -1px #fff;
+            box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+            user-select: none;
+        }
+
+        .site-tabs {
+            margin-left: 20px;
+            display: flex;
+            gap: 4px;
+        }
+
+        .tab {
+            background: #FFFFFF;
+            padding: 6px 14px;
             font-weight: bold;
+            font-size: 11px;
+            border-top: 1px solid #B0B0B0;
+            border-left: 1px solid #B0B0B0;
+            border-right: 1px solid #B0B0B0;
+            border-radius: 4px 4px 0 0;
+            cursor: pointer;
+            text-decoration: none;
+            color: #003399;
         }
 
-        .main-content {
-            padding: 20px;
-            display: table;
+        .tab.active {
+            background: #CC0000;
+            color: #FFFFFF;
+            border-color: #CC0000;
         }
 
-        .product-image {
-            display: table-cell;
-            width: 350px;
-            vertical-align: top;
-            border: 2px solid #555;
-            background-color: #FFF;
+        /* Баннер темы Knights' Kingdom II */
+        .theme-banner {
+            background: linear-gradient(90deg, #1C1B1F 0%, #3D2B1F 50%, #1C1B1F 100%);
+            color: #E2B007;
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #D69E2E;
+            font-family: Georgia, serif;
+            letter-spacing: 1px;
         }
 
-        .product-image img {
-            width: 100%;
-        }
-
-        .product-details {
-            display: table-cell;
-            padding-left: 20px;
-            vertical-align: top;
-        }
-
-        h1 {
-            color: #FFD700;
-            font-size: 24px;
-            margin: 0 0 10px 0;
+        .theme-banner h2 {
+            font-size: 14px;
             text-transform: uppercase;
-            filter: dropshadow(color=#000000, offx=2, offy=2);
         }
 
-        .item-no {
-            font-size: 12px;
-            color: #CCCCCC;
-            margin-bottom: 20px;
+        /* Хлебные крошки */
+        .breadcrumbs {
+            padding: 6px 15px;
+            background-color: #F7F7F7;
+            border-bottom: 1px solid #E0E0E0;
+            font-size: 10px;
+            color: #666666;
+        }
+
+        /* Основной блок карточки товара */
+        .content {
+            display: flex;
+            padding: 15px;
+            gap: 20px;
+        }
+
+        .product-gallery {
+            width: 320px;
+            flex-shrink: 0;
+            text-align: center;
+        }
+
+        .main-image-frame {
+            border: 1px solid #CCCCCC;
+            background-color: #FAFAFA;
+            padding: 10px;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .main-image-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #EEEEEE;
+        }
+
+        .zoom-hint {
+            margin-top: 5px;
+            font-size: 10px;
+            color: #888888;
+            font-style: italic;
+        }
+
+        /* Детали товара */
+        .product-details {
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            color: #000000;
+            margin-bottom: 4px;
+        }
+
+        .product-meta {
+            font-size: 11px;
+            color: #666666;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 1px dashed #CCCCCC;
+        }
+
+        .badge-rogue {
+            display: inline-block;
+            background-color: #4A154B;
+            color: #FFF;
+            font-size: 9px;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 2px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
 
         .description {
-            font-size: 13px;
+            font-size: 11px;
             line-height: 1.5;
-            margin-bottom: 20px;
+            color: #222222;
+            margin-bottom: 15px;
+            background-color: #FFF9E6;
+            border-left: 3px solid #FFCC00;
+            padding: 8px 10px;
         }
 
-        .buy-box {
-            background-color: #004080;
-            border: 2px outset #0055aa;
-            padding: 15px;
-            width: 200px;
-        }
-
-        .price {
-            font-size: 20px;
-            font-weight: bold;
-            color: #FFF;
-            margin-bottom: 10px;
-        }
-
-        .add-to-cart {
-            background-color: #008000;
-            color: white;
-            border: 2px outset #00AA00;
-            padding: 5px 10px;
-            cursor: pointer;
-            font-weight: bold;
+        /* Спецификации набора */
+        .spec-table {
             width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            font-size: 11px;
         }
 
+        .spec-table td {
+            padding: 4px 6px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+
+        .spec-table td.label {
+            font-weight: bold;
+            color: #555555;
+            width: 40%;
+        }
+
+        /* Блок покупки */
+        .purchase-box {
+            background-color: #F2F5F8;
+            border: 1px solid #BCC7D4;
+            padding: 12px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price-tag {
+            font-size: 18px;
+            font-weight: bold;
+            color: #CC0000;
+        }
+
+        .price-sub {
+            font-size: 9px;
+            color: #666666;
+            font-weight: normal;
+        }
+
+        .btn-buy {
+            background: linear-gradient(to bottom, #7CD635 0%, #469B14 100%);
+            border: 1px solid #35790E;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            padding: 8px 18px;
+            border-radius: 3px;
+            cursor: pointer;
+            text-shadow: 1px 1px 1px #234E09;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .btn-buy:hover {
+            background: linear-gradient(to bottom, #8CE645 0%, #52B317 100%);
+        }
+
+        .btn-buy:active {
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.4);
+        }
+
+        /* Дополнительные промо-блоки */
+        .extra-sections {
+            margin: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            border-top: 1px solid #E0E0E0;
+            padding-top: 15px;
+        }
+
+        .promo-card {
+            border: 1px solid #D0D0D0;
+            background: #FDFDFD;
+            padding: 10px;
+        }
+
+        .promo-card h4 {
+            color: #003399;
+            font-size: 12px;
+            margin-bottom: 6px;
+            border-bottom: 1px solid #E5E5E5;
+            padding-bottom: 3px;
+        }
+
+        /* Подвал */
         footer {
+            background-color: #333333;
+            color: #AAAAAA;
+            font-size: 9px;
+            padding: 12px 15px;
             text-align: center;
-            font-size: 10px;
-            padding: 20px;
-            color: #888;
+            line-height: 1.4;
+        }
+
+        footer a {
+            color: #CCCCCC;
+            margin: 0 5px;
+        }
+
+        /* Интерактивное модальное окно уведомления */
+        .toast {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 4px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+            border-left: 4px solid #7CD635;
+            font-size: 11px;
+            z-index: 9999;
         }
     </style>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "Дракус (Dracus)",
-      "image": "https://www.bricklink.com/SL/8705-1.jpg",
-      "description": "Элитный воин Тени с мечом и щитом. Защитите Морсию!",
-      "sku": "8705",
-      "brand": {
-        "@type": "Brand",
-        "name": "LEGO"
-      }
-    }
-    </script>
 </head>
 <body>
 
-<div id="ie-header">
-    Адрес: http://www.lego.com/rus/knights-kingdom/products/8705.aspx
-</div>
-
-<div id="wrapper">
-    <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/LEGO_logo.svg" class="logo" alt="LEGO Logo">
-        <span style="font-size: 24px; font-weight: bold; color: white; margin-left: 10px; vertical-align: middle;">KNIGHTS’ KINGDOM™</span>
-    </header>
-
-    <nav>
-        <a href="#">ГЛАВНАЯ</a>
-        <a href="#">ПРОДУКТЫ</a>
-        <a href="#">ИГРЫ</a>
-        <a href="#">ГЕРОИ</a>
-        <a href="#">МАГАЗИН</a>
-    </nav>
-
-    <div class="main-content">
-        <div class="product-image">
-            <img src="https://www.bricklink.com/SL/8705-1.jpg" alt="LEGO 8705 Дракус">
-        </div>
-
-        <div class="product-details">
-            <h1>8705 Дракус</h1>
-            <div class="item-no">Артикул: 8705 | Возраст: 6-12</div>
-            
-            <div class="description">
-                <p><strong>Герой или злодей?</strong></p>
-                <p>Дракус — один из самых опасных воинов, когда-либо сражавшихся на полях Морсии. Вооруженный массивным мечом и прочным щитом, он готов к любой битве. Используйте механизм на его спине, чтобы наносить сокрушительные удары!</p>
-                <ul>
-                    <li>Высота фигурки более 19 см!</li>
-                    <li>В комплекте меч, щит и доспехи.</li>
-                    <li>Двигайте рычаг, чтобы управлять рукой с мечом!</li>
-                </ul>
+    <div id="container">
+        <!-- Верхняя служебная панель -->
+        <div class="top-nav">
+            <div>
+                <a href="#">Родителям</a> | 
+                <a href="#">Клуб LEGO</a> | 
+                <a href="#">Поддержка покупателей</a>
             </div>
-
-            <div class="buy-box">
-                <div class="price">499 руб.</div>
-                <button class="add-to-cart" onclick="alert('Добавлено в корзину!');">КУПИТЬ СЕЙЧАС</button>
+            <div class="country-selector">
+                Регион: <strong>Россия (Русский)</strong>
             </div>
         </div>
+
+        <!-- Шапка с классическим логотипом и табами -->
+        <header>
+            <div class="main-header">
+                <div class="lego-logo">LEGO</div>
+                <nav class="site-tabs">
+                    <a href="#" class="tab active">Магазин</a>
+                    <a href="#" class="tab">Игры и приключения</a>
+                    <a href="#" class="tab">Каталог тем</a>
+                    <a href="#" class="tab">Инструкции</a>
+                </nav>
+            </div>
+            <div class="theme-banner">
+                <h2>KNIGHTS’ KINGDOM™ / Рыцари Королевства</h2>
+                <span>Коллекция 2006</span>
+            </div>
+        </header>
+
+        <!-- Хлебные крошки -->
+        <div class="breadcrumbs">
+            <a href="#">Главная</a> &gt; 
+            <a href="#">Каталог наборов</a> &gt; 
+            <a href="#">Knights' Kingdom</a> &gt;
+            <strong>8705 Дракус</strong>
+        </div>
+
+        <!-- Контент страницы набора -->
+        <main class="content">
+            <!-- Галерея изображения -->
+            <div class="product-gallery">
+                <div class="main-image-frame">
+                    <img id="mainProductImg" src="https://www.lego.com/cdn/product-assets/product.img.pri/8705_prod.jpg" alt="LEGO 8705 Дракус">
+                </div>
+                <div class="zoom-hint">Нажмите на картинку для увеличения</div>
+            </div>
+
+            <!-- Характеристики и описание -->
+            <div class="product-details">
+                <span class="badge-rogue">Рыцари-изгои</span>
+                <h1 class="product-title">8705 Дракус (Dracus)</h1>
+                <div class="product-meta">
+                    Артикул: <strong>8705</strong> | Возраст: <strong>6-12 лет</strong>
+                </div>
+
+                <div class="description">
+                    Суровый и выносливый рыцарь Дракус — командир орды «Рыцари-изгои». Своим могучим мечом и знаменитыми кольчугами с шипами он выиграл не одну битву!
+                </div>
+
+                <table class="spec-table">
+                    <tr>
+                        <td class="label">Год выпуска:</td>
+                        <td>2006</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Количество деталей:</td>
+                        <td>44</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Оружие и броня:</td>
+                        <td>Тяжелый меч, щит с эмблемой дракона, шипованная броня</td>
+                    </tr>
+                    <tr>
+                        <td class="label">Особенности:</td>
+                        <td>Подвижные шарнирные суставы, функция боевого взмаха рукой</td>
+                    </tr>
+                </table>
+
+                <!-- Блок заказа -->
+                <div class="purchase-box">
+                    <div>
+                        <div class="price-tag">399 руб.</div>
+                        <div class="price-sub">В наличии на складе</div>
+                    </div>
+                    <button class="btn-buy" id="addToCartBtn">В корзину</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Промо-блоки в духе 2006 года -->
+        <section class="extra-sections">
+            <div class="promo-card">
+                <h4>Собери всю армию Моркиса!</h4>
+                <p>Объедини рыцаря Дракуса с другими воинами серии Knights' Kingdom для грандиозной битвы за Морию.</p>
+            </div>
+            <div class="promo-card">
+                <h4>Инструкция по сборке</h4>
+                <p>Потерялась книжка из коробки? <a href="#">Скачать буклет PDF (8705)</a> бесплатно в разделе сервиса.</p>
+            </div>
+        </section>
+
+        <!-- Подвал -->
+        <footer>
+            <p>© 2006 The LEGO Group. Все права защищены.</p>
+            <p style="margin-top: 4px;">
+                <a href="#">Политика конфиденциальности</a> | 
+                <a href="#">Использование cookie</a> | 
+                <a href="#">Правовая информация</a>
+            </p>
+        </footer>
     </div>
 
-    <footer>
-        &copy; 2006 The LEGO Group. Все права защищены. <br>
-        LEGO, the LEGO logo and the KNIGHTS’ KINGDOM are trademarks of the LEGO Group.
-    </footer>
-</div>
+    <!-- Всплывающее окно действия -->
+    <div id="toastNotification" class="toast">
+        Набор «8705 Дракус» добавлен в корзину!
+    </div>
 
-<script>
-    // 2006 era JavaScript: Simple status bar message
-    window.status = "Добро пожаловать в мир Knights' Kingdom!";
-</script>
+    <!-- Простой скрипт интерактивности -->
+    <script>
+        document.getElementById('addToCartBtn').addEventListener('click', function() {
+            const toast = document.getElementById('toastNotification');
+            toast.style.display = 'block';
+            
+            setTimeout(function() {
+                toast.style.display = 'none';
+            }, 3000);
+        });
 
+        // Эффект увеличения при клике на изображение
+        const img = document.getElementById('mainProductImg');
+        img.style.cursor = 'pointer';
+        img.addEventListener('click', function() {
+            window.open(this.src, '_blank');
+        });
+    </script>
 </body>
 </html>
